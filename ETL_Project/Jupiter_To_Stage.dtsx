@@ -1,0 +1,3257 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/14/2022 7:54:38 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-8V127BM"
+  DTS:CreatorName="DESKTOP-8V127BM\tung3"
+  DTS:DTSID="{22DBFF44-07A4-4C2B-A555-90813C95204B}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.845.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Jupiter_To_Stage"
+  DTS:PackageType="5"
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{A03CF2BD-8C06-43A1-B080-1CEB5076B575}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Jupiter]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{2C8BFD96-F10A-4905-89F5-2CDB2C99F1D5}"
+      DTS:ObjectName="DESKTOP-8V127BM\PSTUNG.Jupiter">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-8V127BM\PSTUNG;Initial Catalog=Jupiter;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{2C8BFD96-F10A-4905-89F5-2CDB2C99F1D5}DESKTOP-8V127BM\PSTUNG.Jupiter;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.METADATA]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{93436931-0617-4D24-B2D7-9B28C303048B}"
+      DTS:ObjectName="DESKTOP-8V127BM\PSTUNG.METADATA">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-8V127BM\PSTUNG;Initial Catalog=METADATA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{93436931-0617-4D24-B2D7-9B28C303048B}DESKTOP-8V127BM\PSTUNG.METADATA;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Stage]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{ACF03C2F-2CF6-4306-8FF3-511D1C65819B}"
+      DTS:ObjectName="DESKTOP-8V127BM\PSTUNG.Stage">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-8V127BM\PSTUNG;Initial Catalog=Stage;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{ACF03C2F-2CF6-4306-8FF3-511D1C65819B}DESKTOP-8V127BM\PSTUNG.Stage;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{09DE207F-7FDA-4791-BC8E-8D603F8593FA}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="CET">
+      <DTS:VariableValue
+        DTS:DataType="7">1/1/2000</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{6D038CD3-4B7A-45E6-BF29-CF05BAAFDF48}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="LSET">
+      <DTS:VariableValue
+        DTS:DataType="7">10/14/2022</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\CuaHang_Jupiter_to_Stage"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{B02D0B30-4F55-43B4-BD10-289BD23713DE}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="CuaHang_Jupiter_to_Stage"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\CuaHang_Jupiter_to_Stage\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[CuaHang_Jupiter_stage]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\CuaHang_Jupiter_to_Stage\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Stage]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\CuaHang_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\CuaHang_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MaCH]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4"
+                      cachedName="MaCH"
+                      externalMetadataColumnId="Package\CuaHang_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaCH]"
+                      lineageId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaCH]" />
+                    <inputColumn
+                      refId="Package\CuaHang_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TenCH]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TenCH"
+                      externalMetadataColumnId="Package\CuaHang_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TenCH]"
+                      lineageId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[TenCH]" />
+                    <inputColumn
+                      refId="Package\CuaHang_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[LoaiCH]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4"
+                      cachedName="LoaiCH"
+                      externalMetadataColumnId="Package\CuaHang_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LoaiCH]"
+                      lineageId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[LoaiCH]" />
+                    <inputColumn
+                      refId="Package\CuaHang_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Nuoc]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4"
+                      cachedName="Nuoc"
+                      externalMetadataColumnId="Package\CuaHang_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Nuoc]"
+                      lineageId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nuoc]" />
+                    <inputColumn
+                      refId="Package\CuaHang_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TrangThai]"
+                      cachedDataType="i4"
+                      cachedName="TrangThai"
+                      externalMetadataColumnId="Package\CuaHang_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TrangThai]"
+                      lineageId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[TrangThai]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\CuaHang_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaCH]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="MaCH" />
+                    <externalMetadataColumn
+                      refId="Package\CuaHang_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TenCH]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="TenCH" />
+                    <externalMetadataColumn
+                      refId="Package\CuaHang_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LoaiCH]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="LoaiCH" />
+                    <externalMetadataColumn
+                      refId="Package\CuaHang_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Nuoc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="Nuoc" />
+                    <externalMetadataColumn
+                      refId="Package\CuaHang_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TrangThai]"
+                      dataType="i4"
+                      name="TrangThai" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\CuaHang_Jupiter_to_Stage\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\CuaHang_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CuaHang_Jupiter_to_Stage\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\CuaHang_Jupiter_to_Stage\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\CuaHang_Jupiter_to_Stage\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\CuaHang_Jupiter_to_Stage\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT MaCH, TenCH, LoaiCH, Nuoc, NgayTao, NgayCapNhat, TrangThai
+FROM     CuaHang_Jupiter
+WHERE  (NgayCapNhat BETWEEN ? AND ?) OR
+                  (NgayTao BETWEEN ? AND ?)</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping">"Parameter0:Input",{6D038CD3-4B7A-45E6-BF29-CF05BAAFDF48};"Parameter1:Input",{09DE207F-7FDA-4791-BC8E-8D603F8593FA};"Parameter2:Input",{6D038CD3-4B7A-45E6-BF29-CF05BAAFDF48};"Parameter3:Input",{09DE207F-7FDA-4791-BC8E-8D603F8593FA};</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Jupiter]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Jupiter]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaCH]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MaCH]"
+                      length="4"
+                      lineageId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaCH]"
+                      name="MaCH"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[TenCH]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TenCH]"
+                      length="50"
+                      lineageId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[TenCH]"
+                      name="TenCH"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[LoaiCH]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[LoaiCH]"
+                      length="4"
+                      lineageId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[LoaiCH]"
+                      name="LoaiCH"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nuoc]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nuoc]"
+                      length="4"
+                      lineageId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nuoc]"
+                      name="Nuoc"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[NgayTao]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NgayTao]"
+                      lineageId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[NgayTao]"
+                      name="NgayTao"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[NgayCapNhat]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NgayCapNhat]"
+                      lineageId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[NgayCapNhat]"
+                      name="NgayCapNhat"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[TrangThai]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TrangThai]"
+                      lineageId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[TrangThai]"
+                      name="TrangThai"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MaCH]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="MaCH" />
+                    <externalMetadataColumn
+                      refId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TenCH]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="TenCH" />
+                    <externalMetadataColumn
+                      refId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[LoaiCH]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="LoaiCH" />
+                    <externalMetadataColumn
+                      refId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nuoc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="Nuoc" />
+                    <externalMetadataColumn
+                      refId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NgayTao]"
+                      dataType="dbTimeStamp"
+                      name="NgayTao" />
+                    <externalMetadataColumn
+                      refId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NgayCapNhat]"
+                      dataType="dbTimeStamp"
+                      name="NgayCapNhat" />
+                    <externalMetadataColumn
+                      refId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TrangThai]"
+                      dataType="i4"
+                      name="TrangThai" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MaCH]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      lineageId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MaCH]"
+                      name="MaCH" />
+                    <outputColumn
+                      refId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TenCH]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TenCH]"
+                      name="TenCH" />
+                    <outputColumn
+                      refId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[LoaiCH]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      lineageId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[LoaiCH]"
+                      name="LoaiCH" />
+                    <outputColumn
+                      refId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Nuoc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      lineageId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Nuoc]"
+                      name="Nuoc" />
+                    <outputColumn
+                      refId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NgayTao]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NgayTao]"
+                      name="NgayTao" />
+                    <outputColumn
+                      refId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NgayCapNhat]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NgayCapNhat]"
+                      name="NgayCapNhat" />
+                    <outputColumn
+                      refId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TrangThai]"
+                      dataType="i4"
+                      lineageId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TrangThai]"
+                      name="TrangThai" />
+                    <outputColumn
+                      refId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\CuaHang_Jupiter_to_Stage\TRUNCATE CUAHANG_STAGE"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="TRUNCATE CUAHANG_STAGE"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">truncate table cuahang_jupiter_stage</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\CuaHang_Jupiter_to_Stage\TRUNCATE CUAHANG_STAGE.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Stage]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\CuaHang_Jupiter_to_Stage\TRUNCATE CUAHANG_STAGE.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <externalMetadataColumns
+                    isUsed="True" />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\CuaHang_Jupiter_to_Stage\TRUNCATE CUAHANG_STAGE.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\CuaHang_Jupiter_to_Stage\TRUNCATE CUAHANG_STAGE.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\CuaHang_Jupiter_to_Stage\TRUNCATE CUAHANG_STAGE.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\CuaHang_Jupiter_to_Stage\TRUNCATE CUAHANG_STAGE.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CuaHang_Jupiter_to_Stage\TRUNCATE CUAHANG_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\CuaHang_Jupiter_to_Stage\TRUNCATE CUAHANG_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\CuaHang_Jupiter_to_Stage\TRUNCATE CUAHANG_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\CuaHang_Jupiter_to_Stage\TRUNCATE CUAHANG_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\CuaHang_Jupiter_to_Stage.Paths[OLE DB Command Output]"
+              endId="Package\CuaHang_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="OLE DB Command Output"
+              startId="Package\CuaHang_Jupiter_to_Stage\TRUNCATE CUAHANG_STAGE.Outputs[OLE DB Command Output]" />
+            <path
+              refId="Package\CuaHang_Jupiter_to_Stage.Paths[OLE DB Source Output]"
+              endId="Package\CuaHang_Jupiter_to_Stage\TRUNCATE CUAHANG_STAGE.Inputs[OLE DB Command Input]"
+              name="OLE DB Source Output"
+              startId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\GET CET"
+      DTS:CreationName="Microsoft.ExpressionTask"
+      DTS:Description="Expression Task"
+      DTS:DTSID="{F1801CC6-7CC8-4A7A-AF74-454EB91892A0}"
+      DTS:ExecutableType="Microsoft.ExpressionTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="GET CET"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExpressionTask
+          Expression="@[User::CET] = GETDATE()" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\GET LSET IN METADATA"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{5FF18220-3324-46D5-BFAA-C157337B318E}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="GET LSET IN METADATA"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{93436931-0617-4D24-B2D7-9B28C303048B}"
+          SQLTask:SqlStatementSource="SELECT NgayCapNhat&#xA;FROM     Data_Flow&#xA;WHERE  (TenBang = 'jupiter')"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="NgayCapNhat"
+            SQLTask:DtsVariableName="User::LSET" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\LoaiCuaHang_Jupiter_to_Stage"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{AE668EC7-4A7B-4D90-918B-CFEFF47BCD7C}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="LoaiCuaHang_Jupiter_to_Stage"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[LoaiCuaHang_Jupiter_stage]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Stage]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MaLoaiCH]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4"
+                      cachedName="MaLoaiCH"
+                      externalMetadataColumnId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaLoaiCH]"
+                      lineageId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaLoaiCH]" />
+                    <inputColumn
+                      refId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TenLoaiCH]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TenLoaiCH"
+                      externalMetadataColumnId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TenLoaiCH]"
+                      lineageId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[TenLoaiCH]" />
+                    <inputColumn
+                      refId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TrangThai]"
+                      cachedDataType="i4"
+                      cachedName="TrangThai"
+                      externalMetadataColumnId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TrangThai]"
+                      lineageId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[TrangThai]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaLoaiCH]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="MaLoaiCH" />
+                    <externalMetadataColumn
+                      refId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TenLoaiCH]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="TenLoaiCH" />
+                    <externalMetadataColumn
+                      refId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TrangThai]"
+                      dataType="i4"
+                      name="TrangThai" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT MaLoaiCH, TenLoaiCH, NgayTao, NgayCapNhat, TrangThai
+FROM     LoaiCuaHang_Jupiter
+WHERE  (NgayCapNhat BETWEEN ? AND ?) OR
+                  (NgayTao BETWEEN ? AND ?)</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping">"Parameter0:Input",{6D038CD3-4B7A-45E6-BF29-CF05BAAFDF48};"Parameter1:Input",{09DE207F-7FDA-4791-BC8E-8D603F8593FA};"Parameter2:Input",{6D038CD3-4B7A-45E6-BF29-CF05BAAFDF48};"Parameter3:Input",{09DE207F-7FDA-4791-BC8E-8D603F8593FA};</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Jupiter]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Jupiter]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaLoaiCH]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MaLoaiCH]"
+                      length="4"
+                      lineageId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaLoaiCH]"
+                      name="MaLoaiCH"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[TenLoaiCH]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TenLoaiCH]"
+                      length="50"
+                      lineageId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[TenLoaiCH]"
+                      name="TenLoaiCH"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[NgayTao]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NgayTao]"
+                      lineageId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[NgayTao]"
+                      name="NgayTao"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[NgayCapNhat]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NgayCapNhat]"
+                      lineageId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[NgayCapNhat]"
+                      name="NgayCapNhat"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[TrangThai]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TrangThai]"
+                      lineageId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[TrangThai]"
+                      name="TrangThai"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MaLoaiCH]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="MaLoaiCH" />
+                    <externalMetadataColumn
+                      refId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TenLoaiCH]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="TenLoaiCH" />
+                    <externalMetadataColumn
+                      refId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NgayTao]"
+                      dataType="dbTimeStamp"
+                      name="NgayTao" />
+                    <externalMetadataColumn
+                      refId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NgayCapNhat]"
+                      dataType="dbTimeStamp"
+                      name="NgayCapNhat" />
+                    <externalMetadataColumn
+                      refId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TrangThai]"
+                      dataType="i4"
+                      name="TrangThai" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MaLoaiCH]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      lineageId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MaLoaiCH]"
+                      name="MaLoaiCH" />
+                    <outputColumn
+                      refId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TenLoaiCH]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TenLoaiCH]"
+                      name="TenLoaiCH" />
+                    <outputColumn
+                      refId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NgayTao]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NgayTao]"
+                      name="NgayTao" />
+                    <outputColumn
+                      refId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NgayCapNhat]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NgayCapNhat]"
+                      name="NgayCapNhat" />
+                    <outputColumn
+                      refId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TrangThai]"
+                      dataType="i4"
+                      lineageId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TrangThai]"
+                      name="TrangThai" />
+                    <outputColumn
+                      refId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\LoaiCuaHang_Jupiter_to_Stage\TRUNCATE LOAICUAHANG_JUPITER_STAGE"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="TRUNCATE LOAICUAHANG_JUPITER_STAGE"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">truncate table loaicuahang_jupiter_stage</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\LoaiCuaHang_Jupiter_to_Stage\TRUNCATE LOAICUAHANG_JUPITER_STAGE.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Stage]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\LoaiCuaHang_Jupiter_to_Stage\TRUNCATE LOAICUAHANG_JUPITER_STAGE.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <externalMetadataColumns
+                    isUsed="True" />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\LoaiCuaHang_Jupiter_to_Stage\TRUNCATE LOAICUAHANG_JUPITER_STAGE.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\LoaiCuaHang_Jupiter_to_Stage\TRUNCATE LOAICUAHANG_JUPITER_STAGE.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\LoaiCuaHang_Jupiter_to_Stage\TRUNCATE LOAICUAHANG_JUPITER_STAGE.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\LoaiCuaHang_Jupiter_to_Stage\TRUNCATE LOAICUAHANG_JUPITER_STAGE.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\LoaiCuaHang_Jupiter_to_Stage\TRUNCATE LOAICUAHANG_JUPITER_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\LoaiCuaHang_Jupiter_to_Stage\TRUNCATE LOAICUAHANG_JUPITER_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\LoaiCuaHang_Jupiter_to_Stage\TRUNCATE LOAICUAHANG_JUPITER_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\LoaiCuaHang_Jupiter_to_Stage\TRUNCATE LOAICUAHANG_JUPITER_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\LoaiCuaHang_Jupiter_to_Stage.Paths[OLE DB Command Output]"
+              endId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="OLE DB Command Output"
+              startId="Package\LoaiCuaHang_Jupiter_to_Stage\TRUNCATE LOAICUAHANG_JUPITER_STAGE.Outputs[OLE DB Command Output]" />
+            <path
+              refId="Package\LoaiCuaHang_Jupiter_to_Stage.Paths[OLE DB Source Output]"
+              endId="Package\LoaiCuaHang_Jupiter_to_Stage\TRUNCATE LOAICUAHANG_JUPITER_STAGE.Inputs[OLE DB Command Input]"
+              name="OLE DB Source Output"
+              startId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\LoaiSanPham_Jupiter_to_Stage"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{1F4C3470-59CD-44F7-92AC-FDB55078C667}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="LoaiSanPham_Jupiter_to_Stage"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[LoaiSanPham_Jupiter_stage]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Stage]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MaLoaiSP]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4"
+                      cachedName="MaLoaiSP"
+                      externalMetadataColumnId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaLoaiSP]"
+                      lineageId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaLoaiSP]" />
+                    <inputColumn
+                      refId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TenLoaiSP]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TenLoaiSP"
+                      externalMetadataColumnId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TenLoaiSP]"
+                      lineageId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[TenLoaiSP]" />
+                    <inputColumn
+                      refId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TrangThai]"
+                      cachedDataType="i4"
+                      cachedName="TrangThai"
+                      externalMetadataColumnId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TrangThai]"
+                      lineageId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[TrangThai]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaLoaiSP]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="MaLoaiSP" />
+                    <externalMetadataColumn
+                      refId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TenLoaiSP]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="TenLoaiSP" />
+                    <externalMetadataColumn
+                      refId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TrangThai]"
+                      dataType="i4"
+                      name="TrangThai" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT MaLoaiSP, TenLoaiSP, NgayTao, NgayCapNhat, TrangThai
+FROM     LoaiSanPham_Jupiter
+WHERE  (NgayCapNhat BETWEEN ? AND ?) OR
+                  (NgayTao BETWEEN ? AND ?)</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping">"Parameter0:Input",{6D038CD3-4B7A-45E6-BF29-CF05BAAFDF48};"Parameter1:Input",{09DE207F-7FDA-4791-BC8E-8D603F8593FA};"Parameter2:Input",{6D038CD3-4B7A-45E6-BF29-CF05BAAFDF48};"Parameter3:Input",{09DE207F-7FDA-4791-BC8E-8D603F8593FA};</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Jupiter]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Jupiter]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaLoaiSP]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MaLoaiSP]"
+                      length="4"
+                      lineageId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaLoaiSP]"
+                      name="MaLoaiSP"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[TenLoaiSP]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TenLoaiSP]"
+                      length="50"
+                      lineageId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[TenLoaiSP]"
+                      name="TenLoaiSP"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[NgayTao]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NgayTao]"
+                      lineageId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[NgayTao]"
+                      name="NgayTao"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[NgayCapNhat]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NgayCapNhat]"
+                      lineageId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[NgayCapNhat]"
+                      name="NgayCapNhat"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[TrangThai]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TrangThai]"
+                      lineageId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[TrangThai]"
+                      name="TrangThai"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MaLoaiSP]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="MaLoaiSP" />
+                    <externalMetadataColumn
+                      refId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TenLoaiSP]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="TenLoaiSP" />
+                    <externalMetadataColumn
+                      refId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NgayTao]"
+                      dataType="dbTimeStamp"
+                      name="NgayTao" />
+                    <externalMetadataColumn
+                      refId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NgayCapNhat]"
+                      dataType="dbTimeStamp"
+                      name="NgayCapNhat" />
+                    <externalMetadataColumn
+                      refId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TrangThai]"
+                      dataType="i4"
+                      name="TrangThai" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MaLoaiSP]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      lineageId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MaLoaiSP]"
+                      name="MaLoaiSP" />
+                    <outputColumn
+                      refId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TenLoaiSP]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TenLoaiSP]"
+                      name="TenLoaiSP" />
+                    <outputColumn
+                      refId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NgayTao]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NgayTao]"
+                      name="NgayTao" />
+                    <outputColumn
+                      refId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NgayCapNhat]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NgayCapNhat]"
+                      name="NgayCapNhat" />
+                    <outputColumn
+                      refId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TrangThai]"
+                      dataType="i4"
+                      lineageId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TrangThai]"
+                      name="TrangThai" />
+                    <outputColumn
+                      refId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\LoaiSanPham_Jupiter_to_Stage\TRUNCATE LOAISANPHAM_STAGE"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="TRUNCATE LOAISANPHAM_STAGE"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">truncate table loaisanpham_jupiter_stage</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\LoaiSanPham_Jupiter_to_Stage\TRUNCATE LOAISANPHAM_STAGE.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Stage]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\LoaiSanPham_Jupiter_to_Stage\TRUNCATE LOAISANPHAM_STAGE.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <externalMetadataColumns
+                    isUsed="True" />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\LoaiSanPham_Jupiter_to_Stage\TRUNCATE LOAISANPHAM_STAGE.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\LoaiSanPham_Jupiter_to_Stage\TRUNCATE LOAISANPHAM_STAGE.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\LoaiSanPham_Jupiter_to_Stage\TRUNCATE LOAISANPHAM_STAGE.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\LoaiSanPham_Jupiter_to_Stage\TRUNCATE LOAISANPHAM_STAGE.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\LoaiSanPham_Jupiter_to_Stage\TRUNCATE LOAISANPHAM_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\LoaiSanPham_Jupiter_to_Stage\TRUNCATE LOAISANPHAM_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\LoaiSanPham_Jupiter_to_Stage\TRUNCATE LOAISANPHAM_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\LoaiSanPham_Jupiter_to_Stage\TRUNCATE LOAISANPHAM_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\LoaiSanPham_Jupiter_to_Stage.Paths[OLE DB Command Output]"
+              endId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="OLE DB Command Output"
+              startId="Package\LoaiSanPham_Jupiter_to_Stage\TRUNCATE LOAISANPHAM_STAGE.Outputs[OLE DB Command Output]" />
+            <path
+              refId="Package\LoaiSanPham_Jupiter_to_Stage.Paths[OLE DB Source Output]"
+              endId="Package\LoaiSanPham_Jupiter_to_Stage\TRUNCATE LOAISANPHAM_STAGE.Inputs[OLE DB Command Input]"
+              name="OLE DB Source Output"
+              startId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Nuoc_Jupiter_to_Stage"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{D9A22A6C-7872-4D68-9036-BCF52C21ACB1}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Nuoc_Jupiter_to_Stage"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Nuoc_Jupiter_to_Stage\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Nuoc_Jupiter_stage]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Nuoc_Jupiter_to_Stage\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Stage]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Nuoc_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Nuoc_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MaNuoc]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4"
+                      cachedName="MaNuoc"
+                      externalMetadataColumnId="Package\Nuoc_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaNuoc]"
+                      lineageId="Package\Nuoc_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaNuoc]" />
+                    <inputColumn
+                      refId="Package\Nuoc_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TenNuoc]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TenNuoc"
+                      externalMetadataColumnId="Package\Nuoc_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TenNuoc]"
+                      lineageId="Package\Nuoc_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[TenNuoc]" />
+                    <inputColumn
+                      refId="Package\Nuoc_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TrangThai]"
+                      cachedDataType="i4"
+                      cachedName="TrangThai"
+                      externalMetadataColumnId="Package\Nuoc_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TrangThai]"
+                      lineageId="Package\Nuoc_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[TrangThai]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Nuoc_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaNuoc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="MaNuoc" />
+                    <externalMetadataColumn
+                      refId="Package\Nuoc_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TenNuoc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="TenNuoc" />
+                    <externalMetadataColumn
+                      refId="Package\Nuoc_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TrangThai]"
+                      dataType="i4"
+                      name="TrangThai" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Nuoc_Jupiter_to_Stage\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Nuoc_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Nuoc_Jupiter_to_Stage\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Nuoc_Jupiter_to_Stage\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Nuoc_Jupiter_to_Stage\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Nuoc_Jupiter_to_Stage\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Nuoc_Jupiter_to_Stage\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT MaNuoc, TenNuoc, NgayTao, NgayCapNhat, TrangThai
+FROM     Nuoc_Jupiter
+WHERE  (NgayTao BETWEEN ? AND ?) OR
+                  (NgayCapNhat BETWEEN ? AND ?)</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping">"Parameter0:Input",{6D038CD3-4B7A-45E6-BF29-CF05BAAFDF48};"Parameter1:Input",{09DE207F-7FDA-4791-BC8E-8D603F8593FA};"Parameter2:Input",{6D038CD3-4B7A-45E6-BF29-CF05BAAFDF48};"Parameter3:Input",{09DE207F-7FDA-4791-BC8E-8D603F8593FA};</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Nuoc_Jupiter_to_Stage\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Jupiter]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Jupiter]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Nuoc_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Nuoc_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaNuoc]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Nuoc_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MaNuoc]"
+                      length="4"
+                      lineageId="Package\Nuoc_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaNuoc]"
+                      name="MaNuoc"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Nuoc_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[TenNuoc]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Nuoc_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TenNuoc]"
+                      length="50"
+                      lineageId="Package\Nuoc_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[TenNuoc]"
+                      name="TenNuoc"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Nuoc_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[NgayTao]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Nuoc_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NgayTao]"
+                      lineageId="Package\Nuoc_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[NgayTao]"
+                      name="NgayTao"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Nuoc_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[NgayCapNhat]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Nuoc_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NgayCapNhat]"
+                      lineageId="Package\Nuoc_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[NgayCapNhat]"
+                      name="NgayCapNhat"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Nuoc_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[TrangThai]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Nuoc_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TrangThai]"
+                      lineageId="Package\Nuoc_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[TrangThai]"
+                      name="TrangThai"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Nuoc_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MaNuoc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="MaNuoc" />
+                    <externalMetadataColumn
+                      refId="Package\Nuoc_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TenNuoc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="TenNuoc" />
+                    <externalMetadataColumn
+                      refId="Package\Nuoc_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NgayTao]"
+                      dataType="dbTimeStamp"
+                      name="NgayTao" />
+                    <externalMetadataColumn
+                      refId="Package\Nuoc_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NgayCapNhat]"
+                      dataType="dbTimeStamp"
+                      name="NgayCapNhat" />
+                    <externalMetadataColumn
+                      refId="Package\Nuoc_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TrangThai]"
+                      dataType="i4"
+                      name="TrangThai" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Nuoc_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Nuoc_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MaNuoc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      lineageId="Package\Nuoc_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MaNuoc]"
+                      name="MaNuoc" />
+                    <outputColumn
+                      refId="Package\Nuoc_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TenNuoc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Nuoc_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TenNuoc]"
+                      name="TenNuoc" />
+                    <outputColumn
+                      refId="Package\Nuoc_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NgayTao]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Nuoc_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NgayTao]"
+                      name="NgayTao" />
+                    <outputColumn
+                      refId="Package\Nuoc_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NgayCapNhat]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Nuoc_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NgayCapNhat]"
+                      name="NgayCapNhat" />
+                    <outputColumn
+                      refId="Package\Nuoc_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TrangThai]"
+                      dataType="i4"
+                      lineageId="Package\Nuoc_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TrangThai]"
+                      name="TrangThai" />
+                    <outputColumn
+                      refId="Package\Nuoc_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Nuoc_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Nuoc_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Nuoc_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Nuoc_Jupiter_to_Stage\TRUNCATE NUOC_STAGE"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="TRUNCATE NUOC_STAGE"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">Truncate table Nuoc_Jupiter_Stage</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Nuoc_Jupiter_to_Stage\TRUNCATE NUOC_STAGE.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Stage]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Nuoc_Jupiter_to_Stage\TRUNCATE NUOC_STAGE.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <externalMetadataColumns
+                    isUsed="True" />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Nuoc_Jupiter_to_Stage\TRUNCATE NUOC_STAGE.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\Nuoc_Jupiter_to_Stage\TRUNCATE NUOC_STAGE.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Nuoc_Jupiter_to_Stage\TRUNCATE NUOC_STAGE.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\Nuoc_Jupiter_to_Stage\TRUNCATE NUOC_STAGE.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Nuoc_Jupiter_to_Stage\TRUNCATE NUOC_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Nuoc_Jupiter_to_Stage\TRUNCATE NUOC_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Nuoc_Jupiter_to_Stage\TRUNCATE NUOC_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Nuoc_Jupiter_to_Stage\TRUNCATE NUOC_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Nuoc_Jupiter_to_Stage.Paths[OLE DB Command Output]"
+              endId="Package\Nuoc_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="OLE DB Command Output"
+              startId="Package\Nuoc_Jupiter_to_Stage\TRUNCATE NUOC_STAGE.Outputs[OLE DB Command Output]" />
+            <path
+              refId="Package\Nuoc_Jupiter_to_Stage.Paths[OLE DB Source Output]"
+              endId="Package\Nuoc_Jupiter_to_Stage\TRUNCATE NUOC_STAGE.Inputs[OLE DB Command Input]"
+              name="OLE DB Source Output"
+              startId="Package\Nuoc_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SanPham_Jupiter_to_Stage"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{057F0A4A-4DA3-4218-9C12-F4E9FDC5D01A}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SanPham_Jupiter_to_Stage"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\SanPham_Jupiter_to_Stage\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[SanPham_Jupiter_stage]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\SanPham_Jupiter_to_Stage\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Stage]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\SanPham_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\SanPham_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MaSP]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4"
+                      cachedName="MaSP"
+                      externalMetadataColumnId="Package\SanPham_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaSP]"
+                      lineageId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaSP]" />
+                    <inputColumn
+                      refId="Package\SanPham_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TenSP]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TenSP"
+                      externalMetadataColumnId="Package\SanPham_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TenSP]"
+                      lineageId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[TenSP]" />
+                    <inputColumn
+                      refId="Package\SanPham_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[GiaSP]"
+                      cachedDataType="i4"
+                      cachedName="GiaSP"
+                      externalMetadataColumnId="Package\SanPham_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GiaSP]"
+                      lineageId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[GiaSP]" />
+                    <inputColumn
+                      refId="Package\SanPham_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[LoaiSP]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4"
+                      cachedName="LoaiSP"
+                      externalMetadataColumnId="Package\SanPham_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LoaiSP]"
+                      lineageId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[LoaiSP]" />
+                    <inputColumn
+                      refId="Package\SanPham_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TrangThai]"
+                      cachedDataType="i4"
+                      cachedName="TrangThai"
+                      externalMetadataColumnId="Package\SanPham_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TrangThai]"
+                      lineageId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[TrangThai]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\SanPham_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaSP]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="MaSP" />
+                    <externalMetadataColumn
+                      refId="Package\SanPham_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TenSP]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="TenSP" />
+                    <externalMetadataColumn
+                      refId="Package\SanPham_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GiaSP]"
+                      dataType="i4"
+                      name="GiaSP" />
+                    <externalMetadataColumn
+                      refId="Package\SanPham_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LoaiSP]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="LoaiSP" />
+                    <externalMetadataColumn
+                      refId="Package\SanPham_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TrangThai]"
+                      dataType="i4"
+                      name="TrangThai" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\SanPham_Jupiter_to_Stage\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\SanPham_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SanPham_Jupiter_to_Stage\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\SanPham_Jupiter_to_Stage\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\SanPham_Jupiter_to_Stage\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\SanPham_Jupiter_to_Stage\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\SanPham_Jupiter_to_Stage\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT MaSP, TenSP, GiaSP, LoaiSP, NgayTao, NgayCapNhap, TrangThai
+FROM     SanPham_Jupiter
+WHERE  (NgayTao BETWEEN ? AND ?) OR
+                  (NgayCapNhap BETWEEN ? AND ?)</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping">"Parameter0:Input",{6D038CD3-4B7A-45E6-BF29-CF05BAAFDF48};"Parameter1:Input",{09DE207F-7FDA-4791-BC8E-8D603F8593FA};"Parameter2:Input",{6D038CD3-4B7A-45E6-BF29-CF05BAAFDF48};"Parameter3:Input",{09DE207F-7FDA-4791-BC8E-8D603F8593FA};</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Jupiter]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Jupiter]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaSP]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MaSP]"
+                      length="4"
+                      lineageId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaSP]"
+                      name="MaSP"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[TenSP]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TenSP]"
+                      length="50"
+                      lineageId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[TenSP]"
+                      name="TenSP"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[GiaSP]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[GiaSP]"
+                      lineageId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[GiaSP]"
+                      name="GiaSP"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[LoaiSP]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[LoaiSP]"
+                      length="4"
+                      lineageId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[LoaiSP]"
+                      name="LoaiSP"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[NgayTao]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NgayTao]"
+                      lineageId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[NgayTao]"
+                      name="NgayTao"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[NgayCapNhap]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NgayCapNhap]"
+                      lineageId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[NgayCapNhap]"
+                      name="NgayCapNhap"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[TrangThai]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TrangThai]"
+                      lineageId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[TrangThai]"
+                      name="TrangThai"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MaSP]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="MaSP" />
+                    <externalMetadataColumn
+                      refId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TenSP]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="TenSP" />
+                    <externalMetadataColumn
+                      refId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[GiaSP]"
+                      dataType="i4"
+                      name="GiaSP" />
+                    <externalMetadataColumn
+                      refId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[LoaiSP]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="LoaiSP" />
+                    <externalMetadataColumn
+                      refId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NgayTao]"
+                      dataType="dbTimeStamp"
+                      name="NgayTao" />
+                    <externalMetadataColumn
+                      refId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NgayCapNhap]"
+                      dataType="dbTimeStamp"
+                      name="NgayCapNhap" />
+                    <externalMetadataColumn
+                      refId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TrangThai]"
+                      dataType="i4"
+                      name="TrangThai" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MaSP]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      lineageId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MaSP]"
+                      name="MaSP" />
+                    <outputColumn
+                      refId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TenSP]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TenSP]"
+                      name="TenSP" />
+                    <outputColumn
+                      refId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[GiaSP]"
+                      dataType="i4"
+                      lineageId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[GiaSP]"
+                      name="GiaSP" />
+                    <outputColumn
+                      refId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[LoaiSP]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      lineageId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[LoaiSP]"
+                      name="LoaiSP" />
+                    <outputColumn
+                      refId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NgayTao]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NgayTao]"
+                      name="NgayTao" />
+                    <outputColumn
+                      refId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NgayCapNhap]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NgayCapNhap]"
+                      name="NgayCapNhap" />
+                    <outputColumn
+                      refId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TrangThai]"
+                      dataType="i4"
+                      lineageId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TrangThai]"
+                      name="TrangThai" />
+                    <outputColumn
+                      refId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\SanPham_Jupiter_to_Stage\TRUNCATE SANPHAM_STAGE"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="TRUNCATE SANPHAM_STAGE"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">truncate table sanpham_jupiter_stage</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\SanPham_Jupiter_to_Stage\TRUNCATE SANPHAM_STAGE.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Stage]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\SanPham_Jupiter_to_Stage\TRUNCATE SANPHAM_STAGE.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <externalMetadataColumns
+                    isUsed="True" />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\SanPham_Jupiter_to_Stage\TRUNCATE SANPHAM_STAGE.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\SanPham_Jupiter_to_Stage\TRUNCATE SANPHAM_STAGE.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\SanPham_Jupiter_to_Stage\TRUNCATE SANPHAM_STAGE.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\SanPham_Jupiter_to_Stage\TRUNCATE SANPHAM_STAGE.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SanPham_Jupiter_to_Stage\TRUNCATE SANPHAM_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\SanPham_Jupiter_to_Stage\TRUNCATE SANPHAM_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\SanPham_Jupiter_to_Stage\TRUNCATE SANPHAM_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\SanPham_Jupiter_to_Stage\TRUNCATE SANPHAM_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\SanPham_Jupiter_to_Stage.Paths[OLE DB Command Output]"
+              endId="Package\SanPham_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="OLE DB Command Output"
+              startId="Package\SanPham_Jupiter_to_Stage\TRUNCATE SANPHAM_STAGE.Outputs[OLE DB Command Output]" />
+            <path
+              refId="Package\SanPham_Jupiter_to_Stage.Paths[OLE DB Source Output]"
+              endId="Package\SanPham_Jupiter_to_Stage\TRUNCATE SANPHAM_STAGE.Inputs[OLE DB Command Input]"
+              name="OLE DB Source Output"
+              startId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\UPDATE LSET"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{12767CC1-1A1A-4A9E-A051-FE032574C756}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="UPDATE LSET"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{93436931-0617-4D24-B2D7-9B28C303048B}"
+          SQLTask:SqlStatementSource="UPDATE Data_Flow&#xA;SET          NgayCapNhat = ?&#xA;WHERE  (TenBang = 'jupiter')" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="User::CET"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="7"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{12F4FC5D-9653-4D02-B8E5-42188F8D1446}"
+      DTS:From="Package\GET LSET IN METADATA"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\GET CET" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{429B0020-5345-45C1-AECB-95ECFD014305}"
+      DTS:From="Package\GET CET"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Nuoc_Jupiter_to_Stage" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{BD06F3BA-273E-4340-A85A-0AAFA21A4FFC}"
+      DTS:From="Package\Nuoc_Jupiter_to_Stage"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\LoaiSanPham_Jupiter_to_Stage" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{45D4F924-7009-4A43-98D2-0A353CD65805}"
+      DTS:From="Package\LoaiCuaHang_Jupiter_to_Stage"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\CuaHang_Jupiter_to_Stage" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{A0E4A4EE-BCE7-4084-9E8A-951124294BBA}"
+      DTS:From="Package\LoaiSanPham_Jupiter_to_Stage"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\SanPham_Jupiter_to_Stage" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 5]"
+      DTS:CreationName=""
+      DTS:DTSID="{850C26DD-3D3F-4AA9-8BE3-9558A7F162DC}"
+      DTS:From="Package\CuaHang_Jupiter_to_Stage"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 5"
+      DTS:To="Package\UPDATE LSET" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 6]"
+      DTS:CreationName=""
+      DTS:DTSID="{83E7C338-2035-4AB1-83F2-8F5EEA3668C9}"
+      DTS:From="Package\SanPham_Jupiter_to_Stage"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 6"
+      DTS:To="Package\LoaiCuaHang_Jupiter_to_Stage" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="206.4,41.6"
+          Id="Package\CuaHang_Jupiter_to_Stage"
+          TopLeft="286.428576306422,130.764707716279" />
+        <NodeLayout
+          Size="120,41.6"
+          Id="Package\GET CET"
+          TopLeft="287.142862032871,32.8823534023391" />
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\GET LSET IN METADATA"
+          TopLeft="27.8571433315471,40.5294123331155" />
+        <NodeLayout
+          Size="225.6,41.6"
+          Id="Package\LoaiCuaHang_Jupiter_to_Stage"
+          TopLeft="271.428576050973,234.764709174839" />
+        <NodeLayout
+          Size="226.4,41.6"
+          Id="Package\LoaiSanPham_Jupiter_to_Stage"
+          TopLeft="536.428580563896,132.294119502434" />
+        <NodeLayout
+          Size="187.2,41.6"
+          Id="Package\Nuoc_Jupiter_to_Stage"
+          TopLeft="550.000009366444,33.647059295417" />
+        <NodeLayout
+          Size="207.2,41.6"
+          Id="Package\SanPham_Jupiter_to_Stage"
+          TopLeft="538.571437743246,236.294120960995" />
+        <NodeLayout
+          Size="144,41.6"
+          Id="Package\UPDATE LSET"
+          TopLeft="42.1428578605458,135.352943074745" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="190.257143331547,57.5058828677273">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="96.8857187013239,0"
+              Start="0,0"
+              End="89.3857187013239,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="89.3857187013239,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="407.142862032871,54.064706348878">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="142.857147333573,0"
+              Start="0,0"
+              End="135.357147333573,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="135.357147333573,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="646.61429496517,75.247059295417">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,57.047060207017"
+              Start="0,0"
+              End="0,49.547060207017">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49.547060207017" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="386.928576178697,234.764709174839">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,-62.4000014585608"
+              Start="0,0"
+              End="0,-54.9000014585608">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-54.9000014585608" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="645.900009153571,173.894119502434">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,62.4000014585606"
+              Start="0,0"
+              End="0,54.9000014585606">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,54.9000014585606" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 5]"
+          TopLeft="286.428576306422,153.858825395512">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-100.285718445876,0"
+              Start="0,0"
+              End="-92.7857184458757,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-92.7857184458757,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 6]"
+          TopLeft="538.571437743246,256.329415067917">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-41.5428616922723,0"
+              Start="0,0"
+              End="-34.0428616922723,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-34.0428616922723,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\CuaHang_Jupiter_to_Stage">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="219.2,41.6"
+          Id="Package\CuaHang_Jupiter_to_Stage\TRUNCATE CUAHANG_STAGE"
+          TopLeft="408,205" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\CuaHang_Jupiter_to_Stage\OLE DB Destination"
+          TopLeft="424,300" />
+        <NodeLayout
+          Size="149.6,41.6"
+          Id="Package\CuaHang_Jupiter_to_Stage\OLE DB Source"
+          TopLeft="415.5,105.5" />
+        <EdgeLayout
+          Id="Package\CuaHang_Jupiter_to_Stage.Paths[OLE DB Source Output]"
+          TopLeft="490.3,147.1">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="27.3000000000001,57.9"
+              Start="0,0"
+              End="27.3000000000001,50.4">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.95" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.95"
+                    Point2="0,28.95"
+                    Point3="4,28.95" />
+                  <mssgle:LineSegment
+                    End="23.3000000000001,28.95" />
+                  <mssgle:CubicBezierSegment
+                    Point1="23.3000000000001,28.95"
+                    Point2="27.3000000000001,28.95"
+                    Point3="27.3000000000001,32.95" />
+                  <mssgle:LineSegment
+                    End="27.3000000000001,50.4" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\CuaHang_Jupiter_to_Stage.Paths[OLE DB Command Output]"
+          TopLeft="517.6,246.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-8.40000000000003,53.3999999999999"
+              Start="0,0"
+              End="-8.40000000000003,45.8999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.7" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.7"
+                    Point2="0,26.7"
+                    Point3="-4,26.7" />
+                  <mssgle:LineSegment
+                    End="-4.40000000000003,26.7" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-4.40000000000003,26.7"
+                    Point2="-8.40000000000003,26.7"
+                    Point3="-8.40000000000003,30.7" />
+                  <mssgle:LineSegment
+                    End="-8.40000000000003,45.8999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\CuaHang_Jupiter_to_Stage\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\CuaHang_Jupiter_to_Stage\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\LoaiCuaHang_Jupiter_to_Stage">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="288,41.6"
+          Id="Package\LoaiCuaHang_Jupiter_to_Stage\TRUNCATE LOAICUAHANG_JUPITER_STAGE"
+          TopLeft="364,239" />
+        <NodeLayout
+          Size="149.6,41.6"
+          Id="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Source"
+          TopLeft="356,143" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Destination"
+          TopLeft="424,317" />
+        <EdgeLayout
+          Id="Package\LoaiCuaHang_Jupiter_to_Stage.Paths[OLE DB Source Output]"
+          TopLeft="430.8,184.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="15.6000000000002,54.4"
+              Start="0,0"
+              End="15.6000000000002,46.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23.2"
+                    Point2="0,27.2"
+                    Point3="4,27.2" />
+                  <mssgle:LineSegment
+                    End="11.6000000000002,27.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="11.6000000000002,27.2"
+                    Point2="15.6000000000002,27.2"
+                    Point3="15.6000000000002,31.2" />
+                  <mssgle:LineSegment
+                    End="15.6000000000002,46.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\LoaiCuaHang_Jupiter_to_Stage.Paths[OLE DB Command Output]"
+          TopLeft="508.6,280.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,36.4"
+              Start="0,0"
+              End="0,28.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\LoaiSanPham_Jupiter_to_Stage">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="241.6,41.6"
+          Id="Package\LoaiSanPham_Jupiter_to_Stage\TRUNCATE LOAISANPHAM_STAGE"
+          TopLeft="121.5,69.5" />
+        <NodeLayout
+          Size="149.6,41.6"
+          Id="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Source"
+          TopLeft="5.5,5.5" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Destination"
+          TopLeft="176.5,156.5" />
+        <EdgeLayout
+          Id="Package\LoaiSanPham_Jupiter_to_Stage.Paths[OLE DB Source Output]"
+          TopLeft="155.1,26.3">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="87.2000000000001,43.2"
+              Start="0,0"
+              End="87.2000000000001,35.7">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="83.2000000000001,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="83.2000000000001,0"
+                    Point2="87.2000000000001,0"
+                    Point3="87.2000000000001,4" />
+                  <mssgle:LineSegment
+                    End="87.2000000000001,35.7" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\LoaiSanPham_Jupiter_to_Stage.Paths[OLE DB Command Output]"
+          TopLeft="242.3,111.1">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="19.3999999999999,45.4"
+              Start="0,0"
+              End="19.3999999999999,37.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.7" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.7"
+                    Point2="0,22.7"
+                    Point3="4,22.7" />
+                  <mssgle:LineSegment
+                    End="15.3999999999999,22.7" />
+                  <mssgle:CubicBezierSegment
+                    Point1="15.3999999999999,22.7"
+                    Point2="19.3999999999999,22.7"
+                    Point3="19.3999999999999,26.7" />
+                  <mssgle:LineSegment
+                    End="19.3999999999999,37.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Nuoc_Jupiter_to_Stage">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\Nuoc_Jupiter_to_Stage\TRUNCATE NUOC_STAGE"
+          TopLeft="213.571432208528,165.941178797851" />
+        <NodeLayout
+          Size="149.6,41.6"
+          Id="Package\Nuoc_Jupiter_to_Stage\OLE DB Source"
+          TopLeft="224.285718105277,61.1764714462122" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Nuoc_Jupiter_to_Stage\OLE DB Destination"
+          TopLeft="202.85714631178,251.588238822548" />
+        <EdgeLayout
+          Id="Package\Nuoc_Jupiter_to_Stage.Paths[OLE DB Source Output]"
+          TopLeft="297.528575156903,102.776471446212">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,63.1647073516384"
+              Start="0,0"
+              End="0,55.6647073516384">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,55.6647073516384" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-8,19.8323536758192,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Nuoc_Jupiter_to_Stage.Paths[OLE DB Command Output]"
+          TopLeft="292.014289260154,207.541178797851">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,44.0470600246971"
+              Start="0,0"
+              End="0,36.5470600246971">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.5470600246971" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-8,10.2735300123486,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Nuoc_Jupiter_to_Stage\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Nuoc_Jupiter_to_Stage\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\SanPham_Jupiter_to_Stage">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\SanPham_Jupiter_to_Stage\TRUNCATE SANPHAM_STAGE"
+          TopLeft="536,303" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\SanPham_Jupiter_to_Stage\OLE DB Destination"
+          TopLeft="522.5,390.5" />
+        <NodeLayout
+          Size="149.6,41.6"
+          Id="Package\SanPham_Jupiter_to_Stage\OLE DB Source"
+          TopLeft="526,207" />
+        <EdgeLayout
+          Id="Package\SanPham_Jupiter_to_Stage.Paths[OLE DB Source Output]"
+          TopLeft="600.8,248.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="17.6000000000003,54.4"
+              Start="0,0"
+              End="17.6000000000003,46.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23.2"
+                    Point2="0,27.2"
+                    Point3="4,27.2" />
+                  <mssgle:LineSegment
+                    End="13.6000000000003,27.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="13.6000000000003,27.2"
+                    Point2="17.6000000000003,27.2"
+                    Point3="17.6000000000003,31.2" />
+                  <mssgle:LineSegment
+                    End="17.6000000000003,46.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SanPham_Jupiter_to_Stage.Paths[OLE DB Command Output]"
+          TopLeft="618.4,344.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-10.7000000000002,45.9"
+              Start="0,0"
+              End="-10.7000000000002,38.4">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.95" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.95"
+                    Point2="0,22.95"
+                    Point3="-4,22.95" />
+                  <mssgle:LineSegment
+                    End="-6.70000000000016,22.95" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-6.70000000000016,22.95"
+                    Point2="-10.7000000000002,22.95"
+                    Point3="-10.7000000000002,26.95" />
+                  <mssgle:LineSegment
+                    End="-10.7000000000002,38.4" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\SanPham_Jupiter_to_Stage\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\SanPham_Jupiter_to_Stage\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

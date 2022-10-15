@@ -1,0 +1,2245 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/15/2022 12:20:42 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-8V127BM"
+  DTS:CreatorName="DESKTOP-8V127BM\tung3"
+  DTS:DTSID="{6C8BEC25-361F-4BCF-8648-058AEBE6DC92}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.845.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{55C35A88-3E6F-4F24-949F-16738093CE61}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.METADATA]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{76F8BA34-7250-410E-9E58-586DF83D8B1B}"
+      DTS:ObjectName="DESKTOP-8V127BM\PSTUNG.METADATA">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-8V127BM\PSTUNG;Initial Catalog=METADATA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{76F8BA34-7250-410E-9E58-586DF83D8B1B}DESKTOP-8V127BM\PSTUNG.METADATA;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Stage]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{699F2ECB-0375-4358-8A3C-B9EF8D17349F}"
+      DTS:ObjectName="DESKTOP-8V127BM\PSTUNG.Stage">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-8V127BM\PSTUNG;Initial Catalog=Stage;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{699F2ECB-0375-4358-8A3C-B9EF8D17349F}DESKTOP-8V127BM\PSTUNG.Stage;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Webtower9]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{C9E43DCD-54FB-4441-83BA-B08915CAEE6F}"
+      DTS:ObjectName="DESKTOP-8V127BM\PSTUNG.Webtower9">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-8V127BM\PSTUNG;Initial Catalog=Webtower9;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{C9E43DCD-54FB-4441-83BA-B08915CAEE6F}DESKTOP-8V127BM\PSTUNG.Webtower9;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{F5002AB6-5B58-4A07-880B-32512177343A}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="CET_W9">
+      <DTS:VariableValue
+        DTS:DataType="7">1/1/1000</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{00562D44-1261-47F8-AD91-DDF0FD73E61B}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="CET_WebTower9">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{12D213E8-D4AF-46DF-AE05-7D2263E4E4C4}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="LSET_Webtower9">
+      <DTS:VariableValue
+        DTS:DataType="7">1/1/1000</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\CHITIETHOADON_TO_STAGE"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{657ABBE5-5968-4B42-A023-0B0E9CECEA76}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="CHITIETHOADON_TO_STAGE"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\CHITIETHOADON_TO_STAGE\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[ChiTietHoaDon_WebTower9_Stage]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\CHITIETHOADON_TO_STAGE\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Stage]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\CHITIETHOADON_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\CHITIETHOADON_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MaChiTiet]"
+                      cachedDataType="i4"
+                      cachedName="MaChiTiet"
+                      externalMetadataColumnId="Package\CHITIETHOADON_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaChiTiet]"
+                      lineageId="Package\CHITIETHOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaChiTiet]" />
+                    <inputColumn
+                      refId="Package\CHITIETHOADON_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MaHD]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4"
+                      cachedName="MaHD"
+                      externalMetadataColumnId="Package\CHITIETHOADON_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaHD]"
+                      lineageId="Package\CHITIETHOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaHD]" />
+                    <inputColumn
+                      refId="Package\CHITIETHOADON_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MaSP]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4"
+                      cachedName="MaSP"
+                      externalMetadataColumnId="Package\CHITIETHOADON_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaSP]"
+                      lineageId="Package\CHITIETHOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaSP]" />
+                    <inputColumn
+                      refId="Package\CHITIETHOADON_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TrangThai]"
+                      cachedDataType="i4"
+                      cachedName="TrangThai"
+                      externalMetadataColumnId="Package\CHITIETHOADON_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TrangThai]"
+                      lineageId="Package\CHITIETHOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[TrangThai]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\CHITIETHOADON_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaChiTiet]"
+                      dataType="i4"
+                      name="MaChiTiet" />
+                    <externalMetadataColumn
+                      refId="Package\CHITIETHOADON_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaHD]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="MaHD" />
+                    <externalMetadataColumn
+                      refId="Package\CHITIETHOADON_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaSP]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="MaSP" />
+                    <externalMetadataColumn
+                      refId="Package\CHITIETHOADON_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TrangThai]"
+                      dataType="i4"
+                      name="TrangThai" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\CHITIETHOADON_TO_STAGE\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\CHITIETHOADON_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CHITIETHOADON_TO_STAGE\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\CHITIETHOADON_TO_STAGE\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\CHITIETHOADON_TO_STAGE\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\CHITIETHOADON_TO_STAGE\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\CHITIETHOADON_TO_STAGE\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT MaChiTiet, MaHD, MaSP, NgayTao, NgayCapNhat, TrangThai
+FROM     ChiTietHoaDon_WebTower9
+WHERE  (NgayTao BETWEEN ? AND ?) OR
+                  (NgayCapNhat BETWEEN ? AND ?)</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping">"Parameter0:Input",{12D213E8-D4AF-46DF-AE05-7D2263E4E4C4};"Parameter1:Input",{F5002AB6-5B58-4A07-880B-32512177343A};"Parameter2:Input",{12D213E8-D4AF-46DF-AE05-7D2263E4E4C4};"Parameter3:Input",{F5002AB6-5B58-4A07-880B-32512177343A};</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\CHITIETHOADON_TO_STAGE\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Webtower9]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Webtower9]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\CHITIETHOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CHITIETHOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaChiTiet]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CHITIETHOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MaChiTiet]"
+                      lineageId="Package\CHITIETHOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaChiTiet]"
+                      name="MaChiTiet"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\CHITIETHOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaHD]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CHITIETHOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MaHD]"
+                      length="4"
+                      lineageId="Package\CHITIETHOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaHD]"
+                      name="MaHD"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\CHITIETHOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaSP]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CHITIETHOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MaSP]"
+                      length="4"
+                      lineageId="Package\CHITIETHOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaSP]"
+                      name="MaSP"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\CHITIETHOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[NgayTao]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CHITIETHOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NgayTao]"
+                      lineageId="Package\CHITIETHOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[NgayTao]"
+                      name="NgayTao"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\CHITIETHOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[NgayCapNhat]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CHITIETHOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NgayCapNhat]"
+                      lineageId="Package\CHITIETHOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[NgayCapNhat]"
+                      name="NgayCapNhat"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\CHITIETHOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[TrangThai]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CHITIETHOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TrangThai]"
+                      lineageId="Package\CHITIETHOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[TrangThai]"
+                      name="TrangThai"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\CHITIETHOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MaChiTiet]"
+                      dataType="i4"
+                      name="MaChiTiet" />
+                    <externalMetadataColumn
+                      refId="Package\CHITIETHOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MaHD]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="MaHD" />
+                    <externalMetadataColumn
+                      refId="Package\CHITIETHOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MaSP]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="MaSP" />
+                    <externalMetadataColumn
+                      refId="Package\CHITIETHOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NgayTao]"
+                      dataType="dbTimeStamp"
+                      name="NgayTao" />
+                    <externalMetadataColumn
+                      refId="Package\CHITIETHOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NgayCapNhat]"
+                      dataType="dbTimeStamp"
+                      name="NgayCapNhat" />
+                    <externalMetadataColumn
+                      refId="Package\CHITIETHOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TrangThai]"
+                      dataType="i4"
+                      name="TrangThai" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\CHITIETHOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CHITIETHOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MaChiTiet]"
+                      dataType="i4"
+                      lineageId="Package\CHITIETHOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MaChiTiet]"
+                      name="MaChiTiet" />
+                    <outputColumn
+                      refId="Package\CHITIETHOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MaHD]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      lineageId="Package\CHITIETHOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MaHD]"
+                      name="MaHD" />
+                    <outputColumn
+                      refId="Package\CHITIETHOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MaSP]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      lineageId="Package\CHITIETHOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MaSP]"
+                      name="MaSP" />
+                    <outputColumn
+                      refId="Package\CHITIETHOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NgayTao]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\CHITIETHOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NgayTao]"
+                      name="NgayTao" />
+                    <outputColumn
+                      refId="Package\CHITIETHOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NgayCapNhat]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\CHITIETHOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NgayCapNhat]"
+                      name="NgayCapNhat" />
+                    <outputColumn
+                      refId="Package\CHITIETHOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TrangThai]"
+                      dataType="i4"
+                      lineageId="Package\CHITIETHOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TrangThai]"
+                      name="TrangThai" />
+                    <outputColumn
+                      refId="Package\CHITIETHOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\CHITIETHOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\CHITIETHOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\CHITIETHOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\CHITIETHOADON_TO_STAGE\TRUNCATE CHITIETHOADON_STAGE"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="TRUNCATE CHITIETHOADON_STAGE"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">truncate table chitiethoadon_webtower9_stage</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\CHITIETHOADON_TO_STAGE\TRUNCATE CHITIETHOADON_STAGE.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Stage]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\CHITIETHOADON_TO_STAGE\TRUNCATE CHITIETHOADON_STAGE.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <externalMetadataColumns
+                    isUsed="True" />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\CHITIETHOADON_TO_STAGE\TRUNCATE CHITIETHOADON_STAGE.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\CHITIETHOADON_TO_STAGE\TRUNCATE CHITIETHOADON_STAGE.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\CHITIETHOADON_TO_STAGE\TRUNCATE CHITIETHOADON_STAGE.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\CHITIETHOADON_TO_STAGE\TRUNCATE CHITIETHOADON_STAGE.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CHITIETHOADON_TO_STAGE\TRUNCATE CHITIETHOADON_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\CHITIETHOADON_TO_STAGE\TRUNCATE CHITIETHOADON_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\CHITIETHOADON_TO_STAGE\TRUNCATE CHITIETHOADON_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\CHITIETHOADON_TO_STAGE\TRUNCATE CHITIETHOADON_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\CHITIETHOADON_TO_STAGE.Paths[OLE DB Command Output]"
+              endId="Package\CHITIETHOADON_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="OLE DB Command Output"
+              startId="Package\CHITIETHOADON_TO_STAGE\TRUNCATE CHITIETHOADON_STAGE.Outputs[OLE DB Command Output]" />
+            <path
+              refId="Package\CHITIETHOADON_TO_STAGE.Paths[OLE DB Source Output]"
+              endId="Package\CHITIETHOADON_TO_STAGE\TRUNCATE CHITIETHOADON_STAGE.Inputs[OLE DB Command Input]"
+              name="OLE DB Source Output"
+              startId="Package\CHITIETHOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\GET CET_WEBTOWER9"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{965CBF43-263E-45E3-89DC-D943ED156F0A}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="GET CET_WEBTOWER9"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{76F8BA34-7250-410E-9E58-586DF83D8B1B}"
+          SQLTask:SqlStatementSource="SELECT GETDATE() AS Expr1"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="Expr1"
+            SQLTask:DtsVariableName="User::CET_W9" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\GET LSET FROM METADATA"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{6709B8EF-5063-4F09-B0E7-1446F5463071}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="GET LSET FROM METADATA"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{76F8BA34-7250-410E-9E58-586DF83D8B1B}"
+          SQLTask:SqlStatementSource="SELECT NgayCapNhat&#xA;FROM     Data_Flow&#xA;WHERE  (TenBang = 'webtower9')"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="NgayCapNhat"
+            SQLTask:DtsVariableName="User::LSET_Webtower9" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\HOADON_TO_STAGE"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{04D15FCD-04AC-480F-88C8-15C4C1C807BF}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="HOADON_TO_STAGE"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\HOADON_TO_STAGE\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[HoaDon_WebTower9_Stage]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\HOADON_TO_STAGE\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Stage]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\HOADON_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\HOADON_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MaHD]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4"
+                      cachedName="MaHD"
+                      externalMetadataColumnId="Package\HOADON_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaHD]"
+                      lineageId="Package\HOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaHD]" />
+                    <inputColumn
+                      refId="Package\HOADON_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MaKH]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4"
+                      cachedName="MaKH"
+                      externalMetadataColumnId="Package\HOADON_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaKH]"
+                      lineageId="Package\HOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaKH]" />
+                    <inputColumn
+                      refId="Package\HOADON_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MaCH]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4"
+                      cachedName="MaCH"
+                      externalMetadataColumnId="Package\HOADON_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaCH]"
+                      lineageId="Package\HOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaCH]" />
+                    <inputColumn
+                      refId="Package\HOADON_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[NgayBan]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="NgayBan"
+                      externalMetadataColumnId="Package\HOADON_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NgayBan]"
+                      lineageId="Package\HOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[NgayBan]" />
+                    <inputColumn
+                      refId="Package\HOADON_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TrangThai]"
+                      cachedDataType="i4"
+                      cachedName="TrangThai"
+                      externalMetadataColumnId="Package\HOADON_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TrangThai]"
+                      lineageId="Package\HOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[TrangThai]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\HOADON_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaHD]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="MaHD" />
+                    <externalMetadataColumn
+                      refId="Package\HOADON_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaKH]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="MaKH" />
+                    <externalMetadataColumn
+                      refId="Package\HOADON_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaCH]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="MaCH" />
+                    <externalMetadataColumn
+                      refId="Package\HOADON_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NgayBan]"
+                      dataType="dbTimeStamp"
+                      name="NgayBan" />
+                    <externalMetadataColumn
+                      refId="Package\HOADON_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TrangThai]"
+                      dataType="i4"
+                      name="TrangThai" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\HOADON_TO_STAGE\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\HOADON_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\HOADON_TO_STAGE\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\HOADON_TO_STAGE\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\HOADON_TO_STAGE\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\HOADON_TO_STAGE\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\HOADON_TO_STAGE\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT MaHD, MaKH, MaCH, NgayBan, NgayCapNhat, TrangThai
+FROM     HoaDon_WebTower9
+WHERE  (NgayCapNhat BETWEEN ? AND ?) OR
+                  (NgayBan BETWEEN ? AND ?)</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping">"Parameter0:Input",{12D213E8-D4AF-46DF-AE05-7D2263E4E4C4};"Parameter1:Input",{F5002AB6-5B58-4A07-880B-32512177343A};"Parameter2:Input",{12D213E8-D4AF-46DF-AE05-7D2263E4E4C4};"Parameter3:Input",{F5002AB6-5B58-4A07-880B-32512177343A};</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\HOADON_TO_STAGE\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Webtower9]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Webtower9]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\HOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\HOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaHD]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\HOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MaHD]"
+                      length="4"
+                      lineageId="Package\HOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaHD]"
+                      name="MaHD"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\HOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaKH]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\HOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MaKH]"
+                      length="4"
+                      lineageId="Package\HOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaKH]"
+                      name="MaKH"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\HOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaCH]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\HOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MaCH]"
+                      length="4"
+                      lineageId="Package\HOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaCH]"
+                      name="MaCH"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\HOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[NgayBan]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\HOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NgayBan]"
+                      lineageId="Package\HOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[NgayBan]"
+                      name="NgayBan"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\HOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[NgayCapNhat]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\HOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NgayCapNhat]"
+                      lineageId="Package\HOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[NgayCapNhat]"
+                      name="NgayCapNhat"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\HOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[TrangThai]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\HOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TrangThai]"
+                      lineageId="Package\HOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[TrangThai]"
+                      name="TrangThai"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\HOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MaHD]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="MaHD" />
+                    <externalMetadataColumn
+                      refId="Package\HOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MaKH]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="MaKH" />
+                    <externalMetadataColumn
+                      refId="Package\HOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MaCH]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="MaCH" />
+                    <externalMetadataColumn
+                      refId="Package\HOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NgayBan]"
+                      dataType="dbTimeStamp"
+                      name="NgayBan" />
+                    <externalMetadataColumn
+                      refId="Package\HOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NgayCapNhat]"
+                      dataType="dbTimeStamp"
+                      name="NgayCapNhat" />
+                    <externalMetadataColumn
+                      refId="Package\HOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TrangThai]"
+                      dataType="i4"
+                      name="TrangThai" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\HOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\HOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MaHD]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      lineageId="Package\HOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MaHD]"
+                      name="MaHD" />
+                    <outputColumn
+                      refId="Package\HOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MaKH]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      lineageId="Package\HOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MaKH]"
+                      name="MaKH" />
+                    <outputColumn
+                      refId="Package\HOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MaCH]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      lineageId="Package\HOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MaCH]"
+                      name="MaCH" />
+                    <outputColumn
+                      refId="Package\HOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NgayBan]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\HOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NgayBan]"
+                      name="NgayBan" />
+                    <outputColumn
+                      refId="Package\HOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NgayCapNhat]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\HOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NgayCapNhat]"
+                      name="NgayCapNhat" />
+                    <outputColumn
+                      refId="Package\HOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TrangThai]"
+                      dataType="i4"
+                      lineageId="Package\HOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TrangThai]"
+                      name="TrangThai" />
+                    <outputColumn
+                      refId="Package\HOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\HOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\HOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\HOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\HOADON_TO_STAGE\TRUNCATE HOADON_STAGE"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="TRUNCATE HOADON_STAGE"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">truncate table hoadon_webtower9_stage</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\HOADON_TO_STAGE\TRUNCATE HOADON_STAGE.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Stage]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\HOADON_TO_STAGE\TRUNCATE HOADON_STAGE.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <externalMetadataColumns
+                    isUsed="True" />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\HOADON_TO_STAGE\TRUNCATE HOADON_STAGE.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\HOADON_TO_STAGE\TRUNCATE HOADON_STAGE.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\HOADON_TO_STAGE\TRUNCATE HOADON_STAGE.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\HOADON_TO_STAGE\TRUNCATE HOADON_STAGE.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\HOADON_TO_STAGE\TRUNCATE HOADON_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\HOADON_TO_STAGE\TRUNCATE HOADON_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\HOADON_TO_STAGE\TRUNCATE HOADON_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\HOADON_TO_STAGE\TRUNCATE HOADON_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\HOADON_TO_STAGE.Paths[OLE DB Command Output]"
+              endId="Package\HOADON_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="OLE DB Command Output"
+              startId="Package\HOADON_TO_STAGE\TRUNCATE HOADON_STAGE.Outputs[OLE DB Command Output]" />
+            <path
+              refId="Package\HOADON_TO_STAGE.Paths[OLE DB Source Output]"
+              endId="Package\HOADON_TO_STAGE\TRUNCATE HOADON_STAGE.Inputs[OLE DB Command Input]"
+              name="OLE DB Source Output"
+              startId="Package\HOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\KHACHHANG_TO_STAGE"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{8D27443D-876B-4794-9F19-AFF1882CE395}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="KHACHHANG_TO_STAGE"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\KHACHHANG_TO_STAGE\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[KhachHang_WebTower9_stage]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\KHACHHANG_TO_STAGE\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Stage]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\KHACHHANG_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\KHACHHANG_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MaKH]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4"
+                      cachedName="MaKH"
+                      externalMetadataColumnId="Package\KHACHHANG_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaKH]"
+                      lineageId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaKH]" />
+                    <inputColumn
+                      refId="Package\KHACHHANG_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TenKH]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TenKH"
+                      externalMetadataColumnId="Package\KHACHHANG_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TenKH]"
+                      lineageId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[TenKH]" />
+                    <inputColumn
+                      refId="Package\KHACHHANG_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TenNuoc]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TenNuoc"
+                      externalMetadataColumnId="Package\KHACHHANG_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TenNuoc]"
+                      lineageId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[TenNuoc]" />
+                    <inputColumn
+                      refId="Package\KHACHHANG_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TrangThai]"
+                      cachedDataType="i4"
+                      cachedName="TrangThai"
+                      externalMetadataColumnId="Package\KHACHHANG_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TrangThai]"
+                      lineageId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[TrangThai]" />
+                    <inputColumn
+                      refId="Package\KHACHHANG_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SoThich]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="SoThich"
+                      externalMetadataColumnId="Package\KHACHHANG_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SoThich]"
+                      lineageId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[SoThich]" />
+                    <inputColumn
+                      refId="Package\KHACHHANG_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[NgheNghiep]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="NgheNghiep"
+                      externalMetadataColumnId="Package\KHACHHANG_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NgheNghiep]"
+                      lineageId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[NgheNghiep]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\KHACHHANG_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaKH]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="MaKH" />
+                    <externalMetadataColumn
+                      refId="Package\KHACHHANG_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TenKH]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="TenKH" />
+                    <externalMetadataColumn
+                      refId="Package\KHACHHANG_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TenNuoc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="TenNuoc" />
+                    <externalMetadataColumn
+                      refId="Package\KHACHHANG_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TrangThai]"
+                      dataType="i4"
+                      name="TrangThai" />
+                    <externalMetadataColumn
+                      refId="Package\KHACHHANG_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GioiThich]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="GioiThich" />
+                    <externalMetadataColumn
+                      refId="Package\KHACHHANG_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SoThich]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="SoThich" />
+                    <externalMetadataColumn
+                      refId="Package\KHACHHANG_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NgheNghiep]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="NgheNghiep" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\KHACHHANG_TO_STAGE\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\KHACHHANG_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\KHACHHANG_TO_STAGE\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\KHACHHANG_TO_STAGE\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\KHACHHANG_TO_STAGE\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\KHACHHANG_TO_STAGE\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\KHACHHANG_TO_STAGE\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT MaKH, TenKH, TenNuoc, NgayTao, NgayCapNhat, TrangThai, GioiTinh, SoThich, NgheNghiep
+FROM     KhachHang_WebTower9
+WHERE  (NgayTao BETWEEN ? AND ?) OR
+                  (NgayCapNhat BETWEEN ? AND ?)</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping">"Parameter0:Input",{12D213E8-D4AF-46DF-AE05-7D2263E4E4C4};"Parameter1:Input",{F5002AB6-5B58-4A07-880B-32512177343A};"Parameter2:Input",{12D213E8-D4AF-46DF-AE05-7D2263E4E4C4};"Parameter3:Input",{F5002AB6-5B58-4A07-880B-32512177343A};</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Webtower9]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Webtower9]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaKH]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MaKH]"
+                      length="4"
+                      lineageId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaKH]"
+                      name="MaKH"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[TenKH]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TenKH]"
+                      length="50"
+                      lineageId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[TenKH]"
+                      name="TenKH"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[TenNuoc]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TenNuoc]"
+                      length="50"
+                      lineageId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[TenNuoc]"
+                      name="TenNuoc"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[NgayTao]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NgayTao]"
+                      lineageId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[NgayTao]"
+                      name="NgayTao"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[NgayCapNhat]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NgayCapNhat]"
+                      lineageId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[NgayCapNhat]"
+                      name="NgayCapNhat"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[TrangThai]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TrangThai]"
+                      lineageId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[TrangThai]"
+                      name="TrangThai"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[GioiTinh]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[GioiTinh]"
+                      length="1"
+                      lineageId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[GioiTinh]"
+                      name="GioiTinh"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[SoThich]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SoThich]"
+                      length="30"
+                      lineageId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[SoThich]"
+                      name="SoThich"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[NgheNghiep]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NgheNghiep]"
+                      length="30"
+                      lineageId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[NgheNghiep]"
+                      name="NgheNghiep"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MaKH]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="MaKH" />
+                    <externalMetadataColumn
+                      refId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TenKH]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="TenKH" />
+                    <externalMetadataColumn
+                      refId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TenNuoc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="TenNuoc" />
+                    <externalMetadataColumn
+                      refId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NgayTao]"
+                      dataType="dbTimeStamp"
+                      name="NgayTao" />
+                    <externalMetadataColumn
+                      refId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NgayCapNhat]"
+                      dataType="dbTimeStamp"
+                      name="NgayCapNhat" />
+                    <externalMetadataColumn
+                      refId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TrangThai]"
+                      dataType="i4"
+                      name="TrangThai" />
+                    <externalMetadataColumn
+                      refId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[GioiTinh]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="GioiTinh" />
+                    <externalMetadataColumn
+                      refId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SoThich]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="SoThich" />
+                    <externalMetadataColumn
+                      refId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NgheNghiep]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="NgheNghiep" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MaKH]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      lineageId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MaKH]"
+                      name="MaKH" />
+                    <outputColumn
+                      refId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TenKH]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TenKH]"
+                      name="TenKH" />
+                    <outputColumn
+                      refId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TenNuoc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TenNuoc]"
+                      name="TenNuoc" />
+                    <outputColumn
+                      refId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NgayTao]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NgayTao]"
+                      name="NgayTao" />
+                    <outputColumn
+                      refId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NgayCapNhat]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NgayCapNhat]"
+                      name="NgayCapNhat" />
+                    <outputColumn
+                      refId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TrangThai]"
+                      dataType="i4"
+                      lineageId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TrangThai]"
+                      name="TrangThai" />
+                    <outputColumn
+                      refId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[GioiTinh]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[GioiTinh]"
+                      name="GioiTinh" />
+                    <outputColumn
+                      refId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SoThich]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      lineageId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SoThich]"
+                      name="SoThich" />
+                    <outputColumn
+                      refId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NgheNghiep]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      lineageId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NgheNghiep]"
+                      name="NgheNghiep" />
+                    <outputColumn
+                      refId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\KHACHHANG_TO_STAGE\TRUNCATE KHACHHANG_STAGE"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="TRUNCATE KHACHHANG_STAGE"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">truncate table khachhang_webtower9_stage</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\KHACHHANG_TO_STAGE\TRUNCATE KHACHHANG_STAGE.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Stage]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\KHACHHANG_TO_STAGE\TRUNCATE KHACHHANG_STAGE.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <externalMetadataColumns
+                    isUsed="True" />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\KHACHHANG_TO_STAGE\TRUNCATE KHACHHANG_STAGE.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\KHACHHANG_TO_STAGE\TRUNCATE KHACHHANG_STAGE.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\KHACHHANG_TO_STAGE\TRUNCATE KHACHHANG_STAGE.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\KHACHHANG_TO_STAGE\TRUNCATE KHACHHANG_STAGE.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\KHACHHANG_TO_STAGE\TRUNCATE KHACHHANG_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\KHACHHANG_TO_STAGE\TRUNCATE KHACHHANG_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\KHACHHANG_TO_STAGE\TRUNCATE KHACHHANG_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\KHACHHANG_TO_STAGE\TRUNCATE KHACHHANG_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\KHACHHANG_TO_STAGE.Paths[OLE DB Command Output]"
+              endId="Package\KHACHHANG_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="OLE DB Command Output"
+              startId="Package\KHACHHANG_TO_STAGE\TRUNCATE KHACHHANG_STAGE.Outputs[OLE DB Command Output]" />
+            <path
+              refId="Package\KHACHHANG_TO_STAGE.Paths[OLE DB Source Output]"
+              endId="Package\KHACHHANG_TO_STAGE\TRUNCATE KHACHHANG_STAGE.Inputs[OLE DB Command Input]"
+              name="OLE DB Source Output"
+              startId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\UPDATE LSET IN METADATA"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{E0C25CC3-2C61-4F42-9933-56E07B19B086}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="UPDATE LSET IN METADATA"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{76F8BA34-7250-410E-9E58-586DF83D8B1B}"
+          SQLTask:SqlStatementSource="UPDATE Data_Flow&#xA;SET          NgayCapNhat = ?&#xA;WHERE  (TenBang = 'webtower9')" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="User::CET_W9"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="7"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{C1A21AB9-7BB7-492C-AF64-105C876A461C}"
+      DTS:From="Package\GET LSET FROM METADATA"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\GET CET_WEBTOWER9" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{019A1251-842D-4DB8-8275-A4CC69253C3D}"
+      DTS:From="Package\GET CET_WEBTOWER9"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\KHACHHANG_TO_STAGE" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{BE0BB4A3-0EE2-4955-9164-75AECB637CD2}"
+      DTS:From="Package\KHACHHANG_TO_STAGE"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\HOADON_TO_STAGE" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{2C571D0C-067C-4B12-B77E-736838435DAB}"
+      DTS:From="Package\HOADON_TO_STAGE"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\CHITIETHOADON_TO_STAGE" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{432975BE-8FE7-4C1A-9A74-97AD691F5B04}"
+      DTS:From="Package\CHITIETHOADON_TO_STAGE"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\UPDATE LSET IN METADATA" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="212,41.6"
+          Id="Package\GET LSET FROM METADATA"
+          TopLeft="55.7142866630945,23.7058826854072" />
+        <NodeLayout
+          Size="201.6,43.2"
+          Id="Package\GET CET_WEBTOWER9"
+          TopLeft="59.0714294837446,122.500001640881" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="160.79285807342,65.3058826854072">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,57.1941189554736"
+              Start="0,0"
+              End="0,49.6941189554736">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49.6941189554736" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="196.8,41.6"
+          Id="Package\KHACHHANG_TO_STAGE"
+          TopLeft="61.9285718786473,208.32353183555" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="160.100000681196,165.700001640881">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,42.6235301946687"
+              Start="0,0"
+              End="0,35.1235301946687">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.1235301946687" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="178.4,41.6"
+          Id="Package\HOADON_TO_STAGE"
+          TopLeft="81.4285728152916,311.270592589527" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="160.328571878647,249.92353183555">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="10.3000009366443,61.3470607539775"
+              Start="0,0"
+              End="10.3000009366443,53.8470607539775">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.6735303769887" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.6735303769887"
+                    Point2="0,30.6735303769887"
+                    Point3="4,30.6735303769887" />
+                  <mssgle:LineSegment
+                    End="6.30000093664432,30.6735303769887" />
+                  <mssgle:CubicBezierSegment
+                    Point1="6.30000093664432,30.6735303769887"
+                    Point2="10.3000009366443,30.6735303769887"
+                    Point3="10.3000009366443,34.6735303769887" />
+                  <mssgle:LineSegment
+                    End="10.3000009366443,53.8470607539775" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="218.4,41.6"
+          Id="Package\CHITIETHOADON_TO_STAGE"
+          TopLeft="106.428573241039,390.76470990412" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="170.628572815292,352.870592589527">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="45.0000004257477,37.8941173145925"
+              Start="0,0"
+              End="45.0000004257477,30.3941173145925">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.9470586572963" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.9470586572963"
+                    Point2="0,18.9470586572963"
+                    Point3="4,18.9470586572963" />
+                  <mssgle:LineSegment
+                    End="41.0000004257477,18.9470586572963" />
+                  <mssgle:CubicBezierSegment
+                    Point1="41.0000004257477,18.9470586572963"
+                    Point2="45.0000004257477,18.9470586572963"
+                    Point3="45.0000004257477,22.9470586572963" />
+                  <mssgle:LineSegment
+                    End="45.0000004257477,30.3941173145925" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="214.4,41.6"
+          Id="Package\UPDATE LSET IN METADATA"
+          TopLeft="97.1428587971901,471.270592589527" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="215.628573241039,432.36470990412">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-11.2857144438492,38.9058826854074"
+              Start="0,0"
+              End="-11.2857144438492,31.4058826854074">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.4529413427037" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15.4529413427037"
+                    Point2="0,19.4529413427037"
+                    Point3="-4,19.4529413427037" />
+                  <mssgle:LineSegment
+                    End="-7.2857144438492,19.4529413427037" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-7.2857144438492,19.4529413427037"
+                    Point2="-11.2857144438492,19.4529413427037"
+                    Point3="-11.2857144438492,23.4529413427037" />
+                  <mssgle:LineSegment
+                    End="-11.2857144438492,31.4058826854074" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\KHACHHANG_TO_STAGE">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="149.6,41.6"
+          Id="Package\KHACHHANG_TO_STAGE\OLE DB Source"
+          TopLeft="112.857144779089,26.7647062577178" />
+        <NodeLayout
+          Size="186.4,41.6"
+          Id="Package\KHACHHANG_TO_STAGE\TRUNCATE KHACHHANG_STAGE"
+          TopLeft="171.428574347983,131.529413609356" />
+        <EdgeLayout
+          Id="Package\KHACHHANG_TO_STAGE.Paths[OLE DB Source Output]"
+          TopLeft="187.657144779089,68.3647062577178">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="76.9714295688941,63.1647073516384"
+              Start="0,0"
+              End="76.9714295688941,55.6647073516384">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.5823536758192" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27.5823536758192"
+                    Point2="0,31.5823536758192"
+                    Point3="4,31.5823536758192" />
+                  <mssgle:LineSegment
+                    End="72.9714295688941,31.5823536758192" />
+                  <mssgle:CubicBezierSegment
+                    Point1="72.9714295688941,31.5823536758192"
+                    Point2="76.9714295688941,31.5823536758192"
+                    Point3="76.9714295688941,35.5823536758192" />
+                  <mssgle:LineSegment
+                    End="76.9714295688941,55.6647073516384" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\KHACHHANG_TO_STAGE\OLE DB Destination"
+          TopLeft="205.714289217579,208.000002917121" />
+        <EdgeLayout
+          Id="Package\KHACHHANG_TO_STAGE.Paths[OLE DB Command Output]"
+          TopLeft="264.628574347983,173.129413609356">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="26.2857148695965,34.8705893077652"
+              Start="0,0"
+              End="26.2857148695965,27.3705893077652">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.4352946538826" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.4352946538826"
+                    Point2="0,17.4352946538826"
+                    Point3="4,17.4352946538826" />
+                  <mssgle:LineSegment
+                    End="22.2857148695965,17.4352946538826" />
+                  <mssgle:CubicBezierSegment
+                    Point1="22.2857148695965,17.4352946538826"
+                    Point2="26.2857148695965,17.4352946538826"
+                    Point3="26.2857148695965,21.4352946538826" />
+                  <mssgle:LineSegment
+                    End="26.2857148695965,27.3705893077652" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\KHACHHANG_TO_STAGE\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\KHACHHANG_TO_STAGE\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\HOADON_TO_STAGE">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="149.6,41.6"
+          Id="Package\HOADON_TO_STAGE\OLE DB Source"
+          TopLeft="281,67" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\HOADON_TO_STAGE\OLE DB Destination"
+          TopLeft="416,266" />
+        <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\HOADON_TO_STAGE\TRUNCATE HOADON_STAGE"
+          TopLeft="381,172.8" />
+        <EdgeLayout
+          Id="Package\HOADON_TO_STAGE.Paths[OLE DB Source Output]"
+          TopLeft="355.8,108.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="107.6,64.2000000000001"
+              Start="0,0"
+              End="107.6,56.7000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.1" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28.1"
+                    Point2="0,32.1"
+                    Point3="4,32.1" />
+                  <mssgle:LineSegment
+                    End="103.6,32.1" />
+                  <mssgle:CubicBezierSegment
+                    Point1="103.6,32.1"
+                    Point2="107.6,32.1"
+                    Point3="107.6,36.1" />
+                  <mssgle:LineSegment
+                    End="107.6,56.7000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\HOADON_TO_STAGE.Paths[OLE DB Command Output]"
+          TopLeft="463.4,214.4">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="37.8,51.5999999999999"
+              Start="0,0"
+              End="37.8,44.0999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.8" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.8"
+                    Point2="0,25.8"
+                    Point3="4,25.8" />
+                  <mssgle:LineSegment
+                    End="33.8,25.8" />
+                  <mssgle:CubicBezierSegment
+                    Point1="33.8,25.8"
+                    Point2="37.8,25.8"
+                    Point3="37.8,29.8" />
+                  <mssgle:LineSegment
+                    End="37.8,44.0999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\HOADON_TO_STAGE\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\HOADON_TO_STAGE\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\CHITIETHOADON_TO_STAGE">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="149.6,41.6"
+          Id="Package\CHITIETHOADON_TO_STAGE\OLE DB Source"
+          TopLeft="255,68" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\CHITIETHOADON_TO_STAGE\OLE DB Destination"
+          TopLeft="702,272" />
+        <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\CHITIETHOADON_TO_STAGE\TRUNCATE CHITIETHOADON_STAGE"
+          TopLeft="335.5,167.5" />
+        <EdgeLayout
+          Id="Package\CHITIETHOADON_TO_STAGE.Paths[OLE DB Source Output]"
+          TopLeft="329.8,109.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="88.1000000000001,57.9"
+              Start="0,0"
+              End="88.1000000000001,50.4">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.95" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.95"
+                    Point2="0,28.95"
+                    Point3="4,28.95" />
+                  <mssgle:LineSegment
+                    End="84.1000000000001,28.95" />
+                  <mssgle:CubicBezierSegment
+                    Point1="84.1000000000001,28.95"
+                    Point2="88.1000000000001,28.95"
+                    Point3="88.1000000000001,32.95" />
+                  <mssgle:LineSegment
+                    End="88.1000000000001,50.4" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\CHITIETHOADON_TO_STAGE.Paths[OLE DB Command Output]"
+          TopLeft="417.9,209.1">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="369.3,62.9"
+              Start="0,0"
+              End="369.3,55.4">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.45" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27.45"
+                    Point2="0,31.45"
+                    Point3="4,31.45" />
+                  <mssgle:LineSegment
+                    End="365.3,31.45" />
+                  <mssgle:CubicBezierSegment
+                    Point1="365.3,31.45"
+                    Point2="369.3,31.45"
+                    Point3="369.3,35.45" />
+                  <mssgle:LineSegment
+                    End="369.3,55.4" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\CHITIETHOADON_TO_STAGE\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\CHITIETHOADON_TO_STAGE\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
