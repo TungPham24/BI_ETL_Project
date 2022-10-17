@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="1"
-  DTS:VersionGUID="{19BE0276-F076-43AE-9E5E-536612AAF64D}">
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{DFB8FB34-67A3-4867-9F0C-31C590E9AEAB}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -100,16 +100,20 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="182.4,41.6"
-          Id="Package\Exe_Jupiter_to_Stage"
-          TopLeft="197.14286050018,46.6470594777368" />
-        <NodeLayout
           Size="183.2,41.6"
           Id="Package\EXE_JADE_TO_STAGE"
           TopLeft="193.571431867931,147.588237363987" />
+        <NodeLayout
+          Size="180.8,41.6"
+          Id="Package\Exe_Jupiter_to_Stage"
+          TopLeft="197.14286050018,46.6470594777368" />
+        <NodeLayout
+          Size="182.4,41.6"
+          Id="Package\EXE_WEBTOWER9_TO_STAGE"
+          TopLeft="197.14286050018,234.000003281762" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="286.757146184055,88.2470594777368">
+          TopLeft="286.357146184056,88.2470594777368">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -129,10 +133,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="182.4,41.6"
-          Id="Package\EXE_WEBTOWER9_TO_STAGE"
-          TopLeft="197.14286050018,234.000003281762" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
           TopLeft="286.757146184055,189.188237363987">

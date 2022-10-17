@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{55C35A88-3E6F-4F24-949F-16738093CE61}">
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{20F36AF6-830B-40CB-869E-09E5033C11E9}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1212,6 +1212,14 @@ WHERE  (NgayCapNhat BETWEEN ? AND ?) OR
                       cachedName="NgheNghiep"
                       externalMetadataColumnId="Package\KHACHHANG_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NgheNghiep]"
                       lineageId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[NgheNghiep]" />
+                    <inputColumn
+                      refId="Package\KHACHHANG_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[GioiTinh]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="GioiTinh"
+                      externalMetadataColumnId="Package\KHACHHANG_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GioiThich]"
+                      lineageId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[GioiTinh]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1742,13 +1750,29 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="212,41.6"
-          Id="Package\GET LSET FROM METADATA"
-          TopLeft="55.7142866630945,23.7058826854072" />
+          Size="218.4,41.6"
+          Id="Package\CHITIETHOADON_TO_STAGE"
+          TopLeft="106.428573241039,390.76470990412" />
         <NodeLayout
           Size="201.6,43.2"
           Id="Package\GET CET_WEBTOWER9"
           TopLeft="59.0714294837446,122.500001640881" />
+        <NodeLayout
+          Size="212,41.6"
+          Id="Package\GET LSET FROM METADATA"
+          TopLeft="55.7142866630945,23.7058826854072" />
+        <NodeLayout
+          Size="178.4,41.6"
+          Id="Package\HOADON_TO_STAGE"
+          TopLeft="81.4285728152916,311.270592589527" />
+        <NodeLayout
+          Size="196.8,41.6"
+          Id="Package\KHACHHANG_TO_STAGE"
+          TopLeft="61.9285718786473,209.088237728628" />
+        <NodeLayout
+          Size="214.4,41.6"
+          Id="Package\UPDATE LSET IN METADATA"
+          TopLeft="97.1428587971901,471.270592589527" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="160.79285807342,65.3058826854072">
@@ -1771,24 +1795,20 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="196.8,41.6"
-          Id="Package\KHACHHANG_TO_STAGE"
-          TopLeft="61.9285718786473,208.32353183555" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
           TopLeft="160.100000681196,165.700001640881">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,42.6235301946687"
+              EndConnector="0,43.3882360877466"
               Start="0,0"
-              End="0,35.1235301946687">
+              End="0,35.8882360877466">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,35.1235301946687" />
+                    End="0,35.8882360877466" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1797,36 +1817,32 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="178.4,41.6"
-          Id="Package\HOADON_TO_STAGE"
-          TopLeft="81.4285728152916,311.270592589527" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="160.328571878647,249.92353183555">
+          TopLeft="160.328571878647,250.688237728628">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="10.3000009366443,61.3470607539775"
+              EndConnector="10.3000009366443,60.5823548608994"
               Start="0,0"
-              End="10.3000009366443,53.8470607539775">
+              End="10.3000009366443,53.0823548608994">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,26.6735303769887" />
+                    End="0,26.2911774304497" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,26.6735303769887"
-                    Point2="0,30.6735303769887"
-                    Point3="4,30.6735303769887" />
+                    Point1="0,26.2911774304497"
+                    Point2="0,30.2911774304497"
+                    Point3="4,30.2911774304497" />
                   <mssgle:LineSegment
-                    End="6.30000093664432,30.6735303769887" />
+                    End="6.3000009366443,30.2911774304497" />
                   <mssgle:CubicBezierSegment
-                    Point1="6.30000093664432,30.6735303769887"
-                    Point2="10.3000009366443,30.6735303769887"
-                    Point3="10.3000009366443,34.6735303769887" />
+                    Point1="6.3000009366443,30.2911774304497"
+                    Point2="10.3000009366443,30.2911774304497"
+                    Point3="10.3000009366443,34.2911774304497" />
                   <mssgle:LineSegment
-                    End="10.3000009366443,53.8470607539775" />
+                    End="10.3000009366443,53.0823548608994" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1835,10 +1851,6 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="218.4,41.6"
-          Id="Package\CHITIETHOADON_TO_STAGE"
-          TopLeft="106.428573241039,390.76470990412" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
           TopLeft="170.628572815292,352.870592589527">
@@ -1873,10 +1885,6 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="214.4,41.6"
-          Id="Package\UPDATE LSET IN METADATA"
-          TopLeft="97.1428587971901,471.270592589527" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
           TopLeft="215.628573241039,432.36470990412">
@@ -1915,44 +1923,36 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\KHACHHANG_TO_STAGE">
+    design-time-name="Package\CHITIETHOADON_TO_STAGE">
     <LayoutInfo>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="149.6,41.6"
-          Id="Package\KHACHHANG_TO_STAGE\OLE DB Source"
-          TopLeft="112.857144779089,26.7647062577178" />
+          Id="Package\CHITIETHOADON_TO_STAGE\OLE DB Source"
+          TopLeft="377,53" />
         <NodeLayout
-          Size="186.4,41.6"
-          Id="Package\KHACHHANG_TO_STAGE\TRUNCATE KHACHHANG_STAGE"
-          TopLeft="171.428574347983,131.529413609356" />
+          Size="217.6,52.8"
+          Id="Package\CHITIETHOADON_TO_STAGE\TRUNCATE CHITIETHOADON_STAGE"
+          TopLeft="335.5,167.5" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\CHITIETHOADON_TO_STAGE\OLE DB Destination"
+          TopLeft="354,277" />
         <EdgeLayout
-          Id="Package\KHACHHANG_TO_STAGE.Paths[OLE DB Source Output]"
-          TopLeft="187.657144779089,68.3647062577178">
+          Id="Package\CHITIETHOADON_TO_STAGE.Paths[OLE DB Source Output]"
+          TopLeft="448.05,94.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="76.9714295688941,63.1647073516384"
+              EndConnector="0,72.9"
               Start="0,0"
-              End="76.9714295688941,55.6647073516384">
+              End="0,65.4">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,27.5823536758192" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,27.5823536758192"
-                    Point2="0,31.5823536758192"
-                    Point3="4,31.5823536758192" />
-                  <mssgle:LineSegment
-                    End="72.9714295688941,31.5823536758192" />
-                  <mssgle:CubicBezierSegment
-                    Point1="72.9714295688941,31.5823536758192"
-                    Point2="76.9714295688941,31.5823536758192"
-                    Point3="76.9714295688941,35.5823536758192" />
-                  <mssgle:LineSegment
-                    End="76.9714295688941,55.6647073516384" />
+                    End="0,65.4" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1961,10 +1961,204 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\CHITIETHOADON_TO_STAGE.Paths[OLE DB Command Output]"
+          TopLeft="441.75,220.3">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,56.7"
+              Start="0,0"
+              End="0,49.2">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49.2" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\CHITIETHOADON_TO_STAGE\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\CHITIETHOADON_TO_STAGE\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\HOADON_TO_STAGE">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\HOADON_TO_STAGE\TRUNCATE HOADON_STAGE"
+          TopLeft="381,172.8" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\HOADON_TO_STAGE\OLE DB Destination"
+          TopLeft="416,266" />
+        <NodeLayout
+          Size="149.6,41.6"
+          Id="Package\HOADON_TO_STAGE\OLE DB Source"
+          TopLeft="281,67" />
+        <EdgeLayout
+          Id="Package\HOADON_TO_STAGE.Paths[OLE DB Source Output]"
+          TopLeft="355.8,108.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="107.6,64.2000000000001"
+              Start="0,0"
+              End="107.6,56.7000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.1" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28.1"
+                    Point2="0,32.1"
+                    Point3="4,32.1" />
+                  <mssgle:LineSegment
+                    End="103.6,32.1" />
+                  <mssgle:CubicBezierSegment
+                    Point1="103.6,32.1"
+                    Point2="107.6,32.1"
+                    Point3="107.6,36.1" />
+                  <mssgle:LineSegment
+                    End="107.6,56.7000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\HOADON_TO_STAGE.Paths[OLE DB Command Output]"
+          TopLeft="463.4,214.4">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="37.8,51.5999999999999"
+              Start="0,0"
+              End="37.8,44.0999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.8" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.8"
+                    Point2="0,25.8"
+                    Point3="4,25.8" />
+                  <mssgle:LineSegment
+                    End="33.8,25.8" />
+                  <mssgle:CubicBezierSegment
+                    Point1="33.8,25.8"
+                    Point2="37.8,25.8"
+                    Point3="37.8,29.8" />
+                  <mssgle:LineSegment
+                    End="37.8,44.0999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\HOADON_TO_STAGE\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\HOADON_TO_STAGE\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\KHACHHANG_TO_STAGE">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="186.4,41.6"
+          Id="Package\KHACHHANG_TO_STAGE\TRUNCATE KHACHHANG_STAGE"
+          TopLeft="171.428574347983,131.529413609356" />
+        <NodeLayout
+          Size="149.6,41.6"
+          Id="Package\KHACHHANG_TO_STAGE\OLE DB Source"
+          TopLeft="187.857146056331,19.8823532200189" />
         <NodeLayout
           Size="170.4,41.6"
           Id="Package\KHACHHANG_TO_STAGE\OLE DB Destination"
           TopLeft="205.714289217579,208.000002917121" />
+        <EdgeLayout
+          Id="Package\KHACHHANG_TO_STAGE.Paths[OLE DB Source Output]"
+          TopLeft="263.642860202157,61.4823532200189">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,70.0470603893371"
+              Start="0,0"
+              End="0,62.5470603893371">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,62.5470603893371" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\KHACHHANG_TO_STAGE.Paths[OLE DB Command Output]"
           TopLeft="264.628574347983,173.129413609356">
@@ -2012,224 +2206,6 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\KHACHHANG_TO_STAGE\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\HOADON_TO_STAGE">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="149.6,41.6"
-          Id="Package\HOADON_TO_STAGE\OLE DB Source"
-          TopLeft="281,67" />
-        <NodeLayout
-          Size="170.4,41.6"
-          Id="Package\HOADON_TO_STAGE\OLE DB Destination"
-          TopLeft="416,266" />
-        <NodeLayout
-          Size="164.8,41.6"
-          Id="Package\HOADON_TO_STAGE\TRUNCATE HOADON_STAGE"
-          TopLeft="381,172.8" />
-        <EdgeLayout
-          Id="Package\HOADON_TO_STAGE.Paths[OLE DB Source Output]"
-          TopLeft="355.8,108.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="107.6,64.2000000000001"
-              Start="0,0"
-              End="107.6,56.7000000000001">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,28.1" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,28.1"
-                    Point2="0,32.1"
-                    Point3="4,32.1" />
-                  <mssgle:LineSegment
-                    End="103.6,32.1" />
-                  <mssgle:CubicBezierSegment
-                    Point1="103.6,32.1"
-                    Point2="107.6,32.1"
-                    Point3="107.6,36.1" />
-                  <mssgle:LineSegment
-                    End="107.6,56.7000000000001" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\HOADON_TO_STAGE.Paths[OLE DB Command Output]"
-          TopLeft="463.4,214.4">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="37.8,51.5999999999999"
-              Start="0,0"
-              End="37.8,44.0999999999999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,21.8" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,21.8"
-                    Point2="0,25.8"
-                    Point3="4,25.8" />
-                  <mssgle:LineSegment
-                    End="33.8,25.8" />
-                  <mssgle:CubicBezierSegment
-                    Point1="33.8,25.8"
-                    Point2="37.8,25.8"
-                    Point3="37.8,29.8" />
-                  <mssgle:LineSegment
-                    End="37.8,44.0999999999999" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\HOADON_TO_STAGE\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\HOADON_TO_STAGE\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\CHITIETHOADON_TO_STAGE">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="149.6,41.6"
-          Id="Package\CHITIETHOADON_TO_STAGE\OLE DB Source"
-          TopLeft="255,68" />
-        <NodeLayout
-          Size="170.4,41.6"
-          Id="Package\CHITIETHOADON_TO_STAGE\OLE DB Destination"
-          TopLeft="702,272" />
-        <NodeLayout
-          Size="164.8,41.6"
-          Id="Package\CHITIETHOADON_TO_STAGE\TRUNCATE CHITIETHOADON_STAGE"
-          TopLeft="335.5,167.5" />
-        <EdgeLayout
-          Id="Package\CHITIETHOADON_TO_STAGE.Paths[OLE DB Source Output]"
-          TopLeft="329.8,109.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="88.1000000000001,57.9"
-              Start="0,0"
-              End="88.1000000000001,50.4">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.95" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,24.95"
-                    Point2="0,28.95"
-                    Point3="4,28.95" />
-                  <mssgle:LineSegment
-                    End="84.1000000000001,28.95" />
-                  <mssgle:CubicBezierSegment
-                    Point1="84.1000000000001,28.95"
-                    Point2="88.1000000000001,28.95"
-                    Point3="88.1000000000001,32.95" />
-                  <mssgle:LineSegment
-                    End="88.1000000000001,50.4" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\CHITIETHOADON_TO_STAGE.Paths[OLE DB Command Output]"
-          TopLeft="417.9,209.1">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="369.3,62.9"
-              Start="0,0"
-              End="369.3,55.4">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,27.45" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,27.45"
-                    Point2="0,31.45"
-                    Point3="4,31.45" />
-                  <mssgle:LineSegment
-                    End="365.3,31.45" />
-                  <mssgle:CubicBezierSegment
-                    Point1="365.3,31.45"
-                    Point2="369.3,31.45"
-                    Point3="369.3,35.45" />
-                  <mssgle:LineSegment
-                    End="369.3,55.4" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\CHITIETHOADON_TO_STAGE\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\CHITIETHOADON_TO_STAGE\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
