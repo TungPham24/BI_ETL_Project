@@ -5,14 +5,14 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DESKTOP-8V127BM"
   DTS:CreatorName="DESKTOP-8V127BM\tung3"
-  DTS:DTSID="{0A90EAD3-9D45-4565-A86E-729692777DD9}"
+  DTS:DTSID="{FBD1343C-0A1B-411D-B837-B72F1BA82E65}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="16.0.845.0"
   DTS:LocaleID="1033"
-  DTS:ObjectName="Package1"
+  DTS:ObjectName="02-1-Jade"
   DTS:PackageType="5"
-  DTS:VersionBuild="5"
-  DTS:VersionGUID="{70BB5DA8-7AA5-4ABB-9786-805DF5FCA276}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{E4B7B65F-EE1F-4817-A1E8-BD7B549C2191}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -68,15 +68,15 @@
           version="1">
           <components>
             <component
-              refId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column"
+              refId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column NGAYCAPNHAT"
               componentClassID="Microsoft.DerivedColumn"
               contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
               description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
-              name="Derived Column"
+              name="Derived Column NGAYCAPNHAT"
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column.Inputs[Derived Column Input]"
+                  refId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column NGAYCAPNHAT.Inputs[Derived Column Input]"
                   description="Input to the Derived Column Transformation"
                   name="Derived Column Input">
                   <externalMetadataColumns />
@@ -84,18 +84,186 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column.Outputs[Derived Column Output]"
+                  refId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column NGAYCAPNHAT.Outputs[Derived Column Output]"
                   description="Default Output of the Derived Column Transformation"
                   exclusionGroup="1"
                   name="Derived Column Output"
-                  synchronousInputId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column.Inputs[Derived Column Input]">
+                  synchronousInputId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column NGAYCAPNHAT.Inputs[Derived Column Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column.Outputs[Derived Column Output].Columns[nguondulieu]"
+                      refId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column NGAYCAPNHAT.Outputs[Derived Column Output].Columns[ngaycapnhat]"
+                      dataType="date"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column NGAYCAPNHAT.Outputs[Derived Column Output].Columns[ngaycapnhat]"
+                      name="ngaycapnhat"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">@[User::CET]</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">@[User::CET]</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column NGAYCAPNHAT.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column NGAYCAPNHAT.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column NGAYCAPNHAT.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column NGAYCAPNHAT.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column NGAYCAPNHAT.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column NGAYCAPNHAT.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column NGAYTAO, NGAYCAPNHAT"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column NGAYTAO, NGAYCAPNHAT"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column NGAYTAO, NGAYCAPNHAT.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column NGAYTAO, NGAYCAPNHAT.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column NGAYTAO, NGAYCAPNHAT.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column NGAYTAO, NGAYCAPNHAT.Outputs[Derived Column Output].Columns[ngaytao]"
+                      dataType="date"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column NGAYTAO, NGAYCAPNHAT.Outputs[Derived Column Output].Columns[ngaytao]"
+                      name="ngaytao"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">@[User::CET]</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">@[User::CET]</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column NGAYTAO, NGAYCAPNHAT.Outputs[Derived Column Output].Columns[ngaycapnhat]"
+                      dataType="date"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column NGAYTAO, NGAYCAPNHAT.Outputs[Derived Column Output].Columns[ngaycapnhat]"
+                      name="ngaycapnhat"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">@[User::CET]</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">@[User::CET]</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column NGAYTAO, NGAYCAPNHAT.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column NGAYTAO, NGAYCAPNHAT.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column NGAYTAO, NGAYCAPNHAT.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column NGAYTAO, NGAYCAPNHAT.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column NGAYTAO, NGAYCAPNHAT.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column NGAYTAO, NGAYCAPNHAT.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column NGUONDULIEU"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column NGUONDULIEU"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column NGUONDULIEU.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column NGUONDULIEU.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column NGUONDULIEU.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column NGUONDULIEU.Outputs[Derived Column Output].Columns[nguondulieu]"
                       dataType="i4"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column.Outputs[Derived Column Output].Columns[nguondulieu]"
+                      lineageId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column NGUONDULIEU.Outputs[Derived Column Output].Columns[nguondulieu]"
                       name="nguondulieu"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -116,23 +284,23 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column.Outputs[Derived Column Error Output]"
+                  refId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column NGUONDULIEU.Outputs[Derived Column Error Output]"
                   description="Error Output of the Derived Column Transformation"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Derived Column Error Output"
-                  synchronousInputId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column.Inputs[Derived Column Input]">
+                  synchronousInputId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column NGUONDULIEU.Inputs[Derived Column Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      refId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column NGUONDULIEU.Outputs[Derived Column Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      lineageId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column NGUONDULIEU.Outputs[Derived Column Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      refId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column NGUONDULIEU.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column NGUONDULIEU.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -141,343 +309,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column 1"
-              componentClassID="Microsoft.DerivedColumn"
-              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
-              name="Derived Column 1"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column 1.Inputs[Derived Column Input]"
-                  description="Input to the Derived Column Transformation"
-                  name="Derived Column Input">
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column 1.Outputs[Derived Column Output]"
-                  description="Default Output of the Derived Column Transformation"
-                  exclusionGroup="1"
-                  name="Derived Column Output"
-                  synchronousInputId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column 1.Inputs[Derived Column Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column 1.Outputs[Derived Column Output].Columns[ngaycapnhat]"
-                      dataType="date"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column 1.Outputs[Derived Column Output].Columns[ngaycapnhat]"
-                      name="ngaycapnhat"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">@[User::CET]</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">@[User::CET]</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column 1.Outputs[Derived Column Error Output]"
-                  description="Error Output of the Derived Column Transformation"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Derived Column Error Output"
-                  synchronousInputId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column 1.Inputs[Derived Column Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column 2"
-              componentClassID="Microsoft.DerivedColumn"
-              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
-              name="Derived Column 2"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column 2.Inputs[Derived Column Input]"
-                  description="Input to the Derived Column Transformation"
-                  name="Derived Column Input">
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column 2.Outputs[Derived Column Output]"
-                  description="Default Output of the Derived Column Transformation"
-                  exclusionGroup="1"
-                  name="Derived Column Output"
-                  synchronousInputId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column 2.Inputs[Derived Column Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column 2.Outputs[Derived Column Output].Columns[ngaytao]"
-                      dataType="date"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column 2.Outputs[Derived Column Output].Columns[ngaytao]"
-                      name="ngaytao"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">@[User::CET]</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">@[User::CET]</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column 2.Outputs[Derived Column Output].Columns[ngaycapnhat]"
-                      dataType="date"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column 2.Outputs[Derived Column Output].Columns[ngaycapnhat]"
-                      name="ngaycapnhat"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">@[User::CET]</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">@[User::CET]</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column 2.Outputs[Derived Column Error Output]"
-                  description="Error Output of the Derived Column Transformation"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Derived Column Error Output"
-                  synchronousInputId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column 2.Inputs[Derived Column Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column 2.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column 2.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column 2.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column 2.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup"
+              refId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup MA_CHITIET"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
               description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
-              name="Lookup"
-              usesDispositions="true"
-              version="6">
-              <properties>
-                <property
-                  dataType="System.String"
-                  description="Specifies the SQL statement that generates the lookup table."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT Ma, MaSP
-FROM     SanPham
-WHERE  (NguonDuLieu = 3)</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
-                  expressionType="Notify"
-                  name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (SELECT Ma, MaSP
-FROM     SanPham
-WHERE  (NguonDuLieu = 3)) [refTable]
-where [refTable].[MaSP] = ?</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the type of connection used to access the reference dataset."
-                  name="ConnectionType"
-                  typeConverter="LookupConnectionType">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the cache type of the lookup table."
-                  name="CacheType"
-                  typeConverter="CacheType">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
-                  name="NoMatchBehavior"
-                  typeConverter="LookupNoMatchBehavior">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
-                  name="NoMatchCachePercentage">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
-                  name="MaxMemoryUsage">25</property>
-                <property
-                  dataType="System.Int64"
-                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
-                  name="MaxMemoryUsage64">25</property>
-                <property
-                  dataType="System.String"
-                  description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Ma" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="MaSP" dataType="DT_STR" length="4" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
-                <property
-                  containsID="true"
-                  dataType="System.String"
-                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\CHITIETHOADON_JADE_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaSP]};</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
-                  name="TreatDuplicateKeysAsError">false</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.NDS]"
-                  description="Connection manager used to access lookup data."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup.Inputs[Lookup Input]"
-                  name="Lookup Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup.Inputs[Lookup Input].Columns[MaSP]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="4"
-                      cachedName="MaSP"
-                      lineageId="Package\CHITIETHOADON_JADE_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaSP]">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">MaSP</property>
-                        <property
-                          dataType="System.Null"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn" />
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup.Outputs[Lookup Match Output]"
-                  errorOrTruncationOperation="Lookup"
-                  errorRowDisposition="FailComponent"
-                  exclusionGroup="1"
-                  name="Lookup Match Output"
-                  synchronousInputId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup.Inputs[Lookup Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup.Outputs[Lookup Match Output].Columns[MaSPTrongNDS]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup.Outputs[Lookup Match Output].Columns[MaSPTrongNDS]"
-                      name="MaSPTrongNDS"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn">Ma</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup.Outputs[Lookup No Match Output]"
-                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
-                  exclusionGroup="1"
-                  name="Lookup No Match Output"
-                  synchronousInputId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup.Inputs[Lookup Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup.Outputs[Lookup Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Lookup Error Output"
-                  synchronousInputId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup.Inputs[Lookup Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup 1"
-              componentClassID="Microsoft.Lookup"
-              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
-              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
-              name="Lookup 1"
+              name="Lookup MA_CHITIET"
               usesDispositions="true"
               version="6">
               <properties>
@@ -545,7 +381,7 @@ where [refTable].[MaChiTiet] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup 1.Connections[OleDbConnection]"
+                  refId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup MA_CHITIET.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.NDS]"
                   connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.NDS]"
                   description="Connection manager used to access lookup data."
@@ -553,11 +389,11 @@ where [refTable].[MaChiTiet] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup 1.Inputs[Lookup Input]"
+                  refId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup MA_CHITIET.Inputs[Lookup Input]"
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup 1.Inputs[Lookup Input].Columns[MaChiTiet]"
+                      refId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup MA_CHITIET.Inputs[Lookup Input].Columns[MaChiTiet]"
                       cachedDataType="i4"
                       cachedName="MaChiTiet"
                       lineageId="Package\CHITIETHOADON_JADE_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaChiTiet]">
@@ -578,18 +414,18 @@ where [refTable].[MaChiTiet] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup 1.Outputs[Lookup Match Output]"
+                  refId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup MA_CHITIET.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
                   errorRowDisposition="RedirectRow"
                   exclusionGroup="1"
                   name="Lookup Match Output"
-                  synchronousInputId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup 1.Inputs[Lookup Input]">
+                  synchronousInputId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup MA_CHITIET.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup 1.Outputs[Lookup Match Output].Columns[MaCTTrongNDS]"
+                      refId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup MA_CHITIET.Outputs[Lookup Match Output].Columns[MaCTTrongNDS]"
                       dataType="i4"
                       errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup 1.Outputs[Lookup Match Output].Columns[MaCTTrongNDS]"
+                      lineageId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup MA_CHITIET.Outputs[Lookup Match Output].Columns[MaCTTrongNDS]"
                       name="MaCTTrongNDS"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -603,30 +439,30 @@ where [refTable].[MaChiTiet] = ?</property>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup 1.Outputs[Lookup No Match Output]"
+                  refId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup MA_CHITIET.Outputs[Lookup No Match Output]"
                   description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
                   exclusionGroup="1"
                   name="Lookup No Match Output"
-                  synchronousInputId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup 1.Inputs[Lookup Input]">
+                  synchronousInputId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup MA_CHITIET.Inputs[Lookup Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup 1.Outputs[Lookup Error Output]"
+                  refId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup MA_CHITIET.Outputs[Lookup Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Lookup Error Output"
-                  synchronousInputId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup 1.Inputs[Lookup Input]">
+                  synchronousInputId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup MA_CHITIET.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup 1.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      refId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup MA_CHITIET.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup 1.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      lineageId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup MA_CHITIET.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup 1.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      refId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup MA_CHITIET.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup 1.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup MA_CHITIET.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -799,6 +635,170 @@ where [refTable].[MaHD] = ?</property>
               </outputs>
             </component>
             <component
+              refId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup MA_SANPHAM"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup MA_SANPHAM"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT Ma, MaSP
+FROM     SanPham
+WHERE  (NguonDuLieu = 3)</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (SELECT Ma, MaSP
+FROM     SanPham
+WHERE  (NguonDuLieu = 3)) [refTable]
+where [refTable].[MaSP] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Ma" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="MaSP" dataType="DT_STR" length="4" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\CHITIETHOADON_JADE_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaSP]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup MA_SANPHAM.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.NDS]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup MA_SANPHAM.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup MA_SANPHAM.Inputs[Lookup Input].Columns[MaSP]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4"
+                      cachedName="MaSP"
+                      lineageId="Package\CHITIETHOADON_JADE_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaSP]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">MaSP</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup MA_SANPHAM.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup MA_SANPHAM.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup MA_SANPHAM.Outputs[Lookup Match Output].Columns[MaSPTrongNDS]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup MA_SANPHAM.Outputs[Lookup Match Output].Columns[MaSPTrongNDS]"
+                      name="MaSPTrongNDS"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Ma</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup MA_SANPHAM.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup MA_SANPHAM.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup MA_SANPHAM.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup MA_SANPHAM.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup MA_SANPHAM.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup MA_SANPHAM.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup MA_SANPHAM.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup MA_SANPHAM.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\CHITIETHOADON_JADE_TO_STAGE\OLE DB Destination"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
@@ -903,19 +903,19 @@ where [refTable].[MaHD] = ?</property>
                       cachedDataType="i4"
                       cachedName="nguondulieu"
                       externalMetadataColumnId="Package\CHITIETHOADON_JADE_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NguonDuLieu]"
-                      lineageId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column.Outputs[Derived Column Output].Columns[nguondulieu]" />
+                      lineageId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column NGUONDULIEU.Outputs[Derived Column Output].Columns[nguondulieu]" />
                     <inputColumn
                       refId="Package\CHITIETHOADON_JADE_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ngaytao]"
                       cachedDataType="date"
                       cachedName="ngaytao"
                       externalMetadataColumnId="Package\CHITIETHOADON_JADE_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NgayTao]"
-                      lineageId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column 2.Outputs[Derived Column Output].Columns[ngaytao]" />
+                      lineageId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column NGAYTAO, NGAYCAPNHAT.Outputs[Derived Column Output].Columns[ngaytao]" />
                     <inputColumn
                       refId="Package\CHITIETHOADON_JADE_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ngaycapnhat]"
                       cachedDataType="date"
                       cachedName="ngaycapnhat"
                       externalMetadataColumnId="Package\CHITIETHOADON_JADE_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NgayCapNhat]"
-                      lineageId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column 2.Outputs[Derived Column Output].Columns[ngaycapnhat]" />
+                      lineageId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column NGAYTAO, NGAYCAPNHAT.Outputs[Derived Column Output].Columns[ngaycapnhat]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1204,7 +1204,7 @@ where ma = ?</property>
                       cachedDataType="i4"
                       cachedName="MaSPTrongNDS"
                       externalMetadataColumnId="Package\CHITIETHOADON_JADE_TO_STAGE\UPDATE EXISTING ROW.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      lineageId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup.Outputs[Lookup Match Output].Columns[MaSPTrongNDS]" />
+                      lineageId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup MA_SANPHAM.Outputs[Lookup Match Output].Columns[MaSPTrongNDS]" />
                     <inputColumn
                       refId="Package\CHITIETHOADON_JADE_TO_STAGE\UPDATE EXISTING ROW.Inputs[OLE DB Command Input].Columns[TrangThai]"
                       cachedDataType="i4"
@@ -1216,13 +1216,13 @@ where ma = ?</property>
                       cachedDataType="date"
                       cachedName="ngaycapnhat"
                       externalMetadataColumnId="Package\CHITIETHOADON_JADE_TO_STAGE\UPDATE EXISTING ROW.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
-                      lineageId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column 1.Outputs[Derived Column Output].Columns[ngaycapnhat]" />
+                      lineageId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column NGAYCAPNHAT.Outputs[Derived Column Output].Columns[ngaycapnhat]" />
                     <inputColumn
                       refId="Package\CHITIETHOADON_JADE_TO_STAGE\UPDATE EXISTING ROW.Inputs[OLE DB Command Input].Columns[MaCTTrongNDS]"
                       cachedDataType="i4"
                       cachedName="MaCTTrongNDS"
                       externalMetadataColumnId="Package\CHITIETHOADON_JADE_TO_STAGE\UPDATE EXISTING ROW.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
-                      lineageId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup 1.Outputs[Lookup Match Output].Columns[MaCTTrongNDS]" />
+                      lineageId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup MA_CHITIET.Outputs[Lookup Match Output].Columns[MaCTTrongNDS]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1322,40 +1322,40 @@ where ma = ?</property>
               refId="Package\CHITIETHOADON_JADE_TO_STAGE.Paths[Derived Column Output]"
               endId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup MA_HD.Inputs[Lookup Input]"
               name="Derived Column Output"
-              startId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column.Outputs[Derived Column Output]" />
+              startId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column NGUONDULIEU.Outputs[Derived Column Output]" />
             <path
               refId="Package\CHITIETHOADON_JADE_TO_STAGE.Paths[Derived Column Output1]"
               endId="Package\CHITIETHOADON_JADE_TO_STAGE\UPDATE EXISTING ROW.Inputs[OLE DB Command Input]"
               name="Derived Column Output"
-              startId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column 1.Outputs[Derived Column Output]" />
+              startId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column NGAYCAPNHAT.Outputs[Derived Column Output]" />
             <path
               refId="Package\CHITIETHOADON_JADE_TO_STAGE.Paths[Derived Column Output2]"
               endId="Package\CHITIETHOADON_JADE_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="Derived Column Output"
-              startId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column 2.Outputs[Derived Column Output]" />
+              startId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column NGAYTAO, NGAYCAPNHAT.Outputs[Derived Column Output]" />
             <path
               refId="Package\CHITIETHOADON_JADE_TO_STAGE.Paths[Lookup Error Output]"
-              endId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column 2.Inputs[Derived Column Input]"
+              endId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column NGAYTAO, NGAYCAPNHAT.Inputs[Derived Column Input]"
               name="Lookup Error Output"
-              startId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup 1.Outputs[Lookup Error Output]" />
+              startId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup MA_CHITIET.Outputs[Lookup Error Output]" />
             <path
               refId="Package\CHITIETHOADON_JADE_TO_STAGE.Paths[Lookup Match Output]"
-              endId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup.Inputs[Lookup Input]"
+              endId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup MA_SANPHAM.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup MA_HD.Outputs[Lookup Match Output]" />
             <path
               refId="Package\CHITIETHOADON_JADE_TO_STAGE.Paths[Lookup Match Output1]"
-              endId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup 1.Inputs[Lookup Input]"
+              endId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup MA_CHITIET.Inputs[Lookup Input]"
               name="Lookup Match Output"
-              startId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup.Outputs[Lookup Match Output]" />
+              startId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup MA_SANPHAM.Outputs[Lookup Match Output]" />
             <path
               refId="Package\CHITIETHOADON_JADE_TO_STAGE.Paths[Lookup Match Output2]"
-              endId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column 1.Inputs[Derived Column Input]"
+              endId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column NGAYCAPNHAT.Inputs[Derived Column Input]"
               name="Lookup Match Output"
-              startId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup 1.Outputs[Lookup Match Output]" />
+              startId="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup MA_CHITIET.Outputs[Lookup Match Output]" />
             <path
               refId="Package\CHITIETHOADON_JADE_TO_STAGE.Paths[OLE DB Source Output]"
-              endId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column.Inputs[Derived Column Input]"
+              endId="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column NGUONDULIEU.Inputs[Derived Column Input]"
               name="OLE DB Source Output"
               startId="Package\CHITIETHOADON_JADE_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output]" />
           </paths>
@@ -1363,13 +1363,13 @@ where ma = ?</property>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Expression Task"
+      DTS:refId="Package\GET CET"
       DTS:CreationName="Microsoft.ExpressionTask"
       DTS:Description="Expression Task"
       DTS:DTSID="{03B93B12-5896-4196-857A-A81D21AE619D}"
       DTS:ExecutableType="Microsoft.ExpressionTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Expression Task"
+      DTS:ObjectName="GET CET"
       DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -1392,15 +1392,15 @@ where ma = ?</property>
           version="1">
           <components>
             <component
-              refId="Package\HOADON_JADE_TO_NDS\Derived Column"
+              refId="Package\HOADON_JADE_TO_NDS\Derived Column NGAYCAPNHAT"
               componentClassID="Microsoft.DerivedColumn"
               contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
               description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
-              name="Derived Column"
+              name="Derived Column NGAYCAPNHAT"
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\HOADON_JADE_TO_NDS\Derived Column.Inputs[Derived Column Input]"
+                  refId="Package\HOADON_JADE_TO_NDS\Derived Column NGAYCAPNHAT.Inputs[Derived Column Input]"
                   description="Input to the Derived Column Transformation"
                   name="Derived Column Input">
                   <externalMetadataColumns />
@@ -1408,18 +1408,186 @@ where ma = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\HOADON_JADE_TO_NDS\Derived Column.Outputs[Derived Column Output]"
+                  refId="Package\HOADON_JADE_TO_NDS\Derived Column NGAYCAPNHAT.Outputs[Derived Column Output]"
                   description="Default Output of the Derived Column Transformation"
                   exclusionGroup="1"
                   name="Derived Column Output"
-                  synchronousInputId="Package\HOADON_JADE_TO_NDS\Derived Column.Inputs[Derived Column Input]">
+                  synchronousInputId="Package\HOADON_JADE_TO_NDS\Derived Column NGAYCAPNHAT.Inputs[Derived Column Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\HOADON_JADE_TO_NDS\Derived Column.Outputs[Derived Column Output].Columns[NguonDuLieu]"
+                      refId="Package\HOADON_JADE_TO_NDS\Derived Column NGAYCAPNHAT.Outputs[Derived Column Output].Columns[ngaycapnhat]"
+                      dataType="date"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\HOADON_JADE_TO_NDS\Derived Column NGAYCAPNHAT.Outputs[Derived Column Output].Columns[ngaycapnhat]"
+                      name="ngaycapnhat"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">@[User::CET]</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">@[User::CET]</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\HOADON_JADE_TO_NDS\Derived Column NGAYCAPNHAT.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\HOADON_JADE_TO_NDS\Derived Column NGAYCAPNHAT.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\HOADON_JADE_TO_NDS\Derived Column NGAYCAPNHAT.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\HOADON_JADE_TO_NDS\Derived Column NGAYCAPNHAT.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\HOADON_JADE_TO_NDS\Derived Column NGAYCAPNHAT.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\HOADON_JADE_TO_NDS\Derived Column NGAYCAPNHAT.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\HOADON_JADE_TO_NDS\Derived Column NGAYTAO, NGAYCAPNHAT"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column NGAYTAO, NGAYCAPNHAT"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\HOADON_JADE_TO_NDS\Derived Column NGAYTAO, NGAYCAPNHAT.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\HOADON_JADE_TO_NDS\Derived Column NGAYTAO, NGAYCAPNHAT.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\HOADON_JADE_TO_NDS\Derived Column NGAYTAO, NGAYCAPNHAT.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\HOADON_JADE_TO_NDS\Derived Column NGAYTAO, NGAYCAPNHAT.Outputs[Derived Column Output].Columns[ngaytao]"
+                      dataType="date"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\HOADON_JADE_TO_NDS\Derived Column NGAYTAO, NGAYCAPNHAT.Outputs[Derived Column Output].Columns[ngaytao]"
+                      name="ngaytao"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">@[User::CET]</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">@[User::CET]</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\HOADON_JADE_TO_NDS\Derived Column NGAYTAO, NGAYCAPNHAT.Outputs[Derived Column Output].Columns[ngaycapnhat]"
+                      dataType="date"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\HOADON_JADE_TO_NDS\Derived Column NGAYTAO, NGAYCAPNHAT.Outputs[Derived Column Output].Columns[ngaycapnhat]"
+                      name="ngaycapnhat"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">@[User::CET]</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">@[User::CET]</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\HOADON_JADE_TO_NDS\Derived Column NGAYTAO, NGAYCAPNHAT.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\HOADON_JADE_TO_NDS\Derived Column NGAYTAO, NGAYCAPNHAT.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\HOADON_JADE_TO_NDS\Derived Column NGAYTAO, NGAYCAPNHAT.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\HOADON_JADE_TO_NDS\Derived Column NGAYTAO, NGAYCAPNHAT.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\HOADON_JADE_TO_NDS\Derived Column NGAYTAO, NGAYCAPNHAT.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\HOADON_JADE_TO_NDS\Derived Column NGAYTAO, NGAYCAPNHAT.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\HOADON_JADE_TO_NDS\Derived Column NGUONDULIEU"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column NGUONDULIEU"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\HOADON_JADE_TO_NDS\Derived Column NGUONDULIEU.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\HOADON_JADE_TO_NDS\Derived Column NGUONDULIEU.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\HOADON_JADE_TO_NDS\Derived Column NGUONDULIEU.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\HOADON_JADE_TO_NDS\Derived Column NGUONDULIEU.Outputs[Derived Column Output].Columns[NguonDuLieu]"
                       dataType="i4"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\HOADON_JADE_TO_NDS\Derived Column.Outputs[Derived Column Output].Columns[NguonDuLieu]"
+                      lineageId="Package\HOADON_JADE_TO_NDS\Derived Column NGUONDULIEU.Outputs[Derived Column Output].Columns[NguonDuLieu]"
                       name="NguonDuLieu"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1440,191 +1608,23 @@ where ma = ?</property>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\HOADON_JADE_TO_NDS\Derived Column.Outputs[Derived Column Error Output]"
+                  refId="Package\HOADON_JADE_TO_NDS\Derived Column NGUONDULIEU.Outputs[Derived Column Error Output]"
                   description="Error Output of the Derived Column Transformation"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Derived Column Error Output"
-                  synchronousInputId="Package\HOADON_JADE_TO_NDS\Derived Column.Inputs[Derived Column Input]">
+                  synchronousInputId="Package\HOADON_JADE_TO_NDS\Derived Column NGUONDULIEU.Inputs[Derived Column Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\HOADON_JADE_TO_NDS\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      refId="Package\HOADON_JADE_TO_NDS\Derived Column NGUONDULIEU.Outputs[Derived Column Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\HOADON_JADE_TO_NDS\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      lineageId="Package\HOADON_JADE_TO_NDS\Derived Column NGUONDULIEU.Outputs[Derived Column Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\HOADON_JADE_TO_NDS\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      refId="Package\HOADON_JADE_TO_NDS\Derived Column NGUONDULIEU.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\HOADON_JADE_TO_NDS\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\HOADON_JADE_TO_NDS\Derived Column 1"
-              componentClassID="Microsoft.DerivedColumn"
-              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
-              name="Derived Column 1"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\HOADON_JADE_TO_NDS\Derived Column 1.Inputs[Derived Column Input]"
-                  description="Input to the Derived Column Transformation"
-                  name="Derived Column Input">
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\HOADON_JADE_TO_NDS\Derived Column 1.Outputs[Derived Column Output]"
-                  description="Default Output of the Derived Column Transformation"
-                  exclusionGroup="1"
-                  name="Derived Column Output"
-                  synchronousInputId="Package\HOADON_JADE_TO_NDS\Derived Column 1.Inputs[Derived Column Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\HOADON_JADE_TO_NDS\Derived Column 1.Outputs[Derived Column Output].Columns[ngaycapnhat]"
-                      dataType="date"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\HOADON_JADE_TO_NDS\Derived Column 1.Outputs[Derived Column Output].Columns[ngaycapnhat]"
-                      name="ngaycapnhat"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">@[User::CET]</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">@[User::CET]</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\HOADON_JADE_TO_NDS\Derived Column 1.Outputs[Derived Column Error Output]"
-                  description="Error Output of the Derived Column Transformation"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Derived Column Error Output"
-                  synchronousInputId="Package\HOADON_JADE_TO_NDS\Derived Column 1.Inputs[Derived Column Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\HOADON_JADE_TO_NDS\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\HOADON_JADE_TO_NDS\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\HOADON_JADE_TO_NDS\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\HOADON_JADE_TO_NDS\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\HOADON_JADE_TO_NDS\Derived Column 2"
-              componentClassID="Microsoft.DerivedColumn"
-              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
-              name="Derived Column 2"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\HOADON_JADE_TO_NDS\Derived Column 2.Inputs[Derived Column Input]"
-                  description="Input to the Derived Column Transformation"
-                  name="Derived Column Input">
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\HOADON_JADE_TO_NDS\Derived Column 2.Outputs[Derived Column Output]"
-                  description="Default Output of the Derived Column Transformation"
-                  exclusionGroup="1"
-                  name="Derived Column Output"
-                  synchronousInputId="Package\HOADON_JADE_TO_NDS\Derived Column 2.Inputs[Derived Column Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\HOADON_JADE_TO_NDS\Derived Column 2.Outputs[Derived Column Output].Columns[ngaytao]"
-                      dataType="date"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\HOADON_JADE_TO_NDS\Derived Column 2.Outputs[Derived Column Output].Columns[ngaytao]"
-                      name="ngaytao"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">@[User::CET]</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">@[User::CET]</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\HOADON_JADE_TO_NDS\Derived Column 2.Outputs[Derived Column Output].Columns[ngaycapnhat]"
-                      dataType="date"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\HOADON_JADE_TO_NDS\Derived Column 2.Outputs[Derived Column Output].Columns[ngaycapnhat]"
-                      name="ngaycapnhat"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">@[User::CET]</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">@[User::CET]</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\HOADON_JADE_TO_NDS\Derived Column 2.Outputs[Derived Column Error Output]"
-                  description="Error Output of the Derived Column Transformation"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Derived Column Error Output"
-                  synchronousInputId="Package\HOADON_JADE_TO_NDS\Derived Column 2.Inputs[Derived Column Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\HOADON_JADE_TO_NDS\Derived Column 2.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\HOADON_JADE_TO_NDS\Derived Column 2.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\HOADON_JADE_TO_NDS\Derived Column 2.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\HOADON_JADE_TO_NDS\Derived Column 2.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\HOADON_JADE_TO_NDS\Derived Column NGUONDULIEU.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -2237,19 +2237,19 @@ where [refTable].[MaKH] = ?</property>
                       cachedDataType="i4"
                       cachedName="NguonDuLieu"
                       externalMetadataColumnId="Package\HOADON_JADE_TO_NDS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NguonDuLieu]"
-                      lineageId="Package\HOADON_JADE_TO_NDS\Derived Column.Outputs[Derived Column Output].Columns[NguonDuLieu]" />
+                      lineageId="Package\HOADON_JADE_TO_NDS\Derived Column NGUONDULIEU.Outputs[Derived Column Output].Columns[NguonDuLieu]" />
                     <inputColumn
                       refId="Package\HOADON_JADE_TO_NDS\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ngaytao]"
                       cachedDataType="date"
                       cachedName="ngaytao"
                       externalMetadataColumnId="Package\HOADON_JADE_TO_NDS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NgayTao]"
-                      lineageId="Package\HOADON_JADE_TO_NDS\Derived Column 2.Outputs[Derived Column Output].Columns[ngaytao]" />
+                      lineageId="Package\HOADON_JADE_TO_NDS\Derived Column NGAYTAO, NGAYCAPNHAT.Outputs[Derived Column Output].Columns[ngaytao]" />
                     <inputColumn
                       refId="Package\HOADON_JADE_TO_NDS\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ngaycapnhat]"
                       cachedDataType="date"
                       cachedName="ngaycapnhat"
                       externalMetadataColumnId="Package\HOADON_JADE_TO_NDS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NgayCapNhat]"
-                      lineageId="Package\HOADON_JADE_TO_NDS\Derived Column 2.Outputs[Derived Column Output].Columns[ngaycapnhat]" />
+                      lineageId="Package\HOADON_JADE_TO_NDS\Derived Column NGAYTAO, NGAYCAPNHAT.Outputs[Derived Column Output].Columns[ngaycapnhat]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2590,7 +2590,7 @@ where [refTable].[MaKH] = ?</property>
                       cachedDataType="date"
                       cachedName="ngaycapnhat"
                       externalMetadataColumnId="Package\HOADON_JADE_TO_NDS\UPDATE EXISTING ROW.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
-                      lineageId="Package\HOADON_JADE_TO_NDS\Derived Column 1.Outputs[Derived Column Output].Columns[ngaycapnhat]" />
+                      lineageId="Package\HOADON_JADE_TO_NDS\Derived Column NGAYCAPNHAT.Outputs[Derived Column Output].Columns[ngaycapnhat]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2701,20 +2701,20 @@ where [refTable].[MaKH] = ?</property>
               refId="Package\HOADON_JADE_TO_NDS.Paths[Derived Column Output]"
               endId="Package\HOADON_JADE_TO_NDS\Lookup MA_KHACHHANG.Inputs[Lookup Input]"
               name="Derived Column Output"
-              startId="Package\HOADON_JADE_TO_NDS\Derived Column.Outputs[Derived Column Output]" />
+              startId="Package\HOADON_JADE_TO_NDS\Derived Column NGUONDULIEU.Outputs[Derived Column Output]" />
             <path
               refId="Package\HOADON_JADE_TO_NDS.Paths[Derived Column Output1]"
               endId="Package\HOADON_JADE_TO_NDS\UPDATE EXISTING ROW.Inputs[OLE DB Command Input]"
               name="Derived Column Output"
-              startId="Package\HOADON_JADE_TO_NDS\Derived Column 1.Outputs[Derived Column Output]" />
+              startId="Package\HOADON_JADE_TO_NDS\Derived Column NGAYCAPNHAT.Outputs[Derived Column Output]" />
             <path
               refId="Package\HOADON_JADE_TO_NDS.Paths[Derived Column Output2]"
               endId="Package\HOADON_JADE_TO_NDS\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="Derived Column Output"
-              startId="Package\HOADON_JADE_TO_NDS\Derived Column 2.Outputs[Derived Column Output]" />
+              startId="Package\HOADON_JADE_TO_NDS\Derived Column NGAYTAO, NGAYCAPNHAT.Outputs[Derived Column Output]" />
             <path
               refId="Package\HOADON_JADE_TO_NDS.Paths[Lookup Error Output]"
-              endId="Package\HOADON_JADE_TO_NDS\Derived Column 2.Inputs[Derived Column Input]"
+              endId="Package\HOADON_JADE_TO_NDS\Derived Column NGAYTAO, NGAYCAPNHAT.Inputs[Derived Column Input]"
               name="Lookup Error Output"
               startId="Package\HOADON_JADE_TO_NDS\Lookup MA_HOADON.Outputs[Lookup Error Output]" />
             <path
@@ -2729,12 +2729,12 @@ where [refTable].[MaKH] = ?</property>
               startId="Package\HOADON_JADE_TO_NDS\Lookup MA_CUAHANG.Outputs[Lookup Match Output]" />
             <path
               refId="Package\HOADON_JADE_TO_NDS.Paths[Lookup Match Output2]"
-              endId="Package\HOADON_JADE_TO_NDS\Derived Column 1.Inputs[Derived Column Input]"
+              endId="Package\HOADON_JADE_TO_NDS\Derived Column NGAYCAPNHAT.Inputs[Derived Column Input]"
               name="Lookup Match Output"
               startId="Package\HOADON_JADE_TO_NDS\Lookup MA_HOADON.Outputs[Lookup Match Output]" />
             <path
               refId="Package\HOADON_JADE_TO_NDS.Paths[OLE DB Source Output]"
-              endId="Package\HOADON_JADE_TO_NDS\Derived Column.Inputs[Derived Column Input]"
+              endId="Package\HOADON_JADE_TO_NDS\Derived Column NGUONDULIEU.Inputs[Derived Column Input]"
               name="OLE DB Source Output"
               startId="Package\HOADON_JADE_TO_NDS\OLE DB Source.Outputs[OLE DB Source Output]" />
           </paths>
@@ -2997,11 +2997,11 @@ where [refTable].[MaKH] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\KHACHHANG_JADE_TO_NDS\Lookup MAKHACHHANG"
+              refId="Package\KHACHHANG_JADE_TO_NDS\Lookup MA_KHACHHANG"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
               description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
-              name="Lookup MAKHACHHANG"
+              name="Lookup MA_KHACHHANG"
               usesDispositions="true"
               version="6">
               <properties>
@@ -3069,7 +3069,7 @@ where [refTable].[MaKH] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\KHACHHANG_JADE_TO_NDS\Lookup MAKHACHHANG.Connections[OleDbConnection]"
+                  refId="Package\KHACHHANG_JADE_TO_NDS\Lookup MA_KHACHHANG.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.NDS]"
                   connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.NDS]"
                   description="Connection manager used to access lookup data."
@@ -3077,11 +3077,11 @@ where [refTable].[MaKH] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\KHACHHANG_JADE_TO_NDS\Lookup MAKHACHHANG.Inputs[Lookup Input]"
+                  refId="Package\KHACHHANG_JADE_TO_NDS\Lookup MA_KHACHHANG.Inputs[Lookup Input]"
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\KHACHHANG_JADE_TO_NDS\Lookup MAKHACHHANG.Inputs[Lookup Input].Columns[MaKH]"
+                      refId="Package\KHACHHANG_JADE_TO_NDS\Lookup MA_KHACHHANG.Inputs[Lookup Input].Columns[MaKH]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="4"
@@ -3104,18 +3104,18 @@ where [refTable].[MaKH] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\KHACHHANG_JADE_TO_NDS\Lookup MAKHACHHANG.Outputs[Lookup Match Output]"
+                  refId="Package\KHACHHANG_JADE_TO_NDS\Lookup MA_KHACHHANG.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
                   errorRowDisposition="RedirectRow"
                   exclusionGroup="1"
                   name="Lookup Match Output"
-                  synchronousInputId="Package\KHACHHANG_JADE_TO_NDS\Lookup MAKHACHHANG.Inputs[Lookup Input]">
+                  synchronousInputId="Package\KHACHHANG_JADE_TO_NDS\Lookup MA_KHACHHANG.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\KHACHHANG_JADE_TO_NDS\Lookup MAKHACHHANG.Outputs[Lookup Match Output].Columns[MaKHTrongNDS]"
+                      refId="Package\KHACHHANG_JADE_TO_NDS\Lookup MA_KHACHHANG.Outputs[Lookup Match Output].Columns[MaKHTrongNDS]"
                       dataType="i4"
                       errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\KHACHHANG_JADE_TO_NDS\Lookup MAKHACHHANG.Outputs[Lookup Match Output].Columns[MaKHTrongNDS]"
+                      lineageId="Package\KHACHHANG_JADE_TO_NDS\Lookup MA_KHACHHANG.Outputs[Lookup Match Output].Columns[MaKHTrongNDS]"
                       name="MaKHTrongNDS"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -3129,30 +3129,30 @@ where [refTable].[MaKH] = ?</property>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\KHACHHANG_JADE_TO_NDS\Lookup MAKHACHHANG.Outputs[Lookup No Match Output]"
+                  refId="Package\KHACHHANG_JADE_TO_NDS\Lookup MA_KHACHHANG.Outputs[Lookup No Match Output]"
                   description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
                   exclusionGroup="1"
                   name="Lookup No Match Output"
-                  synchronousInputId="Package\KHACHHANG_JADE_TO_NDS\Lookup MAKHACHHANG.Inputs[Lookup Input]">
+                  synchronousInputId="Package\KHACHHANG_JADE_TO_NDS\Lookup MA_KHACHHANG.Inputs[Lookup Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\KHACHHANG_JADE_TO_NDS\Lookup MAKHACHHANG.Outputs[Lookup Error Output]"
+                  refId="Package\KHACHHANG_JADE_TO_NDS\Lookup MA_KHACHHANG.Outputs[Lookup Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Lookup Error Output"
-                  synchronousInputId="Package\KHACHHANG_JADE_TO_NDS\Lookup MAKHACHHANG.Inputs[Lookup Input]">
+                  synchronousInputId="Package\KHACHHANG_JADE_TO_NDS\Lookup MA_KHACHHANG.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\KHACHHANG_JADE_TO_NDS\Lookup MAKHACHHANG.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      refId="Package\KHACHHANG_JADE_TO_NDS\Lookup MA_KHACHHANG.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\KHACHHANG_JADE_TO_NDS\Lookup MAKHACHHANG.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      lineageId="Package\KHACHHANG_JADE_TO_NDS\Lookup MA_KHACHHANG.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\KHACHHANG_JADE_TO_NDS\Lookup MAKHACHHANG.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      refId="Package\KHACHHANG_JADE_TO_NDS\Lookup MA_KHACHHANG.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\KHACHHANG_JADE_TO_NDS\Lookup MAKHACHHANG.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\KHACHHANG_JADE_TO_NDS\Lookup MA_KHACHHANG.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -3742,7 +3742,7 @@ where [refTable].[MaKH] = ?</property>
                       cachedDataType="i4"
                       cachedName="MaKHTrongNDS"
                       externalMetadataColumnId="Package\KHACHHANG_JADE_TO_NDS\UPDATE EXISTING ROW.Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
-                      lineageId="Package\KHACHHANG_JADE_TO_NDS\Lookup MAKHACHHANG.Outputs[Lookup Match Output].Columns[MaKHTrongNDS]" />
+                      lineageId="Package\KHACHHANG_JADE_TO_NDS\Lookup MA_KHACHHANG.Outputs[Lookup Match Output].Columns[MaKHTrongNDS]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -3883,7 +3883,7 @@ where [refTable].[MaKH] = ?</property>
           <paths>
             <path
               refId="Package\KHACHHANG_JADE_TO_NDS.Paths[Derived Column Output]"
-              endId="Package\KHACHHANG_JADE_TO_NDS\Lookup MAKHACHHANG.Inputs[Lookup Input]"
+              endId="Package\KHACHHANG_JADE_TO_NDS\Lookup MA_KHACHHANG.Inputs[Lookup Input]"
               name="Derived Column Output"
               startId="Package\KHACHHANG_JADE_TO_NDS\Derived Column NGUONDULIEU.Outputs[Derived Column Output]" />
             <path
@@ -3900,12 +3900,12 @@ where [refTable].[MaKH] = ?</property>
               refId="Package\KHACHHANG_JADE_TO_NDS.Paths[Lookup Error Output]"
               endId="Package\KHACHHANG_JADE_TO_NDS\Derived Column NGAYTAO, NGAYCAPNHAT.Inputs[Derived Column Input]"
               name="Lookup Error Output"
-              startId="Package\KHACHHANG_JADE_TO_NDS\Lookup MAKHACHHANG.Outputs[Lookup Error Output]" />
+              startId="Package\KHACHHANG_JADE_TO_NDS\Lookup MA_KHACHHANG.Outputs[Lookup Error Output]" />
             <path
               refId="Package\KHACHHANG_JADE_TO_NDS.Paths[Lookup Match Output]"
               endId="Package\KHACHHANG_JADE_TO_NDS\Derived Column NGAYCAPNHAT.Inputs[Derived Column Input]"
               name="Lookup Match Output"
-              startId="Package\KHACHHANG_JADE_TO_NDS\Lookup MAKHACHHANG.Outputs[Lookup Match Output]" />
+              startId="Package\KHACHHANG_JADE_TO_NDS\Lookup MA_KHACHHANG.Outputs[Lookup Match Output]" />
             <path
               refId="Package\KHACHHANG_JADE_TO_NDS.Paths[OLE DB Source Output]"
               endId="Package\KHACHHANG_JADE_TO_NDS\Derived Column NGUONDULIEU.Inputs[Derived Column Input]"
@@ -3921,7 +3921,7 @@ where [refTable].[MaKH] = ?</property>
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
       DTS:DTSID="{C35BB53F-1DDA-4C9B-841A-CD6D774717E3}"
-      DTS:From="Package\Expression Task"
+      DTS:From="Package\GET CET"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
       DTS:To="Package\KHACHHANG_JADE_TO_NDS" />
@@ -3955,39 +3955,47 @@ where [refTable].[MaKH] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="153.6,41.6"
-          Id="Package\Expression Task"
+          Size="248.8,41.6"
+          Id="Package\CHITIETHOADON_JADE_TO_STAGE"
+          TopLeft="351.428577413365,338.7647106334" />
+        <NodeLayout
+          Size="120,41.6"
+          Id="Package\GET CET"
           TopLeft="242.857146992975,59.6470596600569" />
+        <NodeLayout
+          Size="196.8,41.6"
+          Id="Package\HOADON_JADE_TO_NDS"
+          TopLeft="290.000004938671,255.411768287936" />
         <NodeLayout
           Size="215.2,41.6"
           Id="Package\KHACHHANG_JADE_TO_NDS"
           TopLeft="237.857146907826,157.529413973996" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="319.657146992975,101.247059660057">
+          TopLeft="302.857146992975,101.247059660057">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="25.7999999148504,56.2823543139396"
+              EndConnector="42.599999914851,56.2823543139391"
               Start="0,0"
-              End="25.7999999148504,48.7823543139396">
+              End="42.599999914851,48.7823543139391">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,24.1411771569698" />
+                    End="0,24.1411771569695" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,24.1411771569698"
-                    Point2="0,28.1411771569698"
-                    Point3="4,28.1411771569698" />
+                    Point1="0,24.1411771569695"
+                    Point2="0,28.1411771569695"
+                    Point3="4,28.1411771569695" />
                   <mssgle:LineSegment
-                    End="21.7999999148504,28.1411771569698" />
+                    End="38.599999914851,28.1411771569695" />
                   <mssgle:CubicBezierSegment
-                    Point1="21.7999999148504,28.1411771569698"
-                    Point2="25.7999999148504,28.1411771569698"
-                    Point3="25.7999999148504,32.1411771569698" />
+                    Point1="38.599999914851,28.1411771569695"
+                    Point2="42.599999914851,28.1411771569695"
+                    Point3="42.599999914851,32.1411771569695" />
                   <mssgle:LineSegment
-                    End="25.7999999148504,48.7823543139396" />
+                    End="42.599999914851,48.7823543139391" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3996,10 +4004,6 @@ where [refTable].[MaKH] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="196.8,41.6"
-          Id="Package\HOADON_JADE_TO_NDS"
-          TopLeft="290.000004938671,255.411768287936" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
           TopLeft="345.457146907826,199.129413973996">
@@ -4034,10 +4038,6 @@ where [refTable].[MaKH] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="248.8,41.6"
-          Id="Package\CHITIETHOADON_JADE_TO_STAGE"
-          TopLeft="351.428577413365,338.7647106334" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
           TopLeft="388.400004938671,297.011768287936">
@@ -4076,160 +4076,72 @@ where [refTable].[MaKH] = ?</property>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\KHACHHANG_JADE_TO_NDS">
+    design-time-name="Package\CHITIETHOADON_JADE_TO_STAGE">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="149.6,41.6"
-          Id="Package\KHACHHANG_JADE_TO_NDS\OLE DB Source"
-          TopLeft="175.000002980232,56.5882360877463" />
+          Size="183.2,41.6"
+          Id="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup MA_SANPHAM"
+          TopLeft="361,378" />
         <NodeLayout
-          Size="228.8,41.6"
-          Id="Package\KHACHHANG_JADE_TO_NDS\Derived Column NGUONDULIEU"
-          TopLeft="183.571431697631,145.294119684754" />
-        <EdgeLayout
-          Id="Package\KHACHHANG_JADE_TO_NDS.Paths[OLE DB Source Output]"
-          TopLeft="249.800002980232,98.1882360877463">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="48.1714287173991,47.1058835970077"
-              Start="0,0"
-              End="48.1714287173991,39.6058835970077">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,19.5529417985038" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,19.5529417985038"
-                    Point2="0,23.5529417985038"
-                    Point3="4,23.5529417985038" />
-                  <mssgle:LineSegment
-                    End="44.1714287173991,23.5529417985038" />
-                  <mssgle:CubicBezierSegment
-                    Point1="44.1714287173991,23.5529417985038"
-                    Point2="48.1714287173991,23.5529417985038"
-                    Point3="48.1714287173991,27.5529417985038" />
-                  <mssgle:LineSegment
-                    End="48.1714287173991,39.6058835970077" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="192,41.6"
-          Id="Package\KHACHHANG_JADE_TO_NDS\Lookup MAKHACHHANG"
-          TopLeft="192.142860415031,264.588239004868" />
-        <EdgeLayout
-          Id="Package\KHACHHANG_JADE_TO_NDS.Paths[Derived Column Output]"
-          TopLeft="297.971431697631,186.894119684754">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-9.82857128260082,77.6941193201139"
-              Start="0,0"
-              End="-9.82857128260082,70.1941193201139">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,34.8470596600569" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,34.8470596600569"
-                    Point2="0,38.8470596600569"
-                    Point3="-4,38.8470596600569" />
-                  <mssgle:LineSegment
-                    End="-5.82857128260082,38.8470596600569" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-5.82857128260082,38.8470596600569"
-                    Point2="-9.82857128260082,38.8470596600569"
-                    Point3="-9.82857128260082,42.8470596600569" />
-                  <mssgle:LineSegment
-                    End="-9.82857128260082,70.1941193201139" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="228.8,41.6"
-          Id="Package\KHACHHANG_JADE_TO_NDS\Derived Column NGAYCAPNHAT"
-          TopLeft="116.428573411338,403.800005651923" />
-        <EdgeLayout
-          Id="Package\KHACHHANG_JADE_TO_NDS.Paths[Lookup Match Output]"
-          TopLeft="288.142860415031,306.188239004868">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-57.3142870036923,97.611766647055"
-              Start="0,0"
-              End="-57.3142870036923,90.111766647055">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,44.8058833235275" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,44.8058833235275"
-                    Point2="0,48.8058833235275"
-                    Point3="-4,48.8058833235275" />
-                  <mssgle:LineSegment
-                    End="-53.3142870036923,48.8058833235275" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-53.3142870036923,48.8058833235275"
-                    Point2="-57.3142870036923,48.8058833235275"
-                    Point3="-57.3142870036923,52.8058833235275" />
-                  <mssgle:LineSegment
-                    End="-57.3142870036923,90.111766647055" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-76.8485302205961,53.8058833235275,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="150.4,41.6"
+          Id="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup MA_HD"
+          TopLeft="363,243" />
         <NodeLayout
           Size="194.4,41.6"
-          Id="Package\KHACHHANG_JADE_TO_NDS\UPDATE EXISTING ROW"
-          TopLeft="118.571430590688,488.4470654943" />
+          Id="Package\CHITIETHOADON_JADE_TO_STAGE\UPDATE EXISTING ROW"
+          TopLeft="205,642.8" />
+        <NodeLayout
+          Size="228.8,41.6"
+          Id="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column NGAYCAPNHAT"
+          TopLeft="240,557" />
+        <NodeLayout
+          Size="149.6,41.6"
+          Id="Package\CHITIETHOADON_JADE_TO_STAGE\OLE DB Source"
+          TopLeft="300,34" />
+        <NodeLayout
+          Size="176,41.6"
+          Id="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup MA_CHITIET"
+          TopLeft="368,461" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\CHITIETHOADON_JADE_TO_STAGE\OLE DB Destination"
+          TopLeft="539,654.2" />
+        <NodeLayout
+          Size="282.4,41.6"
+          Id="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column NGAYTAO, NGAYCAPNHAT"
+          TopLeft="492,577.2" />
+        <NodeLayout
+          Size="228.8,41.6"
+          Id="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column NGUONDULIEU"
+          TopLeft="335,139" />
         <EdgeLayout
-          Id="Package\KHACHHANG_JADE_TO_NDS.Paths[Derived Column Output1]"
-          TopLeft="230.828573411338,445.400005651923">
+          Id="Package\CHITIETHOADON_JADE_TO_STAGE.Paths[OLE DB Source Output]"
+          TopLeft="374.8,75.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-15.0571428206502,43.047059842377"
+              EndConnector="74.6,63.4"
               Start="0,0"
-              End="-15.0571428206502,35.547059842377">
+              End="74.6,55.9">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,17.5235299211885" />
+                    End="0,27.7" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,17.5235299211885"
-                    Point2="0,21.5235299211885"
-                    Point3="-4,21.5235299211885" />
+                    Point1="0,27.7"
+                    Point2="0,31.7"
+                    Point3="4,31.7" />
                   <mssgle:LineSegment
-                    End="-11.0571428206502,21.5235299211885" />
+                    End="70.6,31.7" />
                   <mssgle:CubicBezierSegment
-                    Point1="-11.0571428206502,21.5235299211885"
-                    Point2="-15.0571428206502,21.5235299211885"
-                    Point3="-15.0571428206502,25.5235299211885" />
+                    Point1="70.6,31.7"
+                    Point2="74.6,31.7"
+                    Point3="74.6,35.7" />
                   <mssgle:LineSegment
-                    End="-15.0571428206502,35.547059842377" />
+                    End="74.6,55.9" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4238,76 +4150,232 @@ where [refTable].[MaKH] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="282.4,41.6"
-          Id="Package\KHACHHANG_JADE_TO_NDS\Derived Column NGAYTAO, NGAYCAPNHAT"
-          TopLeft="468.571436551153,412.552945627226" />
         <EdgeLayout
-          Id="Package\KHACHHANG_JADE_TO_NDS.Paths[Lookup Error Output]"
-          TopLeft="318.809527081697,306.188239004868">
+          Id="Package\CHITIETHOADON_JADE_TO_STAGE.Paths[Lookup Match Output2]"
+          TopLeft="428,502.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="290.961909469455,106.364706622358"
+              EndConnector="-73.6,54.4"
               Start="0,0"
-              End="290.961909469455,98.8647066223579">
+              End="-73.6,46.9">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,39.0733109462441" />
+                    End="0,18.054054054054" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,39.0733109462441"
-                    Point2="0,43.0733109462441"
-                    Point3="4,43.0733109462441" />
+                    Point1="0,18.054054054054"
+                    Point2="0,22.054054054054"
+                    Point3="-4,22.054054054054" />
                   <mssgle:LineSegment
-                    End="286.961909469455,43.0733109462441" />
+                    End="-69.6,22.054054054054" />
                   <mssgle:CubicBezierSegment
-                    Point1="286.961909469455,43.0733109462441"
-                    Point2="290.961909469455,43.0733109462441"
-                    Point3="290.961909469455,47.0733109462441" />
+                    Point1="-69.6,22.054054054054"
+                    Point2="-73.6,22.054054054054"
+                    Point3="-73.6,26.054054054054" />
                   <mssgle:LineSegment
-                    End="290.961909469455,98.8647066223579" />
+                    End="-73.6,46.9" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="99.6145680159777,48.0733109462441,91.7327734375,11.609375"
+              BoundingBox="-84.99138671875,27.054054054054,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="170.4,41.6"
-          Id="Package\KHACHHANG_JADE_TO_NDS\OLE DB Destination"
-          TopLeft="485.000008259501,490.623534934991" />
         <EdgeLayout
-          Id="Package\KHACHHANG_JADE_TO_NDS.Paths[Derived Column Output2]"
-          TopLeft="609.771436551153,454.152945627226">
+          Id="Package\CHITIETHOADON_JADE_TO_STAGE.Paths[Lookup Match Output1]"
+          TopLeft="454.3,419.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-39.5714282916516,36.4705893077654"
+              EndConnector="0,41.4"
               Start="0,0"
-              End="-39.5714282916516,28.9705893077654">
+              End="0,33.9">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,14.2352946538827" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,14.2352946538827"
-                    Point2="0,18.2352946538827"
-                    Point3="-4,18.2352946538827" />
+                    End="0,33.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,11.1453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\CHITIETHOADON_JADE_TO_STAGE.Paths[Lookup Match Output]"
+          TopLeft="438.2,284.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="14.4,93.4"
+              Start="0,0"
+              End="14.4,85.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="-35.5714282916516,18.2352946538827" />
+                    End="0,42.7" />
                   <mssgle:CubicBezierSegment
-                    Point1="-35.5714282916516,18.2352946538827"
-                    Point2="-39.5714282916516,18.2352946538827"
-                    Point3="-39.5714282916516,22.2352946538827" />
+                    Point1="0,42.7"
+                    Point2="0,46.7"
+                    Point3="4,46.7" />
                   <mssgle:LineSegment
-                    End="-39.5714282916516,28.9705893077654" />
+                    End="10.4,46.7" />
+                  <mssgle:CubicBezierSegment
+                    Point1="10.4,46.7"
+                    Point2="14.4,46.7"
+                    Point3="14.4,50.7" />
+                  <mssgle:LineSegment
+                    End="14.4,85.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-40.99138671875,51.7,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\CHITIETHOADON_JADE_TO_STAGE.Paths[Lookup Error Output]"
+          TopLeft="484,502.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="149.2,74.6"
+              Start="0,0"
+              End="149.2,67.1">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.2432432432433" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.2432432432433"
+                    Point2="0,30.2432432432433"
+                    Point3="4,30.2432432432433" />
+                  <mssgle:LineSegment
+                    End="145.2,30.2432432432433" />
+                  <mssgle:CubicBezierSegment
+                    Point1="145.2,30.2432432432433"
+                    Point2="149.2,30.2432432432433"
+                    Point3="149.2,34.2432432432433" />
+                  <mssgle:LineSegment
+                    End="149.2,67.1" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="28.73361328125,35.2432432432433,91.7327734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\CHITIETHOADON_JADE_TO_STAGE.Paths[Derived Column Output2]"
+          TopLeft="633.2,618.8">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-9,35.4"
+              Start="0,0"
+              End="-9,27.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.7" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.7"
+                    Point2="0,17.7"
+                    Point3="-4,17.7" />
+                  <mssgle:LineSegment
+                    End="-5,17.7" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-5,17.7"
+                    Point2="-9,17.7"
+                    Point3="-9,21.7" />
+                  <mssgle:LineSegment
+                    End="-9,27.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\CHITIETHOADON_JADE_TO_STAGE.Paths[Derived Column Output1]"
+          TopLeft="354.4,598.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-52.2,44.1999999999999"
+              Start="0,0"
+              End="-52.2,36.6999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.1" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.1"
+                    Point2="0,22.1"
+                    Point3="-4,22.1" />
+                  <mssgle:LineSegment
+                    End="-48.2,22.1" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-48.2,22.1"
+                    Point2="-52.2,22.1"
+                    Point3="-52.2,26.1" />
+                  <mssgle:LineSegment
+                    End="-52.2,36.6999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\CHITIETHOADON_JADE_TO_STAGE.Paths[Derived Column Output]"
+          TopLeft="449.4,180.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-11.2,62.4"
+              Start="0,0"
+              End="-11.2,54.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27.2"
+                    Point2="0,31.2"
+                    Point3="-4,31.2" />
+                  <mssgle:LineSegment
+                    End="-7.19999999999999,31.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-7.19999999999999,31.2"
+                    Point2="-11.2,31.2"
+                    Point3="-11.2,35.2" />
+                  <mssgle:LineSegment
+                    End="-11.2,54.9" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4320,7 +4388,53 @@ where [refTable].[MaKH] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\KHACHHANG_JADE_TO_NDS\OLE DB Source">
+    design-time-name="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup MA_SANPHAM">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup MA_HD">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\CHITIETHOADON_JADE_TO_STAGE\OLE DB Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -4333,12 +4447,12 @@ where [refTable].[MaKH] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\KHACHHANG_JADE_TO_NDS\Lookup MAKHACHHANG">
+    design-time-name="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup MA_CHITIET">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -4348,7 +4462,7 @@ where [refTable].[MaKH] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -4356,7 +4470,7 @@ where [refTable].[MaKH] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\KHACHHANG_JADE_TO_NDS\OLE DB Destination">
+    design-time-name="Package\CHITIETHOADON_JADE_TO_STAGE\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -4374,89 +4488,41 @@ where [refTable].[MaKH] = ?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="149.6,41.6"
-          Id="Package\HOADON_JADE_TO_NDS\OLE DB Source"
-          TopLeft="254,34" />
-        <NodeLayout
-          Size="152.8,41.6"
-          Id="Package\HOADON_JADE_TO_NDS\Derived Column"
-          TopLeft="295,151" />
-        <EdgeLayout
-          Id="Package\HOADON_JADE_TO_NDS.Paths[OLE DB Source Output]"
-          TopLeft="328.8,75.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="42.6,75.4"
-              Start="0,0"
-              End="42.6,67.9">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,33.7" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,33.7"
-                    Point2="0,37.7"
-                    Point3="4,37.7" />
-                  <mssgle:LineSegment
-                    End="38.6,37.7" />
-                  <mssgle:CubicBezierSegment
-                    Point1="38.6,37.7"
-                    Point2="42.6,37.7"
-                    Point3="42.6,41.7" />
-                  <mssgle:LineSegment
-                    End="42.6,67.9" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="184,41.6"
+          Id="Package\HOADON_JADE_TO_NDS\Lookup MA_CUAHANG"
+          TopLeft="323,362" />
         <NodeLayout
           Size="197.6,41.6"
           Id="Package\HOADON_JADE_TO_NDS\Lookup MA_KHACHHANG"
           TopLeft="311,257" />
-        <EdgeLayout
-          Id="Package\HOADON_JADE_TO_NDS.Paths[Derived Column Output]"
-          TopLeft="371.4,192.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="38.4,64.4"
-              Start="0,0"
-              End="38.4,56.9">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,28.2" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,28.2"
-                    Point2="0,32.2"
-                    Point3="4,32.2" />
-                  <mssgle:LineSegment
-                    End="34.4,32.2" />
-                  <mssgle:CubicBezierSegment
-                    Point1="34.4,32.2"
-                    Point2="38.4,32.2"
-                    Point3="38.4,36.2" />
-                  <mssgle:LineSegment
-                    End="38.4,56.9" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <NodeLayout
-          Size="184,41.6"
-          Id="Package\HOADON_JADE_TO_NDS\Lookup MA_CUAHANG"
-          TopLeft="323,362" />
+          Size="228.8,41.6"
+          Id="Package\HOADON_JADE_TO_NDS\Derived Column NGAYCAPNHAT"
+          TopLeft="285,587" />
+        <NodeLayout
+          Size="149.6,41.6"
+          Id="Package\HOADON_JADE_TO_NDS\OLE DB Source"
+          TopLeft="254,34" />
+        <NodeLayout
+          Size="179.2,41.6"
+          Id="Package\HOADON_JADE_TO_NDS\Lookup MA_HOADON"
+          TopLeft="317,470" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\HOADON_JADE_TO_NDS\OLE DB Destination"
+          TopLeft="630,681.6" />
+        <NodeLayout
+          Size="282.4,41.6"
+          Id="Package\HOADON_JADE_TO_NDS\Derived Column NGAYTAO, NGAYCAPNHAT"
+          TopLeft="577,554.6" />
+        <NodeLayout
+          Size="228.8,41.6"
+          Id="Package\HOADON_JADE_TO_NDS\Derived Column NGUONDULIEU"
+          TopLeft="295,151" />
+        <NodeLayout
+          Size="194.4,41.6"
+          Id="Package\HOADON_JADE_TO_NDS\UPDATE EXISTING ROW"
+          TopLeft="245,679" />
         <EdgeLayout
           Id="Package\HOADON_JADE_TO_NDS.Paths[Lookup Match Output]"
           TopLeft="412.4,298.6">
@@ -4481,10 +4547,190 @@ where [refTable].[MaKH] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="179.2,41.6"
-          Id="Package\HOADON_JADE_TO_NDS\Lookup MA_HOADON"
-          TopLeft="317,470" />
+        <EdgeLayout
+          Id="Package\HOADON_JADE_TO_NDS.Paths[Lookup Error Output]"
+          TopLeft="435.133333333333,511.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="283.066666666667,43"
+              Start="0,0"
+              End="283.066666666667,35.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.4283185840708" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.4283185840708"
+                    Point2="0,17.4283185840708"
+                    Point3="4,17.4283185840708" />
+                  <mssgle:LineSegment
+                    End="279.066666666667,17.4283185840708" />
+                  <mssgle:CubicBezierSegment
+                    Point1="279.066666666667,17.4283185840708"
+                    Point2="283.066666666667,17.4283185840708"
+                    Point3="283.066666666667,21.4283185840708" />
+                  <mssgle:LineSegment
+                    End="283.066666666667,35.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="95.6669466145834,22.4283185840708,91.7327734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\HOADON_JADE_TO_NDS.Paths[Derived Column Output2]"
+          TopLeft="716.7,596.2">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,85.4"
+              Start="0,0"
+              End="0,77.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,77.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\HOADON_JADE_TO_NDS.Paths[Derived Column Output1]"
+          TopLeft="399.4,628.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-57.2,50.4"
+              Start="0,0"
+              End="-57.2,42.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.2"
+                    Point2="0,25.2"
+                    Point3="-4,25.2" />
+                  <mssgle:LineSegment
+                    End="-53.2,25.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-53.2,25.2"
+                    Point2="-57.2,25.2"
+                    Point3="-57.2,29.2" />
+                  <mssgle:LineSegment
+                    End="-57.2,42.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\HOADON_JADE_TO_NDS.Paths[Derived Column Output]"
+          TopLeft="409.6,192.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,64.4"
+              Start="0,0"
+              End="0,56.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,56.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\HOADON_JADE_TO_NDS.Paths[OLE DB Source Output]"
+          TopLeft="328.8,75.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="80.6,75.4"
+              Start="0,0"
+              End="80.6,67.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.7" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,33.7"
+                    Point2="0,37.7"
+                    Point3="4,37.7" />
+                  <mssgle:LineSegment
+                    End="76.6,37.7" />
+                  <mssgle:CubicBezierSegment
+                    Point1="76.6,37.7"
+                    Point2="80.6,37.7"
+                    Point3="80.6,41.7" />
+                  <mssgle:LineSegment
+                    End="80.6,67.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\HOADON_JADE_TO_NDS.Paths[Lookup Match Output2]"
+          TopLeft="378.066666666667,511.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="21.3333333333333,75.4"
+              Start="0,0"
+              End="21.3333333333333,67.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.5603539823009" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.5603539823009"
+                    Point2="0,30.5603539823009"
+                    Point3="4,30.5603539823009" />
+                  <mssgle:LineSegment
+                    End="17.3333333333333,30.5603539823009" />
+                  <mssgle:CubicBezierSegment
+                    Point1="17.3333333333333,30.5603539823009"
+                    Point2="21.3333333333333,30.5603539823009"
+                    Point3="21.3333333333333,34.5603539823009" />
+                  <mssgle:LineSegment
+                    End="21.3333333333333,67.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-37.5247200520833,35.5603539823009,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\HOADON_JADE_TO_NDS.Paths[Lookup Match Output1]"
           TopLeft="415,403.6">
@@ -4521,165 +4767,55 @@ where [refTable].[MaKH] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="194.4,41.6"
-          Id="Package\HOADON_JADE_TO_NDS\UPDATE EXISTING ROW"
-          TopLeft="245,679" />
-        <NodeLayout
-          Size="162.4,41.6"
-          Id="Package\HOADON_JADE_TO_NDS\Derived Column 1"
-          TopLeft="285,587" />
-        <EdgeLayout
-          Id="Package\HOADON_JADE_TO_NDS.Paths[Lookup Match Output2]"
-          TopLeft="378.066666666667,511.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-11.8666666666666,75.3999999999998"
-              Start="0,0"
-              End="-11.8666666666666,67.8999999999998">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26.5603539823008" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,26.5603539823008"
-                    Point2="0,30.5603539823008"
-                    Point3="-4,30.5603539823008" />
-                  <mssgle:LineSegment
-                    End="-7.86666666666656,30.5603539823008" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-7.86666666666656,30.5603539823008"
-                    Point2="-11.8666666666666,30.5603539823008"
-                    Point3="-11.8666666666666,34.5603539823008" />
-                  <mssgle:LineSegment
-                    End="-11.8666666666666,67.8999999999998" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-54.1247200520833,35.5603539823008,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\HOADON_JADE_TO_NDS.Paths[Derived Column Output1]"
-          TopLeft="366.2,628.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-24.0000000000001,50.4000000000001"
-              Start="0,0"
-              End="-24.0000000000001,42.9000000000001">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,21.2" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,21.2"
-                    Point2="0,25.2"
-                    Point3="-4,25.2" />
-                  <mssgle:LineSegment
-                    End="-20.0000000000001,25.2" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-20.0000000000001,25.2"
-                    Point2="-24.0000000000001,25.2"
-                    Point3="-24.0000000000001,29.2" />
-                  <mssgle:LineSegment
-                    End="-24.0000000000001,42.9000000000001" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="162.4,41.6"
-          Id="Package\HOADON_JADE_TO_NDS\Derived Column 2"
-          TopLeft="577,554.6" />
-        <EdgeLayout
-          Id="Package\HOADON_JADE_TO_NDS.Paths[Lookup Error Output]"
-          TopLeft="435.133333333333,511.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="223.066666666667,43.0000000000001"
-              Start="0,0"
-              End="223.066666666667,35.5000000000001">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,13.4283185840708" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,13.4283185840708"
-                    Point2="0,17.4283185840708"
-                    Point3="4,17.4283185840708" />
-                  <mssgle:LineSegment
-                    End="219.066666666667,17.4283185840708" />
-                  <mssgle:CubicBezierSegment
-                    Point1="219.066666666667,17.4283185840708"
-                    Point2="223.066666666667,17.4283185840708"
-                    Point3="223.066666666667,21.4283185840708" />
-                  <mssgle:LineSegment
-                    End="223.066666666667,35.5000000000001" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="65.6669466145834,22.4283185840708,91.7327734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="170.4,41.6"
-          Id="Package\HOADON_JADE_TO_NDS\OLE DB Destination"
-          TopLeft="630,681.6" />
-        <EdgeLayout
-          Id="Package\HOADON_JADE_TO_NDS.Paths[Derived Column Output2]"
-          TopLeft="658.2,596.2">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="57,85.3999999999999"
-              Start="0,0"
-              End="57,77.8999999999999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,38.6999999999999" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,38.6999999999999"
-                    Point2="0,42.6999999999999"
-                    Point3="4,42.6999999999999" />
-                  <mssgle:LineSegment
-                    End="53,42.6999999999999" />
-                  <mssgle:CubicBezierSegment
-                    Point1="53,42.6999999999999"
-                    Point2="57,42.6999999999999"
-                    Point3="57,46.6999999999999" />
-                  <mssgle:LineSegment
-                    End="57,77.8999999999999" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\HOADON_JADE_TO_NDS\Lookup MA_CUAHANG">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\HOADON_JADE_TO_NDS\Lookup MA_KHACHHANG">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\HOADON_JADE_TO_NDS\OLE DB Source">
     <Properties>
@@ -4694,58 +4830,12 @@ where [refTable].[MaKH] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\HOADON_JADE_TO_NDS\Lookup MA_KHACHHANG">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\HOADON_JADE_TO_NDS\Lookup MA_CUAHANG">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\HOADON_JADE_TO_NDS\Lookup MA_HOADON">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -4755,7 +4845,7 @@ where [refTable].[MaKH] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -4776,331 +4866,262 @@ where [refTable].[MaKH] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
-    design-time-name="Package\CHITIETHOADON_JADE_TO_STAGE">
+    design-time-name="Package\KHACHHANG_JADE_TO_NDS">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="149.6,41.6"
-          Id="Package\CHITIETHOADON_JADE_TO_STAGE\OLE DB Source"
-          TopLeft="300,34" />
-        <NodeLayout
-          Size="152.8,41.6"
-          Id="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column"
-          TopLeft="335,139" />
-        <EdgeLayout
-          Id="Package\CHITIETHOADON_JADE_TO_STAGE.Paths[OLE DB Source Output]"
-          TopLeft="374.8,75.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="36.6,63.4"
-              Start="0,0"
-              End="36.6,55.9">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,27.7" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,27.7"
-                    Point2="0,31.7"
-                    Point3="4,31.7" />
-                  <mssgle:LineSegment
-                    End="32.6,31.7" />
-                  <mssgle:CubicBezierSegment
-                    Point1="32.6,31.7"
-                    Point2="36.6,31.7"
-                    Point3="36.6,35.7" />
-                  <mssgle:LineSegment
-                    End="36.6,55.9" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="150.4,41.6"
-          Id="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup MA_HD"
-          TopLeft="363,243" />
-        <EdgeLayout
-          Id="Package\CHITIETHOADON_JADE_TO_STAGE.Paths[Derived Column Output]"
-          TopLeft="411.4,180.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="26.8000000000001,62.4"
-              Start="0,0"
-              End="26.8000000000001,54.9">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,27.2" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,27.2"
-                    Point2="0,31.2"
-                    Point3="4,31.2" />
-                  <mssgle:LineSegment
-                    End="22.8000000000001,31.2" />
-                  <mssgle:CubicBezierSegment
-                    Point1="22.8000000000001,31.2"
-                    Point2="26.8000000000001,31.2"
-                    Point3="26.8000000000001,35.2" />
-                  <mssgle:LineSegment
-                    End="26.8000000000001,54.9" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="112.8,41.6"
-          Id="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup"
-          TopLeft="361,378" />
-        <EdgeLayout
-          Id="Package\CHITIETHOADON_JADE_TO_STAGE.Paths[Lookup Match Output]"
-          TopLeft="438.2,284.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-20.8000000000001,93.4"
-              Start="0,0"
-              End="-20.8000000000001,85.9">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,42.7" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,42.7"
-                    Point2="0,46.7"
-                    Point3="-4,46.7" />
-                  <mssgle:LineSegment
-                    End="-16.8000000000001,46.7" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-16.8000000000001,46.7"
-                    Point2="-20.8000000000001,46.7"
-                    Point3="-20.8000000000001,50.7" />
-                  <mssgle:LineSegment
-                    End="-20.8000000000001,85.9" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-58.59138671875,51.7,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="121.6,41.6"
-          Id="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup 1"
-          TopLeft="368,461" />
-        <EdgeLayout
-          Id="Package\CHITIETHOADON_JADE_TO_STAGE.Paths[Lookup Match Output1]"
-          TopLeft="417.4,419.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="11.4,41.4000000000001"
-              Start="0,0"
-              End="11.4,33.9000000000001">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.7" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.7"
-                    Point2="0,20.7"
-                    Point3="4,20.7" />
-                  <mssgle:LineSegment
-                    End="7.40000000000003,20.7" />
-                  <mssgle:CubicBezierSegment
-                    Point1="7.40000000000003,20.7"
-                    Point2="11.4,20.7"
-                    Point3="11.4,24.7" />
-                  <mssgle:LineSegment
-                    End="11.4,33.9000000000001" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-42.49138671875,25.7,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="162.4,41.6"
-          Id="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column 1"
-          TopLeft="240,557" />
-        <EdgeLayout
-          Id="Package\CHITIETHOADON_JADE_TO_STAGE.Paths[Lookup Match Output2]"
-          TopLeft="428.8,502.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-107.6,54.3999999999998"
-              Start="0,0"
-              End="-107.6,46.8999999999998">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,23.1999999999999" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,23.1999999999999"
-                    Point2="0,27.1999999999999"
-                    Point3="-4,27.1999999999999" />
-                  <mssgle:LineSegment
-                    End="-103.6,27.1999999999999" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-103.6,27.1999999999999"
-                    Point2="-107.6,27.1999999999999"
-                    Point3="-107.6,31.1999999999999" />
-                  <mssgle:LineSegment
-                    End="-107.6,46.8999999999998" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-101.99138671875,32.1999999999999,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="197.6,41.6"
+          Id="Package\KHACHHANG_JADE_TO_NDS\Lookup MA_KHACHHANG"
+          TopLeft="192.142860415031,264.588239004868" />
         <NodeLayout
           Size="194.4,41.6"
-          Id="Package\CHITIETHOADON_JADE_TO_STAGE\UPDATE EXISTING ROW"
-          TopLeft="205,642.8" />
-        <EdgeLayout
-          Id="Package\CHITIETHOADON_JADE_TO_STAGE.Paths[Derived Column Output1]"
-          TopLeft="321.2,598.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-18.9999999999998,44.1999999999999"
-              Start="0,0"
-              End="-18.9999999999998,36.6999999999999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18.1" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,18.1"
-                    Point2="0,22.1"
-                    Point3="-4,22.1" />
-                  <mssgle:LineSegment
-                    End="-14.9999999999998,22.1" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-14.9999999999998,22.1"
-                    Point2="-18.9999999999998,22.1"
-                    Point3="-18.9999999999998,26.1" />
-                  <mssgle:LineSegment
-                    End="-18.9999999999998,36.6999999999999" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Id="Package\KHACHHANG_JADE_TO_NDS\UPDATE EXISTING ROW"
+          TopLeft="118.571430590688,488.4470654943" />
         <NodeLayout
-          Size="162.4,41.6"
-          Id="Package\CHITIETHOADON_JADE_TO_STAGE\Derived Column 2"
-          TopLeft="492,577.2" />
+          Size="149.6,41.6"
+          Id="Package\KHACHHANG_JADE_TO_NDS\OLE DB Source"
+          TopLeft="175.000002980232,56.5882360877463" />
+        <NodeLayout
+          Size="282.4,41.6"
+          Id="Package\KHACHHANG_JADE_TO_NDS\Derived Column NGAYTAO, NGAYCAPNHAT"
+          TopLeft="468.571436551153,412.552945627226" />
+        <NodeLayout
+          Size="228.8,41.6"
+          Id="Package\KHACHHANG_JADE_TO_NDS\Derived Column NGUONDULIEU"
+          TopLeft="183.571431697631,145.294119684754" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\KHACHHANG_JADE_TO_NDS\OLE DB Destination"
+          TopLeft="485.000008259501,490.623534934991" />
+        <NodeLayout
+          Size="228.8,41.6"
+          Id="Package\KHACHHANG_JADE_TO_NDS\Derived Column NGAYCAPNHAT"
+          TopLeft="116.428573411338,403.800005651923" />
         <EdgeLayout
-          Id="Package\CHITIETHOADON_JADE_TO_STAGE.Paths[Lookup Error Output]"
-          TopLeft="447.733333333333,502.6">
+          Id="Package\KHACHHANG_JADE_TO_NDS.Paths[Lookup Error Output]"
+          TopLeft="322.542860415031,306.188239004868">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="125.466666666667,74.5999999999999"
+              EndConnector="287.228576136122,106.364706622358"
               Start="0,0"
-              End="125.466666666667,67.0999999999999">
+              End="287.228576136122,98.864706622358">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,26.4212987012986" />
+                    End="0,39.0584836447136" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,26.4212987012986"
-                    Point2="0,30.4212987012986"
-                    Point3="4,30.4212987012986" />
+                    Point1="0,39.0584836447136"
+                    Point2="0,43.0584836447136"
+                    Point3="4,43.0584836447136" />
                   <mssgle:LineSegment
-                    End="121.466666666667,30.4212987012986" />
+                    End="283.228576136122,43.0584836447136" />
                   <mssgle:CubicBezierSegment
-                    Point1="121.466666666667,30.4212987012986"
-                    Point2="125.466666666667,30.4212987012986"
-                    Point3="125.466666666667,34.4212987012986" />
+                    Point1="283.228576136122,43.0584836447136"
+                    Point2="287.228576136122,43.0584836447136"
+                    Point3="287.228576136122,47.0584836447136" />
                   <mssgle:LineSegment
-                    End="125.466666666667,67.0999999999999" />
+                    End="287.228576136122,98.864706622358" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="16.8669466145833,35.4212987012986,91.7327734375,11.609375"
+              BoundingBox="97.747901349311,48.0584836447136,91.7327734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="170.4,41.6"
-          Id="Package\CHITIETHOADON_JADE_TO_STAGE\OLE DB Destination"
-          TopLeft="539,654.2" />
         <EdgeLayout
-          Id="Package\CHITIETHOADON_JADE_TO_STAGE.Paths[Derived Column Output2]"
-          TopLeft="573.2,618.8">
+          Id="Package\KHACHHANG_JADE_TO_NDS.Paths[Derived Column Output2]"
+          TopLeft="609.771436551153,454.152945627226">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="51,35.4"
+              EndConnector="-39.5714282916516,36.4705893077654"
               Start="0,0"
-              End="51,27.9">
+              End="-39.5714282916516,28.9705893077654">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,13.7" />
+                    End="0,14.2352946538827" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,13.7"
-                    Point2="0,17.7"
-                    Point3="4,17.7" />
+                    Point1="0,14.2352946538827"
+                    Point2="0,18.2352946538827"
+                    Point3="-4,18.2352946538827" />
                   <mssgle:LineSegment
-                    End="47,17.7" />
+                    End="-35.5714282916516,18.2352946538827" />
                   <mssgle:CubicBezierSegment
-                    Point1="47,17.7"
-                    Point2="51,17.7"
-                    Point3="51,21.7" />
+                    Point1="-35.5714282916516,18.2352946538827"
+                    Point2="-39.5714282916516,18.2352946538827"
+                    Point3="-39.5714282916516,22.2352946538827" />
                   <mssgle:LineSegment
-                    End="51,27.9" />
+                    End="-39.5714282916516,28.9705893077654" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\KHACHHANG_JADE_TO_NDS.Paths[Derived Column Output1]"
+          TopLeft="230.828573411338,445.400005651923">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-15.0571428206502,43.047059842377"
+              Start="0,0"
+              End="-15.0571428206502,35.547059842377">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.5235299211885" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.5235299211885"
+                    Point2="0,21.5235299211885"
+                    Point3="-4,21.5235299211885" />
+                  <mssgle:LineSegment
+                    End="-11.0571428206502,21.5235299211885" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-11.0571428206502,21.5235299211885"
+                    Point2="-15.0571428206502,21.5235299211885"
+                    Point3="-15.0571428206502,25.5235299211885" />
+                  <mssgle:LineSegment
+                    End="-15.0571428206502,35.547059842377" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\KHACHHANG_JADE_TO_NDS.Paths[Derived Column Output]"
+          TopLeft="294.457146056331,186.894119684754">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,77.694119320114"
+              Start="0,0"
+              End="0,70.194119320114">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,70.194119320114" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\KHACHHANG_JADE_TO_NDS.Paths[OLE DB Source Output]"
+          TopLeft="249.800002980232,98.1882360877463">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="48.1714287173991,47.1058835970077"
+              Start="0,0"
+              End="48.1714287173991,39.6058835970077">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.5529417985038" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.5529417985038"
+                    Point2="0,23.5529417985038"
+                    Point3="4,23.5529417985038" />
+                  <mssgle:LineSegment
+                    End="44.1714287173991,23.5529417985038" />
+                  <mssgle:CubicBezierSegment
+                    Point1="44.1714287173991,23.5529417985038"
+                    Point2="48.1714287173991,23.5529417985038"
+                    Point3="48.1714287173991,27.5529417985038" />
+                  <mssgle:LineSegment
+                    End="48.1714287173991,39.6058835970077" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\KHACHHANG_JADE_TO_NDS.Paths[Lookup Match Output]"
+          TopLeft="259.342860415031,306.188239004868">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-28.514287003693,97.611766647055"
+              Start="0,0"
+              End="-28.514287003693,90.111766647055">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.5151248113379" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,35.5151248113379"
+                    Point2="0,39.5151248113379"
+                    Point3="-4,39.5151248113379" />
+                  <mssgle:LineSegment
+                    End="-24.514287003693,39.5151248113379" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-24.514287003693,39.5151248113379"
+                    Point2="-28.514287003693,39.5151248113379"
+                    Point3="-28.514287003693,43.5151248113379" />
+                  <mssgle:LineSegment
+                    End="-28.514287003693,90.111766647055" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-62.4485302205965,44.5151248113379,96.3827734375,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\CHITIETHOADON_JADE_TO_STAGE\OLE DB Source">
+    design-time-name="Package\KHACHHANG_JADE_TO_NDS\Lookup MA_KHACHHANG">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\KHACHHANG_JADE_TO_NDS\OLE DB Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5113,76 +5134,7 @@ where [refTable].[MaKH] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup MA_HD">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup 1">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\CHITIETHOADON_JADE_TO_STAGE\OLE DB Destination">
+    design-time-name="Package\KHACHHANG_JADE_TO_NDS\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

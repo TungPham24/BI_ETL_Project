@@ -5,14 +5,14 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DESKTOP-8V127BM"
   DTS:CreatorName="DESKTOP-8V127BM\tung3"
-  DTS:DTSID="{6C8BEC25-361F-4BCF-8648-058AEBE6DC92}"
+  DTS:DTSID="{7C374E01-DEF7-4E33-870B-58503FF6C72D}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="16.0.845.0"
   DTS:LocaleID="1033"
-  DTS:ObjectName="Package1"
+  DTS:ObjectName="01-2-WebTower9"
   DTS:PackageType="5"
-  DTS:VersionBuild="6"
-  DTS:VersionGUID="{20F36AF6-830B-40CB-869E-09E5033C11E9}">
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{2130B37E-0432-4E5E-9820-B3E210F7C30A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>

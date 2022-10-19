@@ -1,70 +1,70 @@
 ﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
-  DTS:CreationDate="10/15/2022 9:29:40 AM"
+  DTS:CreationDate="10/19/2022 7:53:13 PM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DESKTOP-8V127BM"
   DTS:CreatorName="DESKTOP-8V127BM\tung3"
-  DTS:DTSID="{77FF1840-D4A2-4EED-B7C2-A89C47D4D536}"
+  DTS:DTSID="{D7375D84-2849-4DC0-A677-11F6A46FE00A}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="16.0.845.0"
   DTS:LocaleID="1033"
-  DTS:ObjectName="Package1"
+  DTS:ObjectName="02-0-Stage_To_NDS"
   DTS:PackageType="5"
   DTS:VersionBuild="3"
-  DTS:VersionGUID="{732F60A9-2D59-4A6A-8E93-9F41774460D0}">
+  DTS:VersionGUID="{5A9E7536-7579-4173-9689-F25D296C35C9}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\EXE_JADE_TO_STAGE"
+      DTS:refId="Package\Jade_Stage_To_NDS"
       DTS:CreationName="Microsoft.ExecutePackageTask"
       DTS:Description="Execute Package Task"
-      DTS:DTSID="{2B20CBE4-F18A-4EEE-B207-AA4991C3998E}"
+      DTS:DTSID="{C9CA5F9B-AE90-4AAA-A37C-C2CFA2034E33}"
       DTS:ExecutableType="Microsoft.ExecutePackageTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="EXE_JADE_TO_STAGE"
+      DTS:ObjectName="Jade_Stage_To_NDS"
       DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
         <ExecutePackageTask>
           <UseProjectReference>True</UseProjectReference>
-          <PackageName>Jade_To_Stage.dtsx</PackageName>
+          <PackageName>02-1-Jade.dtsx</PackageName>
         </ExecutePackageTask>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Exe_Jupiter_to_Stage"
+      DTS:refId="Package\Jupiter_Stage_To_NDS"
       DTS:CreationName="Microsoft.ExecutePackageTask"
       DTS:Description="Execute Package Task"
-      DTS:DTSID="{D8CE1C3E-19EE-4CF6-8CE9-E1A019B8AB78}"
+      DTS:DTSID="{CA547446-772D-4DCA-810D-950029E885EA}"
       DTS:ExecutableType="Microsoft.ExecutePackageTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Exe_Jupiter_to_Stage"
+      DTS:ObjectName="Jupiter_Stage_To_NDS"
       DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
         <ExecutePackageTask>
           <UseProjectReference>True</UseProjectReference>
-          <PackageName>Jupiter_To_Stage.dtsx</PackageName>
+          <PackageName>02-3-Jupiter.dtsx</PackageName>
         </ExecutePackageTask>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\EXE_WEBTOWER9_TO_STAGE"
+      DTS:refId="Package\WEBTOWER9_STAGE_TO_NDS"
       DTS:CreationName="Microsoft.ExecutePackageTask"
       DTS:Description="Execute Package Task"
-      DTS:DTSID="{801C4C7F-10AA-40B4-8AF9-9C56B82553C5}"
+      DTS:DTSID="{5821F46D-9F48-4D08-81A9-771EDC711313}"
       DTS:ExecutableType="Microsoft.ExecutePackageTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="EXE_WEBTOWER9_TO_STAGE"
+      DTS:ObjectName="WEBTOWER9_STAGE_TO_NDS"
       DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
         <ExecutePackageTask>
           <UseProjectReference>True</UseProjectReference>
-          <PackageName>WebTower9_To_Stage.dtsx</PackageName>
+          <PackageName>02-2-WebTower9.dtsx</PackageName>
         </ExecutePackageTask>
       </DTS:ObjectData>
     </DTS:Executable>
@@ -73,19 +73,19 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{23DB7B6B-7BFA-46C5-BAAC-322DFE4372A7}"
-      DTS:From="Package\Exe_Jupiter_to_Stage"
+      DTS:DTSID="{E98D0E8E-F953-4426-9996-5F471E48A524}"
+      DTS:From="Package\Jupiter_Stage_To_NDS"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
-      DTS:To="Package\EXE_JADE_TO_STAGE" />
+      DTS:To="Package\Jade_Stage_To_NDS" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
-      DTS:DTSID="{B7A2E523-4BA1-4245-A238-0F41A7AAD4EA}"
-      DTS:From="Package\EXE_JADE_TO_STAGE"
+      DTS:DTSID="{C28D6D7C-4001-445E-B464-BD0EB382D16D}"
+      DTS:From="Package\Jade_Stage_To_NDS"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
-      DTS:To="Package\EXE_WEBTOWER9_TO_STAGE" />
+      DTS:To="Package\WEBTOWER9_STAGE_TO_NDS" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -100,43 +100,31 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="183.2,41.6"
-          Id="Package\EXE_JADE_TO_STAGE"
-          TopLeft="193.571431867931,147.588237363987" />
+          Size="176,41.6"
+          Id="Package\Jade_Stage_To_NDS"
+          TopLeft="255.000004342624,149.88235504322" />
         <NodeLayout
-          Size="180.8,41.6"
-          Id="Package\Exe_Jupiter_to_Stage"
-          TopLeft="182.857145971181,42.0588241192709" />
+          Size="186.4,41.6"
+          Id="Package\Jupiter_Stage_To_NDS"
+          TopLeft="243.571432719425,52.764706622358" />
         <NodeLayout
-          Size="182.4,41.6"
-          Id="Package\EXE_WEBTOWER9_TO_STAGE"
-          TopLeft="197.14286050018,234.000003281762" />
+          Size="225.6,41.6"
+          Id="Package\WEBTOWER9_STAGE_TO_NDS"
+          TopLeft="222.857146652378,243.941179891771" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="273.257145971181,83.6588241192709">
+          TopLeft="339.885718531025,94.364706622358">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="11.9142858967496,63.9294132447161"
+              EndConnector="0,55.5176484208619"
               Start="0,0"
-              End="11.9142858967496,56.4294132447161">
+              End="0,48.0176484208619">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,27.9647066223581" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,27.9647066223581"
-                    Point2="0,31.9647066223581"
-                    Point3="4,31.9647066223581" />
-                  <mssgle:LineSegment
-                    End="7.91428589674956,31.9647066223581" />
-                  <mssgle:CubicBezierSegment
-                    Point1="7.91428589674956,31.9647066223581"
-                    Point2="11.9142858967496,31.9647066223581"
-                    Point3="11.9142858967496,35.9647066223581" />
-                  <mssgle:LineSegment
-                    End="11.9142858967496,56.4294132447161" />
+                    End="0,48.0176484208619" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -147,18 +135,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="286.757146184055,189.188237363987">
+          TopLeft="339.328575497501,191.48235504322">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,44.8117659177748"
+              EndConnector="0,52.4588248485513"
               Start="0,0"
-              End="0,37.3117659177748">
+              End="0,44.9588248485513">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,37.3117659177748" />
+                    End="0,44.9588248485513" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

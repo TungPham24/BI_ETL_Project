@@ -5,14 +5,14 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DESKTOP-8V127BM"
   DTS:CreatorName="DESKTOP-8V127BM\tung3"
-  DTS:DTSID="{02C5BFC3-E544-4FC5-BF3B-606A655C6D1D}"
+  DTS:DTSID="{37C18369-C25B-4E66-BEBA-C510F2B1096C}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="16.0.845.0"
   DTS:LocaleID="1033"
-  DTS:ObjectName="Package1"
+  DTS:ObjectName="01-1-Jade"
   DTS:PackageType="5"
-  DTS:VersionBuild="17"
-  DTS:VersionGUID="{D6BF1D7E-DD07-4D98-8837-D6FED3365D21}">
+  DTS:VersionBuild="20"
+  DTS:VersionGUID="{F7AF4AFE-B35D-4DC0-90D7-EF1779D826AF}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -87,7 +87,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="CET">
       <DTS:VariableValue
-        DTS:DataType="7">10/17/2022 9:14:21 PM</DTS:VariableValue>
+        DTS:DataType="7">10/19/2022 8:09:55 PM</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -132,58 +132,6 @@
         <pipeline
           version="1">
           <components>
-            <component
-              refId="Package\CHITIETHOADON_TO_STAGE\Flat File Source"
-              componentClassID="Microsoft.FlatFileSource"
-              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Flat File Source"
-              name="Flat File Source"
-              usesDispositions="true"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Specifies whether zero-length columns are treated as null."
-                  name="RetainNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
-                  name="FileNameColumnName"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\CHITIETHOADON_TO_STAGE\Flat File Source.Connections[FlatFileConnection]"
-                  name="FlatFileConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\CHITIETHOADON_TO_STAGE\Flat File Source.Outputs[Flat File Source Output]"
-                  name="Flat File Source Output">
-                  <externalMetadataColumns
-                    isUsed="True" />
-                </output>
-                <output
-                  refId="Package\CHITIETHOADON_TO_STAGE\Flat File Source.Outputs[Flat File Source Error Output]"
-                  isErrorOut="true"
-                  name="Flat File Source Error Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\CHITIETHOADON_TO_STAGE\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\CHITIETHOADON_TO_STAGE\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\CHITIETHOADON_TO_STAGE\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\CHITIETHOADON_TO_STAGE\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
             <component
               refId="Package\CHITIETHOADON_TO_STAGE\OLE DB Destination"
               componentClassID="Microsoft.OLEDBDestination"
@@ -1978,10 +1926,6 @@ WHERE  (NgayCapNhat BETWEEN ? AND ?) OR
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="149.6,41.6"
-          Id="Package\CHITIETHOADON_TO_STAGE\OLE DB Source"
-          TopLeft="464,32" />
-        <NodeLayout
           Size="164.8,41.6"
           Id="Package\CHITIETHOADON_TO_STAGE\TRUNCATE CHITIETHOADON_STAGE"
           TopLeft="455.5,126.5" />
@@ -1989,6 +1933,10 @@ WHERE  (NgayCapNhat BETWEEN ? AND ?) OR
           Size="170.4,41.6"
           Id="Package\CHITIETHOADON_TO_STAGE\OLE DB Destination"
           TopLeft="459,245" />
+        <NodeLayout
+          Size="149.6,41.6"
+          Id="Package\CHITIETHOADON_TO_STAGE\OLE DB Source"
+          TopLeft="464,32" />
         <EdgeLayout
           Id="Package\CHITIETHOADON_TO_STAGE.Paths[OLE DB Source Output]"
           TopLeft="538.35,73.6">
@@ -2037,21 +1985,9 @@ WHERE  (NgayCapNhat BETWEEN ? AND ?) OR
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="150.4,41.6"
-          Id="Package\CHITIETHOADON_TO_STAGE\Flat File Source"
-          TopLeft="242.142861266526,76.9764712638921" />
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\CHITIETHOADON_TO_STAGE\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\CHITIETHOADON_TO_STAGE\OLE DB Destination">
     <Properties>
@@ -2062,6 +1998,14 @@ WHERE  (NgayCapNhat BETWEEN ? AND ?) OR
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\CHITIETHOADON_TO_STAGE\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

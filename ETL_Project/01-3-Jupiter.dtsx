@@ -5,14 +5,14 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DESKTOP-8V127BM"
   DTS:CreatorName="DESKTOP-8V127BM\tung3"
-  DTS:DTSID="{22DBFF44-07A4-4C2B-A555-90813C95204B}"
+  DTS:DTSID="{2ED4FFBA-51D1-435F-88FE-5E17E1B04B07}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="16.0.845.0"
   DTS:LocaleID="1033"
-  DTS:ObjectName="Jupiter_To_Stage"
+  DTS:ObjectName="01-3-Jupiter"
   DTS:PackageType="5"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{A03CF2BD-8C06-43A1-B080-1CEB5076B575}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{C8A9983D-67A4-4030-BCEB-E01CB8332C7F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
