@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="02-3-Jupiter"
   DTS:PackageType="5"
-  DTS:VersionBuild="12"
-  DTS:VersionGUID="{544034A0-1ABA-4B65-BCE3-63518B0E6C41}">
+  DTS:VersionBuild="13"
+  DTS:VersionGUID="{91C61ECF-A658-4E0B-AFC3-B195E69FA0CC}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -241,11 +241,11 @@ where [refTable].[MaLoaiCH] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\Lookup MACUAHANG"
+              refId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\Lookup MA_CUAHANG"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
               description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
-              name="Lookup MACUAHANG"
+              name="Lookup MA_CUAHANG"
               usesDispositions="true"
               version="6">
               <properties>
@@ -313,7 +313,7 @@ where [refTable].[MaCH] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\Lookup MACUAHANG.Connections[OleDbConnection]"
+                  refId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\Lookup MA_CUAHANG.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.NDS]"
                   connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.NDS]"
                   description="Connection manager used to access lookup data."
@@ -321,11 +321,11 @@ where [refTable].[MaCH] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\Lookup MACUAHANG.Inputs[Lookup Input]"
+                  refId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\Lookup MA_CUAHANG.Inputs[Lookup Input]"
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\Lookup MACUAHANG.Inputs[Lookup Input].Columns[MaCH]"
+                      refId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\Lookup MA_CUAHANG.Inputs[Lookup Input].Columns[MaCH]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="4"
@@ -348,18 +348,18 @@ where [refTable].[MaCH] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\Lookup MACUAHANG.Outputs[Lookup Match Output]"
+                  refId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\Lookup MA_CUAHANG.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
                   errorRowDisposition="FailComponent"
                   exclusionGroup="1"
                   name="Lookup Match Output"
-                  synchronousInputId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\Lookup MACUAHANG.Inputs[Lookup Input]">
+                  synchronousInputId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\Lookup MA_CUAHANG.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\Lookup MACUAHANG.Outputs[Lookup Match Output].Columns[MaCHTrongNDS]"
+                      refId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\Lookup MA_CUAHANG.Outputs[Lookup Match Output].Columns[MaCHTrongNDS]"
                       dataType="i4"
                       errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\Lookup MACUAHANG.Outputs[Lookup Match Output].Columns[MaCHTrongNDS]"
+                      lineageId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\Lookup MA_CUAHANG.Outputs[Lookup Match Output].Columns[MaCHTrongNDS]"
                       name="MaCHTrongNDS"
                       truncationRowDisposition="RedirectRow">
                       <properties>
@@ -373,30 +373,30 @@ where [refTable].[MaCH] = ?</property>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\Lookup MACUAHANG.Outputs[Lookup No Match Output]"
+                  refId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\Lookup MA_CUAHANG.Outputs[Lookup No Match Output]"
                   description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
                   exclusionGroup="1"
                   name="Lookup No Match Output"
-                  synchronousInputId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\Lookup MACUAHANG.Inputs[Lookup Input]">
+                  synchronousInputId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\Lookup MA_CUAHANG.Inputs[Lookup Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\Lookup MACUAHANG.Outputs[Lookup Error Output]"
+                  refId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\Lookup MA_CUAHANG.Outputs[Lookup Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Lookup Error Output"
-                  synchronousInputId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\Lookup MACUAHANG.Inputs[Lookup Input]">
+                  synchronousInputId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\Lookup MA_CUAHANG.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\Lookup MACUAHANG.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      refId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\Lookup MA_CUAHANG.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\Lookup MACUAHANG.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      lineageId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\Lookup MA_CUAHANG.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\Lookup MACUAHANG.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      refId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\Lookup MA_CUAHANG.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\Lookup MACUAHANG.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\Lookup MA_CUAHANG.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1271,7 +1271,7 @@ where [refTable].[MaNuoc] = ?</property>
                       cachedDataType="i4"
                       cachedName="MaCHTrongNDS"
                       externalMetadataColumnId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\UPDATE EXISTING ROW.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
-                      lineageId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\Lookup MACUAHANG.Outputs[Lookup Match Output].Columns[MaCHTrongNDS]" />
+                      lineageId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\Lookup MA_CUAHANG.Outputs[Lookup Match Output].Columns[MaCHTrongNDS]" />
                     <inputColumn
                       refId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\UPDATE EXISTING ROW.Inputs[OLE DB Command Input].Columns[MaLoaiCHTrongNDS]"
                       cachedDataType="i4"
@@ -1411,7 +1411,7 @@ where [refTable].[MaNuoc] = ?</property>
               refId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS.Paths[Lookup Error Output]"
               endId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\THEM NGAYTAO, NGAYCAPNHAT.Inputs[Derived Column Input]"
               name="Lookup Error Output"
-              startId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\Lookup MACUAHANG.Outputs[Lookup Error Output]" />
+              startId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\Lookup MA_CUAHANG.Outputs[Lookup Error Output]" />
             <path
               refId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS.Paths[Lookup Match Output]"
               endId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\Lookup LOAICUAHANG.Inputs[Lookup Input]"
@@ -1419,14 +1419,14 @@ where [refTable].[MaNuoc] = ?</property>
               startId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\Lookup NUOC.Outputs[Lookup Match Output]" />
             <path
               refId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS.Paths[Lookup Match Output1]"
-              endId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\Lookup MACUAHANG.Inputs[Lookup Input]"
+              endId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\Lookup MA_CUAHANG.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\Lookup LOAICUAHANG.Outputs[Lookup Match Output]" />
             <path
               refId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS.Paths[Lookup Match Output2]"
               endId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\THEM NGAYCAPNHAT.Inputs[Derived Column Input]"
               name="Lookup Match Output"
-              startId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\Lookup MACUAHANG.Outputs[Lookup Match Output]" />
+              startId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\Lookup MA_CUAHANG.Outputs[Lookup Match Output]" />
             <path
               refId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS.Paths[OLE DB Source Output]"
               endId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\THEM NGUONDULIEU.Inputs[Derived Column Input]"
@@ -1546,7 +1546,7 @@ where [refTable].[MaNuoc] = ?</property>
                       lineageId="Package\LOAICUAHANG_JUPITER_STAGE_TO_LOAICUAHANG_NDS\OLE DB Source.Outputs[OLE DB Source Output].Columns[TrangThai]" />
                     <inputColumn
                       refId="Package\LOAICUAHANG_JUPITER_STAGE_TO_LOAICUAHANG_NDS\INSERT NEW ROWS.Inputs[OLE DB Destination Input].Columns[NguonDuLieu]"
-                      cachedDataType="i8"
+                      cachedDataType="i4"
                       cachedName="NguonDuLieu"
                       externalMetadataColumnId="Package\LOAICUAHANG_JUPITER_STAGE_TO_LOAICUAHANG_NDS\INSERT NEW ROWS.Inputs[OLE DB Destination Input].ExternalColumns[NguonDuLieu]"
                       lineageId="Package\LOAICUAHANG_JUPITER_STAGE_TO_LOAICUAHANG_NDS\THEM NGUONDULIEU.Outputs[Derived Column Output].Columns[NguonDuLieu]" />
@@ -1972,7 +1972,7 @@ where [refTable].[MaNuoc] = ?</property>
                   <outputColumns>
                     <outputColumn
                       refId="Package\LOAICUAHANG_JUPITER_STAGE_TO_LOAICUAHANG_NDS\THEM NGUONDULIEU.Outputs[Derived Column Output].Columns[NguonDuLieu]"
-                      dataType="i8"
+                      dataType="i4"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
                       lineageId="Package\LOAICUAHANG_JUPITER_STAGE_TO_LOAICUAHANG_NDS\THEM NGUONDULIEU.Outputs[Derived Column Output].Columns[NguonDuLieu]"
@@ -1983,13 +1983,13 @@ where [refTable].[MaNuoc] = ?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">@[User::MaNguonDuLieu]</property>
+                          name="Expression">3</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">@[User::MaNguonDuLieu]</property>
+                          name="FriendlyExpression">3</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -5528,7 +5528,7 @@ where [refTable].[MaSP] = ?</property>
         <NodeLayout
           Size="355.2,41.6"
           Id="Package\LOAICUAHANG_JUPITER_STAGE_TO_LOAICUAHANG_NDS"
-          TopLeft="117.857144864238,113.176472175493" />
+          TopLeft="117.857144864238,112.411766282415" />
         <NodeLayout
           Size="316.8,41.6"
           Id="Package\LOAISANPHAM_JUPITER_TO_LOAICUAHANG_NDS"
@@ -5551,14 +5551,14 @@ where [refTable].[MaSP] = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,61.6352955654835"
+              EndConnector="0,60.8705896724058"
               Start="0,0"
-              End="0,54.1352955654835">
+              End="0,53.3705896724058">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,54.1352955654835" />
+                    End="0,53.3705896724058" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5569,18 +5569,18 @@ where [refTable].[MaSP] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="294.428573581637,154.776472175493">
+          TopLeft="294.428573581637,154.011766282415">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,66.223530923949"
+              EndConnector="0,66.9882368170267"
               Start="0,0"
-              End="0,58.723530923949">
+              End="0,59.4882368170267">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,58.723530923949" />
+                    End="0,59.4882368170267" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5664,86 +5664,50 @@ where [refTable].[MaSP] = ?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="235.2,41.6"
+          Id="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\THEM NGAYTAO, NGAYCAPNHAT"
+          TopLeft="417.142864246758,446.08235449626" />
+        <NodeLayout
+          Size="184,41.6"
+          Id="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\Lookup MA_CUAHANG"
+          TopLeft="174.285717253783,365.176472175493" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\OLE DB Destination"
+          TopLeft="395.71429245326,544.729414703277" />
+        <NodeLayout
+          Size="181.6,41.6"
+          Id="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\THEM NGAYCAPNHAT"
+          TopLeft="98.000001873289,468.047055284375" />
+        <NodeLayout
           Size="149.6,41.6"
           Id="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\OLE DB Source"
-          TopLeft="70.0000011920933,28.2941180438732" />
+          TopLeft="70.0000011920933,27.2941180438732" />
         <NodeLayout
           Size="181.6,41.6"
           Id="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\THEM NGUONDULIEU"
-          TopLeft="90.7142872591409,119.294119320114" />
-        <EdgeLayout
-          Id="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS.Paths[OLE DB Source Output]"
-          TopLeft="144.800001192093,69.8941180438731">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="36.7142860670477,49.4000012762407"
-              Start="0,0"
-              End="36.7142860670477,41.9000012762407">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.7000006381203" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.7000006381203"
-                    Point2="0,24.7000006381203"
-                    Point3="4,24.7000006381203" />
-                  <mssgle:LineSegment
-                    End="32.7142860670477,24.7000006381203" />
-                  <mssgle:CubicBezierSegment
-                    Point1="32.7142860670477,24.7000006381203"
-                    Point2="36.7142860670477,24.7000006381203"
-                    Point3="36.7142860670477,28.7000006381203" />
-                  <mssgle:LineSegment
-                    End="36.7142860670477,41.9000012762407" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="144,41.6"
-          Id="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\Lookup NUOC"
-          TopLeft="103.571430335239,195.764708627879" />
-        <EdgeLayout
-          Id="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS.Paths[Derived Column Output]"
-          TopLeft="178.54285879719,160.894119320114">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,34.8705893077652"
-              Start="0,0"
-              End="0,27.3705893077652">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,27.3705893077652" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="92.7142872591409,119.294119320114" />
         <NodeLayout
           Size="186.4,41.6"
           Id="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\Lookup LOAICUAHANG"
           TopLeft="125.714287855187,275.294121507955" />
+        <NodeLayout
+          Size="144,41.6"
+          Id="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\Lookup NUOC"
+          TopLeft="104.571430335239,195.764708627879" />
+        <NodeLayout
+          Size="194.4,41.6"
+          Id="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\UPDATE EXISTING ROW"
+          TopLeft="96.4285730707401,543.211768834896" />
         <EdgeLayout
           Id="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS.Paths[Lookup Match Output]"
-          TopLeft="175.571430335239,237.364708627879">
+          TopLeft="176.571430335239,237.364708627879">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="43.3428575199477,37.929412880076"
+              EndConnector="42.342857519948,37.929412880076"
               Start="0,0"
-              End="43.3428575199477,30.429412880076">
+              End="42.342857519948,30.429412880076">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -5754,173 +5718,59 @@ where [refTable].[MaSP] = ?</property>
                     Point2="0,18.964706440038"
                     Point3="4,18.964706440038" />
                   <mssgle:LineSegment
-                    End="39.3428575199477,18.964706440038" />
+                    End="38.342857519948,18.964706440038" />
                   <mssgle:CubicBezierSegment
-                    Point1="39.3428575199477,18.964706440038"
-                    Point2="43.3428575199477,18.964706440038"
-                    Point3="43.3428575199477,22.964706440038" />
+                    Point1="38.342857519948,18.964706440038"
+                    Point2="42.342857519948,18.964706440038"
+                    Point3="42.342857519948,22.964706440038" />
                   <mssgle:LineSegment
-                    End="43.3428575199477,30.429412880076" />
+                    End="42.342857519948,30.429412880076" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-26.5199579587762,23.964706440038,96.3827734375,11.609375"
+              BoundingBox="-27.019957958776,23.964706440038,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="178.4,41.6"
-          Id="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\Lookup MACUAHANG"
-          TopLeft="174.285717253783,365.176472175493" />
-        <EdgeLayout
-          Id="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS.Paths[Lookup Match Output1]"
-          TopLeft="218.914287855187,316.894121507955">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="44.5714293985953,48.2823506675376"
-              Start="0,0"
-              End="44.5714293985953,40.7823506675376">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.1411753337688" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.1411753337688"
-                    Point2="0,24.1411753337688"
-                    Point3="4,24.1411753337688" />
-                  <mssgle:LineSegment
-                    End="40.5714293985953,24.1411753337688" />
-                  <mssgle:CubicBezierSegment
-                    Point1="40.5714293985953,24.1411753337688"
-                    Point2="44.5714293985953,24.1411753337688"
-                    Point3="44.5714293985953,28.1411753337688" />
-                  <mssgle:LineSegment
-                    End="44.5714293985953,40.7823506675376" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-25.9056720194523,29.1411753337688,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="181.6,41.6"
-          Id="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\THEM NGAYCAPNHAT"
-          TopLeft="110.000001873289,442.047055284375" />
-        <EdgeLayout
-          Id="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS.Paths[Lookup Match Output2]"
-          TopLeft="263.485717253783,406.776472175493">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-62.6857153804937,35.270583108882"
-              Start="0,0"
-              End="-62.6857153804937,27.770583108882">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,13.635291554441" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,13.635291554441"
-                    Point2="0,17.635291554441"
-                    Point3="-4,17.635291554441" />
-                  <mssgle:LineSegment
-                    End="-58.6857153804937,17.635291554441" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-58.6857153804937,17.635291554441"
-                    Point2="-62.6857153804937,17.635291554441"
-                    Point3="-62.6857153804937,21.635291554441" />
-                  <mssgle:LineSegment
-                    End="-62.6857153804937,27.770583108882" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-79.5342444089969,22.635291554441,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="194.4,41.6"
-          Id="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\UPDATE EXISTING ROW"
-          TopLeft="96.4285730707401,543.211768834896" />
-        <EdgeLayout
-          Id="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS.Paths[Derived Column Output1]"
-          TopLeft="197.214287472014,483.647055284375">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,59.5647135505214"
-              Start="0,0"
-              End="0,52.0647135505214">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.0647135505214" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="235.2,41.6"
-          Id="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\THEM NGAYTAO, NGAYCAPNHAT"
-          TopLeft="417.142864246758,446.08235449626" />
         <EdgeLayout
           Id="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS.Paths[Lookup Error Output]"
-          TopLeft="291.885717253783,406.776472175493">
+          TopLeft="295.619050587116,406.776472175493">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="242.857146992975,39.305882320767"
+              EndConnector="239.123813659642,39.305882320767"
               Start="0,0"
-              End="242.857146992975,31.805882320767">
+              End="239.123813659642,31.805882320767">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,11.9319843006842" />
+                    End="0,11.9256592161728" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,11.9319843006842"
-                    Point2="0,15.9319843006842"
-                    Point3="4,15.9319843006842" />
+                    Point1="0,11.9256592161728"
+                    Point2="0,15.9256592161728"
+                    Point3="4,15.9256592161728" />
                   <mssgle:LineSegment
-                    End="238.857146992975,15.9319843006842" />
+                    End="235.123813659642,15.9256592161728" />
                   <mssgle:CubicBezierSegment
-                    Point1="238.857146992975,15.9319843006842"
-                    Point2="242.857146992975,15.9319843006842"
-                    Point3="242.857146992975,19.9319843006842" />
+                    Point1="235.123813659642,15.9256592161728"
+                    Point2="239.123813659642,15.9256592161728"
+                    Point3="239.123813659642,19.9256592161728" />
                   <mssgle:LineSegment
-                    End="242.857146992975,31.805882320767" />
+                    End="239.123813659642,31.805882320767" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="75.5621867777376,20.9319843006842,91.7327734375,11.609375"
+              BoundingBox="73.6955201110708,20.9256592161728,91.7327734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="170.4,41.6"
-          Id="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\OLE DB Destination"
-          TopLeft="395.71429245326,544.729414703277" />
         <EdgeLayout
           Id="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS.Paths[Derived Column Output2]"
           TopLeft="534.742864246758,487.68235449626">
@@ -5955,11 +5805,161 @@ where [refTable].[MaSP] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS.Paths[Derived Column Output1]"
+          TopLeft="191.214287472015,509.647055284375">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,33.564713550521"
+              Start="0,0"
+              End="0,26.064713550521">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.064713550521" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS.Paths[Derived Column Output]"
+          TopLeft="180.04285879719,160.894119320114">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34.870589307765"
+              Start="0,0"
+              End="0,27.370589307765">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.370589307765" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS.Paths[OLE DB Source Output]"
+          TopLeft="144.800001192093,68.8941180438732">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="38.7142860670476,50.4000012762408"
+              Start="0,0"
+              End="38.7142860670476,42.9000012762408">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.2000006381204" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.2000006381204"
+                    Point2="0,25.2000006381204"
+                    Point3="4,25.2000006381204" />
+                  <mssgle:LineSegment
+                    End="34.7142860670476,25.2000006381204" />
+                  <mssgle:CubicBezierSegment
+                    Point1="34.7142860670476,25.2000006381204"
+                    Point2="38.7142860670476,25.2000006381204"
+                    Point3="38.7142860670476,29.2000006381204" />
+                  <mssgle:LineSegment
+                    End="38.7142860670476,42.9000012762408" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS.Paths[Lookup Match Output2]"
+          TopLeft="236.95238392045,406.776472175493">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-48.1523820471607,61.270583108882"
+              Start="0,0"
+              End="-48.1523820471607,53.770583108882">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.8251500527367" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.8251500527367"
+                    Point2="0,24.8251500527367"
+                    Point3="-4,24.8251500527367" />
+                  <mssgle:LineSegment
+                    End="-44.1523820471607,24.8251500527367" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-44.1523820471607,24.8251500527367"
+                    Point2="-48.1523820471607,24.8251500527367"
+                    Point3="-48.1523820471607,28.8251500527367" />
+                  <mssgle:LineSegment
+                    End="-48.1523820471607,53.770583108882" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-72.2675777423303,29.8251500527367,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS.Paths[Lookup Match Output1]"
+          TopLeft="218.914287855187,316.894121507955">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="47.371429398596,48.282350667538"
+              Start="0,0"
+              End="47.371429398596,40.782350667538">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.141175333769" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.141175333769"
+                    Point2="0,24.141175333769"
+                    Point3="4,24.141175333769" />
+                  <mssgle:LineSegment
+                    End="43.371429398596,24.141175333769" />
+                  <mssgle:CubicBezierSegment
+                    Point1="43.371429398596,24.141175333769"
+                    Point2="47.371429398596,24.141175333769"
+                    Point3="47.371429398596,28.141175333769" />
+                  <mssgle:LineSegment
+                    End="47.371429398596,40.782350667538" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-24.505672019452,29.141175333769,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\Lookup MACUAHANG">
+    design-time-name="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\Lookup MA_CUAHANG">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -6036,7 +6036,7 @@ where [refTable].[MaSP] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -6085,7 +6085,7 @@ where [refTable].[MaSP] = ?</property>
         <NodeLayout
           Size="337.6,41.6"
           Id="Package\LOAICUAHANG_JUPITER_STAGE_TO_LOAICUAHANG_NDS\TIM KIEM MALOAICUAHANG TUONG UNG TRONG NDS"
-          TopLeft="168,227" />
+          TopLeft="168,226.235294106922" />
         <EdgeLayout
           Id="Package\LOAICUAHANG_JUPITER_STAGE_TO_LOAICUAHANG_NDS.Paths[Derived Column Output2]"
           TopLeft="688.7,373.2">
@@ -6136,26 +6136,26 @@ where [refTable].[MaSP] = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="12,48.4"
+              EndConnector="12,47.6352941069224"
               Start="0,0"
-              End="12,40.9">
+              End="12,40.1352941069224">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20.2" />
+                    End="0,19.8176470534612" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,20.2"
-                    Point2="0,24.2"
-                    Point3="4,24.2" />
+                    Point1="0,19.8176470534612"
+                    Point2="0,23.8176470534612"
+                    Point3="4,23.8176470534612" />
                   <mssgle:LineSegment
-                    End="8,24.2" />
+                    End="8,23.8176470534612" />
                   <mssgle:CubicBezierSegment
-                    Point1="8,24.2"
-                    Point2="12,24.2"
-                    Point3="12,28.2" />
+                    Point1="8,23.8176470534612"
+                    Point2="12,23.8176470534612"
+                    Point3="12,27.8176470534612" />
                   <mssgle:LineSegment
-                    End="12,40.9" />
+                    End="12,40.1352941069224" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6188,73 +6188,73 @@ where [refTable].[MaSP] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\LOAICUAHANG_JUPITER_STAGE_TO_LOAICUAHANG_NDS.Paths[Lookup Match Output]"
-          TopLeft="281.866666666667,268.6">
+          TopLeft="281.866666666667,267.835294106922">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="27.9333333333333,67.4"
+              EndConnector="27.9333333333333,68.1647058930776"
               Start="0,0"
-              End="27.9333333333333,59.9">
+              End="27.9333333333333,60.6647058930776">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,23.1507547169811" />
+                    End="0,23.4588013361737" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,23.1507547169811"
-                    Point2="0,27.1507547169811"
-                    Point3="4,27.1507547169811" />
+                    Point1="0,23.4588013361737"
+                    Point2="0,27.4588013361737"
+                    Point3="4,27.4588013361737" />
                   <mssgle:LineSegment
-                    End="23.9333333333333,27.1507547169811" />
+                    End="23.9333333333333,27.4588013361737" />
                   <mssgle:CubicBezierSegment
-                    Point1="23.9333333333333,27.1507547169811"
-                    Point2="27.9333333333333,27.1507547169811"
-                    Point3="27.9333333333333,31.1507547169811" />
+                    Point1="23.9333333333333,27.4588013361737"
+                    Point2="27.9333333333333,27.4588013361737"
+                    Point3="27.9333333333333,31.4588013361737" />
                   <mssgle:LineSegment
-                    End="27.9333333333333,59.9" />
+                    End="27.9333333333333,60.6647058930776" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-34.2247200520834,32.1507547169811,96.3827734375,11.609375"
+              BoundingBox="-34.2247200520833,32.4588013361737,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\LOAICUAHANG_JUPITER_STAGE_TO_LOAICUAHANG_NDS.Paths[Lookup Error Output]"
-          TopLeft="391.733333333333,268.6">
+          TopLeft="391.733333333333,267.835294106922">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="297.866666666667,63"
+              EndConnector="297.866666666667,63.7647058930776"
               Start="0,0"
-              End="297.866666666667,55.5">
+              End="297.866666666667,56.2647058930776">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,21.3783018867925" />
+                    End="0,21.686348505985" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,21.3783018867925"
-                    Point2="0,25.3783018867925"
-                    Point3="4,25.3783018867925" />
+                    Point1="0,21.686348505985"
+                    Point2="0,25.686348505985"
+                    Point3="4,25.686348505985" />
                   <mssgle:LineSegment
-                    End="293.866666666667,25.3783018867925" />
+                    End="293.866666666667,25.686348505985" />
                   <mssgle:CubicBezierSegment
-                    Point1="293.866666666667,25.3783018867925"
-                    Point2="297.866666666667,25.3783018867925"
-                    Point3="297.866666666667,29.3783018867925" />
+                    Point1="293.866666666667,25.686348505985"
+                    Point2="297.866666666667,25.686348505985"
+                    Point3="297.866666666667,29.686348505985" />
                   <mssgle:LineSegment
-                    End="297.866666666667,55.5" />
+                    End="297.866666666667,56.2647058930776" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="103.066946614584,30.3783018867925,91.7327734375,11.609375"
+              BoundingBox="103.066946614583,30.686348505985,91.7327734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -6293,7 +6293,7 @@ where [refTable].[MaSP] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -6303,7 +6303,7 @@ where [refTable].[MaSP] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>

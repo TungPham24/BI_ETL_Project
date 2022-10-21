@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="02-2-WebTower9"
   DTS:PackageType="5"
-  DTS:VersionBuild="5"
-  DTS:VersionGUID="{ED2F20E7-0E75-4279-B754-ABBBF4D080F6}">
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{9348D555-F3AE-4934-8BE6-8E86AEEA7DE9}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -3037,7 +3037,7 @@ where [refTable].[MaKH] = ?</property>
                 <property
                   dataType="System.Single"
                   description="Specifies the minimum similarity score required for the match results that the transformation returns."
-                  name="MinSimilarity">0.2</property>
+                  name="MinSimilarity">0.35</property>
                 <property
                   dataType="System.String"
                   description="Specifies the set of white-space and punctuation characters used to separate fuzzy match fields into the words used for matching and scoring a fuzzy lookup."
@@ -4589,11 +4589,11 @@ where [refTable].[MaKH] = ?</property>
         <NodeLayout
           Size="288,41.6"
           Id="Package\CHITIETHOADON_WEBTOWER9_TO_STAGE"
-          TopLeft="173.571430505539,339.117650973343" />
+          TopLeft="91.4285719637975,341.411768652576" />
         <NodeLayout
           Size="153.6,41.6"
           Id="Package\Expression Task"
-          TopLeft="65.0000000851496,60" />
+          TopLeft="156.42857307074,45.4705880315246" />
         <NodeLayout
           Size="236.8,41.6"
           Id="Package\HOADON_WEBTOWER9_TO_NDS"
@@ -4601,33 +4601,21 @@ where [refTable].[MaKH] = ?</property>
         <NodeLayout
           Size="255.2,41.6"
           Id="Package\KHACHHANG_WEBTOWER9_TO_NDS"
-          TopLeft="60,157.88235431394" />
+          TopLeft="101.428572134096,154.823530741629" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="141.80000008515,101.6">
+          TopLeft="231.128572602418,87.0705880315246">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="45.7999999148504,56.28235431394"
+              EndConnector="0,67.7529427101049"
               Start="0,0"
-              End="45.7999999148504,48.78235431394">
+              End="0,60.2529427101049">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,24.14117715697" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,24.14117715697"
-                    Point2="0,28.14117715697"
-                    Point3="4,28.14117715697" />
-                  <mssgle:LineSegment
-                    End="41.7999999148504,28.14117715697" />
-                  <mssgle:CubicBezierSegment
-                    Point1="41.7999999148504,28.14117715697"
-                    Point2="45.7999999148504,28.14117715697"
-                    Point3="45.7999999148504,32.14117715697" />
-                  <mssgle:LineSegment
-                    End="45.7999999148504,48.78235431394" />
+                    End="0,60.2529427101049" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4638,30 +4626,18 @@ where [refTable].[MaKH] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="187.6,199.48235431394">
+          TopLeft="229.78571508247,196.423530741629">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="42.942858030845,56.282354313939"
+              EndConnector="0,59.3411778862495"
               Start="0,0"
-              End="42.942858030845,48.782354313939">
+              End="0,51.8411778862495">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,24.1411771569695" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,24.1411771569695"
-                    Point2="0,28.1411771569695"
-                    Point3="4,28.1411771569695" />
-                  <mssgle:LineSegment
-                    End="38.942858030845,28.1411771569695" />
-                  <mssgle:CubicBezierSegment
-                    Point1="38.942858030845,28.1411771569695"
-                    Point2="42.942858030845,28.1411771569695"
-                    Point3="42.942858030845,32.1411771569695" />
-                  <mssgle:LineSegment
-                    End="42.942858030845,48.782354313939" />
+                    End="0,51.8411778862495" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4672,30 +4648,18 @@ where [refTable].[MaKH] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="230.542858030845,297.364708627879">
+          TopLeft="232.985714997321,297.364708627879">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="87.028572474694,41.752942345464"
+              EndConnector="0,44.0470600246971"
               Start="0,0"
-              End="87.028572474694,34.252942345464">
+              End="0,36.5470600246971">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,16.876471172732" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.876471172732"
-                    Point2="0,20.876471172732"
-                    Point3="4,20.876471172732" />
-                  <mssgle:LineSegment
-                    End="83.028572474694,20.876471172732" />
-                  <mssgle:CubicBezierSegment
-                    Point1="83.028572474694,20.876471172732"
-                    Point2="87.028572474694,20.876471172732"
-                    Point3="87.028572474694,24.876471172732" />
-                  <mssgle:LineSegment
-                    End="87.028572474694,34.252942345464" />
+                    End="0,36.5470600246971" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4960,6 +4924,29 @@ where [refTable].[MaKH] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
+    design-time-name="Package\CHITIETHOADON_WEBTOWER9_TO_STAGE\Lookup MA_CHITIET">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\CHITIETHOADON_WEBTOWER9_TO_STAGE\Lookup MA_SANPHAM">
     <Properties>
       <Property>
@@ -5006,7 +4993,7 @@ where [refTable].[MaKH] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\CHITIETHOADON_WEBTOWER9_TO_STAGE\OLE DB Source">
+    design-time-name="Package\CHITIETHOADON_WEBTOWER9_TO_STAGE\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5019,30 +5006,7 @@ where [refTable].[MaKH] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\CHITIETHOADON_WEBTOWER9_TO_STAGE\Lookup MA_CHITIET">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\CHITIETHOADON_WEBTOWER9_TO_STAGE\OLE DB Destination">
+    design-time-name="Package\CHITIETHOADON_WEBTOWER9_TO_STAGE\OLE DB Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5443,21 +5407,17 @@ where [refTable].[MaKH] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="170.4,41.6"
-          Id="Package\KHACHHANG_WEBTOWER9_TO_NDS\OLE DB Destination"
-          TopLeft="500.000008514949,563.894120596355" />
-        <NodeLayout
           Size="193.6,41.6"
           Id="Package\KHACHHANG_WEBTOWER9_TO_NDS\Fuzzy Lookup MA_NUOC"
           TopLeft="157.857145545434,252.352943986345" />
         <NodeLayout
-          Size="228.8,41.6"
-          Id="Package\KHACHHANG_WEBTOWER9_TO_NDS\Derived Column NGAYCAPNHAT"
-          TopLeft="104.285716061689,469.7647097218" />
+          Size="170.4,41.6"
+          Id="Package\KHACHHANG_WEBTOWER9_TO_NDS\OLE DB Destination"
+          TopLeft="565.000009621892,563.894120596355" />
         <NodeLayout
-          Size="194.4,41.6"
-          Id="Package\KHACHHANG_WEBTOWER9_TO_NDS\UPDATE EXISTING ROW"
-          TopLeft="140.714288110636,565.42353311179" />
+          Size="282.4,41.6"
+          Id="Package\KHACHHANG_WEBTOWER9_TO_NDS\Derived Column NGAYTAO, NGAYCAPNHAT"
+          TopLeft="513.571437317498,463.54117806857" />
         <NodeLayout
           Size="228.8,41.6"
           Id="Package\KHACHHANG_WEBTOWER9_TO_NDS\Derived Column NGUONDULIEU"
@@ -5467,9 +5427,13 @@ where [refTable].[MaKH] = ?</property>
           Id="Package\KHACHHANG_WEBTOWER9_TO_NDS\Lookup Ma_KHACHHANG"
           TopLeft="150.714288280935,339.917649514782" />
         <NodeLayout
-          Size="282.4,41.6"
-          Id="Package\KHACHHANG_WEBTOWER9_TO_NDS\Derived Column NGAYTAO, NGAYCAPNHAT"
-          TopLeft="513.571437317498,463.54117806857" />
+          Size="194.4,41.6"
+          Id="Package\KHACHHANG_WEBTOWER9_TO_NDS\UPDATE EXISTING ROW"
+          TopLeft="117.857144864238,564.658827218712" />
+        <NodeLayout
+          Size="228.8,41.6"
+          Id="Package\KHACHHANG_WEBTOWER9_TO_NDS\Derived Column NGAYCAPNHAT"
+          TopLeft="104.285716061689,470.529415614878" />
         <NodeLayout
           Size="149.6,41.6"
           Id="Package\KHACHHANG_WEBTOWER9_TO_NDS\OLE DB Source"
@@ -5502,134 +5466,22 @@ where [refTable].[MaKH] = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,88.2470602070173"
+              EndConnector="0,89.0117661000957"
               Start="0,0"
-              End="0,80.7470602070173">
+              End="0,81.5117661000957">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,80.7470602070173" />
+                    End="0,81.5117661000957" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,34.5688426035086,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,34.9511955500478,96.3827734375,11.609375"
               RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\KHACHHANG_WEBTOWER9_TO_NDS.Paths[Fuzzy Lookup Output]"
-          TopLeft="251.885716913184,293.952943986345">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,45.9647055284375"
-              Start="0,0"
-              End="0,38.4647055284375">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,38.4647055284375" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\KHACHHANG_WEBTOWER9_TO_NDS.Paths[Derived Column Output2]"
-          TopLeft="654.771437317498,505.14117806857">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-69.5714288025489,58.752942527785"
-              Start="0,0"
-              End="-69.5714288025489,51.252942527785">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,25.3764712638925" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,25.3764712638925"
-                    Point2="0,29.3764712638925"
-                    Point3="-4,29.3764712638925" />
-                  <mssgle:LineSegment
-                    End="-65.5714288025489,29.3764712638925" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-65.5714288025489,29.3764712638925"
-                    Point2="-69.5714288025489,29.3764712638925"
-                    Point3="-69.5714288025489,33.3764712638925" />
-                  <mssgle:LineSegment
-                    End="-69.5714288025489,51.252942527785" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\KHACHHANG_WEBTOWER9_TO_NDS.Paths[Derived Column Output1]"
-          TopLeft="255.600002554485,186.129413791676">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,66.2235301946685"
-              Start="0,0"
-              End="0,58.7235301946685">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,58.7235301946685" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\KHACHHANG_WEBTOWER9_TO_NDS.Paths[Derived Column Output]"
-          TopLeft="218.685716061689,511.3647097218">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="19.228572048947,54.05882338999"
-              Start="0,0"
-              End="19.228572048947,46.55882338999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,23.029411694995" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,23.029411694995"
-                    Point2="0,27.029411694995"
-                    Point3="4,27.029411694995" />
-                  <mssgle:LineSegment
-                    End="15.228572048947,27.029411694995" />
-                  <mssgle:CubicBezierSegment
-                    Point1="15.228572048947,27.029411694995"
-                    Point2="19.228572048947,27.029411694995"
-                    Point3="19.228572048947,31.029411694995" />
-                  <mssgle:LineSegment
-                    End="19.228572048947,46.55882338999" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5668,11 +5520,99 @@ where [refTable].[MaKH] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\KHACHHANG_WEBTOWER9_TO_NDS.Paths[Fuzzy Lookup Output]"
+          TopLeft="251.885716913184,293.952943986345">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,45.9647055284375"
+              Start="0,0"
+              End="0,38.4647055284375">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.4647055284375" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\KHACHHANG_WEBTOWER9_TO_NDS.Paths[Derived Column Output2]"
+          TopLeft="652.485723469695,505.14117806857">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,58.752942527785"
+              Start="0,0"
+              End="0,51.252942527785">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,51.252942527785" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\KHACHHANG_WEBTOWER9_TO_NDS.Paths[Derived Column Output1]"
+          TopLeft="255.600002554485,186.129413791676">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,66.2235301946685"
+              Start="0,0"
+              End="0,58.7235301946685">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,58.7235301946685" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\KHACHHANG_WEBTOWER9_TO_NDS.Paths[Derived Column Output]"
+          TopLeft="216.871430462964,512.129415614878">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,52.5294116038348"
+              Start="0,0"
+              End="0,45.0294116038348">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.0294116038348" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\KHACHHANG_WEBTOWER9_TO_NDS\OLE DB Destination">
+    design-time-name="Package\KHACHHANG_WEBTOWER9_TO_NDS\Fuzzy Lookup MA_NUOC">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5685,7 +5625,7 @@ where [refTable].[MaKH] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\KHACHHANG_WEBTOWER9_TO_NDS\Fuzzy Lookup MA_NUOC">
+    design-time-name="Package\KHACHHANG_WEBTOWER9_TO_NDS\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5703,7 +5643,7 @@ where [refTable].[MaKH] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
