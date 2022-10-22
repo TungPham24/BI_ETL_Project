@@ -1,76 +1,76 @@
 ﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
-  DTS:CreationDate="10/20/2022 9:59:57 AM"
+  DTS:CreationDate="10/21/2022 9:23:05 PM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DESKTOP-8V127BM"
   DTS:CreatorName="DESKTOP-8V127BM\tung3"
-  DTS:DTSID="{EAFD4C7B-E1A4-459E-85E7-9F469F116EB6}"
+  DTS:DTSID="{7718B8D9-B458-4363-9DE1-210E658B9B63}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="16.0.845.0"
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{F11F54CE-2A97-43E9-B88A-FF6267A32519}">
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{B195ACFD-C77F-45EF-93E9-17CD5D0331BA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.DDS]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{B7B8F8F4-8EFC-403B-BEC0-2D63C961C7EF}"
+      DTS:DTSID="{A104A69A-4601-43CB-BA2B-265FC4AC78E2}"
       DTS:ObjectName="DESKTOP-8V127BM\PSTUNG.DDS">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-8V127BM\PSTUNG;Initial Catalog=DDS;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{B7B8F8F4-8EFC-403B-BEC0-2D63C961C7EF}DESKTOP-8V127BM\PSTUNG.DDS;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=DESKTOP-8V127BM\PSTUNG;Initial Catalog=DDS;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{A104A69A-4601-43CB-BA2B-265FC4AC78E2}DESKTOP-8V127BM\PSTUNG.DDS;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.METADATA]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{17ABA441-7B0B-4721-9E9A-63AEA81FDCEB}"
+      DTS:DTSID="{EEE764E3-5EB8-42CA-A35E-ABA1B7B2A94D}"
       DTS:ObjectName="DESKTOP-8V127BM\PSTUNG.METADATA">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-8V127BM\PSTUNG;Initial Catalog=METADATA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{17ABA441-7B0B-4721-9E9A-63AEA81FDCEB}DESKTOP-8V127BM\PSTUNG.METADATA;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=DESKTOP-8V127BM\PSTUNG;Initial Catalog=METADATA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{EEE764E3-5EB8-42CA-A35E-ABA1B7B2A94D}DESKTOP-8V127BM\PSTUNG.METADATA;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.NDS]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{1E47F308-0345-4E31-994A-6244DF049252}"
+      DTS:DTSID="{99DCE125-D67E-4711-ACEA-CC06621B2715}"
       DTS:ObjectName="DESKTOP-8V127BM\PSTUNG.NDS">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-8V127BM\PSTUNG;Initial Catalog=NDS;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{1E47F308-0345-4E31-994A-6244DF049252}DESKTOP-8V127BM\PSTUNG.NDS;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=DESKTOP-8V127BM\PSTUNG;Initial Catalog=NDS;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{99DCE125-D67E-4711-ACEA-CC06621B2715}DESKTOP-8V127BM\PSTUNG.NDS;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{A9AC19FB-7A39-4C6E-A27A-DE926C8F5175}"
+      DTS:DTSID="{09BF93FB-A624-4407-B0DD-BAFC0CA01139}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
-      DTS:ObjectName="CET_KhachHang">
+      DTS:ObjectName="CET_KHACHHANG">
       <DTS:VariableValue
-        DTS:DataType="7">10/20/2022 10:01:29 AM</DTS:VariableValue>
+        DTS:DataType="7">10/21/2022 9:23:43 PM</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{5201E50B-56F0-4045-BDF0-3DD1F56ACAC3}"
+      DTS:DTSID="{E59F3B66-2B5F-4752-A8B7-2F35EFD68CA9}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
-      DTS:ObjectName="LSET_KhachHang">
+      DTS:ObjectName="LSET_KHACHHANG">
       <DTS:VariableValue
-        DTS:DataType="7">1/1/2000</DTS:VariableValue>
+        DTS:DataType="7">10/21/2022 9:23:57 PM</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
@@ -78,7 +78,7 @@
       DTS:refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{DF022E1E-6AE7-4E11-98D3-A116D7F95A0F}"
+      DTS:DTSID="{512e05cb-58ab-4fd6-918a-c866ed9bc6fb}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS"
@@ -106,7 +106,7 @@
                   description="The SQL command to be executed."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">UPDATE [dbo].[KhachHang] SET [TrangThai] = ? WHERE [MaKH] = ? AND [TrangThai] = '1'</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">UPDATE [dbo].[KhachHang] SET [TrangThai] = ? WHERE [MaKH] = ? AND [NguonDuLieu] = ? AND [TrangThai] = '1'</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -136,6 +136,12 @@
                       cachedName="MaKH"
                       externalMetadataColumnId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\EXPIRE THE OLD ROW.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
                       lineageId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\KHACHHANG_NDS.Outputs[OLE DB Source Output].Columns[MaKH]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\EXPIRE THE OLD ROW.Inputs[OLE DB Command Input].Columns[NguonDuLieu]"
+                      cachedDataType="i4"
+                      cachedName="NguonDuLieu"
+                      externalMetadataColumnId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\EXPIRE THE OLD ROW.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      lineageId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\KHACHHANG_NDS.Outputs[OLE DB Source Output].Columns[NguonDuLieu]" />
                     <inputColumn
                       refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\EXPIRE THE OLD ROW.Inputs[OLE DB Command Input].Columns[TrangThai]"
                       cachedDataType="i4"
@@ -167,6 +173,17 @@
                           dataType="System.Int32"
                           description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
                           name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\EXPIRE THE OLD ROW.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      dataType="i4"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
                       </properties>
                     </externalMetadataColumn>
                   </externalMetadataColumns>
@@ -769,20 +786,20 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET NEW ROW EFFECTIVE STATUS"
+              refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET NEW ROW'S EFFECTIVE STATUS"
               componentClassID="Microsoft.DerivedColumn"
               contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
               description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
-              name="SET NEW ROW EFFECTIVE STATUS"
+              name="SET NEW ROW'S EFFECTIVE STATUS"
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET NEW ROW EFFECTIVE STATUS.Inputs[Derived Column Input]"
+                  refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET NEW ROW'S EFFECTIVE STATUS.Inputs[Derived Column Input]"
                   description="Input to the Derived Column Transformation"
                   name="Derived Column Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET NEW ROW EFFECTIVE STATUS.Inputs[Derived Column Input].Columns[TrangThai]"
+                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET NEW ROW'S EFFECTIVE STATUS.Inputs[Derived Column Input].Columns[TrangThai]"
                       cachedDataType="i4"
                       cachedName="TrangThai"
                       errorOrTruncationOperation="Computation"
@@ -810,31 +827,31 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET NEW ROW EFFECTIVE STATUS.Outputs[Derived Column Output]"
+                  refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET NEW ROW'S EFFECTIVE STATUS.Outputs[Derived Column Output]"
                   description="Default Output of the Derived Column Transformation"
                   exclusionGroup="1"
                   name="Derived Column Output"
-                  synchronousInputId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET NEW ROW EFFECTIVE STATUS.Inputs[Derived Column Input]">
+                  synchronousInputId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET NEW ROW'S EFFECTIVE STATUS.Inputs[Derived Column Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET NEW ROW EFFECTIVE STATUS.Outputs[Derived Column Error Output]"
+                  refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET NEW ROW'S EFFECTIVE STATUS.Outputs[Derived Column Error Output]"
                   description="Error Output of the Derived Column Transformation"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Derived Column Error Output"
-                  synchronousInputId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET NEW ROW EFFECTIVE STATUS.Inputs[Derived Column Input]">
+                  synchronousInputId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET NEW ROW'S EFFECTIVE STATUS.Inputs[Derived Column Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET NEW ROW EFFECTIVE STATUS.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET NEW ROW'S EFFECTIVE STATUS.Outputs[Derived Column Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET NEW ROW EFFECTIVE STATUS.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET NEW ROW'S EFFECTIVE STATUS.Outputs[Derived Column Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET NEW ROW EFFECTIVE STATUS.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET NEW ROW'S EFFECTIVE STATUS.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET NEW ROW EFFECTIVE STATUS.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET NEW ROW'S EFFECTIVE STATUS.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -843,20 +860,20 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET OLD ROW EXPIRY STATUS"
+              refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET OLD ROW'S EXPIRY STATUS"
               componentClassID="Microsoft.DerivedColumn"
               contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
               description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
-              name="SET OLD ROW EXPIRY STATUS"
+              name="SET OLD ROW'S EXPIRY STATUS"
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET OLD ROW EXPIRY STATUS.Inputs[Derived Column Input]"
+                  refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET OLD ROW'S EXPIRY STATUS.Inputs[Derived Column Input]"
                   description="Input to the Derived Column Transformation"
                   name="Derived Column Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET OLD ROW EXPIRY STATUS.Inputs[Derived Column Input].Columns[TrangThai]"
+                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET OLD ROW'S EXPIRY STATUS.Inputs[Derived Column Input].Columns[TrangThai]"
                       cachedDataType="i4"
                       cachedName="TrangThai"
                       errorOrTruncationOperation="Computation"
@@ -884,31 +901,31 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET OLD ROW EXPIRY STATUS.Outputs[Derived Column Output]"
+                  refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET OLD ROW'S EXPIRY STATUS.Outputs[Derived Column Output]"
                   description="Default Output of the Derived Column Transformation"
                   exclusionGroup="1"
                   name="Derived Column Output"
-                  synchronousInputId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET OLD ROW EXPIRY STATUS.Inputs[Derived Column Input]">
+                  synchronousInputId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET OLD ROW'S EXPIRY STATUS.Inputs[Derived Column Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET OLD ROW EXPIRY STATUS.Outputs[Derived Column Error Output]"
+                  refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET OLD ROW'S EXPIRY STATUS.Outputs[Derived Column Error Output]"
                   description="Error Output of the Derived Column Transformation"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Derived Column Error Output"
-                  synchronousInputId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET OLD ROW EXPIRY STATUS.Inputs[Derived Column Input]">
+                  synchronousInputId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET OLD ROW'S EXPIRY STATUS.Inputs[Derived Column Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET OLD ROW EXPIRY STATUS.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET OLD ROW'S EXPIRY STATUS.Outputs[Derived Column Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET OLD ROW EXPIRY STATUS.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET OLD ROW'S EXPIRY STATUS.Outputs[Derived Column Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET OLD ROW EXPIRY STATUS.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET OLD ROW'S EXPIRY STATUS.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET OLD ROW EXPIRY STATUS.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET OLD ROW'S EXPIRY STATUS.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -928,7 +945,7 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
                   dataType="System.String"
                   description="Specifies the SELECT statement used to create a schema rowset."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT [DiaChi], [MaKH], [MaNuoc], [NgheNghiep], [SoThich], [TrangThai] FROM [dbo].[KhachHang]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT [DiaChi], [MaKH], [NguonDuLieu], [TrangThai] FROM [dbo].[KhachHang]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the WHERE clause in the SELECT statement that selects the current row among rows with identical business keys."
@@ -940,7 +957,7 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the transformation fails when columns with fixed attributes contain changes."
-                  name="FailOnFixedAttributeChange">false</property>
+                  name="FailOnFixedAttributeChange">true</property>
                 <property
                   dataType="System.String"
                   description="Specifies the column name for the inferred member."
@@ -1007,46 +1024,16 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[MaNuoc]"
+                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[NguonDuLieu]"
                       cachedDataType="i4"
-                      cachedName="MaNuoc"
-                      externalMetadataColumnId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[MaNuoc]"
-                      lineageId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\KHACHHANG_NDS.Outputs[OLE DB Source Output].Columns[MaNuoc]">
+                      cachedName="NguonDuLieu"
+                      externalMetadataColumnId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[NguonDuLieu]"
+                      lineageId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\KHACHHANG_NDS.Outputs[OLE DB Source Output].Columns[NguonDuLieu]">
                       <properties>
                         <property
                           dataType="System.Int32"
                           name="ColumnType"
-                          typeConverter="ColumnType">3</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[NgheNghiep]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="30"
-                      cachedName="NgheNghiep"
-                      externalMetadataColumnId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[NgheNghiep]"
-                      lineageId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\KHACHHANG_NDS.Outputs[OLE DB Source Output].Columns[NgheNghiep]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          name="ColumnType"
-                          typeConverter="ColumnType">3</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[SoThich]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="30"
-                      cachedName="SoThich"
-                      externalMetadataColumnId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[SoThich]"
-                      lineageId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\KHACHHANG_NDS.Outputs[OLE DB Source Output].Columns[SoThich]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          name="ColumnType"
-                          typeConverter="ColumnType">2</property>
+                          typeConverter="ColumnType">1</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -1065,21 +1052,9 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
                       length="4"
                       name="MaKH" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[MaNuoc]"
+                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[NguonDuLieu]"
                       dataType="i4"
-                      name="MaNuoc" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[NgheNghiep]"
-                      codePage="1252"
-                      dataType="str"
-                      length="30"
-                      name="NgheNghiep" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[SoThich]"
-                      codePage="1252"
-                      dataType="str"
-                      length="30"
-                      name="SoThich" />
+                      name="NguonDuLieu" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[TrangThai]"
                       dataType="i4"
@@ -1588,11 +1563,11 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG"
+              refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DUMMY ROWS"
               componentClassID="Microsoft.OLEDBCommand"
               contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
               description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
-              name="UPDATE DDS_KHACHHANG"
+              name="UPDATE DUMMY ROWS"
               usesDispositions="true"
               version="2">
               <properties>
@@ -1605,7 +1580,7 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
                   description="The SQL command to be executed."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">UPDATE [dbo].[KhachHang] SET [DiaChi] = ?,[GioiTinh] = ?,[MaNuoc] = ?,[NgheNghiep] = ?,[NguonDuLieu] = ?,[SoThich] = ?,[TenKH] = ?,[TrangThai] = ? WHERE [MaKH] = ?</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">UPDATE [dbo].[KhachHang] SET [DiaChi] = ?,[GioiTinh] = ?,[MaNuoc] = ?,[NgheNghiep] = ?,[SoThich] = ?,[TenKH] = ?,[TrangThai] = ? WHERE [MaKH] = ? AND [NguonDuLieu] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1613,7 +1588,7 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG.Connections[OleDbConnection]"
+                  refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DUMMY ROWS.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.DDS]"
                   connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.DDS]"
                   description="The OLE DB runtime connection used to access the database."
@@ -1621,83 +1596,83 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG.Inputs[OLE DB Command Input]"
+                  refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input]"
                   errorOrTruncationOperation="Command Execution"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Command Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG.Inputs[OLE DB Command Input].Columns[DiaChi]"
+                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input].Columns[DiaChi]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="DiaChi"
-                      externalMetadataColumnId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      externalMetadataColumnId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
                       lineageId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\KHACHHANG_NDS.Outputs[OLE DB Source Output].Columns[DiaChi]" />
                     <inputColumn
-                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG.Inputs[OLE DB Command Input].Columns[GioiTinh]"
+                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input].Columns[GioiTinh]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="1"
                       cachedName="GioiTinh"
-                      externalMetadataColumnId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      externalMetadataColumnId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
                       lineageId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\KHACHHANG_NDS.Outputs[OLE DB Source Output].Columns[GioiTinh]" />
                     <inputColumn
-                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG.Inputs[OLE DB Command Input].Columns[MaKH]"
+                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input].Columns[MaKH]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="4"
                       cachedName="MaKH"
-                      externalMetadataColumnId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG.Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
+                      externalMetadataColumnId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
                       lineageId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\KHACHHANG_NDS.Outputs[OLE DB Source Output].Columns[MaKH]" />
                     <inputColumn
-                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG.Inputs[OLE DB Command Input].Columns[MaNuoc]"
+                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input].Columns[MaNuoc]"
                       cachedDataType="i4"
                       cachedName="MaNuoc"
-                      externalMetadataColumnId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      externalMetadataColumnId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
                       lineageId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\KHACHHANG_NDS.Outputs[OLE DB Source Output].Columns[MaNuoc]" />
                     <inputColumn
-                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG.Inputs[OLE DB Command Input].Columns[NgheNghiep]"
+                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input].Columns[NgheNghiep]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="30"
                       cachedName="NgheNghiep"
-                      externalMetadataColumnId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      externalMetadataColumnId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
                       lineageId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\KHACHHANG_NDS.Outputs[OLE DB Source Output].Columns[NgheNghiep]" />
                     <inputColumn
-                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG.Inputs[OLE DB Command Input].Columns[NguonDuLieu]"
+                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input].Columns[NguonDuLieu]"
                       cachedDataType="i4"
                       cachedName="NguonDuLieu"
-                      externalMetadataColumnId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
+                      externalMetadataColumnId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
                       lineageId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\KHACHHANG_NDS.Outputs[OLE DB Source Output].Columns[NguonDuLieu]" />
                     <inputColumn
-                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG.Inputs[OLE DB Command Input].Columns[SoThich]"
+                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input].Columns[SoThich]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="30"
                       cachedName="SoThich"
-                      externalMetadataColumnId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
+                      externalMetadataColumnId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
                       lineageId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\KHACHHANG_NDS.Outputs[OLE DB Source Output].Columns[SoThich]" />
                     <inputColumn
-                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG.Inputs[OLE DB Command Input].Columns[TenKH]"
+                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input].Columns[TenKH]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="TenKH"
-                      externalMetadataColumnId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG.Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
+                      externalMetadataColumnId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
                       lineageId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\KHACHHANG_NDS.Outputs[OLE DB Source Output].Columns[TenKH]" />
                     <inputColumn
-                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG.Inputs[OLE DB Command Input].Columns[TrangThai]"
+                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input].Columns[TrangThai]"
                       cachedDataType="i4"
                       cachedName="TrangThai"
-                      externalMetadataColumnId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG.Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
+                      externalMetadataColumnId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
                       lineageId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\KHACHHANG_NDS.Outputs[OLE DB Source Output].Columns[TrangThai]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
                       codePage="1252"
                       dataType="str"
                       length="50"
@@ -1710,7 +1685,7 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
                       codePage="1252"
                       dataType="str"
                       length="1"
@@ -1723,7 +1698,7 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
                       dataType="i4"
                       name="Param_2">
                       <properties>
@@ -1734,7 +1709,7 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
                       codePage="1252"
                       dataType="str"
                       length="30"
@@ -1747,21 +1722,23 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
-                      dataType="i4"
+                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
                       name="Param_4">
                       <properties>
                         <property
                           dataType="System.Int32"
                           description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">81</property>
+                          name="DBParamInfoFlags">65</property>
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
+                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
                       codePage="1252"
                       dataType="str"
-                      length="30"
+                      length="50"
                       name="Param_5">
                       <properties>
                         <property
@@ -1771,22 +1748,9 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG.Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Param_6">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG.Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
+                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
                       dataType="i4"
-                      name="Param_7">
+                      name="Param_6">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1795,16 +1759,27 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG.Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
+                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
                       codePage="1252"
                       dataType="str"
                       length="4"
+                      name="Param_7">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
+                      dataType="i4"
                       name="Param_8">
                       <properties>
                         <property
                           dataType="System.Int32"
                           description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
+                          name="DBParamInfoFlags">81</property>
                       </properties>
                     </externalMetadataColumn>
                   </externalMetadataColumns>
@@ -1812,149 +1787,29 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG.Outputs[OLE DB Command Output]"
+                  refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DUMMY ROWS.Outputs[OLE DB Command Output]"
                   exclusionGroup="1"
                   name="OLE DB Command Output"
-                  synchronousInputId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG.Inputs[OLE DB Command Input]">
+                  synchronousInputId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG.Outputs[OLE DB Command Error Output]"
+                  refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DUMMY ROWS.Outputs[OLE DB Command Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Command Error Output"
-                  synchronousInputId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG.Inputs[OLE DB Command Input]">
+                  synchronousInputId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DUMMY ROWS.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DUMMY ROWS.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DUMMY ROWS.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG_SOTHICH"
-              componentClassID="Microsoft.OLEDBCommand"
-              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
-              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
-              name="UPDATE DDS_KHACHHANG_SOTHICH"
-              usesDispositions="true"
-              version="2">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">UPDATE [dbo].[KhachHang] SET [SoThich] = ? WHERE [MaKH] = ? AND [TrangThai] = '1'</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG_SOTHICH.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.DDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.DDS]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG_SOTHICH.Inputs[OLE DB Command Input]"
-                  errorOrTruncationOperation="Command Execution"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Command Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG_SOTHICH.Inputs[OLE DB Command Input].Columns[MaKH]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="4"
-                      cachedName="MaKH"
-                      externalMetadataColumnId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG_SOTHICH.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      lineageId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\KHACHHANG_NDS.Outputs[OLE DB Source Output].Columns[MaKH]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG_SOTHICH.Inputs[OLE DB Command Input].Columns[SoThich]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="30"
-                      cachedName="SoThich"
-                      externalMetadataColumnId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG_SOTHICH.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      lineageId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\KHACHHANG_NDS.Outputs[OLE DB Source Output].Columns[SoThich]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG_SOTHICH.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      codePage="1252"
-                      dataType="str"
-                      length="30"
-                      name="Param_0">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG_SOTHICH.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      codePage="1252"
-                      dataType="str"
-                      length="4"
-                      name="Param_1">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG_SOTHICH.Outputs[OLE DB Command Output]"
-                  exclusionGroup="1"
-                  name="OLE DB Command Output"
-                  synchronousInputId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG_SOTHICH.Inputs[OLE DB Command Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG_SOTHICH.Outputs[OLE DB Command Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Command Error Output"
-                  synchronousInputId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG_SOTHICH.Inputs[OLE DB Command Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG_SOTHICH.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG_SOTHICH.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG_SOTHICH.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG_SOTHICH.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DUMMY ROWS.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1965,28 +1820,23 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
           </components>
           <paths>
             <path
-              refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS.Paths[Changing Attribute Updates Output]"
-              endId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG_SOTHICH.Inputs[OLE DB Command Input]"
-              name="Changing Attribute Updates Output"
-              startId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\Slowly Changing Dimension.Outputs[Changing Attribute Updates Output]" />
-            <path
               refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS.Paths[Derived Column Output]"
               endId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\EXPIRE THE OLD ROW.Inputs[OLE DB Command Input]"
               name="Derived Column Output"
-              startId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET OLD ROW EXPIRY STATUS.Outputs[Derived Column Output]" />
+              startId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET OLD ROW'S EXPIRY STATUS.Outputs[Derived Column Output]" />
             <path
               refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS.Paths[Derived Column Output1]"
               endId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\Insert Destination.Inputs[OLE DB Destination Input]"
               name="Derived Column Output"
-              startId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET NEW ROW EFFECTIVE STATUS.Outputs[Derived Column Output]" />
+              startId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET NEW ROW'S EFFECTIVE STATUS.Outputs[Derived Column Output]" />
             <path
               refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS.Paths[Historical Attribute Inserts Output]"
-              endId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET OLD ROW EXPIRY STATUS.Inputs[Derived Column Input]"
+              endId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET OLD ROW'S EXPIRY STATUS.Inputs[Derived Column Input]"
               name="Historical Attribute Inserts Output"
               startId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\Slowly Changing Dimension.Outputs[Historical Attribute Inserts Output]" />
             <path
               refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS.Paths[Inferred Member Updates Output]"
-              endId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG.Inputs[OLE DB Command Input]"
+              endId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input]"
               name="Inferred Member Updates Output"
               startId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\Slowly Changing Dimension.Outputs[Inferred Member Updates Output]" />
             <path
@@ -2006,7 +1856,7 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
               startId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\KHACHHANG_NDS.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS.Paths[Union All Output 1]"
-              endId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET NEW ROW EFFECTIVE STATUS.Inputs[Derived Column Input]"
+              endId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET NEW ROW'S EFFECTIVE STATUS.Inputs[Derived Column Input]"
               name="Union All Output 1"
               startId="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\Union All.Outputs[Union All Output 1]" />
           </paths>
@@ -2017,7 +1867,7 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
       DTS:refId="Package\GET LSET FROM METADATA"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{3B6DB4D7-BCDB-4D6F-9C63-33F6CDBE9153}"
+      DTS:DTSID="{7275a60c-c499-4c5c-a9ee-d0863f3fd5e8}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="GET LSET FROM METADATA"
@@ -2025,12 +1875,12 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{17ABA441-7B0B-4721-9E9A-63AEA81FDCEB}"
+          SQLTask:Connection="{EEE764E3-5EB8-42CA-A35E-ABA1B7B2A94D}"
           SQLTask:SqlStatementSource="SELECT NgayCapNhat&#xA;FROM     DDS&#xA;WHERE  (TenBang = 'khachhang')"
           SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ResultBinding
             SQLTask:ResultName="ngaycapnhat"
-            SQLTask:DtsVariableName="User::LSET_KhachHang" />
+            SQLTask:DtsVariableName="User::LSET_KHACHHANG" />
         </SQLTask:SqlTaskData>
       </DTS:ObjectData>
     </DTS:Executable>
@@ -2038,7 +1888,7 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
       DTS:refId="Package\SET CET"
       DTS:CreationName="Microsoft.ExpressionTask"
       DTS:Description="Expression Task"
-      DTS:DTSID="{F9B2A1D9-346F-4A10-8997-5E6432D5D5DE}"
+      DTS:DTSID="{2671f446-e0be-4bd5-ba08-f90ded32539d}"
       DTS:ExecutableType="Microsoft.ExpressionTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SET CET"
@@ -2046,14 +1896,14 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
       <DTS:Variables />
       <DTS:ObjectData>
         <ExpressionTask
-          Expression="@[User::CET_KhachHang]= GETDATE()" />
+          Expression="@[User::CET_KHACHHANG]= GETDATE()" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\UPDATE LSET IN METADATA"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{D925646F-9C92-4296-90E4-3EE0D77F27FA}"
+      DTS:DTSID="{66a6f115-fa0d-4596-b532-5766aa72bd99}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="UPDATE LSET IN METADATA"
@@ -2065,7 +1915,7 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
           SQLTask:SqlStatementSource="UPDATE DDS&#xA;SET          NgayCapNhat = ?&#xA;WHERE  (TenBang = 'khachhang')" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ParameterBinding
             SQLTask:ParameterName="0"
-            SQLTask:DtsVariableName="User::CET_KhachHang"
+            SQLTask:DtsVariableName="User::CET_KHACHHANG"
             SQLTask:ParameterDirection="Input"
             SQLTask:DataType="7"
             SQLTask:ParameterSize="-1" />
@@ -2077,7 +1927,7 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{E18684F2-B8DD-431D-8FC7-E2520286776C}"
+      DTS:DTSID="{48543FE2-501A-471D-82F7-2B3595D0BC16}"
       DTS:From="Package\SET CET"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
@@ -2085,7 +1935,7 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
-      DTS:DTSID="{A5367AE4-EE8B-4A18-B688-0392847DBF57}"
+      DTS:DTSID="{5fd9ae22-46b1-4cee-9c34-f952084d0a18}"
       DTS:From="Package\GET LSET FROM METADATA"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
@@ -2093,7 +1943,7 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
       DTS:CreationName=""
-      DTS:DTSID="{A360043A-73CA-4713-BE5C-7884A96B6988}"
+      DTS:DTSID="{19c7f34f-220d-4810-a8c6-7d565d942abb}"
       DTS:From="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 2"
@@ -2114,22 +1964,22 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
         <NodeLayout
           Size="354.4,41.6"
           Id="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS"
-          TopLeft="227.857146737527,191.176473269413" />
+          TopLeft="195.000002299036,224.411767011695" />
         <NodeLayout
           Size="212,41.6"
           Id="Package\GET LSET FROM METADATA"
-          TopLeft="187.142860329881,108.588236817027" />
+          TopLeft="154.28571589139,141.823530559309" />
         <NodeLayout
           Size="118.4,41.6"
           Id="Package\SET CET"
-          TopLeft="92.8571444384906,26.7647062577178" />
+          TopLeft="60,60" />
         <NodeLayout
           Size="214.4,41.6"
           Id="Package\UPDATE LSET IN METADATA"
-          TopLeft="371.428577753962,272.235297935644" />
+          TopLeft="338.571433315471,305.470591677926" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="152.057144438491,68.3647062577178">
+          TopLeft="119.2,101.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2163,7 +2013,7 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="293.142860329881,150.188236817027">
+          TopLeft="260.28571589139,183.423530559309">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2197,7 +2047,7 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="405.057146737527,232.776473269413">
+          TopLeft="372.200002299036,266.011767011695">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2236,52 +2086,48 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
     design-time-name="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="165.6,41.6"
-          Id="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\KHACHHANG_NDS"
-          TopLeft="148.1,5.49999999999995" />
+          Size="186.4,41.6"
+          Id="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\EXPIRE THE OLD ROW"
+          TopLeft="5.50000000000003,310.3" />
         <NodeLayout
-          Size="226.4,41.6"
-          Id="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET OLD ROW EXPIRY STATUS"
-          TopLeft="17.5,208.7" />
-        <NodeLayout
-          Size="208,41.6"
-          Id="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG"
-          TopLeft="291.7,208.7" />
-        <NodeLayout
-          Size="120,41.6"
-          Id="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\Union All"
-          TopLeft="170.9,411.9" />
+          Size="254.4,41.6"
+          Id="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET NEW ROW'S EFFECTIVE STATUS"
+          TopLeft="149.7,513.5" />
         <NodeLayout
           Size="208,41.6"
           Id="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\Slowly Changing Dimension"
           TopLeft="126.9,107.1" />
         <NodeLayout
-          Size="246.4,41.6"
-          Id="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET NEW ROW EFFECTIVE STATUS"
-          TopLeft="149.7,513.5" />
+          Size="190.4,41.6"
+          Id="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DUMMY ROWS"
+          TopLeft="291.7,208.7" />
         <NodeLayout
-          Size="186.4,41.6"
-          Id="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\EXPIRE THE OLD ROW"
-          TopLeft="5.49999999999997,310.3" />
+          Size="165.6,41.6"
+          Id="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\KHACHHANG_NDS"
+          TopLeft="148.1,5.49999999999995" />
+        <NodeLayout
+          Size="120,41.6"
+          Id="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\Union All"
+          TopLeft="170.9,411.9" />
         <NodeLayout
           Size="162.4,41.6"
           Id="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\Insert Destination"
-          TopLeft="149.7,615.099999999999" />
+          TopLeft="149.7,615.1" />
         <NodeLayout
-          Size="258.4,41.6"
-          Id="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\UPDATE DDS_KHACHHANG_SOTHICH"
-          TopLeft="526.7,208.7" />
+          Size="234.4,41.6"
+          Id="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\SET OLD ROW'S EXPIRY STATUS"
+          TopLeft="17.5,208.7" />
         <EdgeLayout
           Id="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS.Paths[Union All Output 1]"
           TopLeft="230.9,453.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="42.0000000000001,59.9999999999999"
+              EndConnector="46,60"
               Start="0,0"
-              End="42.0000000000001,52.4999999999999">
+              End="46,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -2292,13 +2138,13 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
                     Point2="0,30"
                     Point3="4,30" />
                   <mssgle:LineSegment
-                    End="38.0000000000001,30" />
+                    End="42,30" />
                   <mssgle:CubicBezierSegment
-                    Point1="38.0000000000001,30"
-                    Point2="42.0000000000001,30"
-                    Point3="42.0000000000001,34" />
+                    Point1="42,30"
+                    Point2="46,30"
+                    Point3="46,34" />
                   <mssgle:LineSegment
-                    End="42.0000000000001,52.4999999999999" />
+                    End="46,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2335,9 +2181,9 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="113.533333333333,59.9999999999998"
+              EndConnector="113.533333333333,59.9999999999999"
               Start="0,0"
-              End="113.533333333333,52.4999999999998">
+              End="113.533333333333,52.4999999999999">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -2354,7 +2200,7 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
                     Point2="113.533333333333,35.5263157894736"
                     Point3="113.533333333333,39.5263157894736" />
                   <mssgle:LineSegment
-                    End="113.533333333333,52.4999999999998" />
+                    End="113.533333333333,52.4999999999999" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2365,155 +2211,121 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS.Paths[New Output]"
-          TopLeft="210.9,148.7">
+          TopLeft="230.9,148.7">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="38.6666666666667,263.2"
+              EndConnector="18.6666666666667,263.2"
               Start="0,0"
-              End="38.6666666666667,255.7">
+              End="18.6666666666667,255.7">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,138.046830382638" />
+                    End="0,151.842105263158" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,138.046830382638"
-                    Point2="0,142.046830382638"
-                    Point3="4,142.046830382638" />
+                    Point1="0,151.842105263158"
+                    Point2="0,155.842105263158"
+                    Point3="4,155.842105263158" />
                   <mssgle:LineSegment
-                    End="34.6666666666667,142.046830382638" />
+                    End="14.6666666666667,155.842105263158" />
                   <mssgle:CubicBezierSegment
-                    Point1="34.6666666666667,142.046830382638"
-                    Point2="38.6666666666667,142.046830382638"
-                    Point3="38.6666666666667,146.046830382638" />
+                    Point1="14.6666666666667,155.842105263158"
+                    Point2="18.6666666666667,155.842105263158"
+                    Point3="18.6666666666667,159.842105263158" />
                   <mssgle:LineSegment
-                    End="38.6666666666667,255.7" />
+                    End="18.6666666666667,255.7" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-7.75805338541667,147.046830382638,54.1827734375,11.43359375"
+              BoundingBox="-17.7580533854167,160.842105263158,54.1827734375,11.43359375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS.Paths[Inferred Member Updates Output]"
-          TopLeft="250.9,148.7">
+          TopLeft="280.9,148.7">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="144.8,59.9999999999999"
+              EndConnector="106,60"
               Start="0,0"
-              End="144.8,52.4999999999999">
+              End="106,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,22.8085106382978" />
+                    End="0,16.5063291139241" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,22.8085106382978"
-                    Point2="0,26.8085106382978"
-                    Point3="4,26.8085106382978" />
+                    Point1="0,16.5063291139241"
+                    Point2="0,20.5063291139241"
+                    Point3="4,20.5063291139241" />
                   <mssgle:LineSegment
-                    End="140.8,26.8085106382978" />
+                    End="102,20.5063291139241" />
                   <mssgle:CubicBezierSegment
-                    Point1="140.8,26.8085106382978"
-                    Point2="144.8,26.8085106382978"
-                    Point3="144.8,30.8085106382978" />
+                    Point1="102,20.5063291139241"
+                    Point2="106,20.5063291139241"
+                    Point3="106,24.5063291139241" />
                   <mssgle:LineSegment
-                    End="144.8,52.4999999999999" />
+                    End="106,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-2.00298828125,31.8085106382978,148.8059765625,11.658203125"
+              BoundingBox="-21.40298828125,25.5063291139241,148.8059765625,11.658203125"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS.Paths[Historical Attribute Inserts Output]"
-          TopLeft="170.9,148.7">
+          TopLeft="180.9,148.7">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-40.2,60"
+              EndConnector="-46.2,60"
               Start="0,0"
-              End="-40.2,52.5">
+              End="-46.2,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,13.8378378378378" />
+                    End="0,16.5063291139241" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,13.8378378378378"
-                    Point2="0,17.8378378378378"
-                    Point3="-4,17.8378378378378" />
+                    Point1="0,16.5063291139241"
+                    Point2="0,20.5063291139241"
+                    Point3="-4,20.5063291139241" />
                   <mssgle:LineSegment
-                    End="-36.2,17.8378378378378" />
+                    End="-42.2,20.5063291139241" />
                   <mssgle:CubicBezierSegment
-                    Point1="-36.2,17.8378378378378"
-                    Point2="-40.2,17.8378378378378"
-                    Point3="-40.2,21.8378378378378" />
+                    Point1="-42.2,20.5063291139241"
+                    Point2="-46.2,20.5063291139241"
+                    Point3="-46.2,24.5063291139241" />
                   <mssgle:LineSegment
-                    End="-40.2,52.5" />
+                    End="-46.2,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-95.15638671875,22.8378378378378,150.1127734375,11.609375"
+              BoundingBox="-98.15638671875,25.5063291139241,150.1127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS.Paths[Derived Column Output1]"
-          TopLeft="272.9,555.1">
+          TopLeft="276.9,555.1">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-42,59.9999999999999"
+              EndConnector="-46,60"
               Start="0,0"
-              End="-42,52.4999999999999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,25.9999999999999" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,25.9999999999999"
-                    Point2="0,29.9999999999999"
-                    Point3="-4,29.9999999999999" />
-                  <mssgle:LineSegment
-                    End="-38,29.9999999999999" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-38,29.9999999999999"
-                    Point2="-42,29.9999999999999"
-                    Point3="-42,33.9999999999999" />
-                  <mssgle:LineSegment
-                    End="-42,52.4999999999999" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS.Paths[Derived Column Output]"
-          TopLeft="130.7,250.3">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-32,59.9999999999999"
-              Start="0,0"
-              End="-32,52.4999999999999">
+              End="-46,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -2524,13 +2336,13 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
                     Point2="0,30"
                     Point3="-4,30" />
                   <mssgle:LineSegment
-                    End="-28,30" />
+                    End="-42,30" />
                   <mssgle:CubicBezierSegment
-                    Point1="-28,30"
-                    Point2="-32,30"
-                    Point3="-32,34" />
+                    Point1="-42,30"
+                    Point2="-46,30"
+                    Point3="-46,34" />
                   <mssgle:LineSegment
-                    End="-32,52.4999999999999" />
+                    End="-46,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2540,52 +2352,42 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS.Paths[Changing Attribute Updates Output]"
-          TopLeft="290.9,148.7">
+          Id="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS.Paths[Derived Column Output]"
+          TopLeft="134.7,250.3">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="365,59.9999999999999"
+              EndConnector="-36,60"
               Start="0,0"
-              End="365,52.4999999999999">
+              End="-36,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,13.8378378378378" />
+                    End="0,26" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,13.8378378378378"
-                    Point2="0,17.8378378378378"
-                    Point3="4,17.8378378378378" />
+                    Point1="0,26"
+                    Point2="0,30"
+                    Point3="-4,30" />
                   <mssgle:LineSegment
-                    End="361,17.8378378378378" />
+                    End="-32,30" />
                   <mssgle:CubicBezierSegment
-                    Point1="361,17.8378378378378"
-                    Point2="365,17.8378378378378"
-                    Point3="365,21.8378378378378" />
+                    Point1="-32,30"
+                    Point2="-36,30"
+                    Point3="-36,34" />
                   <mssgle:LineSegment
-                    End="365,52.4999999999999" />
+                    End="-36,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="103.96609375,22.8378378378378,157.0678125,11.6630859375"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\KHACHHANG_NDS">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\Slowly Changing Dimension">
     <Properties>
@@ -2594,7 +2396,7 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
         <Value
           type="q2:string">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SCDWizardMetadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionID&gt;{B7B8F8F4-8EFC-403B-BEC0-2D63C961C7EF}&lt;/ConnectionID&gt;
+  &lt;ConnectionID&gt;{A104A69A-4601-43CB-BA2B-265FC4AC78E2}&lt;/ConnectionID&gt;
   &lt;TableName&gt;[dbo].[KhachHang]&lt;/TableName&gt;
   &lt;InputToColumnsCollection&gt;
     &lt;InputColumnToDBColumn&gt;
@@ -2619,25 +2421,25 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
       &lt;IdentificationString&gt;KHACHHANG_NDS.Outputs[OLE DB Source Output].Columns[MaNuoc]&lt;/IdentificationString&gt;
       &lt;ColumnName&gt;MaNuoc&lt;/ColumnName&gt;
       &lt;KeyType&gt;None&lt;/KeyType&gt;
-      &lt;ChangeType&gt;HistoricalAttribute&lt;/ChangeType&gt;
+      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
     &lt;/InputColumnToDBColumn&gt;
     &lt;InputColumnToDBColumn&gt;
       &lt;IdentificationString&gt;KHACHHANG_NDS.Outputs[OLE DB Source Output].Columns[NgheNghiep]&lt;/IdentificationString&gt;
       &lt;ColumnName&gt;NgheNghiep&lt;/ColumnName&gt;
       &lt;KeyType&gt;None&lt;/KeyType&gt;
-      &lt;ChangeType&gt;HistoricalAttribute&lt;/ChangeType&gt;
+      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
     &lt;/InputColumnToDBColumn&gt;
     &lt;InputColumnToDBColumn&gt;
       &lt;IdentificationString&gt;KHACHHANG_NDS.Outputs[OLE DB Source Output].Columns[NguonDuLieu]&lt;/IdentificationString&gt;
       &lt;ColumnName&gt;NguonDuLieu&lt;/ColumnName&gt;
-      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;KeyType&gt;BusinessKey&lt;/KeyType&gt;
       &lt;ChangeType&gt;None&lt;/ChangeType&gt;
     &lt;/InputColumnToDBColumn&gt;
     &lt;InputColumnToDBColumn&gt;
       &lt;IdentificationString&gt;KHACHHANG_NDS.Outputs[OLE DB Source Output].Columns[SoThich]&lt;/IdentificationString&gt;
       &lt;ColumnName&gt;SoThich&lt;/ColumnName&gt;
       &lt;KeyType&gt;None&lt;/KeyType&gt;
-      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
     &lt;/InputColumnToDBColumn&gt;
     &lt;InputColumnToDBColumn&gt;
       &lt;IdentificationString&gt;KHACHHANG_NDS.Outputs[OLE DB Source Output].Columns[TenKH]&lt;/IdentificationString&gt;
@@ -2659,9 +2461,8 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
     &lt;anyType xsi:type="xsd:string"&gt;Derived Column 1&lt;/anyType&gt;
     &lt;anyType xsi:type="xsd:string"&gt;Insert Destination&lt;/anyType&gt;
     &lt;anyType xsi:type="xsd:string"&gt;OLE DB Command 1&lt;/anyType&gt;
-    &lt;anyType xsi:type="xsd:string"&gt;OLE DB Command 2&lt;/anyType&gt;
   &lt;/GeneratedComponentsIdentificationStrings&gt;
-  &lt;FailFixedAttribute&gt;false&lt;/FailFixedAttribute&gt;
+  &lt;FailFixedAttribute&gt;true&lt;/FailFixedAttribute&gt;
   &lt;FailChangeAttribute&gt;false&lt;/FailChangeAttribute&gt;
   &lt;UseStartEndDate&gt;false&lt;/UseStartEndDate&gt;
   &lt;CurrentIndicatorColumn&gt;TrangThai&lt;/CurrentIndicatorColumn&gt;
@@ -2673,6 +2474,14 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
   &lt;DateVariable /&gt;
   &lt;EnableInferredSupport&gt;true&lt;/EnableInferredSupport&gt;
 &lt;/SCDWizardMetadata&gt;</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task KHACHHANG_NDS_TO_KHACHHANG_DDS\KHACHHANG_NDS">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
