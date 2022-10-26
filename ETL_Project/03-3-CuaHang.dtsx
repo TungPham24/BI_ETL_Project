@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package2"
   DTS:PackageType="5"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{1B1538BE-8792-40C9-BBF5-6086FD177110}">
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{795D1638-E3C5-4C32-9D45-F8DFEF0EFBB5}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1852,29 +1852,6 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Execute SQL Task"
-      DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="Execute SQL Task"
-      DTS:DTSID="{0AC51B36-5C1B-4E4D-BBB5-439DAD570F3D}"
-      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Execute SQL Task"
-      DTS:ThreadHint="0">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <SQLTask:SqlTaskData
-          SQLTask:Connection="{0904D34E-7294-4726-A714-027FCA9D56F3}"
-          SQLTask:SqlStatementSource="UPDATE DDS&#xA;SET          NgayCapNhat = ?&#xA;WHERE  (TenBang = 'CuaHang')" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
-          <SQLTask:ParameterBinding
-            SQLTask:ParameterName="0"
-            SQLTask:DtsVariableName="User::CET_CUAHANG"
-            SQLTask:ParameterDirection="Input"
-            SQLTask:DataType="7"
-            SQLTask:ParameterSize="-1" />
-        </SQLTask:SqlTaskData>
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
       DTS:refId="Package\GET LSET FROM METADATA"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
@@ -1910,6 +1887,29 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
           Expression="@[User::CET_CUAHANG]= GETDATE()" />
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\UPDATE LSET IN METADATA"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{0AC51B36-5C1B-4E4D-BBB5-439DAD570F3D}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="UPDATE LSET IN METADATA"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{0904D34E-7294-4726-A714-027FCA9D56F3}"
+          SQLTask:SqlStatementSource="UPDATE DDS&#xA;SET          NgayCapNhat = ?&#xA;WHERE  (TenBang = 'CuaHang')" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="User::CET_CUAHANG"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="7"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
     <DTS:PrecedenceConstraint
@@ -1935,7 +1935,7 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
       DTS:From="Package\Data Flow Task"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 2"
-      DTS:To="Package\Execute SQL Task" />
+      DTS:To="Package\UPDATE LSET IN METADATA" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -1952,41 +1952,33 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
         <NodeLayout
           Size="150.4,41.6"
           Id="Package\Data Flow Task"
-          TopLeft="197.142859478387,235.88235540786" />
+          TopLeft="330.000004598074,203.000002005521" />
+        <NodeLayout
+          Size="214.4,41.6"
+          Id="Package\UPDATE LSET IN METADATA"
+          TopLeft="293.57143357092,281.411768652577" />
         <NodeLayout
           Size="212,41.6"
           Id="Package\GET LSET FROM METADATA"
-          TopLeft="105.000000766346,144.117648238542" />
+          TopLeft="297.857146907826,112.764706622358" />
         <NodeLayout
           Size="118.4,41.6"
           Id="Package\SET CET"
-          TopLeft="60,60" />
+          TopLeft="347.142862032871,15.6470582014962" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="119.2,101.6">
+          TopLeft="405.100004470349,57.2470582014962">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="67.0000007663454,42.5176482385418"
+              EndConnector="0,55.5176484208621"
               Start="0,0"
-              End="67.0000007663454,35.0176482385418">
+              End="0,48.0176484208621">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,17.2588241192709" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,17.2588241192709"
-                    Point2="0,21.2588241192709"
-                    Point3="4,21.2588241192709" />
-                  <mssgle:LineSegment
-                    End="63.0000007663454,21.2588241192709" />
-                  <mssgle:CubicBezierSegment
-                    Point1="63.0000007663454,21.2588241192709"
-                    Point2="67.0000007663454,21.2588241192709"
-                    Point3="67.0000007663454,25.2588241192709" />
-                  <mssgle:LineSegment
-                    End="67.0000007663454,35.0176482385418" />
+                    End="0,48.0176484208621" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1997,30 +1989,18 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="211.000000766346,185.717648238542">
+          TopLeft="404.52857575295,154.364706622358">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="61.3428587120407,50.1647071693183"
+              EndConnector="0,48.6352953831627"
               Start="0,0"
-              End="61.3428587120407,42.6647071693183">
+              End="0,41.1352953831627">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,21.0823535846592" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,21.0823535846592"
-                    Point2="0,25.0823535846592"
-                    Point3="4,25.0823535846592" />
-                  <mssgle:LineSegment
-                    End="57.3428587120407,25.0823535846592" />
-                  <mssgle:CubicBezierSegment
-                    Point1="57.3428587120407,25.0823535846592"
-                    Point2="61.3428587120407,25.0823535846592"
-                    Point3="61.3428587120407,29.0823535846592" />
-                  <mssgle:LineSegment
-                    End="61.3428587120407,42.6647071693183" />
+                    End="0,41.1352953831627" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2029,36 +2009,20 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="162.4,41.6"
-          Id="Package\Execute SQL Task"
-          TopLeft="173.571431527332,313.529416161838" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="272.342859478387,277.48235540786">
+          TopLeft="402.985719084497,244.600002005521">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-17.5714279510546,36.0470607539775"
+              EndConnector="0,36.8117666470557"
               Start="0,0"
-              End="-17.5714279510546,28.5470607539775">
+              End="0,29.3117666470557">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,14.0235303769888" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,14.0235303769888"
-                    Point2="0,18.0235303769888"
-                    Point3="-4,18.0235303769888" />
-                  <mssgle:LineSegment
-                    End="-13.5714279510546,18.0235303769888" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-13.5714279510546,18.0235303769888"
-                    Point2="-17.5714279510546,18.0235303769888"
-                    Point3="-17.5714279510546,22.0235303769888" />
-                  <mssgle:LineSegment
-                    End="-17.5714279510546,28.5470607539775" />
+                    End="0,29.3117666470557" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2369,29 +2333,6 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Lookup">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\OLE DB Source CUAHANG_NDS">
     <Properties>
       <Property>
@@ -2486,6 +2427,29 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
