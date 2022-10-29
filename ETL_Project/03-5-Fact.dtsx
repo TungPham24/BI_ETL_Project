@@ -1,0 +1,2013 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/29/2022 4:05:33 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-8V127BM"
+  DTS:CreatorName="DESKTOP-8V127BM\tung3"
+  DTS:DTSID="{E3F3FDDF-F87E-49DC-A3F3-471898C5D234}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.845.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{C614B248-F003-42FB-ABB5-41D6EE4D71B2}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.DDS]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{59E6E9FF-D685-4B1B-8136-AB752E1AD872}"
+      DTS:ObjectName="DESKTOP-8V127BM\PSTUNG.DDS">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-8V127BM\PSTUNG;Initial Catalog=DDS;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{59E6E9FF-D685-4B1B-8136-AB752E1AD872}DESKTOP-8V127BM\PSTUNG.DDS;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.METADATA]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{287E0EE4-C355-41A0-A86F-B234C67A1854}"
+      DTS:ObjectName="DESKTOP-8V127BM\PSTUNG.METADATA">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-8V127BM\PSTUNG;Initial Catalog=METADATA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{287E0EE4-C355-41A0-A86F-B234C67A1854}DESKTOP-8V127BM\PSTUNG.METADATA;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.NDS]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{2BEA76D3-5F36-4347-902A-DD9C2CCFA2CE}"
+      DTS:ObjectName="DESKTOP-8V127BM\PSTUNG.NDS">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-8V127BM\PSTUNG;Initial Catalog=NDS;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{2BEA76D3-5F36-4347-902A-DD9C2CCFA2CE}DESKTOP-8V127BM\PSTUNG.NDS;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{573E64F6-AA60-479B-A268-DB0CE0165BC0}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="CET">
+      <DTS:VariableValue
+        DTS:DataType="7">10/29/2022 4:06:08 PM</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{C6636743-6B6B-442A-85B9-513BE9275CF0}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="LSET">
+      <DTS:VariableValue
+        DTS:DataType="7">10/29/2022 4:06:16 PM</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Execute SQL Task"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{48e4f308-25d2-4824-a898-0dda62831406}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SQL Task"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{287E0EE4-C355-41A0-A86F-B234C67A1854}"
+          SQLTask:SqlStatementSource="UPDATE DDS&#xA;SET          NgayCapNhat = ?&#xA;WHERE  (TenBang = 'Fact')" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="User::CET"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="7"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Expression Task"
+      DTS:CreationName="Microsoft.ExpressionTask"
+      DTS:Description="Expression Task"
+      DTS:DTSID="{0bae7dcf-9bda-4dc1-98be-5ec2d934dfe4}"
+      DTS:ExecutableType="Microsoft.ExpressionTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Expression Task"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExpressionTask
+          Expression="@[User::CET]= GETDATE()" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\FACT_DOANHTHU"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{e8265253-beef-48f2-873c-73690e5376a0}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="FACT_DOANHTHU"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\FACT_DOANHTHU\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\FACT_DOANHTHU\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\FACT_DOANHTHU\Derived Column.Inputs[Derived Column Input].Columns[Ngay ban]"
+                      cachedDataType="dbDate"
+                      cachedName="Ngay ban"
+                      lineageId="Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Output].Columns[Ngay ban]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\FACT_DOANHTHU\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\FACT_DOANHTHU\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\FACT_DOANHTHU\Derived Column.Outputs[Derived Column Output].Columns[ngay]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\FACT_DOANHTHU\Derived Column.Outputs[Derived Column Output].Columns[ngay]"
+                      name="ngay"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[DAY](#{Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Output].Columns[Ngay ban]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">DAY([Ngay ban])</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FACT_DOANHTHU\Derived Column.Outputs[Derived Column Output].Columns[thang]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\FACT_DOANHTHU\Derived Column.Outputs[Derived Column Output].Columns[thang]"
+                      name="thang"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[MONTH](#{Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Output].Columns[Ngay ban]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">MONTH([Ngay ban])</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FACT_DOANHTHU\Derived Column.Outputs[Derived Column Output].Columns[nam]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\FACT_DOANHTHU\Derived Column.Outputs[Derived Column Output].Columns[nam]"
+                      name="nam"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[YEAR](#{Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Output].Columns[Ngay ban]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">YEAR([Ngay ban])</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\FACT_DOANHTHU\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\FACT_DOANHTHU\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\FACT_DOANHTHU\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\FACT_DOANHTHU\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\FACT_DOANHTHU\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\FACT_DOANHTHU\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\FACT_DOANHTHU\Derived Column 1"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column 1"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\FACT_DOANHTHU\Derived Column 1.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\FACT_DOANHTHU\Derived Column 1.Inputs[Derived Column Input].Columns[SoLuong]"
+                      cachedDataType="i4"
+                      cachedName="SoLuong"
+                      lineageId="Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Output].Columns[SoLuong]" />
+                    <inputColumn
+                      refId="Package\FACT_DOANHTHU\Derived Column 1.Inputs[Derived Column Input].Columns[GiaSP]"
+                      cachedDataType="i4"
+                      cachedName="GiaSP"
+                      lineageId="Package\FACT_DOANHTHU\Lookup ID_SANPHAM.Outputs[Lookup Match Output].Columns[GiaSP]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\FACT_DOANHTHU\Derived Column 1.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\FACT_DOANHTHU\Derived Column 1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\FACT_DOANHTHU\Derived Column 1.Outputs[Derived Column Output].Columns[doanhthu]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\FACT_DOANHTHU\Derived Column 1.Outputs[Derived Column Output].Columns[doanhthu]"
+                      name="doanhthu"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Output].Columns[SoLuong]} * #{Package\FACT_DOANHTHU\Lookup ID_SANPHAM.Outputs[Lookup Match Output].Columns[GiaSP]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">SoLuong * GiaSP</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\FACT_DOANHTHU\Derived Column 1.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\FACT_DOANHTHU\Derived Column 1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\FACT_DOANHTHU\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\FACT_DOANHTHU\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\FACT_DOANHTHU\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\FACT_DOANHTHU\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\FACT_DOANHTHU\DOANHTHU_NDS"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="DOANHTHU_NDS"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT k.MaKH, k.NguonDuLieu, DATEFROMPARTS(YEAR(hd.NgayBan), MONTH(hd.NgayBan), DAY(hd.NgayBan)) AS 'Ngay ban', c.MaCH, s.MaSP, COUNT(s.Ma) AS Expr1
+FROM     HoaDon AS hd INNER JOIN
+                  ChiTietHoaDon AS ct ON hd.Ma = ct.MaHD INNER JOIN
+                  KhachHang AS k ON hd.MaKH = k.Ma INNER JOIN
+                  CuaHang AS c ON hd.MaCH = c.Ma INNER JOIN
+                  SanPham AS s ON ct.MaSP = s.Ma
+WHERE  (hd.TrangThai = 1) AND (ct.TrangThai = 1) AND (k.TrangThai = 1) AND (c.TrangThai = 1) AND (s.TrangThai = 1) AND (hd.NgayTao BETWEEN ? AND ?)
+GROUP BY k.MaKH, k.NguonDuLieu, c.MaCH, s.MaSP, DATEFROMPARTS(YEAR(hd.NgayBan), MONTH(hd.NgayBan), DAY(hd.NgayBan))</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping">"Parameter0:Input",{C6636743-6B6B-442A-85B9-513BE9275CF0};"Parameter1:Input",{573E64F6-AA60-479B-A268-DB0CE0165BC0};</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\FACT_DOANHTHU\DOANHTHU_NDS.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.NDS]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Output].Columns[MaKH]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Output].ExternalColumns[MaKH]"
+                      length="4"
+                      lineageId="Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Output].Columns[MaKH]"
+                      name="MaKH"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Output].Columns[MaCH]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Output].ExternalColumns[MaCH]"
+                      length="4"
+                      lineageId="Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Output].Columns[MaCH]"
+                      name="MaCH"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Output].Columns[MaSP]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Output].ExternalColumns[MaSP]"
+                      length="4"
+                      lineageId="Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Output].Columns[MaSP]"
+                      name="MaSP"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Output].Columns[NguonDuLieu]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Output].ExternalColumns[NguonDuLieu]"
+                      lineageId="Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Output].Columns[NguonDuLieu]"
+                      name="NguonDuLieu"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Output].Columns[Ngay ban]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Output].ExternalColumns[Ngay ban]"
+                      lineageId="Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Output].Columns[Ngay ban]"
+                      name="Ngay ban"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Output].Columns[SoLuong]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Output].ExternalColumns[Expr1]"
+                      lineageId="Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Output].Columns[SoLuong]"
+                      name="SoLuong"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Output].ExternalColumns[MaKH]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="MaKH" />
+                    <externalMetadataColumn
+                      refId="Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Output].ExternalColumns[MaCH]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="MaCH" />
+                    <externalMetadataColumn
+                      refId="Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Output].ExternalColumns[MaSP]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="MaSP" />
+                    <externalMetadataColumn
+                      refId="Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Output].ExternalColumns[NguonDuLieu]"
+                      dataType="i4"
+                      name="NguonDuLieu" />
+                    <externalMetadataColumn
+                      refId="Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Output].ExternalColumns[Ngay ban]"
+                      dataType="dbDate"
+                      name="Ngay ban" />
+                    <externalMetadataColumn
+                      refId="Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Output].ExternalColumns[Expr1]"
+                      dataType="i4"
+                      name="Expr1" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Error Output].Columns[MaKH]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      lineageId="Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Error Output].Columns[MaKH]"
+                      name="MaKH" />
+                    <outputColumn
+                      refId="Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Error Output].Columns[NguonDuLieu]"
+                      dataType="i4"
+                      lineageId="Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Error Output].Columns[NguonDuLieu]"
+                      name="NguonDuLieu" />
+                    <outputColumn
+                      refId="Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Error Output].Columns[Ngay ban]"
+                      dataType="dbDate"
+                      lineageId="Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Error Output].Columns[Ngay ban]"
+                      name="Ngay ban" />
+                    <outputColumn
+                      refId="Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Error Output].Columns[MaCH]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      lineageId="Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Error Output].Columns[MaCH]"
+                      name="MaCH" />
+                    <outputColumn
+                      refId="Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Error Output].Columns[MaSP]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      lineageId="Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Error Output].Columns[MaSP]"
+                      name="MaSP" />
+                    <outputColumn
+                      refId="Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Error Output].Columns[Expr1]"
+                      dataType="i4"
+                      lineageId="Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Error Output].Columns[Expr1]"
+                      name="Expr1" />
+                    <outputColumn
+                      refId="Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\FACT_DOANHTHU\Lookup"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT d.IDNgay, d.Ngay, m.Thang, m.Nam
+FROM     NgayTrongThang AS d INNER JOIN
+                  ThangTrongNam AS m ON d.IDThang = m.IDThang</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (SELECT d.IDNgay, d.Ngay, m.Thang, m.Nam
+FROM     NgayTrongThang AS d INNER JOIN
+                  ThangTrongNam AS m ON d.IDThang = m.IDThang) [refTable]
+where [refTable].[Ngay] = ? and [refTable].[Thang] = ? and [refTable].[Nam] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="IDNgay" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Ngay" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Thang" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Nam" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\FACT_DOANHTHU\Derived Column.Outputs[Derived Column Output].Columns[ngay]};#{Package\FACT_DOANHTHU\Derived Column.Outputs[Derived Column Output].Columns[thang]};#{Package\FACT_DOANHTHU\Derived Column.Outputs[Derived Column Output].Columns[nam]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\FACT_DOANHTHU\Lookup.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.DDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.DDS]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\FACT_DOANHTHU\Lookup.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\FACT_DOANHTHU\Lookup.Inputs[Lookup Input].Columns[ngay]"
+                      cachedDataType="i4"
+                      cachedName="ngay"
+                      lineageId="Package\FACT_DOANHTHU\Derived Column.Outputs[Derived Column Output].Columns[ngay]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Ngay</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\FACT_DOANHTHU\Lookup.Inputs[Lookup Input].Columns[thang]"
+                      cachedDataType="i4"
+                      cachedName="thang"
+                      lineageId="Package\FACT_DOANHTHU\Derived Column.Outputs[Derived Column Output].Columns[thang]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Thang</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\FACT_DOANHTHU\Lookup.Inputs[Lookup Input].Columns[nam]"
+                      cachedDataType="i4"
+                      cachedName="nam"
+                      lineageId="Package\FACT_DOANHTHU\Derived Column.Outputs[Derived Column Output].Columns[nam]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Nam</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\FACT_DOANHTHU\Lookup.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\FACT_DOANHTHU\Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\FACT_DOANHTHU\Lookup.Outputs[Lookup Match Output].Columns[IDNgay]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\FACT_DOANHTHU\Lookup.Outputs[Lookup Match Output].Columns[IDNgay]"
+                      name="IDNgay"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">IDNgay</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\FACT_DOANHTHU\Lookup.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\FACT_DOANHTHU\Lookup.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\FACT_DOANHTHU\Lookup.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\FACT_DOANHTHU\Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\FACT_DOANHTHU\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\FACT_DOANHTHU\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\FACT_DOANHTHU\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\FACT_DOANHTHU\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\FACT_DOANHTHU\Lookup ID_CUAHANG"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup ID_CUAHANG"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT IDCuaHang, MaCH
+FROM     CuaHang
+WHERE  (TrangThai = 1)</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (SELECT IDCuaHang, MaCH
+FROM     CuaHang
+WHERE  (TrangThai = 1)) [refTable]
+where [refTable].[MaCH] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="IDCuaHang" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="MaCH" dataType="DT_STR" length="4" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Output].Columns[MaCH]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\FACT_DOANHTHU\Lookup ID_CUAHANG.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.DDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.DDS]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\FACT_DOANHTHU\Lookup ID_CUAHANG.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\FACT_DOANHTHU\Lookup ID_CUAHANG.Inputs[Lookup Input].Columns[MaCH]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4"
+                      cachedName="MaCH"
+                      lineageId="Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Output].Columns[MaCH]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">MaCH</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\FACT_DOANHTHU\Lookup ID_CUAHANG.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\FACT_DOANHTHU\Lookup ID_CUAHANG.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\FACT_DOANHTHU\Lookup ID_CUAHANG.Outputs[Lookup Match Output].Columns[IDCuaHang]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\FACT_DOANHTHU\Lookup ID_CUAHANG.Outputs[Lookup Match Output].Columns[IDCuaHang]"
+                      name="IDCuaHang"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">IDCuaHang</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\FACT_DOANHTHU\Lookup ID_CUAHANG.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\FACT_DOANHTHU\Lookup ID_CUAHANG.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\FACT_DOANHTHU\Lookup ID_CUAHANG.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\FACT_DOANHTHU\Lookup ID_CUAHANG.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\FACT_DOANHTHU\Lookup ID_CUAHANG.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\FACT_DOANHTHU\Lookup ID_CUAHANG.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\FACT_DOANHTHU\Lookup ID_CUAHANG.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\FACT_DOANHTHU\Lookup ID_CUAHANG.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\FACT_DOANHTHU\Lookup ID_KHACHHANG"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup ID_KHACHHANG"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT IDKhachHang, MaKH, NguonDuLieu
+FROM     KhachHang
+WHERE  (TrangThai = 1)</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (SELECT IDKhachHang, MaKH, NguonDuLieu
+FROM     KhachHang
+WHERE  (TrangThai = 1)) [refTable]
+where [refTable].[MaKH] = ? and [refTable].[NguonDuLieu] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="IDKhachHang" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="MaKH" dataType="DT_STR" length="4" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="NguonDuLieu" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Output].Columns[MaKH]};#{Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Output].Columns[NguonDuLieu]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\FACT_DOANHTHU\Lookup ID_KHACHHANG.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.DDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.DDS]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\FACT_DOANHTHU\Lookup ID_KHACHHANG.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\FACT_DOANHTHU\Lookup ID_KHACHHANG.Inputs[Lookup Input].Columns[MaKH]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4"
+                      cachedName="MaKH"
+                      lineageId="Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Output].Columns[MaKH]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">MaKH</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\FACT_DOANHTHU\Lookup ID_KHACHHANG.Inputs[Lookup Input].Columns[NguonDuLieu]"
+                      cachedDataType="i4"
+                      cachedName="NguonDuLieu"
+                      lineageId="Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Output].Columns[NguonDuLieu]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">NguonDuLieu</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\FACT_DOANHTHU\Lookup ID_KHACHHANG.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\FACT_DOANHTHU\Lookup ID_KHACHHANG.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\FACT_DOANHTHU\Lookup ID_KHACHHANG.Outputs[Lookup Match Output].Columns[IDKhachHang]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\FACT_DOANHTHU\Lookup ID_KHACHHANG.Outputs[Lookup Match Output].Columns[IDKhachHang]"
+                      name="IDKhachHang"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">IDKhachHang</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\FACT_DOANHTHU\Lookup ID_KHACHHANG.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\FACT_DOANHTHU\Lookup ID_KHACHHANG.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\FACT_DOANHTHU\Lookup ID_KHACHHANG.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\FACT_DOANHTHU\Lookup ID_KHACHHANG.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\FACT_DOANHTHU\Lookup ID_KHACHHANG.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\FACT_DOANHTHU\Lookup ID_KHACHHANG.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\FACT_DOANHTHU\Lookup ID_KHACHHANG.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\FACT_DOANHTHU\Lookup ID_KHACHHANG.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\FACT_DOANHTHU\Lookup ID_SANPHAM"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup ID_SANPHAM"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT IDSanPham, MaSP, GiaSP
+FROM     SanPham
+WHERE  (TrangThai = 1)</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (SELECT IDSanPham, MaSP, GiaSP
+FROM     SanPham
+WHERE  (TrangThai = 1)) [refTable]
+where [refTable].[MaSP] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="IDSanPham" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="MaSP" dataType="DT_STR" length="4" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="GiaSP" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Output].Columns[MaSP]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\FACT_DOANHTHU\Lookup ID_SANPHAM.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.DDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.DDS]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\FACT_DOANHTHU\Lookup ID_SANPHAM.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\FACT_DOANHTHU\Lookup ID_SANPHAM.Inputs[Lookup Input].Columns[MaSP]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4"
+                      cachedName="MaSP"
+                      lineageId="Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Output].Columns[MaSP]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">MaSP</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\FACT_DOANHTHU\Lookup ID_SANPHAM.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\FACT_DOANHTHU\Lookup ID_SANPHAM.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\FACT_DOANHTHU\Lookup ID_SANPHAM.Outputs[Lookup Match Output].Columns[IDSanPham]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\FACT_DOANHTHU\Lookup ID_SANPHAM.Outputs[Lookup Match Output].Columns[IDSanPham]"
+                      name="IDSanPham"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">IDSanPham</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FACT_DOANHTHU\Lookup ID_SANPHAM.Outputs[Lookup Match Output].Columns[GiaSP]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\FACT_DOANHTHU\Lookup ID_SANPHAM.Outputs[Lookup Match Output].Columns[GiaSP]"
+                      name="GiaSP"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">GiaSP</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\FACT_DOANHTHU\Lookup ID_SANPHAM.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\FACT_DOANHTHU\Lookup ID_SANPHAM.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\FACT_DOANHTHU\Lookup ID_SANPHAM.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\FACT_DOANHTHU\Lookup ID_SANPHAM.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\FACT_DOANHTHU\Lookup ID_SANPHAM.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\FACT_DOANHTHU\Lookup ID_SANPHAM.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\FACT_DOANHTHU\Lookup ID_SANPHAM.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\FACT_DOANHTHU\Lookup ID_SANPHAM.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\FACT_DOANHTHU\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DoanhThu]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\FACT_DOANHTHU\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.DDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.DDS]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\FACT_DOANHTHU\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\FACT_DOANHTHU\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[IDCuaHang]"
+                      cachedDataType="i4"
+                      cachedName="IDCuaHang"
+                      externalMetadataColumnId="Package\FACT_DOANHTHU\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IDCuaHang]"
+                      lineageId="Package\FACT_DOANHTHU\Lookup ID_CUAHANG.Outputs[Lookup Match Output].Columns[IDCuaHang]" />
+                    <inputColumn
+                      refId="Package\FACT_DOANHTHU\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[IDKhachHang]"
+                      cachedDataType="i4"
+                      cachedName="IDKhachHang"
+                      externalMetadataColumnId="Package\FACT_DOANHTHU\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IDKhachHang]"
+                      lineageId="Package\FACT_DOANHTHU\Lookup ID_KHACHHANG.Outputs[Lookup Match Output].Columns[IDKhachHang]" />
+                    <inputColumn
+                      refId="Package\FACT_DOANHTHU\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[IDSanPham]"
+                      cachedDataType="i4"
+                      cachedName="IDSanPham"
+                      externalMetadataColumnId="Package\FACT_DOANHTHU\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IDSanPham]"
+                      lineageId="Package\FACT_DOANHTHU\Lookup ID_SANPHAM.Outputs[Lookup Match Output].Columns[IDSanPham]" />
+                    <inputColumn
+                      refId="Package\FACT_DOANHTHU\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[IDNgay]"
+                      cachedDataType="i4"
+                      cachedName="IDNgay"
+                      externalMetadataColumnId="Package\FACT_DOANHTHU\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IDNgay]"
+                      lineageId="Package\FACT_DOANHTHU\Lookup.Outputs[Lookup Match Output].Columns[IDNgay]" />
+                    <inputColumn
+                      refId="Package\FACT_DOANHTHU\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[doanhthu]"
+                      cachedDataType="i4"
+                      cachedName="doanhthu"
+                      externalMetadataColumnId="Package\FACT_DOANHTHU\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DoanhThu]"
+                      lineageId="Package\FACT_DOANHTHU\Derived Column 1.Outputs[Derived Column Output].Columns[doanhthu]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\FACT_DOANHTHU\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IDDoanhThu]"
+                      dataType="i4"
+                      name="IDDoanhThu" />
+                    <externalMetadataColumn
+                      refId="Package\FACT_DOANHTHU\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IDNgay]"
+                      dataType="i4"
+                      name="IDNgay" />
+                    <externalMetadataColumn
+                      refId="Package\FACT_DOANHTHU\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IDCuaHang]"
+                      dataType="i4"
+                      name="IDCuaHang" />
+                    <externalMetadataColumn
+                      refId="Package\FACT_DOANHTHU\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IDSanPham]"
+                      dataType="i4"
+                      name="IDSanPham" />
+                    <externalMetadataColumn
+                      refId="Package\FACT_DOANHTHU\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IDKhachHang]"
+                      dataType="i4"
+                      name="IDKhachHang" />
+                    <externalMetadataColumn
+                      refId="Package\FACT_DOANHTHU\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DoanhThu]"
+                      dataType="r8"
+                      name="DoanhThu" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\FACT_DOANHTHU\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\FACT_DOANHTHU\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\FACT_DOANHTHU\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\FACT_DOANHTHU\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\FACT_DOANHTHU\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\FACT_DOANHTHU\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\FACT_DOANHTHU.Paths[Derived Column Output]"
+              endId="Package\FACT_DOANHTHU\Lookup.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\FACT_DOANHTHU\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\FACT_DOANHTHU.Paths[Derived Column Output1]"
+              endId="Package\FACT_DOANHTHU\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\FACT_DOANHTHU\Derived Column 1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\FACT_DOANHTHU.Paths[Lookup Match Output]"
+              endId="Package\FACT_DOANHTHU\Lookup ID_KHACHHANG.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\FACT_DOANHTHU\Lookup ID_CUAHANG.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\FACT_DOANHTHU.Paths[Lookup Match Output1]"
+              endId="Package\FACT_DOANHTHU\Lookup ID_SANPHAM.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\FACT_DOANHTHU\Lookup ID_KHACHHANG.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\FACT_DOANHTHU.Paths[Lookup Match Output2]"
+              endId="Package\FACT_DOANHTHU\Derived Column.Inputs[Derived Column Input]"
+              name="Lookup Match Output"
+              startId="Package\FACT_DOANHTHU\Lookup ID_SANPHAM.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\FACT_DOANHTHU.Paths[Lookup Match Output3]"
+              endId="Package\FACT_DOANHTHU\Derived Column 1.Inputs[Derived Column Input]"
+              name="Lookup Match Output"
+              startId="Package\FACT_DOANHTHU\Lookup.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\FACT_DOANHTHU.Paths[OLE DB Source Output]"
+              endId="Package\FACT_DOANHTHU\Lookup ID_CUAHANG.Inputs[Lookup Input]"
+              name="OLE DB Source Output"
+              startId="Package\FACT_DOANHTHU\DOANHTHU_NDS.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\GET LSET FROM METADATA"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{b658d3d5-e8b3-4b82-847d-f825ac565929}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="GET LSET FROM METADATA"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{287E0EE4-C355-41A0-A86F-B234C67A1854}"
+          SQLTask:SqlStatementSource="SELECT NgayCapNhat&#xA;FROM     DDS&#xA;WHERE  (TenBang = 'Fact')"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="NgayCapNhat"
+            SQLTask:DtsVariableName="User::LSET" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{e477428e-e2ac-4374-961a-352ff0e870f0}"
+      DTS:From="Package\Expression Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\GET LSET FROM METADATA" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{2960672A-137E-47B7-9C0B-047985202977}"
+      DTS:From="Package\GET LSET FROM METADATA"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\FACT_DOANHTHU" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{3F57E5BD-D929-409B-9C1A-DFAC3C70EF2C}"
+      DTS:From="Package\FACT_DOANHTHU"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Execute SQL Task" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="153.6,41.6"
+          Id="Package\Expression Task"
+          TopLeft="106.428572219245,60" />
+        <NodeLayout
+          Size="212,41.6"
+          Id="Package\GET LSET FROM METADATA"
+          TopLeft="60,148.705883597008" />
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\Execute SQL Task"
+          TopLeft="85.0000004257475,315.411768287936" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="183.228572219245,101.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-17.2285722192454,47.1058835970077"
+              Start="0,0"
+              End="-17.2285722192454,39.6058835970077">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.5529417985039" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.5529417985039"
+                    Point2="0,23.5529417985039"
+                    Point3="-4,23.5529417985039" />
+                  <mssgle:LineSegment
+                    End="-13.2285722192454,23.5529417985039" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-13.2285722192454,23.5529417985039"
+                    Point2="-17.2285722192454,23.5529417985039"
+                    Point3="-17.2285722192454,27.5529417985039" />
+                  <mssgle:LineSegment
+                    End="-17.2285722192454,39.6058835970077" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\FACT_DOANHTHU"
+          TopLeft="119.285716317138,221.88235504322" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="166,190.305883597008">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="35.685716317138,31.5764714462123"
+              Start="0,0"
+              End="35.685716317138,24.0764714462123">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11.7882357231061" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.7882357231061"
+                    Point2="0,15.7882357231061"
+                    Point3="4,15.7882357231061" />
+                  <mssgle:LineSegment
+                    End="31.685716317138,15.7882357231061" />
+                  <mssgle:CubicBezierSegment
+                    Point1="31.685716317138,15.7882357231061"
+                    Point2="35.685716317138,15.7882357231061"
+                    Point3="35.685716317138,19.7882357231061" />
+                  <mssgle:LineSegment
+                    End="35.685716317138,24.0764714462123" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="201.685716317138,263.48235504322">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-35.4857158913905,51.929413244716"
+              Start="0,0"
+              End="-35.4857158913905,44.429413244716">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.964706622358" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.964706622358"
+                    Point2="0,25.964706622358"
+                    Point3="-4,25.964706622358" />
+                  <mssgle:LineSegment
+                    End="-31.4857158913905,25.964706622358" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-31.4857158913905,25.964706622358"
+                    Point2="-35.4857158913905,25.964706622358"
+                    Point3="-35.4857158913905,29.964706622358" />
+                  <mssgle:LineSegment
+                    End="-35.4857158913905,44.429413244716" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\FACT_DOANHTHU">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="160.8,41.6"
+          Id="Package\FACT_DOANHTHU\DOANHTHU_NDS"
+          TopLeft="125.714286833393,35.5294114215152" />
+        <NodeLayout
+          Size="180.8,41.6"
+          Id="Package\FACT_DOANHTHU\Lookup ID_CUAHANG"
+          TopLeft="121.142859137788,124.88235504322" />
+        <EdgeLayout
+          Id="Package\FACT_DOANHTHU.Paths[OLE DB Source Output]"
+          TopLeft="208.828572985591,77.1294114215152">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,47.7529436217048"
+              Start="0,0"
+              End="0,40.2529436217048">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.2529436217048" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="194.4,41.6"
+          Id="Package\FACT_DOANHTHU\Lookup ID_KHACHHANG"
+          TopLeft="208,243" />
+        <EdgeLayout
+          Id="Package\FACT_DOANHTHU.Paths[Lookup Match Output]"
+          TopLeft="211.542859137788,166.48235504322">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="93.657140862212,76.51764495678"
+              Start="0,0"
+              End="93.657140862212,69.01764495678">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.25882247839" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,34.25882247839"
+                    Point2="0,38.25882247839"
+                    Point3="4,38.25882247839" />
+                  <mssgle:LineSegment
+                    End="89.657140862212,38.25882247839" />
+                  <mssgle:CubicBezierSegment
+                    Point1="89.657140862212,38.25882247839"
+                    Point2="93.657140862212,38.25882247839"
+                    Point3="93.657140862212,42.25882247839" />
+                  <mssgle:LineSegment
+                    End="93.657140862212,69.01764495678" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-1.36281628764402,43.25882247839,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="180,41.6"
+          Id="Package\FACT_DOANHTHU\Lookup ID_SANPHAM"
+          TopLeft="308,315" />
+        <EdgeLayout
+          Id="Package\FACT_DOANHTHU.Paths[Lookup Match Output1]"
+          TopLeft="305.2,284.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="92.8,30.4"
+              Start="0,0"
+              End="92.8,22.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.2"
+                    Point2="0,15.2"
+                    Point3="4,15.2" />
+                  <mssgle:LineSegment
+                    End="88.8,15.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="88.8,15.2"
+                    Point2="92.8,15.2"
+                    Point3="92.8,19.2" />
+                  <mssgle:LineSegment
+                    End="92.8,22.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-1.79138671875,20.2,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\FACT_DOANHTHU\Derived Column"
+          TopLeft="428,386.4" />
+        <EdgeLayout
+          Id="Package\FACT_DOANHTHU.Paths[Lookup Match Output2]"
+          TopLeft="398,356.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="106.4,29.8"
+              Start="0,0"
+              End="106.4,22.3">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,10.9" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,10.9"
+                    Point2="0,14.9"
+                    Point3="4,14.9" />
+                  <mssgle:LineSegment
+                    End="102.4,14.9" />
+                  <mssgle:CubicBezierSegment
+                    Point1="102.4,14.9"
+                    Point2="106.4,14.9"
+                    Point3="106.4,18.9" />
+                  <mssgle:LineSegment
+                    End="106.4,22.3" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="5.00861328124999,19.9,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="112.8,41.6"
+          Id="Package\FACT_DOANHTHU\Lookup"
+          TopLeft="559,444.4" />
+        <EdgeLayout
+          Id="Package\FACT_DOANHTHU.Paths[Derived Column Output]"
+          TopLeft="580.8,407.2">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="34.6,37.2"
+              Start="0,0"
+              End="34.6,29.7">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="30.6,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="30.6,0"
+                    Point2="34.6,0"
+                    Point3="34.6,4" />
+                  <mssgle:LineSegment
+                    End="34.6,29.7" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\FACT_DOANHTHU\Derived Column 1"
+          TopLeft="700,504" />
+        <EdgeLayout
+          Id="Package\FACT_DOANHTHU.Paths[Lookup Match Output3]"
+          TopLeft="671.8,465.2">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="28.2,59.5999999999999"
+              Start="0,0"
+              End="20.7,59.5999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="10.1,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="10.1,0"
+                    Point2="14.1,0"
+                    Point3="14.1,4" />
+                  <mssgle:LineSegment
+                    End="14.1,55.5999999999999" />
+                  <mssgle:CubicBezierSegment
+                    Point1="14.1,55.5999999999999"
+                    Point2="14.1,59.5999999999999"
+                    Point3="18.1,59.5999999999999" />
+                  <mssgle:LineSegment
+                    End="20.7,59.5999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-34.09138671875,-17.609375,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\FACT_DOANHTHU\OLE DB Destination"
+          TopLeft="822,588" />
+        <EdgeLayout
+          Id="Package\FACT_DOANHTHU.Paths[Derived Column Output1]"
+          TopLeft="781.2,545.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="126,42.4000000000003"
+              Start="0,0"
+              End="126,34.9000000000003">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.2000000000002" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.2000000000002"
+                    Point2="0,21.2000000000002"
+                    Point3="4,21.2000000000002" />
+                  <mssgle:LineSegment
+                    End="122,21.2000000000002" />
+                  <mssgle:CubicBezierSegment
+                    Point1="122,21.2000000000002"
+                    Point2="126,21.2000000000002"
+                    Point3="126,25.2000000000002" />
+                  <mssgle:LineSegment
+                    End="126,34.9000000000003" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\FACT_DOANHTHU\DOANHTHU_NDS">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\FACT_DOANHTHU\Lookup ID_KHACHHANG">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\FACT_DOANHTHU\Lookup ID_SANPHAM">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\FACT_DOANHTHU\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\FACT_DOANHTHU\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
