@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="01-1-Jade"
   DTS:PackageType="5"
-  DTS:VersionBuild="20"
-  DTS:VersionGUID="{F7AF4AFE-B35D-4DC0-90D7-EF1779D826AF}">
+  DTS:VersionBuild="21"
+  DTS:VersionGUID="{757CF2C8-D743-432D-94C3-7B61951CA362}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -87,7 +87,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="CET">
       <DTS:VariableValue
-        DTS:DataType="7">10/19/2022 8:09:55 PM</DTS:VariableValue>
+        DTS:DataType="7">11/2/2022 9:00:11 AM</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -1924,7 +1924,11 @@ WHERE  (NgayCapNhat BETWEEN ? AND ?) OR
     design-time-name="Package\CHITIETHOADON_TO_STAGE">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="149.6,41.6"
+          Id="Package\CHITIETHOADON_TO_STAGE\OLE DB Source"
+          TopLeft="464,32" />
         <NodeLayout
           Size="164.8,41.6"
           Id="Package\CHITIETHOADON_TO_STAGE\TRUNCATE CHITIETHOADON_STAGE"
@@ -1933,10 +1937,6 @@ WHERE  (NgayCapNhat BETWEEN ? AND ?) OR
           Size="170.4,41.6"
           Id="Package\CHITIETHOADON_TO_STAGE\OLE DB Destination"
           TopLeft="459,245" />
-        <NodeLayout
-          Size="149.6,41.6"
-          Id="Package\CHITIETHOADON_TO_STAGE\OLE DB Source"
-          TopLeft="464,32" />
         <EdgeLayout
           Id="Package\CHITIETHOADON_TO_STAGE.Paths[OLE DB Source Output]"
           TopLeft="538.35,73.6">
@@ -1956,9 +1956,7 @@ WHERE  (NgayCapNhat BETWEEN ? AND ?) OR
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-8,14.7,16,16"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -1980,14 +1978,20 @@ WHERE  (NgayCapNhat BETWEEN ? AND ?) OR
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-8,26.7,16,16"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\CHITIETHOADON_TO_STAGE\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\CHITIETHOADON_TO_STAGE\OLE DB Destination">
     <Properties>
@@ -2001,19 +2005,11 @@ WHERE  (NgayCapNhat BETWEEN ? AND ?) OR
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\CHITIETHOADON_TO_STAGE\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\HOADON_TO_STAGE">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="214.4,41.6"
           Id="Package\HOADON_TO_STAGE\TRUNCATE HOADON_STAGE"
@@ -2045,9 +2041,7 @@ WHERE  (NgayCapNhat BETWEEN ? AND ?) OR
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-8,37.95,16,16"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -2069,9 +2063,7 @@ WHERE  (NgayCapNhat BETWEEN ? AND ?) OR
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-8,26.95,16,16"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -2102,7 +2094,7 @@ WHERE  (NgayCapNhat BETWEEN ? AND ?) OR
     design-time-name="Package\KHACHHANG_TO_STAGE">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="232.8,41.6"
           Id="Package\KHACHHANG_TO_STAGE\TRUNCATE KHACHHANG_STAGE"
@@ -2134,9 +2126,7 @@ WHERE  (NgayCapNhat BETWEEN ? AND ?) OR
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="20.4499990207808,5,16,16"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -2158,9 +2148,7 @@ WHERE  (NgayCapNhat BETWEEN ? AND ?) OR
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="30.5642856413004,5,16,16"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

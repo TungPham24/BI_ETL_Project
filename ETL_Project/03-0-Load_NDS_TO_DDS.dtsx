@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="15"
-  DTS:VersionGUID="{834C0B1E-712A-4A56-AFF1-4D4A021879A5}">
+  DTS:VersionBuild="16"
+  DTS:VersionGUID="{FF268EE9-F021-402F-AF9C-E88D23DF9711}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -180,27 +180,35 @@
           Id="Package\DIM_CUAHANG"
           TopLeft="566.428581074792,58.8823537669788" />
         <NodeLayout
+          Size="129.6,41.6"
+          Id="Package\DIM_DATE"
+          TopLeft="581.428581330241,217.941179527131" />
+        <NodeLayout
           Size="164.8,41.6"
           Id="Package\DIM_KHACHHANG"
           TopLeft="322.857148355368,139.94117843321" />
         <NodeLayout
           Size="151.2,41.6"
           Id="Package\DIM_SANPHAM"
-          TopLeft="325.714291261167,66.5294126977552" />
+          TopLeft="329.285719893417,64.2352950185223" />
+        <NodeLayout
+          Size="139.2,41.6"
+          Id="Package\FACT_TABLE"
+          TopLeft="327.142862714067,217.317650061743" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="403.285719808268,139.94117843321">
+          TopLeft="405.071434124392,139.94117843321">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,-31.8117657354553"
+              EndConnector="0,-34.1058834146878"
               Start="0,0"
-              End="0,-24.3117657354553">
+              End="0,-26.6058834146878">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-24.3117657354553" />
+                    End="0,-26.6058834146878" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -211,18 +219,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="476.914291261167,83.505883232367">
+          TopLeft="480.485719893417,82.3588243927505">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="89.5142898136245,0"
+              EndConnector="85.9428611813753,0"
               Start="0,0"
-              End="82.0142898136245,0">
+              End="78.4428611813753,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="82.0142898136245,0" />
+                    End="78.4428611813753,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -231,10 +239,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="129.6,41.6"
-          Id="Package\DIM_DATE"
-          TopLeft="581.428581330241,217.941179527131" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
           TopLeft="644.128581202517,100.482353766979">
@@ -257,10 +261,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="139.2,41.6"
-          Id="Package\FACT_TABLE"
-          TopLeft="327.142862714067,217.317650061743" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
           TopLeft="581.428581330241,238.429414794437">

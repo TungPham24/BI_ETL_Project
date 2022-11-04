@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="5"
-  DTS:VersionGUID="{AE4ED209-61A1-4F20-89AE-F9C7C98C69BB}">
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{C4EF2B25-BCD8-48BD-A12F-C54AE5534ED8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -110,146 +110,131 @@
           version="1">
           <components>
             <component
-              refId="Package\SANPHAM_NDS_TO_DDS\Derived Column"
-              componentClassID="Microsoft.DerivedColumn"
-              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
-              name="Derived Column"
-              usesDispositions="true">
+              refId="Package\SANPHAM_NDS_TO_DDS\EXPIRY OLD ROW"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="EXPIRY OLD ROW"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">UPDATE [dbo].[SanPham] SET [TrangThai] = ? WHERE [MaSP] = ? AND [NguonDuLieu] = ? AND [TrangThai] = '1'</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\SANPHAM_NDS_TO_DDS\EXPIRY OLD ROW.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.DDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.DDS]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
               <inputs>
                 <input
-                  refId="Package\SANPHAM_NDS_TO_DDS\Derived Column.Inputs[Derived Column Input]"
-                  description="Input to the Derived Column Transformation"
-                  name="Derived Column Input">
+                  refId="Package\SANPHAM_NDS_TO_DDS\EXPIRY OLD ROW.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\SANPHAM_NDS_TO_DDS\Derived Column.Inputs[Derived Column Input].Columns[TrangThai]"
+                      refId="Package\SANPHAM_NDS_TO_DDS\EXPIRY OLD ROW.Inputs[OLE DB Command Input].Columns[MaSP]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4"
+                      cachedName="MaSP"
+                      externalMetadataColumnId="Package\SANPHAM_NDS_TO_DDS\EXPIRY OLD ROW.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\SANPHAM_NDS_TO_DDS\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaSP]" />
+                    <inputColumn
+                      refId="Package\SANPHAM_NDS_TO_DDS\EXPIRY OLD ROW.Inputs[OLE DB Command Input].Columns[NguonDuLieu]"
+                      cachedDataType="i4"
+                      cachedName="NguonDuLieu"
+                      externalMetadataColumnId="Package\SANPHAM_NDS_TO_DDS\EXPIRY OLD ROW.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      lineageId="Package\SANPHAM_NDS_TO_DDS\OLE DB Source.Outputs[OLE DB Source Output].Columns[NguonDuLieu]" />
+                    <inputColumn
+                      refId="Package\SANPHAM_NDS_TO_DDS\EXPIRY OLD ROW.Inputs[OLE DB Command Input].Columns[TrangThai]"
                       cachedDataType="i4"
                       cachedName="TrangThai"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\SANPHAM_NDS_TO_DDS\OLE DB Source.Outputs[OLE DB Source Output].Columns[TrangThai]"
-                      truncationRowDisposition="FailComponent"
-                      usageType="readWrite">
+                      externalMetadataColumnId="Package\SANPHAM_NDS_TO_DDS\EXPIRY OLD ROW.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\SANPHAM_NDS_TO_DDS\OLE DB Source.Outputs[OLE DB Source Output].Columns[TrangThai]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\SANPHAM_NDS_TO_DDS\EXPIRY OLD ROW.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="i4"
+                      name="Param_0">
                       <properties>
                         <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">(DT_I4)("2")</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">(DT_I4)("2")</property>
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
                       </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\SANPHAM_NDS_TO_DDS\EXPIRY OLD ROW.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\SANPHAM_NDS_TO_DDS\EXPIRY OLD ROW.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      dataType="i4"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\SANPHAM_NDS_TO_DDS\Derived Column.Outputs[Derived Column Output]"
-                  description="Default Output of the Derived Column Transformation"
+                  refId="Package\SANPHAM_NDS_TO_DDS\EXPIRY OLD ROW.Outputs[OLE DB Command Output]"
                   exclusionGroup="1"
-                  name="Derived Column Output"
-                  synchronousInputId="Package\SANPHAM_NDS_TO_DDS\Derived Column.Inputs[Derived Column Input]">
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\SANPHAM_NDS_TO_DDS\EXPIRY OLD ROW.Inputs[OLE DB Command Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\SANPHAM_NDS_TO_DDS\Derived Column.Outputs[Derived Column Error Output]"
-                  description="Error Output of the Derived Column Transformation"
+                  refId="Package\SANPHAM_NDS_TO_DDS\EXPIRY OLD ROW.Outputs[OLE DB Command Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
-                  name="Derived Column Error Output"
-                  synchronousInputId="Package\SANPHAM_NDS_TO_DDS\Derived Column.Inputs[Derived Column Input]">
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\SANPHAM_NDS_TO_DDS\EXPIRY OLD ROW.Inputs[OLE DB Command Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\SANPHAM_NDS_TO_DDS\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      refId="Package\SANPHAM_NDS_TO_DDS\EXPIRY OLD ROW.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\SANPHAM_NDS_TO_DDS\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      lineageId="Package\SANPHAM_NDS_TO_DDS\EXPIRY OLD ROW.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\SANPHAM_NDS_TO_DDS\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      refId="Package\SANPHAM_NDS_TO_DDS\EXPIRY OLD ROW.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\SANPHAM_NDS_TO_DDS\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\SANPHAM_NDS_TO_DDS\Derived Column 1"
-              componentClassID="Microsoft.DerivedColumn"
-              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
-              name="Derived Column 1"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\SANPHAM_NDS_TO_DDS\Derived Column 1.Inputs[Derived Column Input]"
-                  description="Input to the Derived Column Transformation"
-                  name="Derived Column Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\SANPHAM_NDS_TO_DDS\Derived Column 1.Inputs[Derived Column Input].Columns[TrangThai]"
-                      cachedDataType="i4"
-                      cachedName="TrangThai"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\SANPHAM_NDS_TO_DDS\Union All.Outputs[Union All Output 1].Columns[TrangThai]"
-                      truncationRowDisposition="FailComponent"
-                      usageType="readWrite">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">(DT_I4)("1")</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">(DT_I4)("1")</property>
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\SANPHAM_NDS_TO_DDS\Derived Column 1.Outputs[Derived Column Output]"
-                  description="Default Output of the Derived Column Transformation"
-                  exclusionGroup="1"
-                  name="Derived Column Output"
-                  synchronousInputId="Package\SANPHAM_NDS_TO_DDS\Derived Column 1.Inputs[Derived Column Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\SANPHAM_NDS_TO_DDS\Derived Column 1.Outputs[Derived Column Error Output]"
-                  description="Error Output of the Derived Column Transformation"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Derived Column Error Output"
-                  synchronousInputId="Package\SANPHAM_NDS_TO_DDS\Derived Column 1.Inputs[Derived Column Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\SANPHAM_NDS_TO_DDS\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\SANPHAM_NDS_TO_DDS\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\SANPHAM_NDS_TO_DDS\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\SANPHAM_NDS_TO_DDS\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\SANPHAM_NDS_TO_DDS\EXPIRY OLD ROW.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -425,327 +410,6 @@
                       refId="Package\SANPHAM_NDS_TO_DDS\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\SANPHAM_NDS_TO_DDS\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\SANPHAM_NDS_TO_DDS\OLE DB Command"
-              componentClassID="Microsoft.OLEDBCommand"
-              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
-              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
-              name="OLE DB Command"
-              usesDispositions="true"
-              version="2">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">UPDATE [dbo].[SanPham] SET [TrangThai] = ? WHERE [MaSP] = ? AND [NguonDuLieu] = ? AND [TrangThai] = '1'</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\SANPHAM_NDS_TO_DDS\OLE DB Command.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.DDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.DDS]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\SANPHAM_NDS_TO_DDS\OLE DB Command.Inputs[OLE DB Command Input]"
-                  errorOrTruncationOperation="Command Execution"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Command Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\SANPHAM_NDS_TO_DDS\OLE DB Command.Inputs[OLE DB Command Input].Columns[MaSP]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="4"
-                      cachedName="MaSP"
-                      externalMetadataColumnId="Package\SANPHAM_NDS_TO_DDS\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      lineageId="Package\SANPHAM_NDS_TO_DDS\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaSP]" />
-                    <inputColumn
-                      refId="Package\SANPHAM_NDS_TO_DDS\OLE DB Command.Inputs[OLE DB Command Input].Columns[NguonDuLieu]"
-                      cachedDataType="i4"
-                      cachedName="NguonDuLieu"
-                      externalMetadataColumnId="Package\SANPHAM_NDS_TO_DDS\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
-                      lineageId="Package\SANPHAM_NDS_TO_DDS\OLE DB Source.Outputs[OLE DB Source Output].Columns[NguonDuLieu]" />
-                    <inputColumn
-                      refId="Package\SANPHAM_NDS_TO_DDS\OLE DB Command.Inputs[OLE DB Command Input].Columns[TrangThai]"
-                      cachedDataType="i4"
-                      cachedName="TrangThai"
-                      externalMetadataColumnId="Package\SANPHAM_NDS_TO_DDS\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      lineageId="Package\SANPHAM_NDS_TO_DDS\OLE DB Source.Outputs[OLE DB Source Output].Columns[TrangThai]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\SANPHAM_NDS_TO_DDS\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      dataType="i4"
-                      name="Param_0">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">81</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\SANPHAM_NDS_TO_DDS\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      codePage="1252"
-                      dataType="str"
-                      length="4"
-                      name="Param_1">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\SANPHAM_NDS_TO_DDS\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
-                      dataType="i4"
-                      name="Param_2">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">81</property>
-                      </properties>
-                    </externalMetadataColumn>
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\SANPHAM_NDS_TO_DDS\OLE DB Command.Outputs[OLE DB Command Output]"
-                  exclusionGroup="1"
-                  name="OLE DB Command Output"
-                  synchronousInputId="Package\SANPHAM_NDS_TO_DDS\OLE DB Command.Inputs[OLE DB Command Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\SANPHAM_NDS_TO_DDS\OLE DB Command.Outputs[OLE DB Command Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Command Error Output"
-                  synchronousInputId="Package\SANPHAM_NDS_TO_DDS\OLE DB Command.Inputs[OLE DB Command Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\SANPHAM_NDS_TO_DDS\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\SANPHAM_NDS_TO_DDS\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\SANPHAM_NDS_TO_DDS\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\SANPHAM_NDS_TO_DDS\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\SANPHAM_NDS_TO_DDS\OLE DB Command 1"
-              componentClassID="Microsoft.OLEDBCommand"
-              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
-              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
-              name="OLE DB Command 1"
-              usesDispositions="true"
-              version="2">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">UPDATE [dbo].[SanPham] SET [GiaSP] = ?,[LoaiSP] = ?,[TenSP] = ?,[TrangThai] = ? WHERE [MaSP] = ? AND [NguonDuLieu] = ?</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\SANPHAM_NDS_TO_DDS\OLE DB Command 1.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.DDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.DDS]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\SANPHAM_NDS_TO_DDS\OLE DB Command 1.Inputs[OLE DB Command Input]"
-                  errorOrTruncationOperation="Command Execution"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Command Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\SANPHAM_NDS_TO_DDS\OLE DB Command 1.Inputs[OLE DB Command Input].Columns[GiaSP]"
-                      cachedDataType="i4"
-                      cachedName="GiaSP"
-                      externalMetadataColumnId="Package\SANPHAM_NDS_TO_DDS\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      lineageId="Package\SANPHAM_NDS_TO_DDS\OLE DB Source.Outputs[OLE DB Source Output].Columns[GiaSP]" />
-                    <inputColumn
-                      refId="Package\SANPHAM_NDS_TO_DDS\OLE DB Command 1.Inputs[OLE DB Command Input].Columns[LoaiSP]"
-                      cachedDataType="i4"
-                      cachedName="LoaiSP"
-                      externalMetadataColumnId="Package\SANPHAM_NDS_TO_DDS\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      lineageId="Package\SANPHAM_NDS_TO_DDS\OLE DB Source.Outputs[OLE DB Source Output].Columns[LoaiSP]" />
-                    <inputColumn
-                      refId="Package\SANPHAM_NDS_TO_DDS\OLE DB Command 1.Inputs[OLE DB Command Input].Columns[MaSP]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="4"
-                      cachedName="MaSP"
-                      externalMetadataColumnId="Package\SANPHAM_NDS_TO_DDS\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
-                      lineageId="Package\SANPHAM_NDS_TO_DDS\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaSP]" />
-                    <inputColumn
-                      refId="Package\SANPHAM_NDS_TO_DDS\OLE DB Command 1.Inputs[OLE DB Command Input].Columns[NguonDuLieu]"
-                      cachedDataType="i4"
-                      cachedName="NguonDuLieu"
-                      externalMetadataColumnId="Package\SANPHAM_NDS_TO_DDS\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
-                      lineageId="Package\SANPHAM_NDS_TO_DDS\OLE DB Source.Outputs[OLE DB Source Output].Columns[NguonDuLieu]" />
-                    <inputColumn
-                      refId="Package\SANPHAM_NDS_TO_DDS\OLE DB Command 1.Inputs[OLE DB Command Input].Columns[TenSP]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="TenSP"
-                      externalMetadataColumnId="Package\SANPHAM_NDS_TO_DDS\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
-                      lineageId="Package\SANPHAM_NDS_TO_DDS\OLE DB Source.Outputs[OLE DB Source Output].Columns[TenSP]" />
-                    <inputColumn
-                      refId="Package\SANPHAM_NDS_TO_DDS\OLE DB Command 1.Inputs[OLE DB Command Input].Columns[TrangThai]"
-                      cachedDataType="i4"
-                      cachedName="TrangThai"
-                      externalMetadataColumnId="Package\SANPHAM_NDS_TO_DDS\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
-                      lineageId="Package\SANPHAM_NDS_TO_DDS\OLE DB Source.Outputs[OLE DB Source Output].Columns[TrangThai]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\SANPHAM_NDS_TO_DDS\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      dataType="i4"
-                      name="Param_0">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">81</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\SANPHAM_NDS_TO_DDS\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      dataType="i4"
-                      name="Param_1">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">81</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\SANPHAM_NDS_TO_DDS\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Param_2">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\SANPHAM_NDS_TO_DDS\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
-                      dataType="i4"
-                      name="Param_3">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">81</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\SANPHAM_NDS_TO_DDS\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
-                      codePage="1252"
-                      dataType="str"
-                      length="4"
-                      name="Param_4">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\SANPHAM_NDS_TO_DDS\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
-                      dataType="i4"
-                      name="Param_5">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">81</property>
-                      </properties>
-                    </externalMetadataColumn>
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\SANPHAM_NDS_TO_DDS\OLE DB Command 1.Outputs[OLE DB Command Output]"
-                  exclusionGroup="1"
-                  name="OLE DB Command Output"
-                  synchronousInputId="Package\SANPHAM_NDS_TO_DDS\OLE DB Command 1.Inputs[OLE DB Command Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\SANPHAM_NDS_TO_DDS\OLE DB Command 1.Outputs[OLE DB Command Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Command Error Output"
-                  synchronousInputId="Package\SANPHAM_NDS_TO_DDS\OLE DB Command 1.Inputs[OLE DB Command Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\SANPHAM_NDS_TO_DDS\OLE DB Command 1.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\SANPHAM_NDS_TO_DDS\OLE DB Command 1.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\SANPHAM_NDS_TO_DDS\OLE DB Command 1.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\SANPHAM_NDS_TO_DDS\OLE DB Command 1.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1019,6 +683,154 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
               </outputs>
             </component>
             <component
+              refId="Package\SANPHAM_NDS_TO_DDS\SET TRANGTHAI TO 1"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="SET TRANGTHAI TO 1"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\SANPHAM_NDS_TO_DDS\SET TRANGTHAI TO 1.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\SANPHAM_NDS_TO_DDS\SET TRANGTHAI TO 1.Inputs[Derived Column Input].Columns[TrangThai]"
+                      cachedDataType="i4"
+                      cachedName="TrangThai"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\SANPHAM_NDS_TO_DDS\Union All.Outputs[Union All Output 1].Columns[TrangThai]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_I4)("1")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_I4)("1")</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\SANPHAM_NDS_TO_DDS\SET TRANGTHAI TO 1.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\SANPHAM_NDS_TO_DDS\SET TRANGTHAI TO 1.Inputs[Derived Column Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\SANPHAM_NDS_TO_DDS\SET TRANGTHAI TO 1.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\SANPHAM_NDS_TO_DDS\SET TRANGTHAI TO 1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SANPHAM_NDS_TO_DDS\SET TRANGTHAI TO 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\SANPHAM_NDS_TO_DDS\SET TRANGTHAI TO 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\SANPHAM_NDS_TO_DDS\SET TRANGTHAI TO 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\SANPHAM_NDS_TO_DDS\SET TRANGTHAI TO 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\SANPHAM_NDS_TO_DDS\SET TRANGTHAI TO 2"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="SET TRANGTHAI TO 2"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\SANPHAM_NDS_TO_DDS\SET TRANGTHAI TO 2.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\SANPHAM_NDS_TO_DDS\SET TRANGTHAI TO 2.Inputs[Derived Column Input].Columns[TrangThai]"
+                      cachedDataType="i4"
+                      cachedName="TrangThai"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\SANPHAM_NDS_TO_DDS\OLE DB Source.Outputs[OLE DB Source Output].Columns[TrangThai]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_I4)("2")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_I4)("2")</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\SANPHAM_NDS_TO_DDS\SET TRANGTHAI TO 2.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\SANPHAM_NDS_TO_DDS\SET TRANGTHAI TO 2.Inputs[Derived Column Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\SANPHAM_NDS_TO_DDS\SET TRANGTHAI TO 2.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\SANPHAM_NDS_TO_DDS\SET TRANGTHAI TO 2.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SANPHAM_NDS_TO_DDS\SET TRANGTHAI TO 2.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\SANPHAM_NDS_TO_DDS\SET TRANGTHAI TO 2.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\SANPHAM_NDS_TO_DDS\SET TRANGTHAI TO 2.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\SANPHAM_NDS_TO_DDS\SET TRANGTHAI TO 2.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\SANPHAM_NDS_TO_DDS\Slowly Changing Dimension"
               componentClassID="Microsoft.SCD"
               contactInfo="Slowly Changing Dimension;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;3"
@@ -1030,7 +842,7 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
                   dataType="System.String"
                   description="Specifies the SELECT statement used to create a schema rowset."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT [GiaSP], [MaSP], [NguonDuLieu], [TrangThai] FROM [dbo].[SanPham]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT [GiaSP], [LoaiSP], [MaSP], [NguonDuLieu], [TenSP], [TrangThai] FROM [dbo].[SanPham]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the WHERE clause in the SELECT statement that selects the current row among rows with identical business keys."
@@ -1042,7 +854,7 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the transformation fails when columns with fixed attributes contain changes."
-                  name="FailOnFixedAttributeChange">true</property>
+                  name="FailOnFixedAttributeChange">false</property>
                 <property
                   dataType="System.String"
                   description="Specifies the column name for the inferred member."
@@ -1092,6 +904,19 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
                       </properties>
                     </inputColumn>
                     <inputColumn
+                      refId="Package\SANPHAM_NDS_TO_DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[LoaiSP]"
+                      cachedDataType="i4"
+                      cachedName="LoaiSP"
+                      externalMetadataColumnId="Package\SANPHAM_NDS_TO_DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[LoaiSP]"
+                      lineageId="Package\SANPHAM_NDS_TO_DDS\OLE DB Source.Outputs[OLE DB Source Output].Columns[LoaiSP]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
                       refId="Package\SANPHAM_NDS_TO_DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[MaSP]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -1119,6 +944,21 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
                           typeConverter="ColumnType">1</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\SANPHAM_NDS_TO_DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[TenSP]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TenSP"
+                      externalMetadataColumnId="Package\SANPHAM_NDS_TO_DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[TenSP]"
+                      lineageId="Package\SANPHAM_NDS_TO_DDS\OLE DB Source.Outputs[OLE DB Source Output].Columns[TenSP]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">4</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1126,6 +966,10 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
                       refId="Package\SANPHAM_NDS_TO_DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[GiaSP]"
                       dataType="i4"
                       name="GiaSP" />
+                    <externalMetadataColumn
+                      refId="Package\SANPHAM_NDS_TO_DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[LoaiSP]"
+                      dataType="i4"
+                      name="LoaiSP" />
                     <externalMetadataColumn
                       refId="Package\SANPHAM_NDS_TO_DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[MaSP]"
                       codePage="1252"
@@ -1136,6 +980,12 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
                       refId="Package\SANPHAM_NDS_TO_DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[NguonDuLieu]"
                       dataType="i4"
                       name="NguonDuLieu" />
+                    <externalMetadataColumn
+                      refId="Package\SANPHAM_NDS_TO_DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[TenSP]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="TenSP" />
                     <externalMetadataColumn
                       refId="Package\SANPHAM_NDS_TO_DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[TrangThai]"
                       dataType="i4"
@@ -1526,26 +1376,352 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
                 </output>
               </outputs>
             </component>
+            <component
+              refId="Package\SANPHAM_NDS_TO_DDS\UPDATE CHANGING ATTS"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="UPDATE CHANGING ATTS"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">UPDATE [dbo].[SanPham] SET [LoaiSP] = ? WHERE [MaSP] = ? AND [NguonDuLieu] = ? AND [TrangThai] = '1'</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\SANPHAM_NDS_TO_DDS\UPDATE CHANGING ATTS.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.DDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.DDS]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\SANPHAM_NDS_TO_DDS\UPDATE CHANGING ATTS.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\SANPHAM_NDS_TO_DDS\UPDATE CHANGING ATTS.Inputs[OLE DB Command Input].Columns[LoaiSP]"
+                      cachedDataType="i4"
+                      cachedName="LoaiSP"
+                      externalMetadataColumnId="Package\SANPHAM_NDS_TO_DDS\UPDATE CHANGING ATTS.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\SANPHAM_NDS_TO_DDS\OLE DB Source.Outputs[OLE DB Source Output].Columns[LoaiSP]" />
+                    <inputColumn
+                      refId="Package\SANPHAM_NDS_TO_DDS\UPDATE CHANGING ATTS.Inputs[OLE DB Command Input].Columns[MaSP]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4"
+                      cachedName="MaSP"
+                      externalMetadataColumnId="Package\SANPHAM_NDS_TO_DDS\UPDATE CHANGING ATTS.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\SANPHAM_NDS_TO_DDS\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaSP]" />
+                    <inputColumn
+                      refId="Package\SANPHAM_NDS_TO_DDS\UPDATE CHANGING ATTS.Inputs[OLE DB Command Input].Columns[NguonDuLieu]"
+                      cachedDataType="i4"
+                      cachedName="NguonDuLieu"
+                      externalMetadataColumnId="Package\SANPHAM_NDS_TO_DDS\UPDATE CHANGING ATTS.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      lineageId="Package\SANPHAM_NDS_TO_DDS\OLE DB Source.Outputs[OLE DB Source Output].Columns[NguonDuLieu]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\SANPHAM_NDS_TO_DDS\UPDATE CHANGING ATTS.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="i4"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\SANPHAM_NDS_TO_DDS\UPDATE CHANGING ATTS.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\SANPHAM_NDS_TO_DDS\UPDATE CHANGING ATTS.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      dataType="i4"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\SANPHAM_NDS_TO_DDS\UPDATE CHANGING ATTS.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\SANPHAM_NDS_TO_DDS\UPDATE CHANGING ATTS.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\SANPHAM_NDS_TO_DDS\UPDATE CHANGING ATTS.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\SANPHAM_NDS_TO_DDS\UPDATE CHANGING ATTS.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SANPHAM_NDS_TO_DDS\UPDATE CHANGING ATTS.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\SANPHAM_NDS_TO_DDS\UPDATE CHANGING ATTS.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\SANPHAM_NDS_TO_DDS\UPDATE CHANGING ATTS.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\SANPHAM_NDS_TO_DDS\UPDATE CHANGING ATTS.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\SANPHAM_NDS_TO_DDS\UPDATE DUMMY ROW"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="UPDATE DUMMY ROW"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">UPDATE [dbo].[SanPham] SET [GiaSP] = ?,[LoaiSP] = ?,[TenSP] = ?,[TrangThai] = ? WHERE [MaSP] = ? AND [NguonDuLieu] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\SANPHAM_NDS_TO_DDS\UPDATE DUMMY ROW.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.DDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.DDS]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\SANPHAM_NDS_TO_DDS\UPDATE DUMMY ROW.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\SANPHAM_NDS_TO_DDS\UPDATE DUMMY ROW.Inputs[OLE DB Command Input].Columns[GiaSP]"
+                      cachedDataType="i4"
+                      cachedName="GiaSP"
+                      externalMetadataColumnId="Package\SANPHAM_NDS_TO_DDS\UPDATE DUMMY ROW.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\SANPHAM_NDS_TO_DDS\OLE DB Source.Outputs[OLE DB Source Output].Columns[GiaSP]" />
+                    <inputColumn
+                      refId="Package\SANPHAM_NDS_TO_DDS\UPDATE DUMMY ROW.Inputs[OLE DB Command Input].Columns[LoaiSP]"
+                      cachedDataType="i4"
+                      cachedName="LoaiSP"
+                      externalMetadataColumnId="Package\SANPHAM_NDS_TO_DDS\UPDATE DUMMY ROW.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\SANPHAM_NDS_TO_DDS\OLE DB Source.Outputs[OLE DB Source Output].Columns[LoaiSP]" />
+                    <inputColumn
+                      refId="Package\SANPHAM_NDS_TO_DDS\UPDATE DUMMY ROW.Inputs[OLE DB Command Input].Columns[MaSP]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4"
+                      cachedName="MaSP"
+                      externalMetadataColumnId="Package\SANPHAM_NDS_TO_DDS\UPDATE DUMMY ROW.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
+                      lineageId="Package\SANPHAM_NDS_TO_DDS\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaSP]" />
+                    <inputColumn
+                      refId="Package\SANPHAM_NDS_TO_DDS\UPDATE DUMMY ROW.Inputs[OLE DB Command Input].Columns[NguonDuLieu]"
+                      cachedDataType="i4"
+                      cachedName="NguonDuLieu"
+                      externalMetadataColumnId="Package\SANPHAM_NDS_TO_DDS\UPDATE DUMMY ROW.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
+                      lineageId="Package\SANPHAM_NDS_TO_DDS\OLE DB Source.Outputs[OLE DB Source Output].Columns[NguonDuLieu]" />
+                    <inputColumn
+                      refId="Package\SANPHAM_NDS_TO_DDS\UPDATE DUMMY ROW.Inputs[OLE DB Command Input].Columns[TenSP]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TenSP"
+                      externalMetadataColumnId="Package\SANPHAM_NDS_TO_DDS\UPDATE DUMMY ROW.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      lineageId="Package\SANPHAM_NDS_TO_DDS\OLE DB Source.Outputs[OLE DB Source Output].Columns[TenSP]" />
+                    <inputColumn
+                      refId="Package\SANPHAM_NDS_TO_DDS\UPDATE DUMMY ROW.Inputs[OLE DB Command Input].Columns[TrangThai]"
+                      cachedDataType="i4"
+                      cachedName="TrangThai"
+                      externalMetadataColumnId="Package\SANPHAM_NDS_TO_DDS\UPDATE DUMMY ROW.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      lineageId="Package\SANPHAM_NDS_TO_DDS\OLE DB Source.Outputs[OLE DB Source Output].Columns[TrangThai]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\SANPHAM_NDS_TO_DDS\UPDATE DUMMY ROW.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="i4"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\SANPHAM_NDS_TO_DDS\UPDATE DUMMY ROW.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      dataType="i4"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\SANPHAM_NDS_TO_DDS\UPDATE DUMMY ROW.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\SANPHAM_NDS_TO_DDS\UPDATE DUMMY ROW.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      dataType="i4"
+                      name="Param_3">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\SANPHAM_NDS_TO_DDS\UPDATE DUMMY ROW.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="Param_4">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\SANPHAM_NDS_TO_DDS\UPDATE DUMMY ROW.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
+                      dataType="i4"
+                      name="Param_5">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\SANPHAM_NDS_TO_DDS\UPDATE DUMMY ROW.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\SANPHAM_NDS_TO_DDS\UPDATE DUMMY ROW.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\SANPHAM_NDS_TO_DDS\UPDATE DUMMY ROW.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\SANPHAM_NDS_TO_DDS\UPDATE DUMMY ROW.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SANPHAM_NDS_TO_DDS\UPDATE DUMMY ROW.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\SANPHAM_NDS_TO_DDS\UPDATE DUMMY ROW.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\SANPHAM_NDS_TO_DDS\UPDATE DUMMY ROW.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\SANPHAM_NDS_TO_DDS\UPDATE DUMMY ROW.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
           </components>
           <paths>
             <path
+              refId="Package\SANPHAM_NDS_TO_DDS.Paths[Changing Attribute Updates Output]"
+              endId="Package\SANPHAM_NDS_TO_DDS\UPDATE CHANGING ATTS.Inputs[OLE DB Command Input]"
+              name="Changing Attribute Updates Output"
+              startId="Package\SANPHAM_NDS_TO_DDS\Slowly Changing Dimension.Outputs[Changing Attribute Updates Output]" />
+            <path
               refId="Package\SANPHAM_NDS_TO_DDS.Paths[Derived Column Output]"
-              endId="Package\SANPHAM_NDS_TO_DDS\OLE DB Command.Inputs[OLE DB Command Input]"
+              endId="Package\SANPHAM_NDS_TO_DDS\EXPIRY OLD ROW.Inputs[OLE DB Command Input]"
               name="Derived Column Output"
-              startId="Package\SANPHAM_NDS_TO_DDS\Derived Column.Outputs[Derived Column Output]" />
+              startId="Package\SANPHAM_NDS_TO_DDS\SET TRANGTHAI TO 2.Outputs[Derived Column Output]" />
             <path
               refId="Package\SANPHAM_NDS_TO_DDS.Paths[Derived Column Output1]"
               endId="Package\SANPHAM_NDS_TO_DDS\Insert Destination.Inputs[OLE DB Destination Input]"
               name="Derived Column Output"
-              startId="Package\SANPHAM_NDS_TO_DDS\Derived Column 1.Outputs[Derived Column Output]" />
+              startId="Package\SANPHAM_NDS_TO_DDS\SET TRANGTHAI TO 1.Outputs[Derived Column Output]" />
             <path
               refId="Package\SANPHAM_NDS_TO_DDS.Paths[Historical Attribute Inserts Output]"
-              endId="Package\SANPHAM_NDS_TO_DDS\Derived Column.Inputs[Derived Column Input]"
+              endId="Package\SANPHAM_NDS_TO_DDS\SET TRANGTHAI TO 2.Inputs[Derived Column Input]"
               name="Historical Attribute Inserts Output"
               startId="Package\SANPHAM_NDS_TO_DDS\Slowly Changing Dimension.Outputs[Historical Attribute Inserts Output]" />
             <path
               refId="Package\SANPHAM_NDS_TO_DDS.Paths[Inferred Member Updates Output]"
-              endId="Package\SANPHAM_NDS_TO_DDS\OLE DB Command 1.Inputs[OLE DB Command Input]"
+              endId="Package\SANPHAM_NDS_TO_DDS\UPDATE DUMMY ROW.Inputs[OLE DB Command Input]"
               name="Inferred Member Updates Output"
               startId="Package\SANPHAM_NDS_TO_DDS\Slowly Changing Dimension.Outputs[Inferred Member Updates Output]" />
             <path
@@ -1557,7 +1733,7 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
               refId="Package\SANPHAM_NDS_TO_DDS.Paths[OLE DB Command Output]"
               endId="Package\SANPHAM_NDS_TO_DDS\Union All.Inputs[Union All Input 2]"
               name="OLE DB Command Output"
-              startId="Package\SANPHAM_NDS_TO_DDS\OLE DB Command.Outputs[OLE DB Command Output]" />
+              startId="Package\SANPHAM_NDS_TO_DDS\EXPIRY OLD ROW.Outputs[OLE DB Command Output]" />
             <path
               refId="Package\SANPHAM_NDS_TO_DDS.Paths[OLE DB Source Output]"
               endId="Package\SANPHAM_NDS_TO_DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]"
@@ -1565,7 +1741,7 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
               startId="Package\SANPHAM_NDS_TO_DDS\OLE DB Source.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\SANPHAM_NDS_TO_DDS.Paths[Union All Output 1]"
-              endId="Package\SANPHAM_NDS_TO_DDS\Derived Column 1.Inputs[Derived Column Input]"
+              endId="Package\SANPHAM_NDS_TO_DDS\SET TRANGTHAI TO 1.Inputs[Derived Column Input]"
               name="Union All Output 1"
               startId="Package\SANPHAM_NDS_TO_DDS\Union All.Outputs[Union All Output 1]" />
           </paths>
@@ -1738,7 +1914,7 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
     design-time-name="Package\SANPHAM_NDS_TO_DDS">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="149.6,41.6"
           Id="Package\SANPHAM_NDS_TO_DDS\OLE DB Source"
@@ -1770,63 +1946,75 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="152.8,41.6"
-          Id="Package\SANPHAM_NDS_TO_DDS\Derived Column"
+          Size="183.2,41.6"
+          Id="Package\SANPHAM_NDS_TO_DDS\SET TRANGTHAI TO 2"
           TopLeft="17.5,208.7" />
         <EdgeLayout
           Id="Package\SANPHAM_NDS_TO_DDS.Paths[Historical Attribute Inserts Output]"
-          TopLeft="180.9,148.7">
+          TopLeft="170.9,148.7">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-87,59.9999999999999"
+              EndConnector="-61.8,60"
               Start="0,0"
-              End="-87,52.4999999999999">
+              End="-61.8,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,16.506329113924" />
+                    End="0,13.8378378378378" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,16.506329113924"
-                    Point2="0,20.506329113924"
-                    Point3="-4,20.506329113924" />
+                    Point1="0,13.8378378378378"
+                    Point2="0,17.8378378378378"
+                    Point3="-4,17.8378378378378" />
                   <mssgle:LineSegment
-                    End="-83,20.506329113924" />
+                    End="-57.8,17.8378378378378" />
                   <mssgle:CubicBezierSegment
-                    Point1="-83,20.506329113924"
-                    Point2="-87,20.506329113924"
-                    Point3="-87,24.506329113924" />
+                    Point1="-57.8,17.8378378378378"
+                    Point2="-61.8,17.8378378378378"
+                    Point3="-61.8,21.8378378378378" />
                   <mssgle:LineSegment
-                    End="-87,52.4999999999999" />
+                    End="-61.8,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-118.55638671875,25.506329113924,150.1127734375,11.609375"
+              BoundingBox="-105.95638671875,22.8378378378378,150.1127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="164.8,41.6"
-          Id="Package\SANPHAM_NDS_TO_DDS\OLE DB Command"
-          TopLeft="5.50000000000003,310.3" />
+          Size="164,41.6"
+          Id="Package\SANPHAM_NDS_TO_DDS\EXPIRY OLD ROW"
+          TopLeft="5.49999999999997,310.3" />
         <EdgeLayout
           Id="Package\SANPHAM_NDS_TO_DDS.Paths[Derived Column Output]"
-          TopLeft="90.9,250.3">
+          TopLeft="109.1,250.3">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,59.9999999999999"
+              EndConnector="-21.6,59.9999999999999"
               Start="0,0"
-              End="0,52.4999999999999">
+              End="-21.6,52.4999999999999">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.4999999999999" />
+                    End="0,26" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26"
+                    Point2="0,30"
+                    Point3="-4,30" />
+                  <mssgle:LineSegment
+                    End="-17.6,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-17.6,30"
+                    Point2="-21.6,30"
+                    Point3="-21.6,34" />
+                  <mssgle:LineSegment
+                    End="-21.6,52.4999999999999" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1841,49 +2029,49 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
           TopLeft="170.9,411.9" />
         <EdgeLayout
           Id="Package\SANPHAM_NDS_TO_DDS.Paths[New Output]"
-          TopLeft="230.9,148.7">
+          TopLeft="210.9,148.7">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="18.6666666666667,263.2"
+              EndConnector="38.6666666666667,263.2"
               Start="0,0"
-              End="18.6666666666667,255.7">
+              End="38.6666666666667,255.7">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,151.842105263158" />
+                    End="0,138.046830382638" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,151.842105263158"
-                    Point2="0,155.842105263158"
-                    Point3="4,155.842105263158" />
+                    Point1="0,138.046830382638"
+                    Point2="0,142.046830382638"
+                    Point3="4,142.046830382638" />
                   <mssgle:LineSegment
-                    End="14.6666666666667,155.842105263158" />
+                    End="34.6666666666667,142.046830382638" />
                   <mssgle:CubicBezierSegment
-                    Point1="14.6666666666667,155.842105263158"
-                    Point2="18.6666666666667,155.842105263158"
-                    Point3="18.6666666666667,159.842105263158" />
+                    Point1="34.6666666666667,142.046830382638"
+                    Point2="38.6666666666667,142.046830382638"
+                    Point3="38.6666666666667,146.046830382638" />
                   <mssgle:LineSegment
-                    End="18.6666666666667,255.7" />
+                    End="38.6666666666667,255.7" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-17.7580533854167,160.842105263158,54.1827734375,11.43359375"
+              BoundingBox="-7.75805338541667,147.046830382638,54.1827734375,11.43359375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\SANPHAM_NDS_TO_DDS.Paths[OLE DB Command Output]"
-          TopLeft="87.9,351.9">
+          TopLeft="87.5,351.9">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="124.333333333333,59.9999999999999"
+              EndConnector="124.733333333333,59.9999999999998"
               Start="0,0"
-              End="124.333333333333,52.4999999999999">
+              End="124.733333333333,52.4999999999998">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -1894,13 +2082,13 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
                     Point2="0,35.5263157894736"
                     Point3="4,35.5263157894736" />
                   <mssgle:LineSegment
-                    End="120.333333333333,35.5263157894736" />
+                    End="120.733333333333,35.5263157894736" />
                   <mssgle:CubicBezierSegment
-                    Point1="120.333333333333,35.5263157894736"
-                    Point2="124.333333333333,35.5263157894736"
-                    Point3="124.333333333333,39.5263157894736" />
+                    Point1="120.733333333333,35.5263157894736"
+                    Point2="124.733333333333,35.5263157894736"
+                    Point3="124.733333333333,39.5263157894736" />
                   <mssgle:LineSegment
-                    End="124.333333333333,52.4999999999999" />
+                    End="124.733333333333,52.4999999999998" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1910,8 +2098,8 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="162.4,41.6"
-          Id="Package\SANPHAM_NDS_TO_DDS\Derived Column 1"
+          Size="183.2,41.6"
+          Id="Package\SANPHAM_NDS_TO_DDS\SET TRANGTHAI TO 1"
           TopLeft="149.7,513.5" />
         <EdgeLayout
           Id="Package\SANPHAM_NDS_TO_DDS.Paths[Union All Output 1]"
@@ -1919,14 +2107,26 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,59.9999999999999"
+              EndConnector="10.4000000000001,59.9999999999999"
               Start="0,0"
-              End="0,52.4999999999999">
+              End="10.4000000000001,52.4999999999999">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.4999999999999" />
+                    End="0,26" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26"
+                    Point2="0,30"
+                    Point3="4,30" />
+                  <mssgle:LineSegment
+                    End="6.40000000000006,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="6.40000000000006,30"
+                    Point2="10.4000000000001,30"
+                    Point3="10.4000000000001,34" />
+                  <mssgle:LineSegment
+                    End="10.4000000000001,52.4999999999999" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1941,18 +2141,30 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
           TopLeft="149.7,615.099999999999" />
         <EdgeLayout
           Id="Package\SANPHAM_NDS_TO_DDS.Paths[Derived Column Output1]"
-          TopLeft="230.9,555.1">
+          TopLeft="241.3,555.1">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,59.9999999999999"
+              EndConnector="-10.4,59.9999999999999"
               Start="0,0"
-              End="0,52.4999999999999">
+              End="-10.4,52.4999999999999">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.4999999999999" />
+                    End="0,25.9999999999999" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.9999999999999"
+                    Point2="0,29.9999999999999"
+                    Point3="-4,29.9999999999999" />
+                  <mssgle:LineSegment
+                    End="-6.40000000000001,29.9999999999999" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-6.40000000000001,29.9999999999999"
+                    Point2="-10.4,29.9999999999999"
+                    Point3="-10.4,33.9999999999999" />
+                  <mssgle:LineSegment
+                    End="-10.4,52.4999999999999" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1962,42 +2174,82 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="174.4,41.6"
-          Id="Package\SANPHAM_NDS_TO_DDS\OLE DB Command 1"
+          Size="184,41.6"
+          Id="Package\SANPHAM_NDS_TO_DDS\UPDATE DUMMY ROW"
           TopLeft="291.7,208.7" />
         <EdgeLayout
           Id="Package\SANPHAM_NDS_TO_DDS.Paths[Inferred Member Updates Output]"
-          TopLeft="280.9,148.7">
+          TopLeft="250.9,148.7">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="98,59.9999999999999"
+              EndConnector="132.8,59.9999999999999"
               Start="0,0"
-              End="98,52.4999999999999">
+              End="132.8,52.4999999999999">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,16.506329113924" />
+                    End="0,22.8085106382978" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,16.506329113924"
-                    Point2="0,20.506329113924"
-                    Point3="4,20.506329113924" />
+                    Point1="0,22.8085106382978"
+                    Point2="0,26.8085106382978"
+                    Point3="4,26.8085106382978" />
                   <mssgle:LineSegment
-                    End="94,20.506329113924" />
+                    End="128.8,26.8085106382978" />
                   <mssgle:CubicBezierSegment
-                    Point1="94,20.506329113924"
-                    Point2="98,20.506329113924"
-                    Point3="98,24.506329113924" />
+                    Point1="128.8,26.8085106382978"
+                    Point2="132.8,26.8085106382978"
+                    Point3="132.8,30.8085106382978" />
                   <mssgle:LineSegment
-                    End="98,52.4999999999999" />
+                    End="132.8,52.4999999999999" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-25.40298828125,25.506329113924,148.8059765625,11.658203125"
+              BoundingBox="-8.00298828125,31.8085106382978,148.8059765625,11.658203125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="200.8,41.6"
+          Id="Package\SANPHAM_NDS_TO_DDS\UPDATE CHANGING ATTS"
+          TopLeft="526.7,208.7" />
+        <EdgeLayout
+          Id="Package\SANPHAM_NDS_TO_DDS.Paths[Changing Attribute Updates Output]"
+          TopLeft="290.9,148.7">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="336.2,59.9999999999999"
+              Start="0,0"
+              End="336.2,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.8378378378378" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.8378378378378"
+                    Point2="0,17.8378378378378"
+                    Point3="4,17.8378378378378" />
+                  <mssgle:LineSegment
+                    End="332.2,17.8378378378378" />
+                  <mssgle:CubicBezierSegment
+                    Point1="332.2,17.8378378378378"
+                    Point2="336.2,17.8378378378378"
+                    Point3="336.2,21.8378378378378" />
+                  <mssgle:LineSegment
+                    End="336.2,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="89.5660937499999,22.8378378378378,157.0678125,11.6630859375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -2033,7 +2285,7 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
       &lt;IdentificationString&gt;OLE DB Source.Outputs[OLE DB Source Output].Columns[LoaiSP]&lt;/IdentificationString&gt;
       &lt;ColumnName&gt;LoaiSP&lt;/ColumnName&gt;
       &lt;KeyType&gt;None&lt;/KeyType&gt;
-      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
+      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
     &lt;/InputColumnToDBColumn&gt;
     &lt;InputColumnToDBColumn&gt;
       &lt;IdentificationString&gt;OLE DB Source.Outputs[OLE DB Source Output].Columns[MaSP]&lt;/IdentificationString&gt;
@@ -2051,7 +2303,7 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
       &lt;IdentificationString&gt;OLE DB Source.Outputs[OLE DB Source Output].Columns[TenSP]&lt;/IdentificationString&gt;
       &lt;ColumnName&gt;TenSP&lt;/ColumnName&gt;
       &lt;KeyType&gt;None&lt;/KeyType&gt;
-      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
+      &lt;ChangeType&gt;FixedAttribute&lt;/ChangeType&gt;
     &lt;/InputColumnToDBColumn&gt;
     &lt;InputColumnToDBColumn&gt;
       &lt;IdentificationString&gt;OLE DB Source.Outputs[OLE DB Source Output].Columns[TrangThai]&lt;/IdentificationString&gt;
@@ -2067,8 +2319,9 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
     &lt;anyType xsi:type="xsd:string"&gt;Derived Column 1&lt;/anyType&gt;
     &lt;anyType xsi:type="xsd:string"&gt;Insert Destination&lt;/anyType&gt;
     &lt;anyType xsi:type="xsd:string"&gt;OLE DB Command 1&lt;/anyType&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;OLE DB Command 2&lt;/anyType&gt;
   &lt;/GeneratedComponentsIdentificationStrings&gt;
-  &lt;FailFixedAttribute&gt;true&lt;/FailFixedAttribute&gt;
+  &lt;FailFixedAttribute&gt;false&lt;/FailFixedAttribute&gt;
   &lt;FailChangeAttribute&gt;false&lt;/FailChangeAttribute&gt;
   &lt;UseStartEndDate&gt;false&lt;/UseStartEndDate&gt;
   &lt;CurrentIndicatorColumn&gt;TrangThai&lt;/CurrentIndicatorColumn&gt;

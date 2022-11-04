@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{C614B248-F003-42FB-ABB5-41D6EE4D71B2}">
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{9DDC4C88-E8C4-454A-BF88-986F0851C15D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -95,21 +95,6 @@
             SQLTask:DataType="7"
             SQLTask:ParameterSize="-1" />
         </SQLTask:SqlTaskData>
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\Expression Task"
-      DTS:CreationName="Microsoft.ExpressionTask"
-      DTS:Description="Expression Task"
-      DTS:DTSID="{0bae7dcf-9bda-4dc1-98be-5ec2d934dfe4}"
-      DTS:ExecutableType="Microsoft.ExpressionTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Expression Task"
-      DTS:ThreadHint="0">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <ExpressionTask
-          Expression="@[User::CET]= GETDATE()" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -366,7 +351,7 @@ FROM     HoaDon AS hd INNER JOIN
                   KhachHang AS k ON hd.MaKH = k.Ma INNER JOIN
                   CuaHang AS c ON hd.MaCH = c.Ma INNER JOIN
                   SanPham AS s ON ct.MaSP = s.Ma
-WHERE  (hd.TrangThai = 1) AND (ct.TrangThai = 1) AND (k.TrangThai = 1) AND (c.TrangThai = 1) AND (s.TrangThai = 1) AND (hd.NgayTao BETWEEN ? AND ?)
+WHERE  (hd.TrangThai = 1) AND (ct.TrangThai = 1) AND (k.TrangThai = 1) AND (c.TrangThai = 1) AND (s.TrangThai = 1) AND (hd.NgayTao BETWEEN ? AND ?) AND (hd.NgayCapNhat BETWEEN ? AND ?)
 GROUP BY k.MaKH, k.NguonDuLieu, c.MaCH, s.MaSP, DATEFROMPARTS(YEAR(hd.NgayBan), MONTH(hd.NgayBan), DAY(hd.NgayBan))</property>
                 <property
                   dataType="System.String"
@@ -388,7 +373,7 @@ GROUP BY k.MaKH, k.NguonDuLieu, c.MaCH, s.MaSP, DATEFROMPARTS(YEAR(hd.NgayBan), 
                 <property
                   dataType="System.String"
                   description="The mappings between the parameters in the SQL command and variables."
-                  name="ParameterMapping">"Parameter0:Input",{C6636743-6B6B-442A-85B9-513BE9275CF0};"Parameter1:Input",{573E64F6-AA60-479B-A268-DB0CE0165BC0};</property>
+                  name="ParameterMapping">"Parameter0:Input",{C6636743-6B6B-442A-85B9-513BE9275CF0};"Parameter1:Input",{573E64F6-AA60-479B-A268-DB0CE0165BC0};"Parameter2:Input",{C6636743-6B6B-442A-85B9-513BE9275CF0};"Parameter3:Input",{573E64F6-AA60-479B-A268-DB0CE0165BC0};</property>
               </properties>
               <connections>
                 <connection
@@ -1471,6 +1456,21 @@ where [refTable].[MaSP] = ?</property>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
+      DTS:refId="Package\GET CET"
+      DTS:CreationName="Microsoft.ExpressionTask"
+      DTS:Description="Expression Task"
+      DTS:DTSID="{0bae7dcf-9bda-4dc1-98be-5ec2d934dfe4}"
+      DTS:ExecutableType="Microsoft.ExpressionTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="GET CET"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExpressionTask
+          Expression="@[User::CET]= GETDATE()" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\GET LSET FROM METADATA"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
@@ -1497,7 +1497,7 @@ where [refTable].[MaSP] = ?</property>
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
       DTS:DTSID="{e477428e-e2ac-4374-961a-352ff0e870f0}"
-      DTS:From="Package\Expression Task"
+      DTS:From="Package\GET CET"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
       DTS:To="Package\GET LSET FROM METADATA" />
@@ -1531,43 +1531,35 @@ where [refTable].[MaSP] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="153.6,41.6"
-          Id="Package\Expression Task"
+          Size="162.4,41.6"
+          Id="Package\Execute SQL Task"
+          TopLeft="85.0000004257475,315.411768287936" />
+        <NodeLayout
+          Size="120,41.6"
+          Id="Package\GET CET"
           TopLeft="106.428572219245,60" />
+        <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\FACT_DOANHTHU"
+          TopLeft="119.285716317138,221.88235504322" />
         <NodeLayout
           Size="212,41.6"
           Id="Package\GET LSET FROM METADATA"
           TopLeft="60,148.705883597008" />
-        <NodeLayout
-          Size="162.4,41.6"
-          Id="Package\Execute SQL Task"
-          TopLeft="85.0000004257475,315.411768287936" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="183.228572219245,101.6">
+          TopLeft="166.214286109622,101.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-17.2285722192454,47.1058835970077"
+              EndConnector="0,47.105883597008"
               Start="0,0"
-              End="-17.2285722192454,39.6058835970077">
+              End="0,39.605883597008">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,19.5529417985039" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,19.5529417985039"
-                    Point2="0,23.5529417985039"
-                    Point3="-4,23.5529417985039" />
-                  <mssgle:LineSegment
-                    End="-13.2285722192454,23.5529417985039" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-13.2285722192454,23.5529417985039"
-                    Point2="-17.2285722192454,23.5529417985039"
-                    Point3="-17.2285722192454,27.5529417985039" />
-                  <mssgle:LineSegment
-                    End="-17.2285722192454,39.6058835970077" />
+                    End="0,39.605883597008" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1576,10 +1568,6 @@ where [refTable].[MaSP] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="164.8,41.6"
-          Id="Package\FACT_DOANHTHU"
-          TopLeft="119.285716317138,221.88235504322" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
           TopLeft="166,190.305883597008">
@@ -1657,39 +1645,37 @@ where [refTable].[MaSP] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="194.4,41.6"
+          Id="Package\FACT_DOANHTHU\Lookup ID_KHACHHANG"
+          TopLeft="208,243" />
+        <NodeLayout
           Size="160.8,41.6"
           Id="Package\FACT_DOANHTHU\DOANHTHU_NDS"
           TopLeft="125.714286833393,35.5294114215152" />
         <NodeLayout
+          Size="112.8,41.6"
+          Id="Package\FACT_DOANHTHU\Lookup"
+          TopLeft="559,444.4" />
+        <NodeLayout
+          Size="180,41.6"
+          Id="Package\FACT_DOANHTHU\Lookup ID_SANPHAM"
+          TopLeft="308,315" />
+        <NodeLayout
           Size="180.8,41.6"
           Id="Package\FACT_DOANHTHU\Lookup ID_CUAHANG"
           TopLeft="121.142859137788,124.88235504322" />
-        <EdgeLayout
-          Id="Package\FACT_DOANHTHU.Paths[OLE DB Source Output]"
-          TopLeft="208.828572985591,77.1294114215152">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,47.7529436217048"
-              Start="0,0"
-              End="0,40.2529436217048">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,40.2529436217048" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <NodeLayout
-          Size="194.4,41.6"
-          Id="Package\FACT_DOANHTHU\Lookup ID_KHACHHANG"
-          TopLeft="208,243" />
+          Size="170.4,41.6"
+          Id="Package\FACT_DOANHTHU\OLE DB Destination"
+          TopLeft="822,588" />
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\FACT_DOANHTHU\Derived Column"
+          TopLeft="428,386.4" />
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\FACT_DOANHTHU\Derived Column 1"
+          TopLeft="700,504" />
         <EdgeLayout
           Id="Package\FACT_DOANHTHU.Paths[Lookup Match Output]"
           TopLeft="211.542859137788,166.48235504322">
@@ -1726,90 +1712,40 @@ where [refTable].[MaSP] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="180,41.6"
-          Id="Package\FACT_DOANHTHU\Lookup ID_SANPHAM"
-          TopLeft="308,315" />
         <EdgeLayout
-          Id="Package\FACT_DOANHTHU.Paths[Lookup Match Output1]"
-          TopLeft="305.2,284.6">
+          Id="Package\FACT_DOANHTHU.Paths[Derived Column Output1]"
+          TopLeft="781.2,545.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="92.8,30.4"
+              EndConnector="126,42.4000000000003"
               Start="0,0"
-              End="92.8,22.9">
+              End="126,34.9000000000003">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,11.2" />
+                    End="0,17.2000000000002" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,11.2"
-                    Point2="0,15.2"
-                    Point3="4,15.2" />
+                    Point1="0,17.2000000000002"
+                    Point2="0,21.2000000000002"
+                    Point3="4,21.2000000000002" />
                   <mssgle:LineSegment
-                    End="88.8,15.2" />
+                    End="122,21.2000000000002" />
                   <mssgle:CubicBezierSegment
-                    Point1="88.8,15.2"
-                    Point2="92.8,15.2"
-                    Point3="92.8,19.2" />
+                    Point1="122,21.2000000000002"
+                    Point2="126,21.2000000000002"
+                    Point3="126,25.2000000000002" />
                   <mssgle:LineSegment
-                    End="92.8,22.9" />
+                    End="126,34.9000000000003" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-1.79138671875,20.2,96.3827734375,11.609375"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="152.8,41.6"
-          Id="Package\FACT_DOANHTHU\Derived Column"
-          TopLeft="428,386.4" />
-        <EdgeLayout
-          Id="Package\FACT_DOANHTHU.Paths[Lookup Match Output2]"
-          TopLeft="398,356.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="106.4,29.8"
-              Start="0,0"
-              End="106.4,22.3">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,10.9" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,10.9"
-                    Point2="0,14.9"
-                    Point3="4,14.9" />
-                  <mssgle:LineSegment
-                    End="102.4,14.9" />
-                  <mssgle:CubicBezierSegment
-                    Point1="102.4,14.9"
-                    Point2="106.4,14.9"
-                    Point3="106.4,18.9" />
-                  <mssgle:LineSegment
-                    End="106.4,22.3" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="5.00861328124999,19.9,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="112.8,41.6"
-          Id="Package\FACT_DOANHTHU\Lookup"
-          TopLeft="559,444.4" />
         <EdgeLayout
           Id="Package\FACT_DOANHTHU.Paths[Derived Column Output]"
           TopLeft="580.8,407.2">
@@ -1838,10 +1774,28 @@ where [refTable].[MaSP] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="162.4,41.6"
-          Id="Package\FACT_DOANHTHU\Derived Column 1"
-          TopLeft="700,504" />
+        <EdgeLayout
+          Id="Package\FACT_DOANHTHU.Paths[OLE DB Source Output]"
+          TopLeft="208.828572985591,77.1294114215152">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,47.7529436217048"
+              Start="0,0"
+              End="0,40.2529436217048">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.2529436217048" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\FACT_DOANHTHU.Paths[Lookup Match Output3]"
           TopLeft="671.8,465.2">
@@ -1878,62 +1832,88 @@ where [refTable].[MaSP] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="170.4,41.6"
-          Id="Package\FACT_DOANHTHU\OLE DB Destination"
-          TopLeft="822,588" />
         <EdgeLayout
-          Id="Package\FACT_DOANHTHU.Paths[Derived Column Output1]"
-          TopLeft="781.2,545.6">
+          Id="Package\FACT_DOANHTHU.Paths[Lookup Match Output2]"
+          TopLeft="398,356.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="126,42.4000000000003"
+              EndConnector="106.4,29.8"
               Start="0,0"
-              End="126,34.9000000000003">
+              End="106.4,22.3">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,17.2000000000002" />
+                    End="0,10.9" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,17.2000000000002"
-                    Point2="0,21.2000000000002"
-                    Point3="4,21.2000000000002" />
+                    Point1="0,10.9"
+                    Point2="0,14.9"
+                    Point3="4,14.9" />
                   <mssgle:LineSegment
-                    End="122,21.2000000000002" />
+                    End="102.4,14.9" />
                   <mssgle:CubicBezierSegment
-                    Point1="122,21.2000000000002"
-                    Point2="126,21.2000000000002"
-                    Point3="126,25.2000000000002" />
+                    Point1="102.4,14.9"
+                    Point2="106.4,14.9"
+                    Point3="106.4,18.9" />
                   <mssgle:LineSegment
-                    End="126,34.9000000000003" />
+                    End="106.4,22.3" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="5.00861328124999,19.9,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FACT_DOANHTHU.Paths[Lookup Match Output1]"
+          TopLeft="305.2,284.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="92.8,30.4"
+              Start="0,0"
+              End="92.8,22.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.2"
+                    Point2="0,15.2"
+                    Point3="4,15.2" />
+                  <mssgle:LineSegment
+                    End="88.8,15.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="88.8,15.2"
+                    Point2="92.8,15.2"
+                    Point3="92.8,19.2" />
+                  <mssgle:LineSegment
+                    End="92.8,22.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-1.79138671875,20.2,96.3827734375,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\FACT_DOANHTHU\DOANHTHU_NDS">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\FACT_DOANHTHU\Lookup ID_KHACHHANG">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -1943,7 +1923,38 @@ where [refTable].[MaSP] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\FACT_DOANHTHU\DOANHTHU_NDS">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\FACT_DOANHTHU\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1956,7 +1967,7 @@ where [refTable].[MaSP] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -1966,30 +1977,7 @@ where [refTable].[MaSP] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\FACT_DOANHTHU\Lookup">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>

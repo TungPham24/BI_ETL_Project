@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="02-1-Jade"
   DTS:PackageType="5"
-  DTS:VersionBuild="9"
-  DTS:VersionGUID="{E4B7B65F-EE1F-4817-A1E8-BD7B549C2191}">
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{68C0A467-2AB0-407C-AEF1-4699096F99C5}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -4010,26 +4010,26 @@ where [refTable].[MaKH] = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="42.9428580308448,56.2823543139395"
+              EndConnector="42.9428580308451,56.28235431394"
               Start="0,0"
-              End="42.9428580308448,48.7823543139395">
+              End="42.9428580308451,48.78235431394">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,24.1411771569697" />
+                    End="0,24.14117715697" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,24.1411771569697"
-                    Point2="0,28.1411771569697"
-                    Point3="4,28.1411771569697" />
+                    Point1="0,24.14117715697"
+                    Point2="0,28.14117715697"
+                    Point3="4,28.14117715697" />
                   <mssgle:LineSegment
-                    End="38.9428580308448,28.1411771569697" />
+                    End="38.9428580308451,28.14117715697" />
                   <mssgle:CubicBezierSegment
-                    Point1="38.9428580308448,28.1411771569697"
-                    Point2="42.9428580308448,28.1411771569697"
-                    Point3="42.9428580308448,32.1411771569697" />
+                    Point1="38.9428580308451,28.14117715697"
+                    Point2="42.9428580308451,28.14117715697"
+                    Point3="42.9428580308451,32.14117715697" />
                   <mssgle:LineSegment
-                    End="42.9428580308448,48.7823543139395" />
+                    End="42.9428580308451,48.78235431394" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4388,6 +4388,29 @@ where [refTable].[MaKH] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
+    design-time-name="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup MA_CHITIET">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup MA_SANPHAM">
     <Properties>
       <Property>
@@ -4434,7 +4457,7 @@ where [refTable].[MaKH] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\CHITIETHOADON_JADE_TO_STAGE\OLE DB Source">
+    design-time-name="Package\CHITIETHOADON_JADE_TO_STAGE\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -4447,30 +4470,7 @@ where [refTable].[MaKH] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\CHITIETHOADON_JADE_TO_STAGE\Lookup MA_CHITIET">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\CHITIETHOADON_JADE_TO_STAGE\OLE DB Destination">
+    design-time-name="Package\CHITIETHOADON_JADE_TO_STAGE\OLE DB Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
