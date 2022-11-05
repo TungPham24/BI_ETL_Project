@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="02-2-WebTower9"
   DTS:PackageType="5"
-  DTS:VersionBuild="15"
-  DTS:VersionGUID="{A9CE4CE7-3943-4FDF-8170-296697678D8C}">
+  DTS:VersionBuild="16"
+  DTS:VersionGUID="{34BCC2C2-CB75-4CAE-A71C-9A42249074F3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -580,7 +580,7 @@ where [refTable].[MaHD] = ?</property>
                 <output
                   refId="Package\CHITIETHOADON_WEBTOWER9_TO_STAGE\Lookup MA_HD.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
-                  errorRowDisposition="FailComponent"
+                  errorRowDisposition="IgnoreFailure"
                   exclusionGroup="1"
                   name="Lookup Match Output"
                   synchronousInputId="Package\CHITIETHOADON_WEBTOWER9_TO_STAGE\Lookup MA_HD.Inputs[Lookup Input]">
@@ -744,7 +744,7 @@ where [refTable].[MaSP] = ?</property>
                 <output
                   refId="Package\CHITIETHOADON_WEBTOWER9_TO_STAGE\Lookup MA_SANPHAM.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
-                  errorRowDisposition="FailComponent"
+                  errorRowDisposition="IgnoreFailure"
                   exclusionGroup="1"
                   name="Lookup Match Output"
                   synchronousInputId="Package\CHITIETHOADON_WEBTOWER9_TO_STAGE\Lookup MA_SANPHAM.Inputs[Lookup Input]">
@@ -1736,7 +1736,7 @@ where [refTable].[MaCH] = ?</property>
                 <output
                   refId="Package\HOADON_WEBTOWER9_TO_NDS\Lookup MA_CUAHANG.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
-                  errorRowDisposition="FailComponent"
+                  errorRowDisposition="IgnoreFailure"
                   exclusionGroup="1"
                   name="Lookup Match Output"
                   synchronousInputId="Package\HOADON_WEBTOWER9_TO_NDS\Lookup MA_CUAHANG.Inputs[Lookup Input]">
@@ -2064,7 +2064,7 @@ where [refTable].[MaKH] = ?</property>
                 <output
                   refId="Package\HOADON_WEBTOWER9_TO_NDS\Lookup MA_KHACHHANG.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
-                  errorRowDisposition="FailComponent"
+                  errorRowDisposition="IgnoreFailure"
                   exclusionGroup="1"
                   name="Lookup Match Output"
                   synchronousInputId="Package\HOADON_WEBTOWER9_TO_NDS\Lookup MA_KHACHHANG.Inputs[Lookup Input]">
@@ -4944,7 +4944,7 @@ where [refTable].[MaKH] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -4967,7 +4967,7 @@ where [refTable].[MaKH] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -5306,7 +5306,7 @@ where [refTable].[MaKH] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -5329,7 +5329,7 @@ where [refTable].[MaKH] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
