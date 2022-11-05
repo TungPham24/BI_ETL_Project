@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="02-2-WebTower9"
   DTS:PackageType="5"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{9348D555-F3AE-4934-8BE6-8E86AEEA7DE9}">
+  DTS:VersionBuild="15"
+  DTS:VersionGUID="{A9CE4CE7-3943-4FDF-8170-296697678D8C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -877,22 +877,6 @@ where [refTable].[MaSP] = ?</property>
                       externalMetadataColumnId="Package\CHITIETHOADON_WEBTOWER9_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaChiTiet]"
                       lineageId="Package\CHITIETHOADON_WEBTOWER9_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaChiTiet]" />
                     <inputColumn
-                      refId="Package\CHITIETHOADON_WEBTOWER9_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MaHD]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="4"
-                      cachedName="MaHD"
-                      externalMetadataColumnId="Package\CHITIETHOADON_WEBTOWER9_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaHD]"
-                      lineageId="Package\CHITIETHOADON_WEBTOWER9_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaHD]" />
-                    <inputColumn
-                      refId="Package\CHITIETHOADON_WEBTOWER9_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MaSP]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="4"
-                      cachedName="MaSP"
-                      externalMetadataColumnId="Package\CHITIETHOADON_WEBTOWER9_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaSP]"
-                      lineageId="Package\CHITIETHOADON_WEBTOWER9_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaSP]" />
-                    <inputColumn
                       refId="Package\CHITIETHOADON_WEBTOWER9_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TrangThai]"
                       cachedDataType="i4"
                       cachedName="TrangThai"
@@ -916,6 +900,18 @@ where [refTable].[MaSP] = ?</property>
                       cachedName="ngaycapnhat"
                       externalMetadataColumnId="Package\CHITIETHOADON_WEBTOWER9_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NgayCapNhat]"
                       lineageId="Package\CHITIETHOADON_WEBTOWER9_TO_STAGE\Derived Column NGAYTAO, NGAYCAPNHAT.Outputs[Derived Column Output].Columns[ngaycapnhat]" />
+                    <inputColumn
+                      refId="Package\CHITIETHOADON_WEBTOWER9_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MaHDTrongNDS]"
+                      cachedDataType="i4"
+                      cachedName="MaHDTrongNDS"
+                      externalMetadataColumnId="Package\CHITIETHOADON_WEBTOWER9_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaHD]"
+                      lineageId="Package\CHITIETHOADON_WEBTOWER9_TO_STAGE\Lookup MA_HD.Outputs[Lookup Match Output].Columns[MaHDTrongNDS]" />
+                    <inputColumn
+                      refId="Package\CHITIETHOADON_WEBTOWER9_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MaSPTrongNDS]"
+                      cachedDataType="i4"
+                      cachedName="MaSPTrongNDS"
+                      externalMetadataColumnId="Package\CHITIETHOADON_WEBTOWER9_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaSP]"
+                      lineageId="Package\CHITIETHOADON_WEBTOWER9_TO_STAGE\Lookup MA_SANPHAM.Outputs[Lookup Match Output].Columns[MaSPTrongNDS]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2203,22 +2199,6 @@ where [refTable].[MaKH] = ?</property>
                       externalMetadataColumnId="Package\HOADON_WEBTOWER9_TO_NDS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaHD]"
                       lineageId="Package\HOADON_WEBTOWER9_TO_NDS\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaHD]" />
                     <inputColumn
-                      refId="Package\HOADON_WEBTOWER9_TO_NDS\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MaKH]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="4"
-                      cachedName="MaKH"
-                      externalMetadataColumnId="Package\HOADON_WEBTOWER9_TO_NDS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaKH]"
-                      lineageId="Package\HOADON_WEBTOWER9_TO_NDS\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaKH]" />
-                    <inputColumn
-                      refId="Package\HOADON_WEBTOWER9_TO_NDS\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MaCH]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="4"
-                      cachedName="MaCH"
-                      externalMetadataColumnId="Package\HOADON_WEBTOWER9_TO_NDS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaCH]"
-                      lineageId="Package\HOADON_WEBTOWER9_TO_NDS\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaCH]" />
-                    <inputColumn
                       refId="Package\HOADON_WEBTOWER9_TO_NDS\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[NgayBan]"
                       cachedDataType="dbTimeStamp"
                       cachedName="NgayBan"
@@ -2248,6 +2228,18 @@ where [refTable].[MaKH] = ?</property>
                       cachedName="ngaycapnhat"
                       externalMetadataColumnId="Package\HOADON_WEBTOWER9_TO_NDS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NgayCapNhat]"
                       lineageId="Package\HOADON_WEBTOWER9_TO_NDS\Derived Column NGAYTAO, NGAYCAPNHAT.Outputs[Derived Column Output].Columns[ngaycapnhat]" />
+                    <inputColumn
+                      refId="Package\HOADON_WEBTOWER9_TO_NDS\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MaKHTrongNDS]"
+                      cachedDataType="i4"
+                      cachedName="MaKHTrongNDS"
+                      externalMetadataColumnId="Package\HOADON_WEBTOWER9_TO_NDS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaKH]"
+                      lineageId="Package\HOADON_WEBTOWER9_TO_NDS\Lookup MA_KHACHHANG.Outputs[Lookup Match Output].Columns[MaKHTrongNDS]" />
+                    <inputColumn
+                      refId="Package\HOADON_WEBTOWER9_TO_NDS\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MaCHTrongNDS]"
+                      cachedDataType="i4"
+                      cachedName="MaCHTrongNDS"
+                      externalMetadataColumnId="Package\HOADON_WEBTOWER9_TO_NDS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaCH]"
+                      lineageId="Package\HOADON_WEBTOWER9_TO_NDS\Lookup MA_CUAHANG.Outputs[Lookup Match Output].Columns[MaCHTrongNDS]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -4589,33 +4581,33 @@ where [refTable].[MaKH] = ?</property>
         <NodeLayout
           Size="288,41.6"
           Id="Package\CHITIETHOADON_WEBTOWER9_TO_STAGE"
-          TopLeft="91.4285719637975,341.411768652576" />
+          TopLeft="74.2857145289992,176.235295747803" />
         <NodeLayout
           Size="153.6,41.6"
           Id="Package\Expression Task"
-          TopLeft="156.42857307074,45.4705880315246" />
+          TopLeft="157.14285879719,48.5294116038352" />
         <NodeLayout
           Size="236.8,41.6"
           Id="Package\HOADON_WEBTOWER9_TO_NDS"
-          TopLeft="112.142858030845,255.764708627879" />
+          TopLeft="414.285720319165,172.411766282415" />
         <NodeLayout
           Size="255.2,41.6"
           Id="Package\KHACHHANG_WEBTOWER9_TO_NDS"
-          TopLeft="101.428572134096,154.823530741629" />
+          TopLeft="404.285720148865,53.8823528553789" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="231.128572602418,87.0705880315246">
+          TopLeft="310.74285879719,72.005882229607">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,67.7529427101049"
+              EndConnector="93.5428613516754,0"
               Start="0,0"
-              End="0,60.2529427101049">
+              End="86.0428613516754,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,60.2529427101049" />
+                    End="86.0428613516754,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4626,18 +4618,18 @@ where [refTable].[MaKH] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="229.78571508247,196.423530741629">
+          TopLeft="532.285720234015,95.4823528553789">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,59.3411778862495"
+              EndConnector="0,76.929413427036"
               Start="0,0"
-              End="0,51.8411778862495">
+              End="0,69.429413427036">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,51.8411778862495" />
+                    End="0,69.429413427036" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4648,18 +4640,18 @@ where [refTable].[MaKH] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="232.985714997321,297.364708627879">
+          TopLeft="414.285720319165,195.123531015109">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,44.0470600246971"
+              EndConnector="-52.0000057901655,0"
               Start="0,0"
-              End="0,36.5470600246971">
+              End="-44.5000057901655,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,36.5470600246971" />
+                    End="-44.5000057901655,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4677,33 +4669,17 @@ where [refTable].[MaKH] = ?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="183.2,41.6"
-          Id="Package\CHITIETHOADON_WEBTOWER9_TO_STAGE\Lookup MA_SANPHAM"
-          TopLeft="340,353" />
-        <NodeLayout
-          Size="150.4,41.6"
-          Id="Package\CHITIETHOADON_WEBTOWER9_TO_STAGE\Lookup MA_HD"
-          TopLeft="363,243" />
-        <NodeLayout
-          Size="194.4,41.6"
-          Id="Package\CHITIETHOADON_WEBTOWER9_TO_STAGE\UPDATE EXISTING ROW"
-          TopLeft="175,657.8" />
-        <NodeLayout
-          Size="228.8,41.6"
-          Id="Package\CHITIETHOADON_WEBTOWER9_TO_STAGE\Derived Column NGAYCAPNHAT"
-          TopLeft="160,579" />
-        <NodeLayout
-          Size="149.6,41.6"
-          Id="Package\CHITIETHOADON_WEBTOWER9_TO_STAGE\OLE DB Source"
-          TopLeft="358,26" />
-        <NodeLayout
           Size="176,41.6"
           Id="Package\CHITIETHOADON_WEBTOWER9_TO_STAGE\Lookup MA_CHITIET"
           TopLeft="340,454" />
         <NodeLayout
-          Size="170.4,41.6"
-          Id="Package\CHITIETHOADON_WEBTOWER9_TO_STAGE\OLE DB Destination"
-          TopLeft="549,655.2" />
+          Size="183.2,41.6"
+          Id="Package\CHITIETHOADON_WEBTOWER9_TO_STAGE\Lookup MA_SANPHAM"
+          TopLeft="340,353" />
+        <NodeLayout
+          Size="194.4,41.6"
+          Id="Package\CHITIETHOADON_WEBTOWER9_TO_STAGE\UPDATE EXISTING ROW"
+          TopLeft="175,657.8" />
         <NodeLayout
           Size="282.4,41.6"
           Id="Package\CHITIETHOADON_WEBTOWER9_TO_STAGE\Derived Column NGAYTAO, NGAYCAPNHAT"
@@ -4712,6 +4688,22 @@ where [refTable].[MaKH] = ?</property>
           Size="228.8,41.6"
           Id="Package\CHITIETHOADON_WEBTOWER9_TO_STAGE\Derived Column NGUONDULIEU"
           TopLeft="318,143" />
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\CHITIETHOADON_WEBTOWER9_TO_STAGE\Lookup MA_HD"
+          TopLeft="363,243" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\CHITIETHOADON_WEBTOWER9_TO_STAGE\OLE DB Destination"
+          TopLeft="549,655.2" />
+        <NodeLayout
+          Size="149.6,41.6"
+          Id="Package\CHITIETHOADON_WEBTOWER9_TO_STAGE\OLE DB Source"
+          TopLeft="358,26" />
+        <NodeLayout
+          Size="228.8,41.6"
+          Id="Package\CHITIETHOADON_WEBTOWER9_TO_STAGE\Derived Column NGAYCAPNHAT"
+          TopLeft="160,579" />
         <EdgeLayout
           Id="Package\CHITIETHOADON_WEBTOWER9_TO_STAGE.Paths[OLE DB Source Output]"
           TopLeft="432.6,67.6">
@@ -5032,9 +5024,13 @@ where [refTable].[MaKH] = ?</property>
           Id="Package\HOADON_WEBTOWER9_TO_NDS\Lookup MA_KHACHHANG"
           TopLeft="311,257" />
         <NodeLayout
+          Size="282.4,41.6"
+          Id="Package\HOADON_WEBTOWER9_TO_NDS\Derived Column NGAYTAO, NGAYCAPNHAT"
+          TopLeft="577,554.6" />
+        <NodeLayout
           Size="228.8,41.6"
-          Id="Package\HOADON_WEBTOWER9_TO_NDS\Derived Column NGAYCAPNHAT"
-          TopLeft="285,587" />
+          Id="Package\HOADON_WEBTOWER9_TO_NDS\Derived Column NGUONDULIEU"
+          TopLeft="295,151" />
         <NodeLayout
           Size="149.6,41.6"
           Id="Package\HOADON_WEBTOWER9_TO_NDS\OLE DB Source"
@@ -5048,13 +5044,9 @@ where [refTable].[MaKH] = ?</property>
           Id="Package\HOADON_WEBTOWER9_TO_NDS\OLE DB Destination"
           TopLeft="630,681.6" />
         <NodeLayout
-          Size="282.4,41.6"
-          Id="Package\HOADON_WEBTOWER9_TO_NDS\Derived Column NGAYTAO, NGAYCAPNHAT"
-          TopLeft="577,554.6" />
-        <NodeLayout
           Size="228.8,41.6"
-          Id="Package\HOADON_WEBTOWER9_TO_NDS\Derived Column NGUONDULIEU"
-          TopLeft="295,151" />
+          Id="Package\HOADON_WEBTOWER9_TO_NDS\Derived Column NGAYCAPNHAT"
+          TopLeft="285,587" />
         <NodeLayout
           Size="194.4,41.6"
           Id="Package\HOADON_WEBTOWER9_TO_NDS\UPDATE EXISTING ROW"
@@ -5115,7 +5107,7 @@ where [refTable].[MaKH] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="95.6669466145834,22.4283185840708,91.7327734375,11.609375"
+              BoundingBox="95.6669466145835,22.4283185840708,91.7327734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -5194,7 +5186,9 @@ where [refTable].[MaKH] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-8,20.45,16,16"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5263,7 +5257,7 @@ where [refTable].[MaKH] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-37.5247200520833,35.5603539823009,96.3827734375,11.609375"
+              BoundingBox="-37.5247200520834,35.5603539823009,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>

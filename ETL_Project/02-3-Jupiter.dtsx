@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="02-3-Jupiter"
   DTS:PackageType="5"
-  DTS:VersionBuild="13"
-  DTS:VersionGUID="{91C61ECF-A658-4E0B-AFC3-B195E69FA0CC}">
+  DTS:VersionBuild="18"
+  DTS:VersionGUID="{988F6E63-0223-4FEF-91FC-EEAE2CB9B271}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -350,7 +350,7 @@ where [refTable].[MaCH] = ?</property>
                 <output
                   refId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\Lookup MA_CUAHANG.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
-                  errorRowDisposition="FailComponent"
+                  errorRowDisposition="RedirectRow"
                   exclusionGroup="1"
                   name="Lookup Match Output"
                   synchronousInputId="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS\Lookup MA_CUAHANG.Inputs[Lookup Input]">
@@ -5524,41 +5524,41 @@ where [refTable].[MaSP] = ?</property>
         <NodeLayout
           Size="271.2,41.6"
           Id="Package\CUAHANG_JUPITER_TO_CUAHANG_NDS"
-          TopLeft="161.428574177684,422.882358871942" />
+          TopLeft="27.1428576050976,215.647061847898" />
         <NodeLayout
           Size="355.2,41.6"
           Id="Package\LOAICUAHANG_JUPITER_STAGE_TO_LOAICUAHANG_NDS"
-          TopLeft="117.857144864238,112.411766282415" />
+          TopLeft="412.142864161608,13.7647060753978" />
         <NodeLayout
           Size="316.8,41.6"
           Id="Package\LOAISANPHAM_JUPITER_TO_LOAICUAHANG_NDS"
-          TopLeft="135.000002299037,221.000003099442" />
+          TopLeft="433.571435955107,134.588237181667" />
         <NodeLayout
           Size="232,41.6"
           Id="Package\NUOC_JUPITER_TO_NUOC_NDS"
-          TopLeft="179.285717338932,320.305885420209" />
+          TopLeft="41.428572134096,132.188235723106" />
         <NodeLayout
           Size="270.4,41.6"
           Id="Package\SANPHAM_JUPITER_TO_SANPHAM_NDS"
-          TopLeft="157.857145545434,499.611769199536" />
+          TopLeft="447.142864757655,216.670588760805" />
         <NodeLayout
           Size="118.4,41.6"
           Id="Package\SET CET"
-          TopLeft="233.571432549126,9.9411766100095" />
+          TopLeft="37.1428577753959,10.7058825030872" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="294.114288706682,51.5411766100095">
+          TopLeft="155.542857775396,33.0352942892425">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60.8705896724058"
+              EndConnector="256.600006386212,0"
               Start="0,0"
-              End="0,53.3705896724058">
+              End="249.100006386212,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,53.3705896724058" />
+                    End="249.100006386212,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5569,18 +5569,18 @@ where [refTable].[MaSP] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="294.428573581637,154.011766282415">
+          TopLeft="590.857150058358,55.3647060753978">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,66.9882368170267"
+              EndConnector="0,79.2235311062694"
               Start="0,0"
-              End="0,59.4882368170267">
+              End="0,71.7235311062694">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,59.4882368170267" />
+                    End="0,71.7235311062694" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5591,18 +5591,18 @@ where [refTable].[MaSP] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="294.342859818984,262.600003099442">
+          TopLeft="433.571435955107,154.188236452387">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,57.7058823207671"
+              EndConnector="-160.142863821011,0"
               Start="0,0"
-              End="0,50.2058823207671">
+              End="-152.642863821011,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,50.2058823207671" />
+                    End="-152.642863821011,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5613,18 +5613,18 @@ where [refTable].[MaSP] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="296.157145758308,361.905885420209">
+          TopLeft="160.085714869597,173.788235723106">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60.9764734517327"
+              EndConnector="0,41.8588261247917"
               Start="0,0"
-              End="0,53.4764734517327">
+              End="0,34.3588261247917">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,53.4764734517327" />
+                    End="0,34.3588261247917" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5635,18 +5635,18 @@ where [refTable].[MaSP] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="295.042859861559,464.482358871942">
+          TopLeft="298.342857605098,236.958825304351">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,35.1294103275944"
+              EndConnector="148.800007152557,0"
               Start="0,0"
-              End="0,27.6294103275944">
+              End="141.300007152557,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,27.6294103275944" />
+                    End="141.300007152557,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5951,7 +5951,7 @@ where [refTable].[MaSP] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-24.505672019452,29.141175333769,96.3827734375,11.609375"
+              BoundingBox="-33.374324363202,29.141175333769,114.120078125,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -6036,7 +6036,7 @@ where [refTable].[MaSP] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -6105,7 +6105,9 @@ where [refTable].[MaSP] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6127,7 +6129,9 @@ where [refTable].[MaSP] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6161,7 +6165,9 @@ where [refTable].[MaSP] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6183,7 +6189,9 @@ where [refTable].[MaSP] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6293,7 +6301,7 @@ where [refTable].[MaSP] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -6303,7 +6311,7 @@ where [refTable].[MaSP] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -6374,7 +6382,9 @@ where [refTable].[MaSP] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6396,7 +6406,9 @@ where [refTable].[MaSP] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6418,7 +6430,9 @@ where [refTable].[MaSP] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6440,7 +6454,9 @@ where [refTable].[MaSP] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6631,7 +6647,9 @@ where [refTable].[MaSP] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6653,7 +6671,9 @@ where [refTable].[MaSP] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6675,7 +6695,9 @@ where [refTable].[MaSP] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6697,7 +6719,9 @@ where [refTable].[MaSP] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6830,13 +6854,37 @@ where [refTable].[MaSP] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="149.6,41.6"
-          Id="Package\SANPHAM_JUPITER_TO_SANPHAM_NDS\OLE DB Source"
-          TopLeft="423.5,19.5" />
-        <NodeLayout
           Size="181.6,41.6"
           Id="Package\SANPHAM_JUPITER_TO_SANPHAM_NDS\THEM NGUONDULIEU"
           TopLeft="397,114" />
+        <NodeLayout
+          Size="181.6,41.6"
+          Id="Package\SANPHAM_JUPITER_TO_SANPHAM_NDS\THEM NGAYCAPNHAT"
+          TopLeft="311,405.2" />
+        <NodeLayout
+          Size="163.2,41.6"
+          Id="Package\SANPHAM_JUPITER_TO_SANPHAM_NDS\Lookup SANPHAM"
+          TopLeft="505,311.8" />
+        <NodeLayout
+          Size="235.2,41.6"
+          Id="Package\SANPHAM_JUPITER_TO_SANPHAM_NDS\THEM NGAYTAO, NGAYCAPNHAT"
+          TopLeft="674,409.6" />
+        <NodeLayout
+          Size="179.2,41.6"
+          Id="Package\SANPHAM_JUPITER_TO_SANPHAM_NDS\OLE DB Destination 1"
+          TopLeft="669,500.2" />
+        <NodeLayout
+          Size="194.4,41.6"
+          Id="Package\SANPHAM_JUPITER_TO_SANPHAM_NDS\UPDATE EXISTING ROW"
+          TopLeft="264,491.4" />
+        <NodeLayout
+          Size="186.4,41.6"
+          Id="Package\SANPHAM_JUPITER_TO_SANPHAM_NDS\Lookup LOAISANPHAM"
+          TopLeft="438,207" />
+        <NodeLayout
+          Size="149.6,41.6"
+          Id="Package\SANPHAM_JUPITER_TO_SANPHAM_NDS\OLE DB Source"
+          TopLeft="423.5,19.5" />
         <EdgeLayout
           Id="Package\SANPHAM_JUPITER_TO_SANPHAM_NDS.Paths[OLE DB Source Output]"
           TopLeft="498.3,61.1">
@@ -6868,92 +6916,8 @@ where [refTable].[MaSP] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="186.4,41.6"
-          Id="Package\SANPHAM_JUPITER_TO_SANPHAM_NDS\Lookup LOAISANPHAM"
-          TopLeft="438,207" />
-        <EdgeLayout
-          Id="Package\SANPHAM_JUPITER_TO_SANPHAM_NDS.Paths[Derived Column Output]"
-          TopLeft="487.8,155.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="43.4000000000001,51.4"
-              Start="0,0"
-              End="43.4000000000001,43.9">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,21.7" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,21.7"
-                    Point2="0,25.7"
-                    Point3="4,25.7" />
-                  <mssgle:LineSegment
-                    End="39.4000000000001,25.7" />
-                  <mssgle:CubicBezierSegment
-                    Point1="39.4000000000001,25.7"
-                    Point2="43.4000000000001,25.7"
-                    Point3="43.4000000000001,29.7" />
-                  <mssgle:LineSegment
-                    End="43.4000000000001,43.9" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="181.6,41.6"
-          Id="Package\SANPHAM_JUPITER_TO_SANPHAM_NDS\THEM NGAYCAPNHAT"
-          TopLeft="311,405.2" />
-        <NodeLayout
-          Size="235.2,41.6"
-          Id="Package\SANPHAM_JUPITER_TO_SANPHAM_NDS\THEM NGAYTAO, NGAYCAPNHAT"
-          TopLeft="674,409.6" />
-        <NodeLayout
-          Size="163.2,41.6"
-          Id="Package\SANPHAM_JUPITER_TO_SANPHAM_NDS\Lookup SANPHAM"
-          TopLeft="505,311.8" />
-        <EdgeLayout
-          Id="Package\SANPHAM_JUPITER_TO_SANPHAM_NDS.Paths[Lookup Match Output]"
-          TopLeft="531.2,248.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="55.4000000000003,63.2"
-              Start="0,0"
-              End="55.4000000000003,55.7">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,27.6" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,27.6"
-                    Point2="0,31.6"
-                    Point3="4,31.6" />
-                  <mssgle:LineSegment
-                    End="51.4000000000003,31.6" />
-                  <mssgle:CubicBezierSegment
-                    Point1="51.4000000000003,31.6"
-                    Point2="55.4000000000003,31.6"
-                    Point3="55.4000000000003,35.6" />
-                  <mssgle:LineSegment
-                    End="55.4000000000003,55.7" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-20.4913867187498,36.6,96.3827734375,11.609375"
+              BoundingBox="0,0,0,0"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -6994,6 +6958,42 @@ where [refTable].[MaSP] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\SANPHAM_JUPITER_TO_SANPHAM_NDS.Paths[Lookup Match Output]"
+          TopLeft="531.2,248.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="55.4000000000003,63.2"
+              Start="0,0"
+              End="55.4000000000003,55.7">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.6" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27.6"
+                    Point2="0,31.6"
+                    Point3="4,31.6" />
+                  <mssgle:LineSegment
+                    End="51.4000000000003,31.6" />
+                  <mssgle:CubicBezierSegment
+                    Point1="51.4000000000003,31.6"
+                    Point2="55.4000000000003,31.6"
+                    Point3="55.4000000000003,35.6" />
+                  <mssgle:LineSegment
+                    End="55.4000000000003,55.7" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-20.4913867187498,36.6,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\SANPHAM_JUPITER_TO_SANPHAM_NDS.Paths[Lookup Error Output]"
           TopLeft="612.466666666667,353.4">
           <EdgeLayout.Curve>
@@ -7029,48 +7029,6 @@ where [refTable].[MaSP] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="194.4,41.6"
-          Id="Package\SANPHAM_JUPITER_TO_SANPHAM_NDS\UPDATE EXISTING ROW"
-          TopLeft="264,491.4" />
-        <EdgeLayout
-          Id="Package\SANPHAM_JUPITER_TO_SANPHAM_NDS.Paths[Derived Column Output1]"
-          TopLeft="401.8,446.8">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-40.6,44.6"
-              Start="0,0"
-              End="-40.6,37.1">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18.3" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,18.3"
-                    Point2="0,22.3"
-                    Point3="-4,22.3" />
-                  <mssgle:LineSegment
-                    End="-36.6,22.3" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-36.6,22.3"
-                    Point2="-40.6,22.3"
-                    Point3="-40.6,26.3" />
-                  <mssgle:LineSegment
-                    End="-40.6,37.1" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="179.2,41.6"
-          Id="Package\SANPHAM_JUPITER_TO_SANPHAM_NDS\OLE DB Destination 1"
-          TopLeft="669,500.2" />
         <EdgeLayout
           Id="Package\SANPHAM_JUPITER_TO_SANPHAM_NDS.Paths[Derived Column Output2]"
           TopLeft="791.6,451.2">
@@ -7102,7 +7060,81 @@ where [refTable].[MaSP] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SANPHAM_JUPITER_TO_SANPHAM_NDS.Paths[Derived Column Output1]"
+          TopLeft="401.8,446.8">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-40.6,44.6"
+              Start="0,0"
+              End="-40.6,37.1">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.3" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.3"
+                    Point2="0,22.3"
+                    Point3="-4,22.3" />
+                  <mssgle:LineSegment
+                    End="-36.6,22.3" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-36.6,22.3"
+                    Point2="-40.6,22.3"
+                    Point3="-40.6,26.3" />
+                  <mssgle:LineSegment
+                    End="-40.6,37.1" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SANPHAM_JUPITER_TO_SANPHAM_NDS.Paths[Derived Column Output]"
+          TopLeft="487.8,155.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="43.4000000000001,51.4"
+              Start="0,0"
+              End="43.4000000000001,43.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.7" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.7"
+                    Point2="0,25.7"
+                    Point3="4,25.7" />
+                  <mssgle:LineSegment
+                    End="39.4000000000001,25.7" />
+                  <mssgle:CubicBezierSegment
+                    Point1="39.4000000000001,25.7"
+                    Point2="43.4000000000001,25.7"
+                    Point3="43.4000000000001,29.7" />
+                  <mssgle:LineSegment
+                    End="43.4000000000001,43.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

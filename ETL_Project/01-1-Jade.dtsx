@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="01-1-Jade"
   DTS:PackageType="5"
-  DTS:VersionBuild="21"
-  DTS:VersionGUID="{757CF2C8-D743-432D-94C3-7B61951CA362}">
+  DTS:VersionBuild="26"
+  DTS:VersionGUID="{D14C2804-1944-4EC4-BCA7-F65D188C9956}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -87,7 +87,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="CET">
       <DTS:VariableValue
-        DTS:DataType="7">11/2/2022 9:00:11 AM</DTS:VariableValue>
+        DTS:DataType="7">11/5/2022 4:18:00 PM</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -494,91 +494,11 @@ WHERE  (NgayCapNhat BETWEEN ? AND ?) OR
                 </output>
               </outputs>
             </component>
-            <component
-              refId="Package\CHITIETHOADON_TO_STAGE\TRUNCATE CHITIETHOADON_STAGE"
-              componentClassID="Microsoft.OLEDBCommand"
-              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
-              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
-              name="TRUNCATE CHITIETHOADON_STAGE"
-              usesDispositions="true"
-              version="2">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">truncate table chitiethoadon_jade_stage</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\CHITIETHOADON_TO_STAGE\TRUNCATE CHITIETHOADON_STAGE.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Stage]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Stage]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\CHITIETHOADON_TO_STAGE\TRUNCATE CHITIETHOADON_STAGE.Inputs[OLE DB Command Input]"
-                  errorOrTruncationOperation="Command Execution"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Command Input">
-                  <externalMetadataColumns
-                    isUsed="True" />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\CHITIETHOADON_TO_STAGE\TRUNCATE CHITIETHOADON_STAGE.Outputs[OLE DB Command Output]"
-                  exclusionGroup="1"
-                  name="OLE DB Command Output"
-                  synchronousInputId="Package\CHITIETHOADON_TO_STAGE\TRUNCATE CHITIETHOADON_STAGE.Inputs[OLE DB Command Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\CHITIETHOADON_TO_STAGE\TRUNCATE CHITIETHOADON_STAGE.Outputs[OLE DB Command Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Command Error Output"
-                  synchronousInputId="Package\CHITIETHOADON_TO_STAGE\TRUNCATE CHITIETHOADON_STAGE.Inputs[OLE DB Command Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\CHITIETHOADON_TO_STAGE\TRUNCATE CHITIETHOADON_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\CHITIETHOADON_TO_STAGE\TRUNCATE CHITIETHOADON_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\CHITIETHOADON_TO_STAGE\TRUNCATE CHITIETHOADON_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\CHITIETHOADON_TO_STAGE\TRUNCATE CHITIETHOADON_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
           </components>
           <paths>
             <path
-              refId="Package\CHITIETHOADON_TO_STAGE.Paths[OLE DB Command Output]"
-              endId="Package\CHITIETHOADON_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input]"
-              name="OLE DB Command Output"
-              startId="Package\CHITIETHOADON_TO_STAGE\TRUNCATE CHITIETHOADON_STAGE.Outputs[OLE DB Command Output]" />
-            <path
               refId="Package\CHITIETHOADON_TO_STAGE.Paths[OLE DB Source Output]"
-              endId="Package\CHITIETHOADON_TO_STAGE\TRUNCATE CHITIETHOADON_STAGE.Inputs[OLE DB Command Input]"
+              endId="Package\CHITIETHOADON_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="OLE DB Source Output"
               startId="Package\CHITIETHOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output]" />
           </paths>
@@ -1023,91 +943,11 @@ WHERE  (NgayCapNhat BETWEEN ? AND ?) OR
                 </output>
               </outputs>
             </component>
-            <component
-              refId="Package\HOADON_TO_STAGE\TRUNCATE HOADON_STAGE"
-              componentClassID="Microsoft.OLEDBCommand"
-              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
-              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
-              name="TRUNCATE HOADON_STAGE"
-              usesDispositions="true"
-              version="2">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">truncate table hoadon_jade_stage</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\HOADON_TO_STAGE\TRUNCATE HOADON_STAGE.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Stage]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Stage]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\HOADON_TO_STAGE\TRUNCATE HOADON_STAGE.Inputs[OLE DB Command Input]"
-                  errorOrTruncationOperation="Command Execution"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Command Input">
-                  <externalMetadataColumns
-                    isUsed="True" />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\HOADON_TO_STAGE\TRUNCATE HOADON_STAGE.Outputs[OLE DB Command Output]"
-                  exclusionGroup="1"
-                  name="OLE DB Command Output"
-                  synchronousInputId="Package\HOADON_TO_STAGE\TRUNCATE HOADON_STAGE.Inputs[OLE DB Command Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\HOADON_TO_STAGE\TRUNCATE HOADON_STAGE.Outputs[OLE DB Command Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Command Error Output"
-                  synchronousInputId="Package\HOADON_TO_STAGE\TRUNCATE HOADON_STAGE.Inputs[OLE DB Command Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\HOADON_TO_STAGE\TRUNCATE HOADON_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\HOADON_TO_STAGE\TRUNCATE HOADON_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\HOADON_TO_STAGE\TRUNCATE HOADON_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\HOADON_TO_STAGE\TRUNCATE HOADON_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
           </components>
           <paths>
             <path
-              refId="Package\HOADON_TO_STAGE.Paths[OLE DB Command Output]"
-              endId="Package\HOADON_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input]"
-              name="OLE DB Command Output"
-              startId="Package\HOADON_TO_STAGE\TRUNCATE HOADON_STAGE.Outputs[OLE DB Command Output]" />
-            <path
               refId="Package\HOADON_TO_STAGE.Paths[OLE DB Source Output]"
-              endId="Package\HOADON_TO_STAGE\TRUNCATE HOADON_STAGE.Inputs[OLE DB Command Input]"
+              endId="Package\HOADON_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="OLE DB Source Output"
               startId="Package\HOADON_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output]" />
           </paths>
@@ -1614,95 +1454,63 @@ WHERE  (NgayCapNhat BETWEEN ? AND ?) OR
                 </output>
               </outputs>
             </component>
-            <component
-              refId="Package\KHACHHANG_TO_STAGE\TRUNCATE KHACHHANG_STAGE"
-              componentClassID="Microsoft.OLEDBCommand"
-              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
-              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
-              name="TRUNCATE KHACHHANG_STAGE"
-              usesDispositions="true"
-              version="2">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">TRUNCATE TABLE KHACHHANG_JADE_STAGE</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\KHACHHANG_TO_STAGE\TRUNCATE KHACHHANG_STAGE.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Stage]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Stage]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\KHACHHANG_TO_STAGE\TRUNCATE KHACHHANG_STAGE.Inputs[OLE DB Command Input]"
-                  errorOrTruncationOperation="Command Execution"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Command Input">
-                  <externalMetadataColumns
-                    isUsed="True" />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\KHACHHANG_TO_STAGE\TRUNCATE KHACHHANG_STAGE.Outputs[OLE DB Command Output]"
-                  exclusionGroup="1"
-                  name="OLE DB Command Output"
-                  synchronousInputId="Package\KHACHHANG_TO_STAGE\TRUNCATE KHACHHANG_STAGE.Inputs[OLE DB Command Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\KHACHHANG_TO_STAGE\TRUNCATE KHACHHANG_STAGE.Outputs[OLE DB Command Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Command Error Output"
-                  synchronousInputId="Package\KHACHHANG_TO_STAGE\TRUNCATE KHACHHANG_STAGE.Inputs[OLE DB Command Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\KHACHHANG_TO_STAGE\TRUNCATE KHACHHANG_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\KHACHHANG_TO_STAGE\TRUNCATE KHACHHANG_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\KHACHHANG_TO_STAGE\TRUNCATE KHACHHANG_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\KHACHHANG_TO_STAGE\TRUNCATE KHACHHANG_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
           </components>
           <paths>
             <path
-              refId="Package\KHACHHANG_TO_STAGE.Paths[OLE DB Command Output]"
-              endId="Package\KHACHHANG_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input]"
-              name="OLE DB Command Output"
-              startId="Package\KHACHHANG_TO_STAGE\TRUNCATE KHACHHANG_STAGE.Outputs[OLE DB Command Output]" />
-            <path
               refId="Package\KHACHHANG_TO_STAGE.Paths[OLE DB Source Output]"
-              endId="Package\KHACHHANG_TO_STAGE\TRUNCATE KHACHHANG_STAGE.Inputs[OLE DB Command Input]"
+              endId="Package\KHACHHANG_TO_STAGE\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="OLE DB Source Output"
               startId="Package\KHACHHANG_TO_STAGE\OLE DB Source.Outputs[OLE DB Source Output]" />
           </paths>
         </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\TRUNCATE CHITIETHOADON_JADE_STAGE"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{97044d5e-c9a6-482b-9c41-6a558ac267a6}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="TRUNCATE CHITIETHOADON_JADE_STAGE"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{116820EC-AF63-45FA-A331-DF95A5A51EC7}"
+          SQLTask:SqlStatementSource="truncate table chitiethoadon_jade_stage" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\TRUNCATE HOADON_JADE_STAGE"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{ad2f2db6-4344-47f9-932b-7c97093df231}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="TRUNCATE HOADON_JADE_STAGE"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{116820EC-AF63-45FA-A331-DF95A5A51EC7}"
+          SQLTask:SqlStatementSource="truncate table hoadon_jade_stage" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\TRUNCATE KHACHHANG_JADE_STAGE"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{EE610C47-40D9-48D9-A706-8A1F606131F9}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="TRUNCATE KHACHHANG_JADE_STAGE"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{116820EC-AF63-45FA-A331-DF95A5A51EC7}"
+          SQLTask:SqlStatementSource="truncate table khachhang_jade_stage" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -1741,27 +1549,27 @@ WHERE  (NgayCapNhat BETWEEN ? AND ?) OR
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
-      DTS:DTSID="{A975CF8D-E479-4493-B346-2E27B4E2EAA4}"
+      DTS:DTSID="{E4B3ABA6-08A8-43BB-91A2-E041D120B9EF}"
       DTS:From="Package\GET CET_Jade"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
-      DTS:To="Package\KHACHHANG_TO_STAGE" />
+      DTS:To="Package\TRUNCATE KHACHHANG_JADE_STAGE" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
       DTS:CreationName=""
-      DTS:DTSID="{BBA9D722-C098-4924-A4C9-C38630010D90}"
+      DTS:DTSID="{982B09E2-FBC2-4C31-9C79-4907487D8A0A}"
       DTS:From="Package\KHACHHANG_TO_STAGE"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 2"
-      DTS:To="Package\HOADON_TO_STAGE" />
+      DTS:To="Package\TRUNCATE HOADON_JADE_STAGE" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
       DTS:CreationName=""
-      DTS:DTSID="{80B9EFCB-0ECB-4D62-A6FE-A6058BE80696}"
+      DTS:DTSID="{41D0699F-06E5-4743-962C-4ACEB120FD6E}"
       DTS:From="Package\HOADON_TO_STAGE"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 3"
-      DTS:To="Package\CHITIETHOADON_TO_STAGE" />
+      DTS:To="Package\TRUNCATE CHITIETHOADON_JADE_STAGE" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
       DTS:CreationName=""
@@ -1770,6 +1578,30 @@ WHERE  (NgayCapNhat BETWEEN ? AND ?) OR
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 4"
       DTS:To="Package\UPDATE LSET" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 5]"
+      DTS:CreationName=""
+      DTS:DTSID="{6D588B02-E3C5-48AA-B167-3EA834618C4C}"
+      DTS:From="Package\TRUNCATE KHACHHANG_JADE_STAGE"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 5"
+      DTS:To="Package\KHACHHANG_TO_STAGE" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 6]"
+      DTS:CreationName=""
+      DTS:DTSID="{E5933A68-16F5-4453-BD14-88CEA5D81939}"
+      DTS:From="Package\TRUNCATE HOADON_JADE_STAGE"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 6"
+      DTS:To="Package\HOADON_TO_STAGE" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 7]"
+      DTS:CreationName=""
+      DTS:DTSID="{1D3D35DB-258E-4D22-8324-96658E467856}"
+      DTS:From="Package\TRUNCATE CHITIETHOADON_JADE_STAGE"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 7"
+      DTS:To="Package\CHITIETHOADON_TO_STAGE" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -1782,45 +1614,57 @@ WHERE  (NgayCapNhat BETWEEN ? AND ?) OR
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="218.4,41.6"
           Id="Package\CHITIETHOADON_TO_STAGE"
-          TopLeft="285.714290579971,351.3647097218" />
+          TopLeft="557.857152357394,240.48235522554" />
         <NodeLayout
           Size="162.4,41.6"
           Id="Package\GET CET_Jade"
-          TopLeft="311.428576732168,99.0117650061742" />
+          TopLeft="307.857148099919,34.7764699876514" />
         <NodeLayout
           Size="162.4,41.6"
           Id="Package\GET LSET FROM METADATA"
-          TopLeft="311.214290920569,10.452940157623" />
+          TopLeft="24.785714614148,33.3941169499526" />
         <NodeLayout
           Size="178.4,41.6"
           Id="Package\HOADON_TO_STAGE"
-          TopLeft="297.85714792962,254.247061300938" />
+          TopLeft="47.8571436721453,174.717648420862" />
         <NodeLayout
           Size="196.8,41.6"
           Id="Package\KHACHHANG_TO_STAGE"
-          TopLeft="292.85714784447,177.011766100095" />
+          TopLeft="582.142867056691,99.7764708992522" />
         <NodeLayout
-          Size="162.4,41.6"
+          Size="284,41.6"
+          Id="Package\TRUNCATE CHITIETHOADON_JADE_STAGE"
+          TopLeft="519.285723129097,168.764704434517" />
+        <NodeLayout
+          Size="244,41.6"
+          Id="Package\TRUNCATE HOADON_JADE_STAGE"
+          TopLeft="22.8571432463981,103.764703522917" />
+        <NodeLayout
+          Size="262.4,41.6"
+          Id="Package\TRUNCATE KHACHHANG_JADE_STAGE"
+          TopLeft="546.600008940697,32.1529408869036" />
+        <NodeLayout
+          Size="152.8,41.6"
           Id="Package\UPDATE LSET"
-          TopLeft="306.428576647019,451.047062759499" />
+          TopLeft="75.7142870036922,238.458824483911" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="392.521433826369,52.052940157623">
+          TopLeft="187.185714614148,54.885293468802">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,46.9588248485512"
+              EndConnector="120.67143348577,0"
               Start="0,0"
-              End="0,39.4588248485512">
+              End="113.17143348577,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,39.4588248485512" />
+                    End="113.17143348577,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1831,18 +1675,18 @@ WHERE  (NgayCapNhat BETWEEN ? AND ?) OR
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="391.942862288319,140.611765006174">
+          TopLeft="470.257148099918,54.2647054372775">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,36.400001093921"
+              EndConnector="76.3428608407788,0"
               Start="0,0"
-              End="0,28.900001093921">
+              End="68.8428608407788,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,28.900001093921" />
+                    End="68.8428608407788,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1853,18 +1697,18 @@ WHERE  (NgayCapNhat BETWEEN ? AND ?) OR
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="389.157147887045,218.611766100095">
+          TopLeft="582.142867056691,122.570587211085">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,35.6352952008428"
+              EndConnector="-315.285723810293,0"
               Start="0,0"
-              End="0,28.1352952008428">
+              End="-307.785723810293,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,28.1352952008428" />
+                    End="-307.785723810293,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1875,18 +1719,18 @@ WHERE  (NgayCapNhat BETWEEN ? AND ?) OR
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="390.985719254796,295.847061300938">
+          TopLeft="226.257143672145,192.541176427689">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,55.517648420862"
+              EndConnector="293.028579456952,0"
               Start="0,0"
-              End="0,48.017648420862">
+              End="285.528579456952,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,48.017648420862" />
+                    End="285.528579456952,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1897,18 +1741,84 @@ WHERE  (NgayCapNhat BETWEEN ? AND ?) OR
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="391.271433613495,392.9647097218">
+          TopLeft="557.857152357394,260.270589854726">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,58.0823530376987"
+              EndConnector="-329.342865353702,0"
               Start="0,0"
-              End="0,50.5823530376987">
+              End="-321.842865353702,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,50.5823530376987" />
+                    End="-321.842865353702,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 5]"
+          TopLeft="679.171437998694,73.7529408869036">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,26.0235300123486"
+              Start="0,0"
+              End="0,18.5235300123486">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.5235300123486" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 6]"
+          TopLeft="140.957143459272,145.364703522917">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,29.3529448979449"
+              Start="0,0"
+              End="0,21.8529448979449">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.8529448979449" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 7]"
+          TopLeft="664.171437743245,210.364704434517">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,30.117650791023"
+              Start="0,0"
+              End="0,22.617650791023">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.617650791023" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1924,55 +1834,29 @@ WHERE  (NgayCapNhat BETWEEN ? AND ?) OR
     design-time-name="Package\CHITIETHOADON_TO_STAGE">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="149.6,41.6"
           Id="Package\CHITIETHOADON_TO_STAGE\OLE DB Source"
           TopLeft="464,32" />
-        <NodeLayout
-          Size="164.8,41.6"
-          Id="Package\CHITIETHOADON_TO_STAGE\TRUNCATE CHITIETHOADON_STAGE"
-          TopLeft="455.5,126.5" />
         <NodeLayout
           Size="170.4,41.6"
           Id="Package\CHITIETHOADON_TO_STAGE\OLE DB Destination"
           TopLeft="459,245" />
         <EdgeLayout
           Id="Package\CHITIETHOADON_TO_STAGE.Paths[OLE DB Source Output]"
-          TopLeft="538.35,73.6">
+          TopLeft="541.5,73.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,52.9"
+              EndConnector="0,171.4"
               Start="0,0"
-              End="0,45.4">
+              End="0,163.9">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,45.4" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\CHITIETHOADON_TO_STAGE.Paths[OLE DB Command Output]"
-          TopLeft="541.05,168.1">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,76.9"
-              Start="0,0"
-              End="0,69.4">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,69.4" />
+                    End="0,163.9" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1984,14 +1868,6 @@ WHERE  (NgayCapNhat BETWEEN ? AND ?) OR
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\CHITIETHOADON_TO_STAGE\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\CHITIETHOADON_TO_STAGE\OLE DB Destination">
     <Properties>
@@ -2005,15 +1881,19 @@ WHERE  (NgayCapNhat BETWEEN ? AND ?) OR
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\CHITIETHOADON_TO_STAGE\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\HOADON_TO_STAGE">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="214.4,41.6"
-          Id="Package\HOADON_TO_STAGE\TRUNCATE HOADON_STAGE"
-          TopLeft="474,160" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="170.4,41.6"
           Id="Package\HOADON_TO_STAGE\OLE DB Destination"
@@ -2024,40 +1904,18 @@ WHERE  (NgayCapNhat BETWEEN ? AND ?) OR
           TopLeft="506,19" />
         <EdgeLayout
           Id="Package\HOADON_TO_STAGE.Paths[OLE DB Source Output]"
-          TopLeft="581,60.6">
+          TopLeft="583.5,60.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,99.4"
+              EndConnector="0,218.4"
               Start="0,0"
-              End="0,91.9">
+              End="0,210.9">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,91.9" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\HOADON_TO_STAGE.Paths[OLE DB Command Output]"
-          TopLeft="583.7,201.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,77.3999999999999"
-              Start="0,0"
-              End="0,69.8999999999999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,69.8999999999999" />
+                    End="0,210.9" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2094,55 +1952,29 @@ WHERE  (NgayCapNhat BETWEEN ? AND ?) OR
     design-time-name="Package\KHACHHANG_TO_STAGE">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="232.8,41.6"
-          Id="Package\KHACHHANG_TO_STAGE\TRUNCATE KHACHHANG_STAGE"
-          TopLeft="369.999998041562,158.294117679233" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="149.6,41.6"
           Id="Package\KHACHHANG_TO_STAGE\OLE DB Source"
-          TopLeft="156,157" />
+          TopLeft="392.428575454926,58.3529397929828" />
         <NodeLayout
           Size="170.4,41.6"
           Id="Package\KHACHHANG_TO_STAGE\OLE DB Destination"
-          TopLeft="687.428569324162,156.352941251544" />
+          TopLeft="387.428564215192,160.176470716932" />
         <EdgeLayout
           Id="Package\KHACHHANG_TO_STAGE.Paths[OLE DB Source Output]"
-          TopLeft="305.6,178.447058839616">
+          TopLeft="469.928569835059,99.9529397929828">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="64.3999980415616,0"
+              EndConnector="0,60.2235309239495"
               Start="0,0"
-              End="56.8999980415616,0">
+              End="0,52.7235309239495">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="56.8999980415616,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\KHACHHANG_TO_STAGE.Paths[OLE DB Command Output]"
-          TopLeft="602.799998041562,178.123529465388">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="84.6285712826009,0"
-              Start="0,0"
-              End="77.1285712826009,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="77.1285712826009,0" />
+                    End="0,52.7235309239495" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2155,14 +1987,6 @@ WHERE  (NgayCapNhat BETWEEN ? AND ?) OR
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\KHACHHANG_TO_STAGE\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\KHACHHANG_TO_STAGE\OLE DB Destination">
     <Properties>
       <Property>
@@ -2172,6 +1996,14 @@ WHERE  (NgayCapNhat BETWEEN ? AND ?) OR
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\KHACHHANG_TO_STAGE\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

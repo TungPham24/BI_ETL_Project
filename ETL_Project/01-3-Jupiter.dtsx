@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="01-3-Jupiter"
   DTS:PackageType="5"
-  DTS:VersionBuild="10"
-  DTS:VersionGUID="{1530ADFE-CEF1-4331-AA9F-7F925FE9C4B6}">
+  DTS:VersionBuild="15"
+  DTS:VersionGUID="{D8D251B6-CD42-427E-850B-C3B3AD67771F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -498,91 +498,11 @@ WHERE  (NgayCapNhat BETWEEN ? AND ?) OR
                 </output>
               </outputs>
             </component>
-            <component
-              refId="Package\CuaHang_Jupiter_to_Stage\TRUNCATE CUAHANG_STAGE"
-              componentClassID="Microsoft.OLEDBCommand"
-              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
-              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
-              name="TRUNCATE CUAHANG_STAGE"
-              usesDispositions="true"
-              version="2">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">truncate table cuahang_jupiter_stage</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\CuaHang_Jupiter_to_Stage\TRUNCATE CUAHANG_STAGE.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Stage]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Stage]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\CuaHang_Jupiter_to_Stage\TRUNCATE CUAHANG_STAGE.Inputs[OLE DB Command Input]"
-                  errorOrTruncationOperation="Command Execution"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Command Input">
-                  <externalMetadataColumns
-                    isUsed="True" />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\CuaHang_Jupiter_to_Stage\TRUNCATE CUAHANG_STAGE.Outputs[OLE DB Command Output]"
-                  exclusionGroup="1"
-                  name="OLE DB Command Output"
-                  synchronousInputId="Package\CuaHang_Jupiter_to_Stage\TRUNCATE CUAHANG_STAGE.Inputs[OLE DB Command Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\CuaHang_Jupiter_to_Stage\TRUNCATE CUAHANG_STAGE.Outputs[OLE DB Command Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Command Error Output"
-                  synchronousInputId="Package\CuaHang_Jupiter_to_Stage\TRUNCATE CUAHANG_STAGE.Inputs[OLE DB Command Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\CuaHang_Jupiter_to_Stage\TRUNCATE CUAHANG_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\CuaHang_Jupiter_to_Stage\TRUNCATE CUAHANG_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\CuaHang_Jupiter_to_Stage\TRUNCATE CUAHANG_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\CuaHang_Jupiter_to_Stage\TRUNCATE CUAHANG_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
           </components>
           <paths>
             <path
-              refId="Package\CuaHang_Jupiter_to_Stage.Paths[OLE DB Command Output]"
-              endId="Package\CuaHang_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input]"
-              name="OLE DB Command Output"
-              startId="Package\CuaHang_Jupiter_to_Stage\TRUNCATE CUAHANG_STAGE.Outputs[OLE DB Command Output]" />
-            <path
               refId="Package\CuaHang_Jupiter_to_Stage.Paths[OLE DB Source Output]"
-              endId="Package\CuaHang_Jupiter_to_Stage\TRUNCATE CUAHANG_STAGE.Inputs[OLE DB Command Input]"
+              endId="Package\CuaHang_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="OLE DB Source Output"
               startId="Package\CuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output]" />
           </paths>
@@ -973,91 +893,11 @@ WHERE  (NgayCapNhat BETWEEN ? AND ?) OR
                 </output>
               </outputs>
             </component>
-            <component
-              refId="Package\LoaiCuaHang_Jupiter_to_Stage\TRUNCATE LOAICUAHANG_JUPITER_STAGE"
-              componentClassID="Microsoft.OLEDBCommand"
-              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
-              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
-              name="TRUNCATE LOAICUAHANG_JUPITER_STAGE"
-              usesDispositions="true"
-              version="2">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">truncate table loaicuahang_jupiter_stage</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\LoaiCuaHang_Jupiter_to_Stage\TRUNCATE LOAICUAHANG_JUPITER_STAGE.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Stage]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Stage]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\LoaiCuaHang_Jupiter_to_Stage\TRUNCATE LOAICUAHANG_JUPITER_STAGE.Inputs[OLE DB Command Input]"
-                  errorOrTruncationOperation="Command Execution"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Command Input">
-                  <externalMetadataColumns
-                    isUsed="True" />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\LoaiCuaHang_Jupiter_to_Stage\TRUNCATE LOAICUAHANG_JUPITER_STAGE.Outputs[OLE DB Command Output]"
-                  exclusionGroup="1"
-                  name="OLE DB Command Output"
-                  synchronousInputId="Package\LoaiCuaHang_Jupiter_to_Stage\TRUNCATE LOAICUAHANG_JUPITER_STAGE.Inputs[OLE DB Command Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\LoaiCuaHang_Jupiter_to_Stage\TRUNCATE LOAICUAHANG_JUPITER_STAGE.Outputs[OLE DB Command Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Command Error Output"
-                  synchronousInputId="Package\LoaiCuaHang_Jupiter_to_Stage\TRUNCATE LOAICUAHANG_JUPITER_STAGE.Inputs[OLE DB Command Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\LoaiCuaHang_Jupiter_to_Stage\TRUNCATE LOAICUAHANG_JUPITER_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\LoaiCuaHang_Jupiter_to_Stage\TRUNCATE LOAICUAHANG_JUPITER_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\LoaiCuaHang_Jupiter_to_Stage\TRUNCATE LOAICUAHANG_JUPITER_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\LoaiCuaHang_Jupiter_to_Stage\TRUNCATE LOAICUAHANG_JUPITER_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
           </components>
           <paths>
             <path
-              refId="Package\LoaiCuaHang_Jupiter_to_Stage.Paths[OLE DB Command Output]"
-              endId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input]"
-              name="OLE DB Command Output"
-              startId="Package\LoaiCuaHang_Jupiter_to_Stage\TRUNCATE LOAICUAHANG_JUPITER_STAGE.Outputs[OLE DB Command Output]" />
-            <path
               refId="Package\LoaiCuaHang_Jupiter_to_Stage.Paths[OLE DB Source Output]"
-              endId="Package\LoaiCuaHang_Jupiter_to_Stage\TRUNCATE LOAICUAHANG_JUPITER_STAGE.Inputs[OLE DB Command Input]"
+              endId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="OLE DB Source Output"
               startId="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output]" />
           </paths>
@@ -1412,91 +1252,11 @@ WHERE  (NgayCapNhat BETWEEN ? AND ?) OR
                 </output>
               </outputs>
             </component>
-            <component
-              refId="Package\LoaiSanPham_Jupiter_to_Stage\TRUNCATE LOAISANPHAM_STAGE"
-              componentClassID="Microsoft.OLEDBCommand"
-              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
-              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
-              name="TRUNCATE LOAISANPHAM_STAGE"
-              usesDispositions="true"
-              version="2">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">truncate table loaisanpham_jupiter_stage</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\LoaiSanPham_Jupiter_to_Stage\TRUNCATE LOAISANPHAM_STAGE.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Stage]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Stage]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\LoaiSanPham_Jupiter_to_Stage\TRUNCATE LOAISANPHAM_STAGE.Inputs[OLE DB Command Input]"
-                  errorOrTruncationOperation="Command Execution"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Command Input">
-                  <externalMetadataColumns
-                    isUsed="True" />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\LoaiSanPham_Jupiter_to_Stage\TRUNCATE LOAISANPHAM_STAGE.Outputs[OLE DB Command Output]"
-                  exclusionGroup="1"
-                  name="OLE DB Command Output"
-                  synchronousInputId="Package\LoaiSanPham_Jupiter_to_Stage\TRUNCATE LOAISANPHAM_STAGE.Inputs[OLE DB Command Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\LoaiSanPham_Jupiter_to_Stage\TRUNCATE LOAISANPHAM_STAGE.Outputs[OLE DB Command Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Command Error Output"
-                  synchronousInputId="Package\LoaiSanPham_Jupiter_to_Stage\TRUNCATE LOAISANPHAM_STAGE.Inputs[OLE DB Command Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\LoaiSanPham_Jupiter_to_Stage\TRUNCATE LOAISANPHAM_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\LoaiSanPham_Jupiter_to_Stage\TRUNCATE LOAISANPHAM_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\LoaiSanPham_Jupiter_to_Stage\TRUNCATE LOAISANPHAM_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\LoaiSanPham_Jupiter_to_Stage\TRUNCATE LOAISANPHAM_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
           </components>
           <paths>
             <path
-              refId="Package\LoaiSanPham_Jupiter_to_Stage.Paths[OLE DB Command Output]"
-              endId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input]"
-              name="OLE DB Command Output"
-              startId="Package\LoaiSanPham_Jupiter_to_Stage\TRUNCATE LOAISANPHAM_STAGE.Outputs[OLE DB Command Output]" />
-            <path
               refId="Package\LoaiSanPham_Jupiter_to_Stage.Paths[OLE DB Source Output]"
-              endId="Package\LoaiSanPham_Jupiter_to_Stage\TRUNCATE LOAISANPHAM_STAGE.Inputs[OLE DB Command Input]"
+              endId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="OLE DB Source Output"
               startId="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output]" />
           </paths>
@@ -1851,91 +1611,11 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
                 </output>
               </outputs>
             </component>
-            <component
-              refId="Package\Nuoc_Jupiter_to_Stage\TRUNCATE NUOC_STAGE"
-              componentClassID="Microsoft.OLEDBCommand"
-              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
-              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
-              name="TRUNCATE NUOC_STAGE"
-              usesDispositions="true"
-              version="2">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">Truncate table Nuoc_Jupiter_Stage</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Nuoc_Jupiter_to_Stage\TRUNCATE NUOC_STAGE.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Stage]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Stage]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Nuoc_Jupiter_to_Stage\TRUNCATE NUOC_STAGE.Inputs[OLE DB Command Input]"
-                  errorOrTruncationOperation="Command Execution"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Command Input">
-                  <externalMetadataColumns
-                    isUsed="True" />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Nuoc_Jupiter_to_Stage\TRUNCATE NUOC_STAGE.Outputs[OLE DB Command Output]"
-                  exclusionGroup="1"
-                  name="OLE DB Command Output"
-                  synchronousInputId="Package\Nuoc_Jupiter_to_Stage\TRUNCATE NUOC_STAGE.Inputs[OLE DB Command Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Nuoc_Jupiter_to_Stage\TRUNCATE NUOC_STAGE.Outputs[OLE DB Command Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Command Error Output"
-                  synchronousInputId="Package\Nuoc_Jupiter_to_Stage\TRUNCATE NUOC_STAGE.Inputs[OLE DB Command Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Nuoc_Jupiter_to_Stage\TRUNCATE NUOC_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Nuoc_Jupiter_to_Stage\TRUNCATE NUOC_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Nuoc_Jupiter_to_Stage\TRUNCATE NUOC_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Nuoc_Jupiter_to_Stage\TRUNCATE NUOC_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
           </components>
           <paths>
             <path
-              refId="Package\Nuoc_Jupiter_to_Stage.Paths[OLE DB Command Output]"
-              endId="Package\Nuoc_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input]"
-              name="OLE DB Command Output"
-              startId="Package\Nuoc_Jupiter_to_Stage\TRUNCATE NUOC_STAGE.Outputs[OLE DB Command Output]" />
-            <path
               refId="Package\Nuoc_Jupiter_to_Stage.Paths[OLE DB Source Output]"
-              endId="Package\Nuoc_Jupiter_to_Stage\TRUNCATE NUOC_STAGE.Inputs[OLE DB Command Input]"
+              endId="Package\Nuoc_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="OLE DB Source Output"
               startId="Package\Nuoc_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output]" />
           </paths>
@@ -2356,95 +2036,95 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
                 </output>
               </outputs>
             </component>
-            <component
-              refId="Package\SanPham_Jupiter_to_Stage\TRUNCATE SANPHAM_STAGE"
-              componentClassID="Microsoft.OLEDBCommand"
-              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
-              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
-              name="TRUNCATE SANPHAM_STAGE"
-              usesDispositions="true"
-              version="2">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">truncate table sanpham_jupiter_stage</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\SanPham_Jupiter_to_Stage\TRUNCATE SANPHAM_STAGE.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Stage]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.Stage]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\SanPham_Jupiter_to_Stage\TRUNCATE SANPHAM_STAGE.Inputs[OLE DB Command Input]"
-                  errorOrTruncationOperation="Command Execution"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Command Input">
-                  <externalMetadataColumns
-                    isUsed="True" />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\SanPham_Jupiter_to_Stage\TRUNCATE SANPHAM_STAGE.Outputs[OLE DB Command Output]"
-                  exclusionGroup="1"
-                  name="OLE DB Command Output"
-                  synchronousInputId="Package\SanPham_Jupiter_to_Stage\TRUNCATE SANPHAM_STAGE.Inputs[OLE DB Command Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\SanPham_Jupiter_to_Stage\TRUNCATE SANPHAM_STAGE.Outputs[OLE DB Command Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Command Error Output"
-                  synchronousInputId="Package\SanPham_Jupiter_to_Stage\TRUNCATE SANPHAM_STAGE.Inputs[OLE DB Command Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\SanPham_Jupiter_to_Stage\TRUNCATE SANPHAM_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\SanPham_Jupiter_to_Stage\TRUNCATE SANPHAM_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\SanPham_Jupiter_to_Stage\TRUNCATE SANPHAM_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\SanPham_Jupiter_to_Stage\TRUNCATE SANPHAM_STAGE.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
           </components>
           <paths>
             <path
-              refId="Package\SanPham_Jupiter_to_Stage.Paths[OLE DB Command Output]"
-              endId="Package\SanPham_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input]"
-              name="OLE DB Command Output"
-              startId="Package\SanPham_Jupiter_to_Stage\TRUNCATE SANPHAM_STAGE.Outputs[OLE DB Command Output]" />
-            <path
               refId="Package\SanPham_Jupiter_to_Stage.Paths[OLE DB Source Output]"
-              endId="Package\SanPham_Jupiter_to_Stage\TRUNCATE SANPHAM_STAGE.Inputs[OLE DB Command Input]"
+              endId="Package\SanPham_Jupiter_to_Stage\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="OLE DB Source Output"
               startId="Package\SanPham_Jupiter_to_Stage\OLE DB Source.Outputs[OLE DB Source Output]" />
           </paths>
         </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\TRUNCATE CUAHANG_JUPITER_STAGE"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{a58b963b-2689-47ac-a1ca-8bf070b1973e}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="TRUNCATE CUAHANG_JUPITER_STAGE"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{ACF03C2F-2CF6-4306-8FF3-511D1C65819B}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE CUAHANG_JUPITER_STAGE" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\TRUNCATE LOAICH_JUPITER_STAGE"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{e8ef0949-ad4c-4850-a6c7-9edbc759fbe7}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="TRUNCATE LOAICH_JUPITER_STAGE"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{ACF03C2F-2CF6-4306-8FF3-511D1C65819B}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE LOAICUAHANG_JUPITER_STAGE" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\TRUNCATE LOAISP_JUPITER_STAGE"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{75eac454-3d23-45b9-bf99-8ddc85c52a07}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="TRUNCATE LOAISP_JUPITER_STAGE"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{ACF03C2F-2CF6-4306-8FF3-511D1C65819B}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE LOAISANPHAM_JUPITER_STAGE" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\TRUNCATE NUOC_JUPITER_STAGE"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{3F30D8EA-DEDD-4E31-A042-180D00358FAF}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="TRUNCATE NUOC_JUPITER_STAGE"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{ACF03C2F-2CF6-4306-8FF3-511D1C65819B}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE NUOC_JUPITER_STAGE" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\TRUNCATE SANPHAM_JUPITER_STAGE"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{9c7c5c23-2850-4e6a-9608-a6b5fcdba193}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="TRUNCATE SANPHAM_JUPITER_STAGE"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{ACF03C2F-2CF6-4306-8FF3-511D1C65819B}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE SANPHAM_JUPITER_STAGE" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -2483,35 +2163,51 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
-      DTS:DTSID="{429B0020-5345-45C1-AECB-95ECFD014305}"
+      DTS:DTSID="{5AFED146-E860-4A03-821A-EF242D106278}"
       DTS:From="Package\GET CET"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
-      DTS:To="Package\Nuoc_Jupiter_to_Stage" />
+      DTS:To="Package\TRUNCATE NUOC_JUPITER_STAGE" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 10]"
+      DTS:CreationName=""
+      DTS:DTSID="{857786BC-3248-46D3-A532-8CAFBDD5D1CF}"
+      DTS:From="Package\TRUNCATE LOAICH_JUPITER_STAGE"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 10"
+      DTS:To="Package\LoaiCuaHang_Jupiter_to_Stage" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 11]"
+      DTS:CreationName=""
+      DTS:DTSID="{F3ADCB54-1A4D-4E51-A102-743940F85E01}"
+      DTS:From="Package\LoaiCuaHang_Jupiter_to_Stage"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 11"
+      DTS:To="Package\TRUNCATE CUAHANG_JUPITER_STAGE" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
       DTS:CreationName=""
-      DTS:DTSID="{BD06F3BA-273E-4340-A85A-0AAFA21A4FFC}"
+      DTS:DTSID="{E4F6D7E6-767D-4719-84A7-57B38D816119}"
       DTS:From="Package\Nuoc_Jupiter_to_Stage"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 2"
-      DTS:To="Package\LoaiSanPham_Jupiter_to_Stage" />
+      DTS:To="Package\TRUNCATE LOAISP_JUPITER_STAGE" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
       DTS:CreationName=""
-      DTS:DTSID="{45D4F924-7009-4A43-98D2-0A353CD65805}"
-      DTS:From="Package\LoaiCuaHang_Jupiter_to_Stage"
+      DTS:DTSID="{C7E507AE-FCB7-43EF-B2AF-92FF88E64BF4}"
+      DTS:From="Package\TRUNCATE CUAHANG_JUPITER_STAGE"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 3"
       DTS:To="Package\CuaHang_Jupiter_to_Stage" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
       DTS:CreationName=""
-      DTS:DTSID="{A0E4A4EE-BCE7-4084-9E8A-951124294BBA}"
+      DTS:DTSID="{B71DBC3F-EAAC-45E1-9CE1-5AB5C2C358E1}"
       DTS:From="Package\LoaiSanPham_Jupiter_to_Stage"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 4"
-      DTS:To="Package\SanPham_Jupiter_to_Stage" />
+      DTS:To="Package\TRUNCATE SANPHAM_JUPITER_STAGE" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 5]"
       DTS:CreationName=""
@@ -2523,11 +2219,35 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 6]"
       DTS:CreationName=""
-      DTS:DTSID="{83E7C338-2035-4AB1-83F2-8F5EEA3668C9}"
+      DTS:DTSID="{1DD27BDA-B2FE-45AA-A65D-97C853B95649}"
       DTS:From="Package\SanPham_Jupiter_to_Stage"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 6"
-      DTS:To="Package\LoaiCuaHang_Jupiter_to_Stage" />
+      DTS:To="Package\TRUNCATE LOAICH_JUPITER_STAGE" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 7]"
+      DTS:CreationName=""
+      DTS:DTSID="{FD9499B8-FA72-4A19-93ED-2527835C7E9A}"
+      DTS:From="Package\TRUNCATE NUOC_JUPITER_STAGE"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 7"
+      DTS:To="Package\Nuoc_Jupiter_to_Stage" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 8]"
+      DTS:CreationName=""
+      DTS:DTSID="{74854B46-0BF6-4C3B-9028-955CF65B3089}"
+      DTS:From="Package\TRUNCATE LOAISP_JUPITER_STAGE"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 8"
+      DTS:To="Package\LoaiSanPham_Jupiter_to_Stage" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 9]"
+      DTS:CreationName=""
+      DTS:DTSID="{03858961-F039-4C81-85E4-70E628269B5F}"
+      DTS:From="Package\TRUNCATE SANPHAM_JUPITER_STAGE"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 9"
+      DTS:To="Package\SanPham_Jupiter_to_Stage" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -2540,53 +2260,73 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="206.4,41.6"
           Id="Package\CuaHang_Jupiter_to_Stage"
-          TopLeft="286.428576306422,130.764707716279" />
+          TopLeft="719.542869015135,244.517649332462" />
         <NodeLayout
           Size="120,41.6"
           Id="Package\GET CET"
-          TopLeft="287.142862032871,32.8823534023391" />
+          TopLeft="435.000007408006,5.35294125154362" />
         <NodeLayout
           Size="162.4,41.6"
           Id="Package\GET LSET IN METADATA"
-          TopLeft="27.8571433315471,40.5294123331155" />
+          TopLeft="98.57143025009,7.6470589307765" />
         <NodeLayout
           Size="225.6,41.6"
           Id="Package\LoaiCuaHang_Jupiter_to_Stage"
-          TopLeft="271.428576050973,234.764709174839" />
+          TopLeft="385.600005790166,325.741180074091" />
         <NodeLayout
           Size="226.4,41.6"
           Id="Package\LoaiSanPham_Jupiter_to_Stage"
-          TopLeft="536.428580563896,132.294119502434" />
+          TopLeft="387.685718190428,155.211765917775" />
         <NodeLayout
           Size="187.2,41.6"
           Id="Package\Nuoc_Jupiter_to_Stage"
-          TopLeft="550.000009366444,33.647059295417" />
+          TopLeft="723.857152868292,86.411765917775" />
         <NodeLayout
           Size="207.2,41.6"
           Id="Package\SanPham_Jupiter_to_Stage"
-          TopLeft="538.571437743246,236.294120960995" />
+          TopLeft="61.2571412028105,240.858825942472" />
+        <NodeLayout
+          Size="264.8,41.6"
+          Id="Package\TRUNCATE CUAHANG_JUPITER_STAGE"
+          TopLeft="694.428582096587,330.117646415341" />
+        <NodeLayout
+          Size="254.4,41.6"
+          Id="Package\TRUNCATE LOAICH_JUPITER_STAGE"
+          TopLeft="365.714291261167,237.694117132273" />
+        <NodeLayout
+          Size="252,41.6"
+          Id="Package\TRUNCATE LOAISP_JUPITER_STAGE"
+          TopLeft="377.142862884366,81.0352928306818" />
+        <NodeLayout
+          Size="198.4,41.6"
+          Id="Package\TRUNCATE NUOC_JUPITER_STAGE"
+          TopLeft="715.88572610933,7.64705893077656" />
+        <NodeLayout
+          Size="264,41.6"
+          Id="Package\TRUNCATE SANPHAM_JUPITER_STAGE"
+          TopLeft="28.5714283768013,154.129407228154" />
         <NodeLayout
           Size="144,41.6"
           Id="Package\UPDATE LSET"
-          TopLeft="42.1428578605458,135.352943074745" />
+          TopLeft="750.285721340962,154.458824483912" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="190.257143331547,57.5058828677273">
+          TopLeft="260.97143025009,27.3000000911601">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="96.8857187013239,0"
+              EndConnector="174.028577157916,0"
               Start="0,0"
-              End="89.3857187013239,0">
+              End="166.528577157916,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="89.3857187013239,0" />
+                    End="166.528577157916,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2597,18 +2337,62 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="407.142862032871,54.064706348878">
+          TopLeft="555.000007408006,27.3000000911601">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="142.857147333573,0"
+              EndConnector="160.885718701324,0"
               Start="0,0"
-              End="135.357147333573,0">
+              End="153.385718701324,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="135.357147333573,0" />
+                    End="153.385718701324,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 10]"
+          TopLeft="495.657148525667,279.294117132273">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46.447062941818"
+              Start="0,0"
+              End="0,38.947062941818">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.947062941818" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 11]"
+          TopLeft="611.200005790166,348.729413244716">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="83.2285763064206,0"
+              Start="0,0"
+              End="75.7285763064206,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="75.7285763064206,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2619,18 +2403,18 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="646.61429496517,75.247059295417">
+          TopLeft="723.857152868292,104.523529374228">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,57.047060207017"
+              EndConnector="-94.7142899839261,0"
               Start="0,0"
-              End="0,49.547060207017">
+              End="-87.2142899839261,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,49.547060207017" />
+                    End="-87.2142899839261,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2641,18 +2425,18 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="386.928576178697,234.764709174839">
+          TopLeft="824.785725555861,330.117646415341">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,-62.4000014585608"
+              EndConnector="0,-43.999997082879"
               Start="0,0"
-              End="0,-54.9000014585608">
+              End="0,-36.499997082879">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-54.9000014585608" />
+                    End="0,-36.499997082879" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2663,18 +2447,18 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="645.900009153571,173.894119502434">
+          TopLeft="387.685718190428,175.470586572964">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,62.4000014585606"
+              EndConnector="-95.1142898136267,0"
               Start="0,0"
-              End="0,54.9000014585606">
+              End="-87.6142898136267,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,54.9000014585606" />
+                    End="-87.6142898136267,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2685,18 +2469,18 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 5]"
-          TopLeft="286.428576306422,153.858825395512">
+          TopLeft="822.514295178048,244.517649332462">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-100.285718445876,0"
+              EndConnector="0,-48.4588248485505"
               Start="0,0"
-              End="-92.7857184458757,0">
+              End="0,-40.9588248485505">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-92.7857184458757,0" />
+                    End="0,-40.9588248485505" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2707,18 +2491,84 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 6]"
-          TopLeft="538.571437743246,256.329415067917">
+          TopLeft="268.45714120281,260.076471537373">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-41.5428616922723,0"
+              EndConnector="97.2571500583567,0"
               Start="0,0"
-              End="-34.0428616922723,0">
+              End="89.7571500583567,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-34.0428616922723,0" />
+                    End="89.7571500583567,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 7]"
+          TopLeft="816.271439488811,49.2470589307766">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37.1647069869985"
+              Start="0,0"
+              End="0,29.6647069869985">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.6647069869985" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 8]"
+          TopLeft="502.014290537397,122.635292830682">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,32.576473087093"
+              Start="0,0"
+              End="0,25.076473087093">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.076473087093" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 9]"
+          TopLeft="162.714284789806,195.729407228154">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,45.1294187143185"
+              Start="0,0"
+              End="0,37.6294187143185">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.6294187143185" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2734,11 +2584,7 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
     design-time-name="Package\CuaHang_Jupiter_to_Stage">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="219.2,41.6"
-          Id="Package\CuaHang_Jupiter_to_Stage\TRUNCATE CUAHANG_STAGE"
-          TopLeft="408,205" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="170.4,41.6"
           Id="Package\CuaHang_Jupiter_to_Stage\OLE DB Destination"
@@ -2753,60 +2599,26 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="27.3000000000001,57.9"
+              EndConnector="18.9,152.9"
               Start="0,0"
-              End="27.3000000000001,50.4">
+              End="18.9,145.4">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,24.95" />
+                    End="0,72.45" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,24.95"
-                    Point2="0,28.95"
-                    Point3="4,28.95" />
+                    Point1="0,72.45"
+                    Point2="0,76.45"
+                    Point3="4,76.45" />
                   <mssgle:LineSegment
-                    End="23.3000000000001,28.95" />
+                    End="14.9,76.45" />
                   <mssgle:CubicBezierSegment
-                    Point1="23.3000000000001,28.95"
-                    Point2="27.3000000000001,28.95"
-                    Point3="27.3000000000001,32.95" />
+                    Point1="14.9,76.45"
+                    Point2="18.9,76.45"
+                    Point3="18.9,80.45" />
                   <mssgle:LineSegment
-                    End="27.3000000000001,50.4" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\CuaHang_Jupiter_to_Stage.Paths[OLE DB Command Output]"
-          TopLeft="517.6,246.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-8.40000000000003,53.3999999999999"
-              Start="0,0"
-              End="-8.40000000000003,45.8999999999999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,22.7" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,22.7"
-                    Point2="0,26.7"
-                    Point3="-4,26.7" />
-                  <mssgle:LineSegment
-                    End="-4.40000000000003,26.7" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-4.40000000000003,26.7"
-                    Point2="-8.40000000000003,26.7"
-                    Point3="-8.40000000000003,30.7" />
-                  <mssgle:LineSegment
-                    End="-8.40000000000003,45.8999999999999" />
+                    End="18.9,145.4" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2843,11 +2655,7 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
     design-time-name="Package\LoaiCuaHang_Jupiter_to_Stage">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="288,41.6"
-          Id="Package\LoaiCuaHang_Jupiter_to_Stage\TRUNCATE LOAICUAHANG_JUPITER_STAGE"
-          TopLeft="364,239" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="149.6,41.6"
           Id="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Source"
@@ -2862,48 +2670,26 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="15.6000000000002,54.4"
+              EndConnector="78.4,132.4"
               Start="0,0"
-              End="15.6000000000002,46.9">
+              End="78.4,124.9">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,23.2" />
+                    End="0,62.2" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,23.2"
-                    Point2="0,27.2"
-                    Point3="4,27.2" />
+                    Point1="0,62.2"
+                    Point2="0,66.2"
+                    Point3="4,66.2" />
                   <mssgle:LineSegment
-                    End="11.6000000000002,27.2" />
+                    End="74.4,66.2" />
                   <mssgle:CubicBezierSegment
-                    Point1="11.6000000000002,27.2"
-                    Point2="15.6000000000002,27.2"
-                    Point3="15.6000000000002,31.2" />
+                    Point1="74.4,66.2"
+                    Point2="78.4,66.2"
+                    Point3="78.4,70.2" />
                   <mssgle:LineSegment
-                    End="15.6000000000002,46.9" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\LoaiCuaHang_Jupiter_to_Stage.Paths[OLE DB Command Output]"
-          TopLeft="508.6,280.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,36.4"
-              Start="0,0"
-              End="0,28.9">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,28.9" />
+                    End="78.4,124.9" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2915,14 +2701,6 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Destination">
     <Properties>
@@ -2936,15 +2714,19 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\LoaiCuaHang_Jupiter_to_Stage\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\LoaiSanPham_Jupiter_to_Stage">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="241.6,41.6"
-          Id="Package\LoaiSanPham_Jupiter_to_Stage\TRUNCATE LOAISANPHAM_STAGE"
-          TopLeft="121.5,69.5" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="149.6,41.6"
           Id="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Source"
@@ -2955,58 +2737,30 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
           TopLeft="176.5,156.5" />
         <EdgeLayout
           Id="Package\LoaiSanPham_Jupiter_to_Stage.Paths[OLE DB Source Output]"
-          TopLeft="155.1,26.3">
+          TopLeft="80.3,47.1">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="87.2000000000001,43.2"
+              EndConnector="181.4,109.4"
               Start="0,0"
-              End="87.2000000000001,35.7">
+              End="181.4,101.9">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="83.2000000000001,0" />
+                    End="0,50.7" />
                   <mssgle:CubicBezierSegment
-                    Point1="83.2000000000001,0"
-                    Point2="87.2000000000001,0"
-                    Point3="87.2000000000001,4" />
+                    Point1="0,50.7"
+                    Point2="0,54.7"
+                    Point3="4,54.7" />
                   <mssgle:LineSegment
-                    End="87.2000000000001,35.7" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\LoaiSanPham_Jupiter_to_Stage.Paths[OLE DB Command Output]"
-          TopLeft="242.3,111.1">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="19.3999999999999,45.4"
-              Start="0,0"
-              End="19.3999999999999,37.9">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18.7" />
+                    End="177.4,54.7" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,18.7"
-                    Point2="0,22.7"
-                    Point3="4,22.7" />
+                    Point1="177.4,54.7"
+                    Point2="181.4,54.7"
+                    Point3="181.4,58.7" />
                   <mssgle:LineSegment
-                    End="15.3999999999999,22.7" />
-                  <mssgle:CubicBezierSegment
-                    Point1="15.3999999999999,22.7"
-                    Point2="19.3999999999999,22.7"
-                    Point3="19.3999999999999,26.7" />
-                  <mssgle:LineSegment
-                    End="19.3999999999999,37.9" />
+                    End="181.4,101.9" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3018,14 +2772,6 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Destination">
     <Properties>
@@ -3039,59 +2785,41 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\LoaiSanPham_Jupiter_to_Stage\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Nuoc_Jupiter_to_Stage">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="164.8,41.6"
-          Id="Package\Nuoc_Jupiter_to_Stage\TRUNCATE NUOC_STAGE"
-          TopLeft="213.571432208528,165.941178797851" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="149.6,41.6"
           Id="Package\Nuoc_Jupiter_to_Stage\OLE DB Source"
-          TopLeft="224.285718105277,61.1764714462122" />
+          TopLeft="196.42857477373,40.5294123331156" />
         <NodeLayout
           Size="170.4,41.6"
           Id="Package\Nuoc_Jupiter_to_Stage\OLE DB Destination"
-          TopLeft="202.85714631178,251.588238822548" />
+          TopLeft="187.142860329882,242.411768105616" />
         <EdgeLayout
           Id="Package\Nuoc_Jupiter_to_Stage.Paths[OLE DB Source Output]"
-          TopLeft="297.528575156903,102.776471446212">
+          TopLeft="271.785717551806,82.1294123331156">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,63.1647073516384"
+              EndConnector="0,160.2823557725"
               Start="0,0"
-              End="0,55.6647073516384">
+              End="0,152.7823557725">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,55.6647073516384" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Nuoc_Jupiter_to_Stage.Paths[OLE DB Command Output]"
-          TopLeft="292.014289260154,207.541178797851">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,44.0470600246971"
-              Start="0,0"
-              End="0,36.5470600246971">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,36.5470600246971" />
+                    End="0,152.7823557725" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3103,14 +2831,6 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Nuoc_Jupiter_to_Stage\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Nuoc_Jupiter_to_Stage\OLE DB Destination">
     <Properties>
@@ -3124,83 +2844,41 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Nuoc_Jupiter_to_Stage\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\SanPham_Jupiter_to_Stage">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="164.8,41.6"
-          Id="Package\SanPham_Jupiter_to_Stage\TRUNCATE SANPHAM_STAGE"
-          TopLeft="536,303" />
-        <NodeLayout
-          Size="170.4,41.6"
-          Id="Package\SanPham_Jupiter_to_Stage\OLE DB Destination"
-          TopLeft="522.5,390.5" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="149.6,41.6"
           Id="Package\SanPham_Jupiter_to_Stage\OLE DB Source"
-          TopLeft="526,207" />
+          TopLeft="454,104" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\SanPham_Jupiter_to_Stage\OLE DB Destination"
+          TopLeft="444,201" />
         <EdgeLayout
           Id="Package\SanPham_Jupiter_to_Stage.Paths[OLE DB Source Output]"
-          TopLeft="600.8,248.6">
+          TopLeft="529,145.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="17.6000000000003,54.4"
+              EndConnector="0,55.3999999999999"
               Start="0,0"
-              End="17.6000000000003,46.9">
+              End="0,47.8999999999999">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,23.2" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,23.2"
-                    Point2="0,27.2"
-                    Point3="4,27.2" />
-                  <mssgle:LineSegment
-                    End="13.6000000000003,27.2" />
-                  <mssgle:CubicBezierSegment
-                    Point1="13.6000000000003,27.2"
-                    Point2="17.6000000000003,27.2"
-                    Point3="17.6000000000003,31.2" />
-                  <mssgle:LineSegment
-                    End="17.6000000000003,46.9" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\SanPham_Jupiter_to_Stage.Paths[OLE DB Command Output]"
-          TopLeft="618.4,344.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-10.7000000000002,45.9"
-              Start="0,0"
-              End="-10.7000000000002,38.4">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18.95" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,18.95"
-                    Point2="0,22.95"
-                    Point3="-4,22.95" />
-                  <mssgle:LineSegment
-                    End="-6.70000000000016,22.95" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-6.70000000000016,22.95"
-                    Point2="-10.7000000000002,22.95"
-                    Point3="-10.7000000000002,26.95" />
-                  <mssgle:LineSegment
-                    End="-10.7000000000002,38.4" />
+                    End="0,47.8999999999999" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

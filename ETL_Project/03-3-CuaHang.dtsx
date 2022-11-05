@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package2"
   DTS:PackageType="5"
-  DTS:VersionBuild="12"
-  DTS:VersionGUID="{81A8AF69-F736-43AF-A92D-FFF1D1B16D58}">
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{35E1C118-0CBD-43D6-81F9-13BC2D8BD885}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -932,20 +932,20 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\SET OLD ROW'S EXPIRY STATUS"
+              refId="Package\Data Flow Task\SET OLD ROWS' EXPIRY STATUS"
               componentClassID="Microsoft.DerivedColumn"
               contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
               description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
-              name="SET OLD ROW'S EXPIRY STATUS"
+              name="SET OLD ROWS' EXPIRY STATUS"
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\SET OLD ROW'S EXPIRY STATUS.Inputs[Derived Column Input]"
+                  refId="Package\Data Flow Task\SET OLD ROWS' EXPIRY STATUS.Inputs[Derived Column Input]"
                   description="Input to the Derived Column Transformation"
                   name="Derived Column Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\SET OLD ROW'S EXPIRY STATUS.Inputs[Derived Column Input].Columns[TrangThai]"
+                      refId="Package\Data Flow Task\SET OLD ROWS' EXPIRY STATUS.Inputs[Derived Column Input].Columns[TrangThai]"
                       cachedDataType="i4"
                       cachedName="TrangThai"
                       errorOrTruncationOperation="Computation"
@@ -973,31 +973,31 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\SET OLD ROW'S EXPIRY STATUS.Outputs[Derived Column Output]"
+                  refId="Package\Data Flow Task\SET OLD ROWS' EXPIRY STATUS.Outputs[Derived Column Output]"
                   description="Default Output of the Derived Column Transformation"
                   exclusionGroup="1"
                   name="Derived Column Output"
-                  synchronousInputId="Package\Data Flow Task\SET OLD ROW'S EXPIRY STATUS.Inputs[Derived Column Input]">
+                  synchronousInputId="Package\Data Flow Task\SET OLD ROWS' EXPIRY STATUS.Inputs[Derived Column Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\SET OLD ROW'S EXPIRY STATUS.Outputs[Derived Column Error Output]"
+                  refId="Package\Data Flow Task\SET OLD ROWS' EXPIRY STATUS.Outputs[Derived Column Error Output]"
                   description="Error Output of the Derived Column Transformation"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Derived Column Error Output"
-                  synchronousInputId="Package\Data Flow Task\SET OLD ROW'S EXPIRY STATUS.Inputs[Derived Column Input]">
+                  synchronousInputId="Package\Data Flow Task\SET OLD ROWS' EXPIRY STATUS.Inputs[Derived Column Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\SET OLD ROW'S EXPIRY STATUS.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      refId="Package\Data Flow Task\SET OLD ROWS' EXPIRY STATUS.Outputs[Derived Column Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\SET OLD ROW'S EXPIRY STATUS.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Data Flow Task\SET OLD ROWS' EXPIRY STATUS.Outputs[Derived Column Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\SET OLD ROW'S EXPIRY STATUS.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      refId="Package\Data Flow Task\SET OLD ROWS' EXPIRY STATUS.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\SET OLD ROW'S EXPIRY STATUS.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Data Flow Task\SET OLD ROWS' EXPIRY STATUS.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1017,7 +1017,7 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
                   dataType="System.String"
                   description="Specifies the SELECT statement used to create a schema rowset."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT [MaCH], [MaLoaiCH], [NguonDuLieu], [Nuoc], [TenCH], [TrangThai] FROM [dbo].[CuaHang]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT [MaCH], [MaLoaiCH], [NguonDuLieu], [Nuoc], [TenCH], [TenLoaiCH], [TrangThai] FROM [dbo].[CuaHang]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the WHERE clause in the SELECT statement that selects the current row among rows with identical business keys."
@@ -1136,6 +1136,21 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
                           typeConverter="ColumnType">2</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[TenLoaiCH1]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TenLoaiCH1"
+                      externalMetadataColumnId="Package\Data Flow Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[TenLoaiCH]"
+                      lineageId="Package\Data Flow Task\Lookup MALOAICH.Outputs[Lookup Match Output].Columns[TenLoaiCH1]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">2</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1165,6 +1180,12 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
                       dataType="str"
                       length="50"
                       name="TenCH" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[TenLoaiCH]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="TenLoaiCH" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[TrangThai]"
                       dataType="i4"
@@ -1219,219 +1240,6 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
                   exclusionGroup="1"
                   name="Inferred Member Updates Output"
                   synchronousInputId="Package\Data Flow Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Data Flow Task\UDPATE DUMMY ROWS"
-              componentClassID="Microsoft.OLEDBCommand"
-              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
-              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
-              name="UDPATE DUMMY ROWS"
-              usesDispositions="true"
-              version="2">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">UPDATE [dbo].[CuaHang] SET [MaLoaiCH] = ?,[Nuoc] = ?,[TenCH] = ?,[TenLoaiCH] = ?,[TrangThai] = ? WHERE [MaCH] = ? AND [NguonDuLieu] = ?</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Data Flow Task\UDPATE DUMMY ROWS.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.DDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.DDS]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task\UDPATE DUMMY ROWS.Inputs[OLE DB Command Input]"
-                  errorOrTruncationOperation="Command Execution"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Command Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\UDPATE DUMMY ROWS.Inputs[OLE DB Command Input].Columns[MaCH]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="4"
-                      cachedName="MaCH"
-                      externalMetadataColumnId="Package\Data Flow Task\UDPATE DUMMY ROWS.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
-                      lineageId="Package\Data Flow Task\OLE DB Source CUAHANG_NDS.Outputs[OLE DB Source Output].Columns[MaCH]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\UDPATE DUMMY ROWS.Inputs[OLE DB Command Input].Columns[MaLoaiCH1]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="4"
-                      cachedName="MaLoaiCH1"
-                      externalMetadataColumnId="Package\Data Flow Task\UDPATE DUMMY ROWS.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      lineageId="Package\Data Flow Task\Lookup MALOAICH.Outputs[Lookup Match Output].Columns[MaLoaiCH1]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\UDPATE DUMMY ROWS.Inputs[OLE DB Command Input].Columns[NguonDuLieu]"
-                      cachedDataType="i4"
-                      cachedName="NguonDuLieu"
-                      externalMetadataColumnId="Package\Data Flow Task\UDPATE DUMMY ROWS.Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
-                      lineageId="Package\Data Flow Task\OLE DB Source CUAHANG_NDS.Outputs[OLE DB Source Output].Columns[NguonDuLieu]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\UDPATE DUMMY ROWS.Inputs[OLE DB Command Input].Columns[Nuoc]"
-                      cachedDataType="i4"
-                      cachedName="Nuoc"
-                      externalMetadataColumnId="Package\Data Flow Task\UDPATE DUMMY ROWS.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      lineageId="Package\Data Flow Task\OLE DB Source CUAHANG_NDS.Outputs[OLE DB Source Output].Columns[Nuoc]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\UDPATE DUMMY ROWS.Inputs[OLE DB Command Input].Columns[TenCH]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="TenCH"
-                      externalMetadataColumnId="Package\Data Flow Task\UDPATE DUMMY ROWS.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
-                      lineageId="Package\Data Flow Task\OLE DB Source CUAHANG_NDS.Outputs[OLE DB Source Output].Columns[TenCH]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\UDPATE DUMMY ROWS.Inputs[OLE DB Command Input].Columns[TenLoaiCH1]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="TenLoaiCH1"
-                      externalMetadataColumnId="Package\Data Flow Task\UDPATE DUMMY ROWS.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
-                      lineageId="Package\Data Flow Task\Lookup MALOAICH.Outputs[Lookup Match Output].Columns[TenLoaiCH1]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\UDPATE DUMMY ROWS.Inputs[OLE DB Command Input].Columns[TrangThai]"
-                      cachedDataType="i4"
-                      cachedName="TrangThai"
-                      externalMetadataColumnId="Package\Data Flow Task\UDPATE DUMMY ROWS.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
-                      lineageId="Package\Data Flow Task\OLE DB Source CUAHANG_NDS.Outputs[OLE DB Source Output].Columns[TrangThai]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\UDPATE DUMMY ROWS.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      codePage="1252"
-                      dataType="str"
-                      length="4"
-                      name="Param_0">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\UDPATE DUMMY ROWS.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      dataType="i4"
-                      name="Param_1">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">81</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\UDPATE DUMMY ROWS.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Param_2">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\UDPATE DUMMY ROWS.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Param_3">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\UDPATE DUMMY ROWS.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
-                      dataType="i4"
-                      name="Param_4">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">81</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\UDPATE DUMMY ROWS.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
-                      codePage="1252"
-                      dataType="str"
-                      length="4"
-                      name="Param_5">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\UDPATE DUMMY ROWS.Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
-                      dataType="i4"
-                      name="Param_6">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">81</property>
-                      </properties>
-                    </externalMetadataColumn>
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task\UDPATE DUMMY ROWS.Outputs[OLE DB Command Output]"
-                  exclusionGroup="1"
-                  name="OLE DB Command Output"
-                  synchronousInputId="Package\Data Flow Task\UDPATE DUMMY ROWS.Inputs[OLE DB Command Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Data Flow Task\UDPATE DUMMY ROWS.Outputs[OLE DB Command Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Command Error Output"
-                  synchronousInputId="Package\Data Flow Task\UDPATE DUMMY ROWS.Inputs[OLE DB Command Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\UDPATE DUMMY ROWS.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\UDPATE DUMMY ROWS.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\UDPATE DUMMY ROWS.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\UDPATE DUMMY ROWS.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
                   <externalMetadataColumns />
                 </output>
               </outputs>
@@ -1843,11 +1651,11 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\UPDATE TENCH"
+              refId="Package\Data Flow Task\UPDATE DUMMY ROWS"
               componentClassID="Microsoft.OLEDBCommand"
               contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
               description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
-              name="UPDATE TENCH"
+              name="UPDATE DUMMY ROWS"
               usesDispositions="true"
               version="2">
               <properties>
@@ -1860,7 +1668,7 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
                   description="The SQL command to be executed."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">UPDATE [dbo].[CuaHang] SET [TenCH] = ? WHERE [MaCH] = ? AND [NguonDuLieu] = ? AND [TrangThai] = '1'</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">UPDATE [dbo].[CuaHang] SET [MaLoaiCH] = ?,[Nuoc] = ?,[TenCH] = ?,[TenLoaiCH] = ?,[TrangThai] = ? WHERE [MaCH] = ? AND [NguonDuLieu] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1868,7 +1676,7 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\UPDATE TENCH.Connections[OleDbConnection]"
+                  refId="Package\Data Flow Task\UPDATE DUMMY ROWS.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.DDS]"
                   connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.DDS]"
                   description="The OLE DB runtime connection used to access the database."
@@ -1876,42 +1684,70 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\UPDATE TENCH.Inputs[OLE DB Command Input]"
+                  refId="Package\Data Flow Task\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input]"
                   errorOrTruncationOperation="Command Execution"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Command Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\UPDATE TENCH.Inputs[OLE DB Command Input].Columns[MaCH]"
+                      refId="Package\Data Flow Task\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input].Columns[MaCH]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="4"
                       cachedName="MaCH"
-                      externalMetadataColumnId="Package\Data Flow Task\UPDATE TENCH.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      externalMetadataColumnId="Package\Data Flow Task\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
                       lineageId="Package\Data Flow Task\OLE DB Source CUAHANG_NDS.Outputs[OLE DB Source Output].Columns[MaCH]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\UPDATE TENCH.Inputs[OLE DB Command Input].Columns[NguonDuLieu]"
+                      refId="Package\Data Flow Task\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input].Columns[MaLoaiCH1]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4"
+                      cachedName="MaLoaiCH1"
+                      externalMetadataColumnId="Package\Data Flow Task\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\Data Flow Task\Lookup MALOAICH.Outputs[Lookup Match Output].Columns[MaLoaiCH1]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input].Columns[NguonDuLieu]"
                       cachedDataType="i4"
                       cachedName="NguonDuLieu"
-                      externalMetadataColumnId="Package\Data Flow Task\UPDATE TENCH.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      externalMetadataColumnId="Package\Data Flow Task\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
                       lineageId="Package\Data Flow Task\OLE DB Source CUAHANG_NDS.Outputs[OLE DB Source Output].Columns[NguonDuLieu]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\UPDATE TENCH.Inputs[OLE DB Command Input].Columns[TenCH]"
+                      refId="Package\Data Flow Task\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input].Columns[Nuoc]"
+                      cachedDataType="i4"
+                      cachedName="Nuoc"
+                      externalMetadataColumnId="Package\Data Flow Task\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\Data Flow Task\OLE DB Source CUAHANG_NDS.Outputs[OLE DB Source Output].Columns[Nuoc]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input].Columns[TenCH]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="TenCH"
-                      externalMetadataColumnId="Package\Data Flow Task\UPDATE TENCH.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      externalMetadataColumnId="Package\Data Flow Task\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
                       lineageId="Package\Data Flow Task\OLE DB Source CUAHANG_NDS.Outputs[OLE DB Source Output].Columns[TenCH]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input].Columns[TenLoaiCH1]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TenLoaiCH1"
+                      externalMetadataColumnId="Package\Data Flow Task\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      lineageId="Package\Data Flow Task\Lookup MALOAICH.Outputs[Lookup Match Output].Columns[TenLoaiCH1]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input].Columns[TrangThai]"
+                      cachedDataType="i4"
+                      cachedName="TrangThai"
+                      externalMetadataColumnId="Package\Data Flow Task\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
+                      lineageId="Package\Data Flow Task\OLE DB Source CUAHANG_NDS.Outputs[OLE DB Source Output].Columns[TrangThai]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\UPDATE TENCH.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      refId="Package\Data Flow Task\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="4"
                       name="Param_0">
                       <properties>
                         <property
@@ -1921,11 +1757,22 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\UPDATE TENCH.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      refId="Package\Data Flow Task\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      dataType="i4"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
                       codePage="1252"
                       dataType="str"
-                      length="4"
-                      name="Param_1">
+                      length="50"
+                      name="Param_2">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1934,9 +1781,46 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\UPDATE TENCH.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      refId="Package\Data Flow Task\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Param_3">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
                       dataType="i4"
-                      name="Param_2">
+                      name="Param_4">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="Param_5">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
+                      dataType="i4"
+                      name="Param_6">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1949,29 +1833,187 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\UPDATE TENCH.Outputs[OLE DB Command Output]"
+                  refId="Package\Data Flow Task\UPDATE DUMMY ROWS.Outputs[OLE DB Command Output]"
                   exclusionGroup="1"
                   name="OLE DB Command Output"
-                  synchronousInputId="Package\Data Flow Task\UPDATE TENCH.Inputs[OLE DB Command Input]">
+                  synchronousInputId="Package\Data Flow Task\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\UPDATE TENCH.Outputs[OLE DB Command Error Output]"
+                  refId="Package\Data Flow Task\UPDATE DUMMY ROWS.Outputs[OLE DB Command Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Command Error Output"
-                  synchronousInputId="Package\Data Flow Task\UPDATE TENCH.Inputs[OLE DB Command Input]">
+                  synchronousInputId="Package\Data Flow Task\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\UPDATE TENCH.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      refId="Package\Data Flow Task\UPDATE DUMMY ROWS.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\UPDATE TENCH.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Data Flow Task\UPDATE DUMMY ROWS.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\UPDATE TENCH.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      refId="Package\Data Flow Task\UPDATE DUMMY ROWS.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\UPDATE TENCH.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Data Flow Task\UPDATE DUMMY ROWS.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\UPDATE TENCH, TENLOAICH"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="UPDATE TENCH, TENLOAICH"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">UPDATE [dbo].[CuaHang] SET [TenCH] = ?,[TenLoaiCH] = ? WHERE [MaCH] = ? AND [NguonDuLieu] = ? AND [TrangThai] = '1'</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\UPDATE TENCH, TENLOAICH.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.DDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8V127BM\PSTUNG.DDS]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\UPDATE TENCH, TENLOAICH.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\UPDATE TENCH, TENLOAICH.Inputs[OLE DB Command Input].Columns[MaCH]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4"
+                      cachedName="MaCH"
+                      externalMetadataColumnId="Package\Data Flow Task\UPDATE TENCH, TENLOAICH.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      lineageId="Package\Data Flow Task\OLE DB Source CUAHANG_NDS.Outputs[OLE DB Source Output].Columns[MaCH]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\UPDATE TENCH, TENLOAICH.Inputs[OLE DB Command Input].Columns[NguonDuLieu]"
+                      cachedDataType="i4"
+                      cachedName="NguonDuLieu"
+                      externalMetadataColumnId="Package\Data Flow Task\UPDATE TENCH, TENLOAICH.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      lineageId="Package\Data Flow Task\OLE DB Source CUAHANG_NDS.Outputs[OLE DB Source Output].Columns[NguonDuLieu]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\UPDATE TENCH, TENLOAICH.Inputs[OLE DB Command Input].Columns[TenCH]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TenCH"
+                      externalMetadataColumnId="Package\Data Flow Task\UPDATE TENCH, TENLOAICH.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\Data Flow Task\OLE DB Source CUAHANG_NDS.Outputs[OLE DB Source Output].Columns[TenCH]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\UPDATE TENCH, TENLOAICH.Inputs[OLE DB Command Input].Columns[TenLoaiCH1]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TenLoaiCH1"
+                      externalMetadataColumnId="Package\Data Flow Task\UPDATE TENCH, TENLOAICH.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\Data Flow Task\Lookup MALOAICH.Outputs[Lookup Match Output].Columns[TenLoaiCH1]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\UPDATE TENCH, TENLOAICH.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\UPDATE TENCH, TENLOAICH.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\UPDATE TENCH, TENLOAICH.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\UPDATE TENCH, TENLOAICH.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      dataType="i4"
+                      name="Param_3">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\UPDATE TENCH, TENLOAICH.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\Data Flow Task\UPDATE TENCH, TENLOAICH.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\UPDATE TENCH, TENLOAICH.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\Data Flow Task\UPDATE TENCH, TENLOAICH.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\UPDATE TENCH, TENLOAICH.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\UPDATE TENCH, TENLOAICH.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\UPDATE TENCH, TENLOAICH.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\UPDATE TENCH, TENLOAICH.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1983,14 +2025,14 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
           <paths>
             <path
               refId="Package\Data Flow Task.Paths[Changing Attribute Updates Output]"
-              endId="Package\Data Flow Task\UPDATE TENCH.Inputs[OLE DB Command Input]"
+              endId="Package\Data Flow Task\UPDATE TENCH, TENLOAICH.Inputs[OLE DB Command Input]"
               name="Changing Attribute Updates Output"
               startId="Package\Data Flow Task\Slowly Changing Dimension.Outputs[Changing Attribute Updates Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Derived Column Output]"
               endId="Package\Data Flow Task\EXPIRE THE OLD ROWS.Inputs[OLE DB Command Input]"
               name="Derived Column Output"
-              startId="Package\Data Flow Task\SET OLD ROW'S EXPIRY STATUS.Outputs[Derived Column Output]" />
+              startId="Package\Data Flow Task\SET OLD ROWS' EXPIRY STATUS.Outputs[Derived Column Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Derived Column Output1]"
               endId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input]"
@@ -1998,12 +2040,12 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
               startId="Package\Data Flow Task\SET NEW ROWS' EFFECTIVE STATUS.Outputs[Derived Column Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Historical Attribute Inserts Output]"
-              endId="Package\Data Flow Task\SET OLD ROW'S EXPIRY STATUS.Inputs[Derived Column Input]"
+              endId="Package\Data Flow Task\SET OLD ROWS' EXPIRY STATUS.Inputs[Derived Column Input]"
               name="Historical Attribute Inserts Output"
               startId="Package\Data Flow Task\Slowly Changing Dimension.Outputs[Historical Attribute Inserts Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Inferred Member Updates Output]"
-              endId="Package\Data Flow Task\UDPATE DUMMY ROWS.Inputs[OLE DB Command Input]"
+              endId="Package\Data Flow Task\UPDATE DUMMY ROWS.Inputs[OLE DB Command Input]"
               name="Inferred Member Updates Output"
               startId="Package\Data Flow Task\Slowly Changing Dimension.Outputs[Inferred Member Updates Output]" />
             <path
@@ -2136,7 +2178,7 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
         <NodeLayout
           Size="150.4,41.6"
           Id="Package\Data Flow Task"
-          TopLeft="330.000004598074,203.000002005521" />
+          TopLeft="322.857147333575,201.470590219366" />
         <NodeLayout
           Size="212,41.6"
           Id="Package\GET LSET FROM METADATA"
@@ -2144,25 +2186,25 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
         <NodeLayout
           Size="118.4,41.6"
           Id="Package\SET CET"
-          TopLeft="347.142862032871,15.6470582014962" />
+          TopLeft="80.7142860670479,108.176471263892" />
         <NodeLayout
           Size="214.4,41.6"
           Id="Package\UPDATE LSET IN METADATA"
-          TopLeft="293.57143357092,281.411768652577" />
+          TopLeft="53.5714294837443,206.470591130967" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="405.100004470349,57.2470582014962">
+          TopLeft="199.114286067048,131.270588943125">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,55.5176484208621"
+              EndConnector="98.7428608407781,0"
               Start="0,0"
-              End="0,48.0176484208621">
+              End="91.2428608407781,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,48.0176484208621" />
+                    End="91.2428608407781,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2173,18 +2215,18 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="404.52857575295,154.364706622358">
+          TopLeft="400.9571471207,154.364706622358">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,48.6352953831627"
+              EndConnector="0,47.1058835970076"
               Start="0,0"
-              End="0,41.1352953831627">
+              End="0,39.6058835970076">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,41.1352953831627" />
+                    End="0,39.6058835970076" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2195,18 +2237,18 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="402.985719084497,244.600002005521">
+          TopLeft="322.857147333575,224.770590675166">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,36.8117666470557"
+              EndConnector="-54.8857178498304,0"
               Start="0,0"
-              End="0,29.3117666470557">
+              End="-47.3857178498304,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,29.3117666470557" />
+                    End="-47.3857178498304,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2226,18 +2268,18 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
         <NodeLayout
           Size="226.4,47.2"
           Id="Package\Data Flow Task\OLE DB Source CUAHANG_NDS"
-          TopLeft="117.7,5.49999999999991" />
-        <NodeLayout
-          Size="208,41.6"
-          Id="Package\Data Flow Task\Slowly Changing Dimension"
-          TopLeft="126.9,214.3" />
+          TopLeft="190.557144097893,8.55882357231051" />
         <NodeLayout
           Size="167.2,41.6"
           Id="Package\Data Flow Task\Lookup MALOAICH"
-          TopLeft="150.214285300702,112.7" />
+          TopLeft="220.157144097893,115.75882357231" />
+        <NodeLayout
+          Size="208,41.6"
+          Id="Package\Data Flow Task\Slowly Changing Dimension"
+          TopLeft="194.042858286293,213.535294106922" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
-          TopLeft="232.357142650351,52.6999999999999">
+          TopLeft="303.757144097893,55.7588235723105">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2259,98 +2301,86 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Lookup Match Output]"
-          TopLeft="232.357142650351,154.3">
+          TopLeft="300.900001192093,157.35882357231">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,59.9999999999999"
+              EndConnector="0,56.1764705346116"
               Start="0,0"
-              End="0,52.4999999999999">
+              End="0,48.6764705346116">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.4999999999999" />
+                    End="0,48.6764705346116" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,20.4453124999999,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,18.5335477673058,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
           Size="234.4,41.6"
-          Id="Package\Data Flow Task\SET OLD ROW'S EXPIRY STATUS"
-          TopLeft="17.5,315.9" />
+          Id="Package\Data Flow Task\SET OLD ROWS' EXPIRY STATUS"
+          TopLeft="0.357142565201869,314.370588213844" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Historical Attribute Inserts Output]"
-          TopLeft="170.9,255.9">
+          TopLeft="238.042858286293,255.135294106922">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-36.2,60"
+              EndConnector="-120.485715721091,59.2352941069222"
               Start="0,0"
-              End="-36.2,52.5">
+              End="-120.485715721091,51.7352941069222">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,13.8378378378378" />
+                    End="0,13.6104928425985" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,13.8378378378378"
-                    Point2="0,17.8378378378378"
-                    Point3="-4,17.8378378378378" />
+                    Point1="0,13.6104928425985"
+                    Point2="0,17.6104928425985"
+                    Point3="-4,17.6104928425985" />
                   <mssgle:LineSegment
-                    End="-32.2,17.8378378378378" />
+                    End="-116.485715721091,17.6104928425985" />
                   <mssgle:CubicBezierSegment
-                    Point1="-32.2,17.8378378378378"
-                    Point2="-36.2,17.8378378378378"
-                    Point3="-36.2,21.8378378378378" />
+                    Point1="-116.485715721091,17.6104928425985"
+                    Point2="-120.485715721091,17.6104928425985"
+                    Point3="-120.485715721091,21.6104928425985" />
                   <mssgle:LineSegment
-                    End="-36.2,52.5" />
+                    End="-120.485715721091,51.7352941069222" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-93.15638671875,22.8378378378378,150.1127734375,11.609375"
+              BoundingBox="-135.299244579296,22.6104928425985,150.1127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
           Size="192,41.6"
           Id="Package\Data Flow Task\EXPIRE THE OLD ROWS"
-          TopLeft="5.49999999999997,417.5" />
+          TopLeft="26.2142860670482,417.499999999999" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Derived Column Output]"
-          TopLeft="134.7,357.5">
+          TopLeft="119.885714316125,355.970588213844">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-33.2,59.9999999999999"
+              EndConnector="0,61.5294117861552"
               Start="0,0"
-              End="-33.2,52.4999999999999">
+              End="0,54.0294117861552">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.9999999999999" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,25.9999999999999"
-                    Point2="0,29.9999999999999"
-                    Point3="-4,29.9999999999999" />
-                  <mssgle:LineSegment
-                    End="-29.2,29.9999999999999" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-29.2,29.9999999999999"
-                    Point2="-33.2,29.9999999999999"
-                    Point3="-33.2,33.9999999999999" />
-                  <mssgle:LineSegment
-                    End="-33.2,52.4999999999999" />
+                    End="0,54.0294117861552" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2362,69 +2392,57 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
         <NodeLayout
           Size="120,41.6"
           Id="Package\Data Flow Task\Union All"
-          TopLeft="170.9,519.099999999999" />
+          TopLeft="191.614286067048,519.099999999999" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[New Output]"
-          TopLeft="210.9,255.9">
+          TopLeft="274.161905510004,255.135294106922">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="38.6666666666667,263.2"
+              EndConnector="0,263.964705893077"
               Start="0,0"
-              End="38.6666666666667,255.7">
+              End="0,256.464705893077">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,138.046830382638" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,138.046830382638"
-                    Point2="0,142.046830382638"
-                    Point3="4,142.046830382638" />
-                  <mssgle:LineSegment
-                    End="34.6666666666667,142.046830382638" />
-                  <mssgle:CubicBezierSegment
-                    Point1="34.6666666666667,142.046830382638"
-                    Point2="38.6666666666667,142.046830382638"
-                    Point3="38.6666666666667,146.046830382638" />
-                  <mssgle:LineSegment
-                    End="38.6666666666667,255.7" />
+                    End="0,256.464705893077" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-7.75805338541667,147.046830382638,54.1827734375,11.43359375"
+              BoundingBox="-27.09138671875,122.515556071539,54.1827734375,11.43359375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[OLE DB Command Output]"
-          TopLeft="101.5,459.1">
+          TopLeft="122.214286067048,459.099999999999">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="110.733333333333,59.9999999999998"
+              EndConnector="110.733333333333,59.9999999999999"
               Start="0,0"
-              End="110.733333333333,52.4999999999998">
+              End="110.733333333333,52.4999999999999">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31.5263157894736" />
+                    End="0,31.5263157894737" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,31.5263157894736"
-                    Point2="0,35.5263157894736"
-                    Point3="4,35.5263157894736" />
+                    Point1="0,31.5263157894737"
+                    Point2="0,35.5263157894737"
+                    Point3="4,35.5263157894737" />
                   <mssgle:LineSegment
-                    End="106.733333333333,35.5263157894736" />
+                    End="106.733333333333,35.5263157894737" />
                   <mssgle:CubicBezierSegment
-                    Point1="106.733333333333,35.5263157894736"
-                    Point2="110.733333333333,35.5263157894736"
-                    Point3="110.733333333333,39.5263157894736" />
+                    Point1="106.733333333333,35.5263157894737"
+                    Point2="110.733333333333,35.5263157894737"
+                    Point3="110.733333333333,39.5263157894737" />
                   <mssgle:LineSegment
-                    End="110.733333333333,52.4999999999998" />
+                    End="110.733333333333,52.4999999999999" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2436,21 +2454,21 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
         <NodeLayout
           Size="254.4,41.6"
           Id="Package\Data Flow Task\SET NEW ROWS' EFFECTIVE STATUS"
-          TopLeft="105.414284960105,620.699999999999" />
+          TopLeft="122.557142394903,619.935294106922" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Union All Output 1]"
-          TopLeft="231.757142480052,560.699999999999">
+          TopLeft="250.685714230976,560.699999999999">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,59.9999999999999"
+              EndConnector="0,59.2352941069223"
               Start="0,0"
-              End="0,52.4999999999999">
+              End="0,51.7352941069223">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.4999999999999" />
+                    End="0,51.7352941069223" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2462,21 +2480,21 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
         <NodeLayout
           Size="162.4,41.6"
           Id="Package\Data Flow Task\Insert Destination"
-          TopLeft="149.7,722.299999999999" />
+          TopLeft="170.414286067048,722.3" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Derived Column Output1]"
-          TopLeft="231.757142480052,662.299999999999">
+          TopLeft="250.685714230976,661.535294106922">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,59.9999999999999"
+              EndConnector="0,60.7647058930778"
               Start="0,0"
-              End="0,52.4999999999999">
+              End="0,53.2647058930778">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.4999999999999" />
+                    End="0,53.2647058930778" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2487,81 +2505,81 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
         </EdgeLayout>
         <NodeLayout
           Size="190.4,41.6"
-          Id="Package\Data Flow Task\UDPATE DUMMY ROWS"
-          TopLeft="291.7,315.9" />
+          Id="Package\Data Flow Task\UPDATE DUMMY ROWS"
+          TopLeft="313.128571793498,315.899999999999" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Inferred Member Updates Output]"
-          TopLeft="250.9,255.9">
+          TopLeft="318.042858286293,255.135294106922">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="136,59.9999999999999"
+              EndConnector="90.2857135072048,60.7647058930774"
               Start="0,0"
-              End="136,52.4999999999999">
+              End="90.2857135072048,53.2647058930774">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,22.8085106382978" />
+                    End="0,23.1501877394601" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,22.8085106382978"
-                    Point2="0,26.8085106382978"
-                    Point3="4,26.8085106382978" />
+                    Point1="0,23.1501877394601"
+                    Point2="0,27.1501877394601"
+                    Point3="4,27.1501877394601" />
                   <mssgle:LineSegment
-                    End="132,26.8085106382978" />
+                    End="86.2857135072048,27.1501877394601" />
                   <mssgle:CubicBezierSegment
-                    Point1="132,26.8085106382978"
-                    Point2="136,26.8085106382978"
-                    Point3="136,30.8085106382978" />
+                    Point1="86.2857135072048,27.1501877394601"
+                    Point2="90.2857135072048,27.1501877394601"
+                    Point3="90.2857135072048,31.1501877394601" />
                   <mssgle:LineSegment
-                    End="136,52.4999999999999" />
+                    End="90.2857135072048,53.2647058930774" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-6.40298828125,31.8085106382978,148.8059765625,11.658203125"
+              BoundingBox="-29.2601315276476,32.1501877394601,148.8059765625,11.658203125"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="153.6,41.6"
-          Id="Package\Data Flow Task\UPDATE TENCH"
-          TopLeft="526.7,315.9" />
+          Size="216,41.6"
+          Id="Package\Data Flow Task\UPDATE TENCH, TENLOAICH"
+          TopLeft="547.414286067048,315.899999999999" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Changing Attribute Updates Output]"
-          TopLeft="290.9,255.9">
+          TopLeft="358.042858286293,255.135294106922">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="312.6,59.9999999999999"
+              EndConnector="297.371427780755,60.7647058930774"
               Start="0,0"
-              End="312.6,52.4999999999999">
+              End="297.371427780755,53.2647058930774">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,13.8378378378378" />
+                    End="0,14.0651828330771" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,13.8378378378378"
-                    Point2="0,17.8378378378378"
-                    Point3="4,17.8378378378378" />
+                    Point1="0,14.0651828330771"
+                    Point2="0,18.0651828330771"
+                    Point3="4,18.0651828330771" />
                   <mssgle:LineSegment
-                    End="308.6,17.8378378378378" />
+                    End="293.371427780755,18.0651828330771" />
                   <mssgle:CubicBezierSegment
-                    Point1="308.6,17.8378378378378"
-                    Point2="312.6,17.8378378378378"
-                    Point3="312.6,21.8378378378378" />
+                    Point1="293.371427780755,18.0651828330771"
+                    Point2="297.371427780755,18.0651828330771"
+                    Point3="297.371427780755,22.0651828330771" />
                   <mssgle:LineSegment
-                    End="312.6,52.4999999999999" />
+                    End="297.371427780755,53.2647058930774" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="77.7660937499999,22.8378378378378,157.0678125,11.6630859375"
+              BoundingBox="70.1518076403774,23.0651828330771,157.0678125,11.6630859375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -2571,6 +2589,29 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
   <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\OLE DB Source CUAHANG_NDS">
     <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Lookup MALOAICH">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
       <Property>
         <Name>DataSourceViewID</Name>
       </Property>
@@ -2594,7 +2635,7 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
       &lt;ChangeType&gt;None&lt;/ChangeType&gt;
     &lt;/InputColumnToDBColumn&gt;
     &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;Lookup.Outputs[Lookup Match Output].Columns[MaLoaiCH1]&lt;/IdentificationString&gt;
+      &lt;IdentificationString&gt;Lookup MALOAICH.Outputs[Lookup Match Output].Columns[MaLoaiCH1]&lt;/IdentificationString&gt;
       &lt;ColumnName&gt;MaLoaiCH&lt;/ColumnName&gt;
       &lt;KeyType&gt;None&lt;/KeyType&gt;
       &lt;ChangeType&gt;HistoricalAttribute&lt;/ChangeType&gt;
@@ -2618,10 +2659,10 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
       &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
     &lt;/InputColumnToDBColumn&gt;
     &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;Lookup.Outputs[Lookup Match Output].Columns[TenLoaiCH1]&lt;/IdentificationString&gt;
+      &lt;IdentificationString&gt;Lookup MALOAICH.Outputs[Lookup Match Output].Columns[TenLoaiCH1]&lt;/IdentificationString&gt;
       &lt;ColumnName&gt;TenLoaiCH&lt;/ColumnName&gt;
       &lt;KeyType&gt;None&lt;/KeyType&gt;
-      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
+      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
     &lt;/InputColumnToDBColumn&gt;
     &lt;InputColumnToDBColumn&gt;
       &lt;IdentificationString&gt;OLE DB Source CUAHANG_NDS.Outputs[OLE DB Source Output].Columns[TrangThai]&lt;/IdentificationString&gt;
@@ -2651,29 +2692,6 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
   &lt;DateVariable /&gt;
   &lt;EnableInferredSupport&gt;true&lt;/EnableInferredSupport&gt;
 &lt;/SCDWizardMetadata&gt;</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Lookup MALOAICH">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

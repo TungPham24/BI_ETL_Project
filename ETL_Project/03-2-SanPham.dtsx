@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="6"
-  DTS:VersionGUID="{C4EF2B25-BCD8-48BD-A12F-C54AE5534ED8}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{A08A6A53-FC61-4968-9892-1DCA5DCD61FA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1828,33 +1828,33 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
         <NodeLayout
           Size="212,41.6"
           Id="Package\GET LSET FROM METADATA"
-          TopLeft="315.000005364418,126.176472357813" />
+          TopLeft="462.142865013103,54.2941184085137" />
         <NodeLayout
           Size="197.6,41.6"
           Id="Package\SANPHAM_NDS_TO_DDS"
-          TopLeft="325.000005534717,216.411767740976" />
+          TopLeft="472.857150909852,195.764708627879" />
         <NodeLayout
           Size="118.4,41.6"
           Id="Package\SET CET"
-          TopLeft="357.857148951413,42.058824119271" />
+          TopLeft="87.8571443533403,47.4117653708146" />
         <NodeLayout
           Size="214.4,41.6"
           Id="Package\UPDATE LSET IN METADATA"
-          TopLeft="315.714291090868,319.82353238251" />
+          TopLeft="84.2857157210914,190.588236452387" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="419.028577157916,83.6588241192709">
+          TopLeft="206.25714435334,71.6529418896641">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,42.5176482385422"
+              EndConnector="255.885720659763,0"
               Start="0,0"
-              End="0,35.0176482385422">
+              End="248.385720659763,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,35.0176482385422" />
+                    End="248.385720659763,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1865,18 +1865,18 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="422.400005449568,167.776472357813">
+          TopLeft="569.900007961478,95.8941184085137">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,48.6352953831629"
+              EndConnector="0,99.8705902193657"
               Start="0,0"
-              End="0,41.1352953831629">
+              End="0,92.3705902193657">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,41.1352953831629" />
+                    End="0,92.3705902193657" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1887,18 +1887,18 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="423.357148312792,258.011767740976">
+          TopLeft="472.857150909852,213.976472540133">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,61.8117646415341"
+              EndConnector="-174.171435188761,0"
               Start="0,0"
-              End="0,54.3117646415341">
+              End="-166.671435188761,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,54.3117646415341" />
+                    End="-166.671435188761,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1918,177 +1918,109 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
         <NodeLayout
           Size="149.6,41.6"
           Id="Package\SANPHAM_NDS_TO_DDS\OLE DB Source"
-          TopLeft="156.1,5.49999999999995" />
-        <NodeLayout
-          Size="208,41.6"
-          Id="Package\SANPHAM_NDS_TO_DDS\Slowly Changing Dimension"
-          TopLeft="126.9,107.1" />
-        <EdgeLayout
-          Id="Package\SANPHAM_NDS_TO_DDS.Paths[OLE DB Source Output]"
-          TopLeft="230.9,47.1">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,59.9999999999999"
-              Start="0,0"
-              End="0,52.4999999999999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.4999999999999" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="183.2,41.6"
-          Id="Package\SANPHAM_NDS_TO_DDS\SET TRANGTHAI TO 2"
-          TopLeft="17.5,208.7" />
-        <EdgeLayout
-          Id="Package\SANPHAM_NDS_TO_DDS.Paths[Historical Attribute Inserts Output]"
-          TopLeft="170.9,148.7">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-61.8,60"
-              Start="0,0"
-              End="-61.8,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,13.8378378378378" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,13.8378378378378"
-                    Point2="0,17.8378378378378"
-                    Point3="-4,17.8378378378378" />
-                  <mssgle:LineSegment
-                    End="-57.8,17.8378378378378" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-57.8,17.8378378378378"
-                    Point2="-61.8,17.8378378378378"
-                    Point3="-61.8,21.8378378378378" />
-                  <mssgle:LineSegment
-                    End="-61.8,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-105.95638671875,22.8378378378378,150.1127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="164,41.6"
-          Id="Package\SANPHAM_NDS_TO_DDS\EXPIRY OLD ROW"
-          TopLeft="5.49999999999997,310.3" />
-        <EdgeLayout
-          Id="Package\SANPHAM_NDS_TO_DDS.Paths[Derived Column Output]"
-          TopLeft="109.1,250.3">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-21.6,59.9999999999999"
-              Start="0,0"
-              End="-21.6,52.4999999999999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,26"
-                    Point2="0,30"
-                    Point3="-4,30" />
-                  <mssgle:LineSegment
-                    End="-17.6,30" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-17.6,30"
-                    Point2="-21.6,30"
-                    Point3="-21.6,34" />
-                  <mssgle:LineSegment
-                    End="-21.6,52.4999999999999" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="171.814285981898,5.49999999999995" />
         <NodeLayout
           Size="120,41.6"
           Id="Package\SANPHAM_NDS_TO_DDS\Union All"
-          TopLeft="170.9,411.9" />
+          TopLeft="150.899999659402,410.370588213845" />
+        <NodeLayout
+          Size="184,41.6"
+          Id="Package\SANPHAM_NDS_TO_DDS\UPDATE DUMMY ROW"
+          TopLeft="307.414285981899,208.7" />
+        <NodeLayout
+          Size="208,41.6"
+          Id="Package\SANPHAM_NDS_TO_DDS\Slowly Changing Dimension"
+          TopLeft="142.614285981898,107.1" />
+        <NodeLayout
+          Size="183.2,41.6"
+          Id="Package\SANPHAM_NDS_TO_DDS\SET TRANGTHAI TO 1"
+          TopLeft="121.128570942003,515.029411786155" />
+        <NodeLayout
+          Size="200.8,41.6"
+          Id="Package\SANPHAM_NDS_TO_DDS\UPDATE CHANGING ATTS"
+          TopLeft="542.414285981899,208.7" />
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\SANPHAM_NDS_TO_DDS\Insert Destination"
+          TopLeft="127.557142480052,595.982352673058" />
+        <NodeLayout
+          Size="164,41.6"
+          Id="Package\SANPHAM_NDS_TO_DDS\EXPIRY OLD ROW"
+          TopLeft="21.2142859818984,310.3" />
+        <NodeLayout
+          Size="183.2,41.6"
+          Id="Package\SANPHAM_NDS_TO_DDS\SET TRANGTHAI TO 2"
+          TopLeft="11.7857141884006,205.641176427689" />
         <EdgeLayout
-          Id="Package\SANPHAM_NDS_TO_DDS.Paths[New Output]"
-          TopLeft="210.9,148.7">
+          Id="Package\SANPHAM_NDS_TO_DDS.Paths[Union All Output 1]"
+          TopLeft="211.814285300702,451.970588213845">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="38.6666666666667,263.2"
+              EndConnector="0,63.0588235723107"
               Start="0,0"
-              End="38.6666666666667,255.7">
+              End="0,55.5588235723107">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,138.046830382638" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,138.046830382638"
-                    Point2="0,142.046830382638"
-                    Point3="4,142.046830382638" />
-                  <mssgle:LineSegment
-                    End="34.6666666666667,142.046830382638" />
-                  <mssgle:CubicBezierSegment
-                    Point1="34.6666666666667,142.046830382638"
-                    Point2="38.6666666666667,142.046830382638"
-                    Point3="38.6666666666667,146.046830382638" />
-                  <mssgle:LineSegment
-                    End="38.6666666666667,255.7" />
+                    End="0,55.5588235723107" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-7.75805338541667,147.046830382638,54.1827734375,11.43359375"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SANPHAM_NDS_TO_DDS.Paths[OLE DB Source Output]"
+          TopLeft="246.614285981898,47.1">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\SANPHAM_NDS_TO_DDS.Paths[OLE DB Command Output]"
-          TopLeft="87.5,351.9">
+          TopLeft="103.214285981898,351.9">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="124.733333333333,59.9999999999998"
+              EndConnector="89.019047010837,58.4705882138446"
               Start="0,0"
-              End="124.733333333333,52.4999999999998">
+              End="89.019047010837,50.9705882138446">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31.5263157894736" />
+                    End="0,30.6207430213554" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,31.5263157894736"
-                    Point2="0,35.5263157894736"
-                    Point3="4,35.5263157894736" />
+                    Point1="0,30.6207430213554"
+                    Point2="0,34.6207430213554"
+                    Point3="4,34.6207430213554" />
                   <mssgle:LineSegment
-                    End="120.733333333333,35.5263157894736" />
+                    End="85.019047010837,34.6207430213554" />
                   <mssgle:CubicBezierSegment
-                    Point1="120.733333333333,35.5263157894736"
-                    Point2="124.733333333333,35.5263157894736"
-                    Point3="124.733333333333,39.5263157894736" />
+                    Point1="85.019047010837,34.6207430213554"
+                    Point2="89.019047010837,34.6207430213554"
+                    Point3="89.019047010837,38.6207430213554" />
                   <mssgle:LineSegment
-                    End="124.733333333333,52.4999999999998" />
+                    End="89.019047010837,50.9705882138446" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2097,135 +2029,155 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="183.2,41.6"
-          Id="Package\SANPHAM_NDS_TO_DDS\SET TRANGTHAI TO 1"
-          TopLeft="149.7,513.5" />
         <EdgeLayout
-          Id="Package\SANPHAM_NDS_TO_DDS.Paths[Union All Output 1]"
-          TopLeft="230.9,453.5">
+          Id="Package\SANPHAM_NDS_TO_DDS.Paths[New Output]"
+          TopLeft="228.090476153984,148.7">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="10.4000000000001,59.9999999999999"
+              EndConnector="0,261.670588213845"
               Start="0,0"
-              End="10.4000000000001,52.4999999999999">
+              End="0,254.170588213845">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,26" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,26"
-                    Point2="0,30"
-                    Point3="4,30" />
-                  <mssgle:LineSegment
-                    End="6.40000000000006,30" />
-                  <mssgle:CubicBezierSegment
-                    Point1="6.40000000000006,30"
-                    Point2="10.4000000000001,30"
-                    Point3="10.4000000000001,34" />
-                  <mssgle:LineSegment
-                    End="10.4000000000001,52.4999999999999" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="162.4,41.6"
-          Id="Package\SANPHAM_NDS_TO_DDS\Insert Destination"
-          TopLeft="149.7,615.099999999999" />
-        <EdgeLayout
-          Id="Package\SANPHAM_NDS_TO_DDS.Paths[Derived Column Output1]"
-          TopLeft="241.3,555.1">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-10.4,59.9999999999999"
-              Start="0,0"
-              End="-10.4,52.4999999999999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,25.9999999999999" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,25.9999999999999"
-                    Point2="0,29.9999999999999"
-                    Point3="-4,29.9999999999999" />
-                  <mssgle:LineSegment
-                    End="-6.40000000000001,29.9999999999999" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-6.40000000000001,29.9999999999999"
-                    Point2="-10.4,29.9999999999999"
-                    Point3="-10.4,33.9999999999999" />
-                  <mssgle:LineSegment
-                    End="-10.4,52.4999999999999" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="184,41.6"
-          Id="Package\SANPHAM_NDS_TO_DDS\UPDATE DUMMY ROW"
-          TopLeft="291.7,208.7" />
-        <EdgeLayout
-          Id="Package\SANPHAM_NDS_TO_DDS.Paths[Inferred Member Updates Output]"
-          TopLeft="250.9,148.7">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="132.8,59.9999999999999"
-              Start="0,0"
-              End="132.8,52.4999999999999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,22.8085106382978" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,22.8085106382978"
-                    Point2="0,26.8085106382978"
-                    Point3="4,26.8085106382978" />
-                  <mssgle:LineSegment
-                    End="128.8,26.8085106382978" />
-                  <mssgle:CubicBezierSegment
-                    Point1="128.8,26.8085106382978"
-                    Point2="132.8,26.8085106382978"
-                    Point3="132.8,30.8085106382978" />
-                  <mssgle:LineSegment
-                    End="132.8,52.4999999999999" />
+                    End="0,254.170588213845" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-8.00298828125,31.8085106382978,148.8059765625,11.658203125"
+              BoundingBox="-27.09138671875,121.368497231922,54.1827734375,11.43359375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="200.8,41.6"
-          Id="Package\SANPHAM_NDS_TO_DDS\UPDATE CHANGING ATTS"
-          TopLeft="526.7,208.7" />
         <EdgeLayout
-          Id="Package\SANPHAM_NDS_TO_DDS.Paths[Changing Attribute Updates Output]"
-          TopLeft="290.9,148.7">
+          Id="Package\SANPHAM_NDS_TO_DDS.Paths[Inferred Member Updates Output]"
+          TopLeft="266.614285981898,148.7">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="336.2,59.9999999999999"
+              EndConnector="132.8,60"
               Start="0,0"
-              End="336.2,52.4999999999999">
+              End="132.8,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.8085106382979" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.8085106382979"
+                    Point2="0,26.8085106382979"
+                    Point3="4,26.8085106382979" />
+                  <mssgle:LineSegment
+                    End="128.8,26.8085106382979" />
+                  <mssgle:CubicBezierSegment
+                    Point1="128.8,26.8085106382979"
+                    Point2="132.8,26.8085106382979"
+                    Point3="132.8,30.8085106382979" />
+                  <mssgle:LineSegment
+                    End="132.8,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-8.00298828125001,31.8085106382979,148.8059765625,11.658203125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SANPHAM_NDS_TO_DDS.Paths[Historical Attribute Inserts Output]"
+          TopLeft="186.614285981898,148.7">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-83.2285717934978,56.9411764276894"
+              Start="0,0"
+              End="-83.2285717934978,49.4411764276894">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.9284578568806" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.9284578568806"
+                    Point2="0,16.9284578568806"
+                    Point3="-4,16.9284578568806" />
+                  <mssgle:LineSegment
+                    End="-79.2285717934978,16.9284578568806" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-79.2285717934978,16.9284578568806"
+                    Point2="-83.2285717934978,16.9284578568806"
+                    Point3="-83.2285717934978,20.9284578568806" />
+                  <mssgle:LineSegment
+                    End="-83.2285717934978,49.4411764276894" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-116.670672615499,21.9284578568806,150.1127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SANPHAM_NDS_TO_DDS.Paths[Derived Column Output1]"
+          TopLeft="210.742856711028,556.629411786155">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39.3529408869023"
+              Start="0,0"
+              End="0,31.8529408869023">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.8529408869023" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SANPHAM_NDS_TO_DDS.Paths[Derived Column Output]"
+          TopLeft="103.30000008515,247.241176427689">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,63.0588235723106"
+              Start="0,0"
+              End="0,55.5588235723106">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,55.5588235723106" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SANPHAM_NDS_TO_DDS.Paths[Changing Attribute Updates Output]"
+          TopLeft="306.614285981898,148.7">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="336.2,60"
+              Start="0,0"
+              End="336.2,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -2242,14 +2194,14 @@ WHERE  (NgayTao BETWEEN ? AND ?) OR
                     Point2="336.2,17.8378378378378"
                     Point3="336.2,21.8378378378378" />
                   <mssgle:LineSegment
-                    End="336.2,52.4999999999999" />
+                    End="336.2,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="89.5660937499999,22.8378378378378,157.0678125,11.6630859375"
+              BoundingBox="89.56609375,22.8378378378378,157.0678125,11.6630859375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
